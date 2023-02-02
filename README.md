@@ -1,35 +1,145 @@
-<img src="https://github.com/niemopen/oasis-open-project/blob/main/artwork/NIEM-NO-Logo-v5.png" width="200">
 
-# README
+# NIEM 4.0
 
-This repository is part of the NIEM Open Project.
+This is the NIEM 4.0 release.
 
-For more information on NIEMOpen, see the project's website at [www.niemopen.org](www.niemopen.org).
+This release reflects updates to the [NIEM Naming and Design Rules][NDR], as well
+as the new [NIEM Code Lists Specification][Code Lists Specification].
 
-General questions about OASIS Open Projects may be directed to OASIS staff at project-admin@lists.oasis-open-projects.org
+## NDR 4.0
 
-# Other assets
+This release of NIEM reflects updates to the
+[NIEM Naming and Design Rules][NDR], including:
 
-In addition to this GitHub organization, this project also makes use of other assets. 
+- The structures schema incorporates a new attribute, uri, that supports
+  cross-document and within-document references, in the style of Linked Data.
+- The vocabulary for local terminology, formerly in its own namespace, has been
+  moved into the appinfo namespace.
+- Abstract elements now have names that end in "Abstract", other than
+  augmentation points and representation elements
 
-- The NIEMOpen website is at www.niemopen.org. The website contains news, announcements, and other information of interest about the project. 
+## Code Lists Specification 4.0
 
-- The [General purpose mailing list](https://lists.oasis-open-projects.org/g/niemopen). To subscribe, send an empty email message to niemopen+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe and send email to the list. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen/messages).
+This release reflects the new [Code Lists Specification], including:
 
-- The [Project Governing Board mailing list](https://lists.oasis-open-projects.org/g/niemopen-pgb). This is the discussion list for use by the members of the PGB. To subscribe, send an empty email message to niemopen-pgb+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe read-only. Only PGB members can post. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen-pgb/messages).
+- NIEM Core contains a new type, `nc:CodeType`, which supports code lists that
+  are identified at run time, including GENC (see below).
+- The release contains codes for countries and subdivisions (e.g., states) that
+  are provided as CSV spreadsheet files. See below for more info.
 
-- [NBAC Technical Steering Committee mailing list](https://lists.oasis-open-projects.org/g/niemopen-nbactsc). This is the discussion list for use by the members of the NIEM Business Architecture Committee TSC. To subscribe, send an empty email message to niemopen-nbactsc+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe read-only. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen-nbactsc/messages).
+## Content
 
-- [NTAC Technical Steering Committee mailing list](https://lists.oasis-open-projects.org/g/niemopen-ntactsc). This is the discussion list for use by the members of the NIEM Technical Architecture Committee TSC. To subscribe, send an empty email message to niemopen-ntactsc+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe read-only. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen-ntactsc/messages).
+### Domains with new or updated content
 
-# Contributing
+- **Agriculture** (*new domain in NIEM 4.0*)
+- **Biometrics**
+- **Emergency Management**
+- **Human Services**
+  - content adopted from the former CYFS domain
+- **Justice**
+- **Military Operations**
+- **Surface Transportation**
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details how to join the project, contribute changes to our repositories and communicate with the rest of the project contributors. Please become familiar with and follow the [code of conduct](CODE-OF-CONDUCT.md).
+Note: All domains have been changed, to some degree. The list above shows
+domains with additional changes beyond the regular updates to move to the 4.0
+major release, apply harmonization changes, etc.
 
-# Governance
+### Support for the international community
 
-NIEM Open operates under the terms of the [Open Project Rules](https://www.oasis-open.org/policies-guidelines/open-projects-process) and the applicable license(s) specified in [LICENSE.md](LICENSE.md). Further details can be found in [GOVERNANCE.md](GOVERNANCE.md), [GOVERNANCE-NBAC.md](GOVERNANCE-NBAC.md), and [GOVERNANCE-NTAC.md](GOVERNANCE-NTAC.md).
+- Added **address codes**
+- Added **nc:Crisis**
+- Added **nc:DocumentEUDataPrivacyIndicator** to nc:DocumentType
+- Added **message** elements to support message references and FATCA information
+- Added **nc:ServiceDeliveryNGO** and **nc:CoordinatingAgency** organizations
+- Added **nc:Payment**
+- Added **nc:PublicService**
+- Promoted **FinancialAccount** from the Justice domain to Core and added additional content
+- Reviewed Core definitions to remove unnecessary US-specific terms
 
-# CLA & Non-assert signatures required
+### Harmonization and issue resolution
 
-All technical contributions must be covered by a Contributor's License Agreement. This requirement allows our work to advance through OASIS standards development stages and potentially be submitted to de jure organizations such as ISO. You will get a prompt to sign this document when you submit your first pull request to a project repository, or you can sign [here](https://www.oasis-open.org/open-projects/cla/oasis-open-projects-individual-contributor-license-agreement-i-cla/). If you are contributing on behalf of your employer, you must also sign the ECLA [here](https://www.oasis-open.org/open-projects/cla/entity-cla-20210630/).
+Core-related changes include:
+
+- Refactored **measures**
+  - Created measure subtypes so that only the appropriate unit codes are available in each type
+  - For example, length unit codes are now available on nc:LengthMeasureType, not nc:MeasureType itself
+- Updated the representations of **GENC** codes
+  - Codes for countries and administrative subdivisions (e.g., states,
+    provinces) are represented according to the new [Code Lists Specification]
+  - Example usage:
+
+    ```xml
+    <nc:CountryCode
+      cli:codeListURI="http://api.nsgreg.nga.mil/geo-political/GENC/3/3-6"
+      cli:codeListColumnName="char3">USA</nc:CountryCode>
+    ```
+
+  - The URI `http://api.nsgreg.nga.mil/geo-political/GENC/3/3-6` is resolved by
+    [niem/xml-catalog.xml](niem/xml-catalog.xml) to the CSV spreadsheet
+    [niem/codes/genc/geo-political/3-6/genc_geo-political_3-6_char3.csv](niem/codes/genc/geo-political/3-6/genc_geo-political_3-6_char3.csv). The
+    code value `USA` appears in the spreadsheet's column headed `char3`.
+  - See `niem/codes/genc/` for GENC CSV code sets provided with this release
+  - See the [Code Lists Specification] for examples, more details, and how to build and use new CSVs for updated GENC codes
+- Added **nc:ArrivalType** and **nc:DepartureType**
+- Added / promoted additional  representations for **nc:DateType**:
+  - Fiscal year
+  - Quarter
+  - Zulu date/time
+  - Month
+  - Day
+  - Date ranges
+- Added **nc:BinaryHash** to nc:BinaryType
+- Added **nc:CountryType** and **nc:StateType**
+  - Bundles multiple representations of country and state codes to allow for easier reuse
+- Added additional **entity** representations
+  - **nc:EntityItem**
+  - **nc:GenericEntity**
+    - simple name, contact info, description fields
+    - for use when an entity cannot be determined to be either a person or an organization
+- Added **nc:LocationFloorNumberText**
+- Added **nc:OrganizationLEIIdentification**
+- Added **nc:RecommendationType**
+- Added **nc:TelephoneNumberDescriptionText**
+- Harmonized **capability** content
+- Harmonized **equipment** content
+- Harmonized **hazmat** code and text elements
+- Harmonized **medical condition** content
+- Harmonized **mission** content
+- Harmonized **permit** content
+- Harmonized **PersonStolenIdentityAssociation**
+- Harmonized **request** content
+- Harmonized **SubjectCautionInformation** content
+- Harmonized **task** content
+- Moved **AnomalyType** from Maritime to Core
+- Moved **CourtCase** to Core
+- Moved **MGRS** (Military Grid Reference System) coordinates from Core to MilOps
+- Moved **MissionID** to nc:MissionType
+- Moved **OrientationType** from MilOps to Core
+- Removed the **core_misc** namespace
+  - Moved the existing code sets into Core
+- Removed **FIPS 5-2 state** alpha codes
+  - FIPS 5-2 reuses USPS state alpha code
+- Removed the **FIPS 10-4** namespace (deprecated country codes)
+- Removed **nc:ContactInformationAssociationType**
+  - Largely overlapped nc:ContactInformationType
+- Updated **nc:AngularDegreeValue** from an integer to a decimal data type
+- Updated **nc:ElectronicAddressType**
+- Updated **nc:PersonNationality** to correct the definition
+- Updated **nc:RelativeLocationDistanceText** to a measure
+- Updated **nc:ReliabilityPercent** as nc:ConfidencePercent
+- Updated **nc:UTMCoordinateType** to fix the representation so it follows the common pattern
+- Updated the representation of **percent** values
+  - Percents should now be represented as a decimal value, with **100% represented as "100"**.
+  - Values less than 0 and greater than 100 are now allowed.
+
+### Miscellaneous
+- Incorporated all 3.0-related Core Supplements
+- Moved supporting schemas into a new `utility` folder to simplify the release folder layout:
+  - appinfo
+  - code-lists-spec
+  - conformanceTargets
+  - structures
+
+
+[Code Lists Specification]: https://github.com/NIEM/NIEM-Code-Lists-Spec
+[NDR]: https://github.com/NIEM/NIEM-NDR
