@@ -1,35 +1,54 @@
-<img src="https://github.com/niemopen/oasis-open-project/blob/main/artwork/NIEM-NO-Logo-v5.png" width="200">
 
-# README
+# NIEM 5.2
 
-This repository is part of the NIEM Open Project.
+This is the NIEM 5.2 minor release.
 
-For more information on NIEMOpen, see the project's website at [www.niemopen.org](www.niemopen.org).
+In a minor release, content may be updated in domains and code tables.  Core, namespaces imported by Core, and the architecture, which is defined by the NIEM Naming and Design Rules (NDR), will remain locked until the next major release.
 
-General questions about OASIS Open Projects may be directed to OASIS staff at project-admin@lists.oasis-open-projects.org
+## Key changes
 
-# Other assets
+The following is a summary of the key changes made in this release.  More details are available from the [5.2 issues list](https://github.com/NIEM/NIEM-Releases/issues?page=1&q=is%3Aissue+label%3A5.2) in the NIEM Releases issue tracker, and the change log spreadsheet in the release package.
 
-In addition to this GitHub organization, this project also makes use of other assets. 
+- **Biometrics domain**
+  - Added and updated content for DNA categories and encodings. ([#238](https://github.com/NIEM/NIEM-Releases/issues/238))
 
-- The NIEMOpen website is at www.niemopen.org. The website contains news, announcements, and other information of interest about the project. 
+- **Cyber domain**
+  - Added and modified content to support State, Local, Tribal, and Territorial (SLTT) Agency Cyber Incident Reporting Requirements (CIRR) and Cyber-Physical System (CPS) Incident Reporting Requirements ([#233](https://github.com/NIEM/NIEM-Releases/issues/233)).
 
-- The [General purpose mailing list](https://lists.oasis-open-projects.org/g/niemopen). To subscribe, send an empty email message to niemopen+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe and send email to the list. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen/messages).
+- **Learning and Development domain** (new)
+  - Added content about courses, course sections, students, and employment positions. ([#235](https://github.com/NIEM/NIEM-Releases/issues/235))
 
-- The [Project Governing Board mailing list](https://lists.oasis-open-projects.org/g/niemopen-pgb). This is the discussion list for use by the members of the PGB. To subscribe, send an empty email message to niemopen-pgb+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe read-only. Only PGB members can post. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen-pgb/messages).
+- **Justice domain**
+  - Updated the FBI's National Crime Information Center (NCIC) codes ([#239](https://github.com/NIEM/NIEM-Releases/issues/239))
+    - BMA - Boat Make
+    - BRA - Boat Parts Brand Name
+    - Construction - Vehicle Make/Brand Name for Construction Equipment and Parts
+    - Country - Country Codes
+    - DBN - One Crime Inquiry Database Name
+    - Farm - Vehicle Make/Brand Name for Farm and Garden Equipment and Parts
+    - HAIR - Hair Color
+    - Indian - Indian Nations
+    - MAK - Gun Make Field
+    - Motorcycle - Vehicle Make/Brand Name for Motorcycles and Parts
+    - ProhibitedPersonsCategory
+    - RACE - Race
+    - SMT - Scars, Marks, Tattoos, and Other Characteristics
+    - Snowmobile - Vehicle Make/Brand Name for Snowmobiles and Parts
+    - Trailers - Vehicle Make/Brand Name for Trailer Make
+    - Trucks - Vehicle Make/Brand Name for Trucks and Parts
+    - TYP - Article Type
+    - TYPE - Type of Output
+    - VMA - Vehicle Make
+    - VMO - Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts
+    - VMOUsage - Vehicle Model Usage
+    - VST - Vehicle Style
 
-- [NBAC Technical Steering Committee mailing list](https://lists.oasis-open-projects.org/g/niemopen-nbactsc). This is the discussion list for use by the members of the NIEM Business Architecture Committee TSC. To subscribe, send an empty email message to niemopen-nbactsc+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe read-only. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen-nbactsc/messages).
+- **MilOps domain**
+  - Added Minimum Essential Metadata (MEM) content ([#234](https://github.com/NIEM/NIEM-Releases/issues/234))
+  - Added U.S. Message Text Format (USMTF) content as a subdomain, with information about military operations, missions, resources, readiness, and training ([#236](https://github.com/NIEM/NIEM-Releases/issues/236))
 
-- [NTAC Technical Steering Committee mailing list](https://lists.oasis-open-projects.org/g/niemopen-ntactsc). This is the discussion list for use by the members of the NIEM Technical Architecture Committee TSC. To subscribe, send an empty email message to niemopen-ntactsc+subscribe@lists.oasis-open-projects.org. Anyone interested is welcome to subscribe read-only. The list maintains an [archive](https://lists.oasis-open-projects.org/g/niemopen-ntactsc/messages).
+- **FIPS county codes**
+  - Updated FIPS 3-digit and 5-digit county codes ([#243](https://github.com/NIEM/NIEM-Releases/issues/243))
 
-# Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details how to join the project, contribute changes to our repositories and communicate with the rest of the project contributors. Please become familiar with and follow the [code of conduct](CODE-OF-CONDUCT.md).
-
-# Governance
-
-NIEM Open operates under the terms of the [Open Project Rules](https://www.oasis-open.org/policies-guidelines/open-projects-process) and the applicable license(s) specified in [LICENSE.md](LICENSE.md). Further details can be found in [GOVERNANCE.md](GOVERNANCE.md), [GOVERNANCE-NBAC.md](GOVERNANCE-NBAC.md), and [GOVERNANCE-NTAC.md](GOVERNANCE-NTAC.md).
-
-# CLA & Non-assert signatures required
-
-All technical contributions must be covered by a Contributor's License Agreement. This requirement allows our work to advance through OASIS standards development stages and potentially be submitted to de jure organizations such as ISO. You will get a prompt to sign this document when you submit your first pull request to a project repository, or you can sign [here](https://www.oasis-open.org/open-projects/cla/oasis-open-projects-individual-contributor-license-agreement-i-cla/). If you are contributing on behalf of your employer, you must also sign the ECLA [here](https://www.oasis-open.org/open-projects/cla/entity-cla-20210630/).
+- **ISO 639-5 Language Family codes**
+  - Added the ISO 639-5 language family code set ([#240](https://github.com/NIEM/NIEM-Releases/issues/240))
