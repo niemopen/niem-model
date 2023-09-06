@@ -20871,6 +20871,7 @@
         <xs:sequence>
           <xs:element ref="scr:AgentPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonEncounter" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:Person" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PhysicalEncounterAgentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
