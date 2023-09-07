@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/domains/cyber/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/cyber/6.0/"
+  version="psd01"
+  xml:lang="en-US"
+  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
   xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
   xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:cyber="http://release.niem.gov/niem/domains/cyber/5.2/"
-  xmlns:ip="http://release.niem.gov/niem/domains/infrastructureProtection/5.0/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
-  xmlns:stix="http://release.niem.gov/niem/codes/stix/5.1/"
+  xmlns:cyber="https://docs.oasis-open.org/niemopen/ns/model/domains/cyber/6.0/"
+  xmlns:ip="https://docs.oasis-open.org/niemopen/ns/model/domains/infrastructureProtection/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:stix="https://docs.oasis-open.org/niemopen/ns/model/codes/stix/6.0/"
   xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -23,17 +28,18 @@
       <appinfo:LocalTerm term="IOA" literal="Indicator(s) of Attack" definition="Evidence of the intent the adversary is trying to accomplish."/>
       <appinfo:LocalTerm term="IOB" literal="Indicator(s) of Behavior" definition="Evidence of user behavior and interests."/>
       <appinfo:LocalTerm term="IOC" literal="Indicator(s) of Compromise" definition="Forensic evidence of potential intrusions on a host system or network."/>
+      <appinfo:LocalTerm term="SBOM" literal="Software Bill of Materials" definition="A SBOM is a nested inventory, a list of ingredients that make up software components. ref cisa.gov/sbom"/>
       <appinfo:LocalTerm term="SMS" literal="Short Messaging Service" definition="A technology for sending short text messages between mobile phones"/>
       <appinfo:LocalTerm term="TTP" literal="Tactic, Technique, and Procedure" definition="A description of the &quot;why,&quot; &quot;how,&quot; and specific implementation the adversary uses."/>
       <appinfo:LocalTerm term="VERIS" literal="Vocabulary for Event Recording and Incident Sharing" definition="The Vocabulary for Event Recording and Incident Sharing (VERIS) is a set of metrics designed to provide a common language for describing security incidents in a structured and repeatable manner."/>
       <appinfo:LocalTerm term="WFN" literal="well-formed CPE name"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/codes/stix/5.1/" schemaLocation="../codes/stix.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/infrastructureProtection/5.0/" schemaLocation="infrastructureProtection.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/stix/6.0/" schemaLocation="../codes/stix.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/infrastructureProtection/6.0/" schemaLocation="infrastructureProtection.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:simpleType name="AccessedInformationCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a kind of information that has been or potentially has been accessed, manipulated, destroyed, or rendered unusable as a result of a breach</xs:documentation>
