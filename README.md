@@ -221,3 +221,53 @@ This example from the Justice domain shows multiple `RoleOf` properties replaced
 ## Key content changes
 
 The following is a summary of the key changes made in this release.  More details are available from the [6.0 issues list](https://github.com/niemopen/niem-model/labels/6.0) in the NIEM Model issue tracker, and the change log spreadsheet in the release package.
+
+### Refactored other role components ([niemopen/niem-model#38](https://github.com/niemopen/niem-model/issues/38))
+
+In addition to removing the `RoleOf` construct from the model due to NDR updates, other properties and types using the `Role` representation term were reviewed and updated as appropriate to improve consistency with the rest of the model.
+
+**Renamed remaining RoleOf properties and types**
+
+Renamed additional properties and types that were using `RoleOf` as the class term but were not using the `RoleOf` construct as defined by the NDR:
+
+Component | Original name | Updated name
+--------- | ------------- | ------------
+Property | it:RoleOfCategory | it:PartyIDCategory
+Property | it:RoleOfCategoryDescriptionText | it:PartyRoleCategoryDescriptionText
+Property | it:RoleOfOrganizationCategoryDescriptionText | it:OrganizationRoleCategoryDescriptionText
+Property | it:RoleOfOrganizationCategory | it:OrganizationRoleCategory
+Property | it:RoleOfOrganizationCategoryAugmentationPoint | it:OrganizationRoleCategoryAugmentationPoint
+Type | it:RoleOfOrganizationCategoryType | it:OrganizationRoleCategoryType
+
+**Removed the Role representation term**
+
+Removed extraneous `Role` representation terms from a list of properties and their corresponding types and augmentation point properties.  For example, `im:AlienRole` has been renamed `im:Alien`.
+
+The following properties have been renamed:
+
+- im:AlienExchangeVisitorRole
+- im:AlienRole
+- im:AlienStudentRole
+- im:CitizenRole
+- im:ForeignBornChildOfCitizenRole
+- im:ImmigrantRole
+- im:LawfulPermanentResidentRole
+- im:NationalRole
+- im:NaturalizedCitizenRole
+- im:NonImmigrantRole
+- im:PersonCountryRole
+- im:OtherAlienRole
+- im:ResidentRole
+
+**Refactored im:PersonCountryRoleType**
+
+Refactored `im:PersonCountryRoleType` to make immigration status more widely available for reuse:
+
+- Moved `im:ImmigrationStatus` from `im:PersonCountryRoleType` to `im:PersonAugmentationType`, making it available wherever `nc:PersonType` is used.
+- Updated `im:PersonCountryRoleType` to extend `nc:PersonType`.
+
+**Refactored scr:PersonRole**
+
+- Added a new Screening augmentation for `nc:PersonType`.
+- Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
+- Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
