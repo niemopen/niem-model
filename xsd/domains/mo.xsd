@@ -8524,13 +8524,11 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="mo:TargetRepresentation" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:TargetIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:TargetResultingDamage" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:MeanPointOfImpactAimpoint" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:DesiredPointOfImpactAimpoint" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:RoleOfUnit" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:RoleOfFacility" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:TargetLocation" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:MILSTD2525-B-SIDC-Code" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:MILSTD2525-C-SIDC-Code" minOccurs="0" maxOccurs="unbounded"/>
@@ -12589,21 +12587,6 @@
       <xs:documentation>A date for the end of a specified retention period.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="RoleOfFacility" type="nc:FacilityType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A facility, of which the containing object is a role.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfSensor" type="mo:SensorType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A sensor, of which the containing object is a role.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfUnit" type="mo:UnitType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A unit, of which the containing object is a role.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="RollChangeValue" type="nc:Degree180PlusMinusType" nillable="true">
     <xs:annotation>
       <xs:documentation>A rate of change of angle of rotation of a thing about its longitudinal axis, measured in degrees per second.</xs:documentation>
@@ -12969,6 +12952,11 @@
       <xs:documentation>A detailed description of the target software using the Common Platform Enumeration Standard.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="TargetFacility" type="nc:FacilityType" substitutionGroup="mo:TargetRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A facility that represents a target.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="TargetIdentification" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An identification of a target.</xs:documentation>
@@ -12977,6 +12965,16 @@
   <xs:element name="TargetLocation" type="nc:LocationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A geographic coordinate of the target.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TargetPerson" type="nc:PersonType" substitutionGroup="mo:TargetRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person that represents a target.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TargetRepresentation" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a representation of a target.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="TargetResultingDamage" type="mo:DamageType" nillable="true">
@@ -13027,6 +13025,11 @@
   <xs:element name="TargetTestSettingAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for representation of specific settings for the target.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TargetUnit" type="mo:UnitType" substitutionGroup="mo:TargetRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unit that represents a target.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="TaskAugmentation" type="mo:TaskAugmentationType" substitutionGroup="nc:TaskAugmentationPoint" nillable="true">

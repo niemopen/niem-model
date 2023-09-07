@@ -2449,9 +2449,8 @@
       <xs:documentation>A data type for the classification of the person employed by the Department of Homeland Security (DHS) Immigration and Customs Enforcement (ICE) agency.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEEmployeeAssistantUSAttorneyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEEmployeeAttorneyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEEmployeeBadgeIdentification" minOccurs="0" maxOccurs="unbounded"/>
@@ -2470,9 +2469,8 @@
       <xs:documentation>A data type for the classification of the authorized enforcement officer employed by the Department of Homeland Security (DHS) Immigration and Customs Enforcement (ICE) agency.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEOfficerCategoryText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEOfficerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -10360,11 +10358,6 @@
   <xs:element name="ResponseYesIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if Yes has been specified; false otherwise.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfAlienAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for the role of an Alien who is being processed as part of a Screening Encounter.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ScholarshipGrantAmount" type="nc:AmountType" nillable="true">

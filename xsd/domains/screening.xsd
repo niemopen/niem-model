@@ -21012,9 +21012,8 @@
       <xs:documentation>A data type for additional information about an Alien being screened.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="im:AlienRoleType">
         <xs:sequence>
-          <xs:element ref="im:RoleOfAlienAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PrincipalIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:VisaWaiverIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:AlienCategoryText" minOccurs="0" maxOccurs="unbounded"/>
@@ -21067,9 +21066,8 @@
       <xs:documentation>A data type for additional information about Persons being Screened</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonCategory" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonRole" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonTelephoneNumber" minOccurs="0" maxOccurs="unbounded"/>
