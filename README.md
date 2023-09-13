@@ -275,3 +275,7 @@ Refactored `im:PersonCountryRoleType` to make immigration status more widely ava
 ### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([niemopen/niem-model#41](https://github.com/niemopen/niem-model/issues/41))
 
 scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
+
+### Updated scr:ChargeCategoryCodeSimpleType code definitions ([niemopen/niem-model#16](https://github.com/niemopen/niem-model/issues/16))
+
+Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
