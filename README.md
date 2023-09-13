@@ -271,3 +271,7 @@ Refactored `im:PersonCountryRoleType` to make immigration status more widely ava
 - Added a new Screening augmentation for `nc:PersonType`.
 - Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
 - Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
+
+### Add hs:Wages ([niemopen/niem-model#13](https://github.com/niemopen/niem-model/issues/13))
+
+Created a new property `hs:Wages` for the existing type `hs:WagesType`.  Added the new property to `hs:PersonAugmentationType`.
