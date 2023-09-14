@@ -24,3 +24,12 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+### Package updates
+
+#### Added namespace authority documentation ([niemopen/niem-model#36](https://github.com/niemopen/niem-model/issues/36))
+
+Added CSV files documenting the NIEMOpen Technical Steering Committee (TSC) or TSC Subcommittee responsible for the content of NIEM namespaces.
+
+- `namespaces.csv` - Presents the information ordered by namespace category and namespace prefix.
+- `namespaces-by-authority.csv` - Presents the information ordered by the namespace authority.
