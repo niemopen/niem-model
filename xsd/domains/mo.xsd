@@ -6847,6 +6847,7 @@
           <xs:element ref="mo:ResourceGlobalIdentification" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:ResourceDomainIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ResourceCreateDate" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DescriptionText" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:AuthorizationReference" minOccurs="1" maxOccurs="unbounded"/>
           <xs:element ref="mo:ResourceOriginator" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:ResourceCustodian" minOccurs="1" maxOccurs="1"/>

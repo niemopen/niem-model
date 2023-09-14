@@ -39,3 +39,4 @@ The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued 
 - Renamed property `mo:Creator` as `mo:ResourceOriginator` and updated its definition.
 - Renamed property `mo:OfficeOfRecord` as `mo:DataResourceCustodian` and updated its definition.
 - Added new property `mo:DataItemCreateDateTime` to type `mo:MinimumEssentialMetadataType`.
+- Added existing property `nc:DescriptionText` to type `mo:MinimumEssentialMetadataType`.
