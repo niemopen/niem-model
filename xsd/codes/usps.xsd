@@ -24,42 +24,42 @@
     <xs:restriction base="xs:token">
       <xs:enumeration value="E">
         <xs:annotation>
-          <xs:documentation>EAST</xs:documentation>
+          <xs:documentation>East</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="N">
         <xs:annotation>
-          <xs:documentation>NORTH</xs:documentation>
+          <xs:documentation>North</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NE">
         <xs:annotation>
-          <xs:documentation>NORTHEAST</xs:documentation>
+          <xs:documentation>Northeast</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NW">
         <xs:annotation>
-          <xs:documentation>NORTHWEST</xs:documentation>
+          <xs:documentation>Northwest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="S">
         <xs:annotation>
-          <xs:documentation>SOUTH</xs:documentation>
+          <xs:documentation>South</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SE">
         <xs:annotation>
-          <xs:documentation>SOUTHEAST</xs:documentation>
+          <xs:documentation>Southeast</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SW">
         <xs:annotation>
-          <xs:documentation>SOUTHWEST</xs:documentation>
+          <xs:documentation>Southwest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="W">
         <xs:annotation>
-          <xs:documentation>WEST</xs:documentation>
+          <xs:documentation>West</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>

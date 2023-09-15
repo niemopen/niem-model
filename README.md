@@ -62,3 +62,7 @@ Removed property `fips:County3DigitCode` and related types to eliminate many non
 - Changed the type from the 3-digit to the 5-digit FIPS county code for the following properties:
   - `hs:FosterCareLiablePlacementCountyCode`
   - `hs:PriorDetentionHoldingForCountyCode`
+
+#### Updated usps:StreetDirectionalCodeSimpleType ([niemopen/niem-model#62](https://github.com/niemopen/niem-model/issues/62))
+
+United States Postal Service street direction codes are the same, but the capitalization of the definitions has changed from uppercase to upper camel case.
