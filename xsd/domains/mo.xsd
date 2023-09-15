@@ -7,6 +7,7 @@
   ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
   xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
   xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:cui="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/"
   xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:iso_3166="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/"
@@ -107,6 +108,7 @@
     </xs:annotation>
   </xs:import>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" schemaLocation="../adapters/geospatial.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/" schemaLocation="../auxiliary/cui.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" schemaLocation="../codes/iso_3166.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/" schemaLocation="../codes/nga.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/" schemaLocation="../codes/xCard.xsd"/>
@@ -3786,6 +3788,9 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:DocumentTitleText" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentEffectiveDate" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentAuthor" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ClassificationReferenceDocumentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -4687,6 +4692,9 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="cui:SpecifiedCategoryMarkingCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cui:BasicCategoryMarkingCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cui:DocumentMarkingLDC" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:HandlingRestrictionsCUIAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -8074,6 +8082,8 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:DocumentMediaCategoryText" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:BinarySizeValue" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="mo:ResourceFormatAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>

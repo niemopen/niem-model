@@ -40,3 +40,14 @@ The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued 
 - Renamed property `mo:OfficeOfRecord` as `mo:DataResourceCustodian` and updated its definition.
 - Added new property `mo:DataItemCreateDateTime` to type `mo:MinimumEssentialMetadataType`.
 - Added existing property `nc:DescriptionText` to type `mo:MinimumEssentialMetadataType`.
+- Added existing properties to type `mo:ResourceFormatType`:
+  - `nc:DocumentMediaCategoryText`
+  - `nc:BinarySizeValue`
+- Added existing properties to type `mo:ClassificationReferenceDocumentType`:
+  - `nc:DocumentTitleText`
+  - `nc:DocumentEffectiveDate`
+  - `nc:DocumentAuthor`.
+- Added existing properties to type `mo:HandlingRestrictionsCUIType`:
+  - `cui:SpecifiedCategoryMarkingCode`
+  - `cui:BasicCategoryMarkingCode`
+  - `cui:DocumentMarkingLDC`
