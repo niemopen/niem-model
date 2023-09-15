@@ -24,3 +24,19 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+#### Require unique enumerations ([niemopen/niem-naming-design-rules#30](https://github.com/niemopen/niem-naming-design-rules/issues/30))
+
+- Removed property `fips:County3DigitCode` and types to eliminate many non-unique code values.
+  - Use `fips:CountyCode` for unique 5-digit county codes that begin with a 2-digit state code.
+  - See also issue ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59)).
+
+### Code set updates
+
+#### Removed fips:County3DigitCode and types ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59))
+
+- Removed property `fips:County3DigitCode` and types to eliminate many non-unique code values.
+  - Note: Use `fips:CountyCode` for unique 5-digit county codes.
+- Changed the type from the 3-digit to the 5-digit FIPS county code for the following properties:
+  - `hs:FosterCareLiablePlacementCountyCode`
+  - `hs:PriorDetentionHoldingForCountyCode`
