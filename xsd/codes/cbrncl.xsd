@@ -3344,11 +3344,6 @@
           <xs:documentation>Buildings used in the direct research, development, testing, and evaluation of military equipment.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="Military Research Facility">
-        <xs:annotation>
-          <xs:documentation>Military Research Facility</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="Military Training Facility">
         <xs:annotation>
           <xs:documentation>Training buildings that include primarily classroom space for multipurpose training instruction typically conducted by a school/training center. These facilities may include auditorium, library and/or technical education or learning resource centers, and administrative support space. These general-purpose facilities are intended for use by organizations that serve a large population for basic lecture/conference/seminar instruction. These facilities are distinct from organizational classroom areas associated with unit headquarters and trainee barracks.</xs:documentation>

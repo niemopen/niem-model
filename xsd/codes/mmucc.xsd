@@ -1585,11 +1585,6 @@
       </xs:enumeration>
       <xs:enumeration value="NA">
         <xs:annotation>
-          <xs:documentation>None/Not Applicable</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NA">
-        <xs:annotation>
           <xs:documentation>Not Applicable</xs:documentation>
         </xs:annotation>
       </xs:enumeration>

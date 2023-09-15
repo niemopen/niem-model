@@ -7734,12 +7734,7 @@
       </xs:enumeration>
       <xs:enumeration value="ftp">
         <xs:annotation>
-          <xs:documentation>File Transfer Protocol [Control].</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ftp">
-        <xs:annotation>
-          <xs:documentation>FTP.</xs:documentation>
+          <xs:documentation>File Transfer Protocol [Control]; FTP.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ftp-agent">
@@ -7749,12 +7744,7 @@
       </xs:enumeration>
       <xs:enumeration value="ftp-data">
         <xs:annotation>
-          <xs:documentation>File Transfer [Default Data].</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ftp-data">
-        <xs:annotation>
-          <xs:documentation>FTP.</xs:documentation>
+          <xs:documentation>File Transfer [Default Data]; FTP.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ftps">
@@ -7774,12 +7764,7 @@
       </xs:enumeration>
       <xs:enumeration value="http">
         <xs:annotation>
-          <xs:documentation>HTTP.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="http">
-        <xs:annotation>
-          <xs:documentation>World Wide Web HTTP.</xs:documentation>
+          <xs:documentation>World Wide Web HTTP; HTTP.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="http-mgmt">
@@ -7809,12 +7794,7 @@
       </xs:enumeration>
       <xs:enumeration value="imaps">
         <xs:annotation>
-          <xs:documentation>IMAP over TLS protocol.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="imaps">
-        <xs:annotation>
-          <xs:documentation>imap4 protocol over TLS/SSL.</xs:documentation>
+          <xs:documentation>IMAP over TLS protocol; imap4 protocol over TLS/SSL.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="imsp">

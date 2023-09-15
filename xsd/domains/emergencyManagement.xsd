@@ -5483,11 +5483,6 @@
       </xs:enumeration>
       <xs:enumeration value="Alert">
         <xs:annotation>
-          <xs:documentation>Alert message(s)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Alert">
-        <xs:annotation>
           <xs:documentation>Initial information requiring attention by targeted recipients</xs:documentation>
         </xs:annotation>
       </xs:enumeration>

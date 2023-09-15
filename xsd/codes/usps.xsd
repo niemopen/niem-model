@@ -701,12 +701,7 @@
       </xs:enumeration>
       <xs:enumeration value="PARK">
         <xs:annotation>
-          <xs:documentation>PARK</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="PARK">
-        <xs:annotation>
-          <xs:documentation>PARKS</xs:documentation>
+          <xs:documentation>PARK; PARKS</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PASS">
@@ -726,12 +721,7 @@
       </xs:enumeration>
       <xs:enumeration value="PKWY">
         <xs:annotation>
-          <xs:documentation>PARKWAY</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="PKWY">
-        <xs:annotation>
-          <xs:documentation>PARKWAYS</xs:documentation>
+          <xs:documentation>PARKWAY; PARKWAYS</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PL">
@@ -911,12 +901,7 @@
       </xs:enumeration>
       <xs:enumeration value="SPUR">
         <xs:annotation>
-          <xs:documentation>SPUR</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SPUR">
-        <xs:annotation>
-          <xs:documentation>SPURS</xs:documentation>
+          <xs:documentation>SPUR; SPURS</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SQ">
@@ -1061,12 +1046,7 @@
       </xs:enumeration>
       <xs:enumeration value="WALK">
         <xs:annotation>
-          <xs:documentation>WALK</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="WALK">
-        <xs:annotation>
-          <xs:documentation>WALKS</xs:documentation>
+          <xs:documentation>WALK; WALKS</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="WALL">

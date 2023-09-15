@@ -27,9 +27,31 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 
 #### Require unique enumerations ([niemopen/niem-naming-design-rules#30](https://github.com/niemopen/niem-naming-design-rules/issues/30))
 
-- Removed property `fips:County3DigitCode` and types to eliminate many non-unique code values.
-  - Use `fips:CountyCode` for unique 5-digit county codes that begin with a 2-digit state code.
-  - See also issue ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59)).
+Merged or resolved definitions for non-unique codes in the following types:
+
+- `can:StreetDirectionCodeSimpleType` - *Merged English and French definitions*
+- `cbrncl:FacilityUsageCodeSimpleType`
+- `cyber:BreachClassificationCategoryCodeSimpleType`
+- `em:NotificationFunctionCategoryCodeSimpleType`
+- `mmucc:DriverLicenseClassCodeSimpleType`
+- `mo:RegisteredServiceNameCodeSimpleType`
+- `usmtf:AngleUnitCodeSimpleType`
+- `usmtf:NauticalMileUnitCodeSimpleType`
+- `usmtf:RFPowerUnitDecibelsCodeSimpleType`
+- `usps:StreetSuffixCodeSimpleType`
+
+Replaced a code in type `usmtf:RadioactiveHalfLifeCodeSimpleType`:
+
+- Code `1600.00YR` with definition "RA-226+ (Radon)."
+  - *Kept as is*
+- Code `1600.00YR` with definition "SE-75 (Selenium). None"
+  - Changed code to `119.80DA`
+  - Removed "None" from the definition
+
+Removed property `fips:County3DigitCode` and related types to eliminate many non-unique code values.
+
+- Use `fips:CountyCode` for unique 5-digit county codes that begin with a 2-digit state code.
+- See also issue ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59)).
 
 ### Code set updates
 
