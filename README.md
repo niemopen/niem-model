@@ -24,3 +24,23 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+## Key content changes
+
+The following is a summary of the key changes made in this release.  More details are available from the [6.0 issues list](https://github.com/niemopen/niem-model/labels/6.0) in the NIEM Model issue tracker, and the change log spreadsheet in the release package.
+
+### Support specifying empty value reason on simple values ([niemopen/niem-model#34](https://github.com/niemopen/niem-model/issues/34))
+
+Created the following new attributes and added them to `nc:TextType` and `nc:QuantityType`:
+
+- `nc:valueEmptyReasonCode` of type `nc:EmptyReasonCodeSimpleType`
+- `nc:valueEmptyReasonText` of type `xs:string`
+
+*These new attributes can also be used throughout the model with the new support for attribute wildcards in NIEM 6.0.*
+
+Harmonized two domain code sets that represented a ternary choice with "Yes", "No", and "Unknown" code values with new code `nc:YesNoUnknownCodeType`:
+
+- `em:TernaryIndicatorCodeType`
+- `hs:JuvenileFamilyFinancialProblemCodeType`
+
+*This new code set can be used in places where a boolean with a null value cannot be used to indicate the value is unknown or not applicable.*
