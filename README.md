@@ -32,6 +32,7 @@ Merged or resolved definitions for non-unique codes in the following types:
 - `can:StreetDirectionCodeSimpleType` - *Merged English and French definitions*
 - `cbrncl:FacilityUsageCodeSimpleType`
 - `cyber:BreachClassificationCategoryCodeSimpleType`
+- `dea:DrugCodeSimpleType`
 - `em:NotificationFunctionCategoryCodeSimpleType`
 - `mmucc:DriverLicenseClassCodeSimpleType`
 - `mo:RegisteredServiceNameCodeSimpleType`
@@ -66,6 +67,13 @@ Updated English definitions and added alternate French definitions where applica
 
 - `can:CanadianProvinceCodeSimpleType`
 - `can:StreetCategoryCodeSimpleType`
+
+#### Updated DEA Controlled Substance codes ([niemopen/niem-model#60](https://github.com/niemopen/niem-model/issues/60))
+
+- Updated definitions for `dea:DEAClassScheduleCodeCodeSimpleType`
+- Updated code set for `dea:DrugCodeSimpleType`
+  - Added and removed codes
+  - Updated existing code definitions
 
 #### Removed fips:County3DigitCode and types ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59))
 
