@@ -1118,11 +1118,6 @@
           <xs:documentation>Character set C encodes only numbers and the FNC1 function (indicated in blue). Because the numbers are "interleaved" into pairs, two numbers are encoded into every bar-code character which makes it a very high-density bar-code.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="SCC-14">
-        <xs:annotation>
-          <xs:documentation>Interleaved 2 of 5 (ITF) is a numeric-only bar-code used for encoding pairs of numbers in a high density bar-code format</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="SSCC-18">
         <xs:annotation>
           <xs:documentation>Character set C encodes only numbers and the FNC1 function (indicated in blue). Because the numbers are "interleaved" into pairs, two numbers are encoded into every bar-code character which makes it a very high-density bar-code.</xs:documentation>
@@ -1150,12 +1145,7 @@
       </xs:enumeration>
       <xs:enumeration value="USPS">
         <xs:annotation>
-          <xs:documentation>Character set A allows for uppercase characters, punctuation, numbers and several special functions such as a return or tab.Character set B allows for upper and lower case letters, punctuation, numbers and a few select functions</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="USPS">
-        <xs:annotation>
-          <xs:documentation>Interleaved 2 of 5 (ITF) is a numeric-only bar-code used for encoding pairs of numbers in a high density bar-code format</xs:documentation>
+          <xs:documentation>Character set A allows for uppercase characters, punctuation, numbers and several special functions such as a return or tab.Character set B allows for upper and lower case letters, punctuation, numbers and a few select functions.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="USPS CONFIRM">

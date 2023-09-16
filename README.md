@@ -33,6 +33,7 @@ Merged or resolved definitions for non-unique codes in the following types:
 - `cbrncl:FacilityUsageCodeSimpleType`
 - `cyber:BreachClassificationCategoryCodeSimpleType`
 - `dea:DrugCodeSimpleType`
+- `em:BarcodeCodeSimpleType`
 - `em:NotificationFunctionCategoryCodeSimpleType`
 - `hazmat:HazmatCodeSimpleType`
 - `mmucc:DriverLicenseClassCodeSimpleType`
