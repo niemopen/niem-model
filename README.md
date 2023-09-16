@@ -56,6 +56,20 @@ Removed property `fips:County3DigitCode` and related types to eliminate many non
 - Use `fips:CountyCode` for unique 5-digit county codes that begin with a 2-digit state code.
 - See also issue ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59)).
 
+#### Require definitions for patterns ([niemopen/niem-naming-design-rules#12](https://github.com/niemopen/niem-naming-design-rules/issues/12))
+
+The NDR now requires definitions for patterns, along with enumerations.
+
+Added the following definitions to the following patterns for simple types:
+
+Type | Pattern | Definition
+---- | ------- | ----------
+`ag_codes:TaxIdentificationIDSimpleType` | `[0-9]{9}` | A 9-digit number
+`ag_codes:CropYearSimpleType` | `^([1][9]\d\d\|[2]\d\d\d)$` | A 4-digit year ranging from 1900 to 2999.
+`biom:LipPatternSimpleType` | `<>` | Indicator for center of the lip (left < followed by right >)
+`mo:MILSTD2525-C-SIDC-SimpleType` | `[A-Z0-9\-]{15}` | A 15-character ID with upper case letters, numbers, and hyphens
+`mo:MILSTD2525-B-SIDC-SimpleType` | `[A-Z0-9\-]{15}` | A 15-character ID with upper case letters, numbers, and hyphens
+
 ### Code set updates
 
 ### Updated Canada Post codes
