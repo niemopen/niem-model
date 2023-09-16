@@ -29,7 +29,7 @@
       </xs:enumeration>
       <xs:enumeration value="BC">
         <xs:annotation>
-          <xs:documentation>British Columbia</xs:documentation>
+          <xs:documentation>British Columbia; Colombie-Britannique</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MB">
@@ -39,22 +39,22 @@
       </xs:enumeration>
       <xs:enumeration value="NB">
         <xs:annotation>
-          <xs:documentation>New Brunswick</xs:documentation>
+          <xs:documentation>New Brunswick; Nouveau-Brunswick</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NL">
         <xs:annotation>
-          <xs:documentation>Newfoundland and Labrador</xs:documentation>
+          <xs:documentation>Newfoundland and Labrador; Terre-Neuve-et-Labrador</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NS">
         <xs:annotation>
-          <xs:documentation>Nova Scotia</xs:documentation>
+          <xs:documentation>Nova Scotia; Nouvelle-Écosse</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NT">
         <xs:annotation>
-          <xs:documentation>Northwest Territories</xs:documentation>
+          <xs:documentation>Northwest Territories; Territoires du Nord-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NU">
@@ -69,12 +69,12 @@
       </xs:enumeration>
       <xs:enumeration value="PE">
         <xs:annotation>
-          <xs:documentation>Prince Edward Island</xs:documentation>
+          <xs:documentation>Prince Edward Island; Île-du-Prince-Édouard</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="QC">
         <xs:annotation>
-          <xs:documentation>Québec</xs:documentation>
+          <xs:documentation>Quebec; Québec</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SK">
@@ -124,19 +124,14 @@
           <xs:documentation>Alley</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="AUT">
-        <xs:annotation>
-          <xs:documentation>Autoroute</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="AV">
         <xs:annotation>
-          <xs:documentation>Avenue (French)</xs:documentation>
+          <xs:documentation>Avenue (Français)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="AVE">
         <xs:annotation>
-          <xs:documentation>Avenue (English)</xs:documentation>
+          <xs:documentation>Avenue; Avenue (Anglais)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BAY">
@@ -156,12 +151,12 @@
       </xs:enumeration>
       <xs:enumeration value="BLVD">
         <xs:annotation>
-          <xs:documentation>Boulevard (English)</xs:documentation>
+          <xs:documentation>Boulevard; Boulevard (Anglais)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BOUL">
         <xs:annotation>
-          <xs:documentation>Boulevard (French)</xs:documentation>
+          <xs:documentation>Boulevard (Français)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BYPASS">
@@ -176,7 +171,7 @@
       </xs:enumeration>
       <xs:enumeration value="C">
         <xs:annotation>
-          <xs:documentation>Centre (French)</xs:documentation>
+          <xs:documentation>Centre (Français)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CAMPUS">
@@ -254,11 +249,6 @@
           <xs:documentation>Cour</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="COURS">
-        <xs:annotation>
-          <xs:documentation>Cours</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="COVE">
         <xs:annotation>
           <xs:documentation>Cove</xs:documentation>
@@ -291,7 +281,7 @@
       </xs:enumeration>
       <xs:enumeration value="CTR">
         <xs:annotation>
-          <xs:documentation>Centre (English)</xs:documentation>
+          <xs:documentation>Centre; Centre (Anglais)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DALE">
@@ -596,12 +586,12 @@
       </xs:enumeration>
       <xs:enumeration value="PL">
         <xs:annotation>
-          <xs:documentation>Place (English)</xs:documentation>
+          <xs:documentation>Place</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PLACE">
         <xs:annotation>
-          <xs:documentation>Place (French)</xs:documentation>
+          <xs:documentation>Place</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PLAT">

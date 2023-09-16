@@ -55,6 +55,18 @@ Removed property `fips:County3DigitCode` and related types to eliminate many non
 
 ### Code set updates
 
+### Updated Canada Post codes
+
+Deleted codes from `can:StreetCategoryCodeSimpleType`:
+
+- `AUT` - Autoroute
+- `COURS` - Cours
+
+Updated English definitions and added alternate French definitions where applicable for the following types:
+
+- `can:CanadianProvinceCodeSimpleType`
+- `can:StreetCategoryCodeSimpleType`
+
 #### Removed fips:County3DigitCode and types ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59))
 
 - Removed property `fips:County3DigitCode` and types to eliminate many non-unique code values.
