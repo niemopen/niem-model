@@ -12139,9 +12139,9 @@
       <xs:documentation>A data concept for an activity of an observed object.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ObservedObjectAllegianceCountryAbstract" abstract="true">
+  <xs:element name="ObservedObjectAllegianceCountry" type="nc:CountryType" nillable="true">
     <xs:annotation>
-      <xs:documentation>A data concept for a country of allegiance of an observed object.</xs:documentation>
+      <xs:documentation>A country of allegiance of an observed object.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ObservedObjectBattleDimensionAbstract" abstract="true">

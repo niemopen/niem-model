@@ -136,7 +136,7 @@
       <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="intel:AuthenticIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="intel:IdentificationIssuingCountryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="intel:IdentificationIssuingCountry" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="intel:IdentificationIssuingStateName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="intel:IdentificationIssuingLocalityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="intel:PersonInIdentification" minOccurs="0" maxOccurs="unbounded"/>
@@ -351,19 +351,9 @@
       <xs:documentation>Additional information about an identification.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IdentificationIssuingCountryAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a GeoPolitical Entity from which this identification was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationIssuingCountryISO3166Alpha2Code" type="iso_3166:CountryAlpha2CodeType" substitutionGroup="intel:IdentificationIssuingCountryAbstract" nillable="true">
+  <xs:element name="IdentificationIssuingCountry" type="nc:CountryType" nillable="true">
     <xs:annotation>
       <xs:documentation>A GeoPolitical Entity from which this identification was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationIssuingCountryName" type="nc:TextType" substitutionGroup="intel:IdentificationIssuingCountryAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A name of a GeoPolitical Entity from which this identification was issued.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="IdentificationIssuingLocalityText" type="nc:TextType" nillable="true">

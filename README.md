@@ -24,3 +24,26 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+## Key content changes
+
+The following is a summary of the key changes made in this release.  More details are available from the [6.0 issues list](https://github.com/niemopen/niem-model/labels/6.0) in the NIEM Model issue tracker, and the change log spreadsheet in the release package.
+
+### Harmonized AAMVA country code sets supporting the DHS Western Hemisphere Travel Initiative (WHTI) for the Enhanced Driver License (EDL)
+
+Harmonized duplicate code sets into a single `aamva_d20:CountryWHTICodeType`:
+
+- `aamva_d20:CountryCodeType`
+- `aamva_d20:DHSDriverLicenseIssuingCountryCodeType`
+
+Updated type of property `j:CountryWHTICode` to the new type.
+
+Removed property `j:DriverLicenseIssuingCountryCode` since it will no longer be necessary with the full set of NIEM country representations available via `nc:CountryType`. See [niemopen/niem-model#22](https://github.com/niemopen/niem-model/issues/22) for more.
+
+### Refactored abstract country properties to be of type nc:CountryType ([#niemopen/niem-model#22](https://github.com/niemopen/niem-model/issues/22))
+
+Updated the following properties to no longer be abstract and to have type `nc:CountryType`, permitting any country representations in NIEM to be used:
+
+- intel:IdentificationIssuingCountryAbstract
+- j:DriverLicenseIssuingCountryAbstract
+- mo:ObservedObjectAllegianceCountryAbstract
