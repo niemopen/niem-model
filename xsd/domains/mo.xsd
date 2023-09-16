@@ -6713,42 +6713,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:simpleType name="MILSTD2525-B-SIDC-SimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:pattern value="[A-Z0-9\-]{15}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MILSTD2525-B-SIDC-Type">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="mo:MILSTD2525-B-SIDC-SimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:simpleType name="MILSTD2525-C-SIDC-SimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:pattern value="[A-Z0-9\-]{15}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MILSTD2525-C-SIDC-Type">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="mo:MILSTD2525-C-SIDC-SimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:simpleType name="MILSTD2525-C-StandardIdentityCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a code describing the standard identity of a track; codes defined by MIL-STD-2525C.</xs:documentation>
@@ -6844,6 +6808,28 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MILSTD2525-SIDC-SimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a MIL-STD-2525 symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Z0-9\-]{15}">
+        <xs:annotation>
+          <xs:documentation>A 15-character ID with upper case letters, numbers, and hyphens</xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MILSTD2525-SIDC-Type">
+    <xs:annotation>
+      <xs:documentation>A data type for a MIL-STD-2525 symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="mo:MILSTD2525-SIDC-SimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="MinimumEssentialMetadataType">
     <xs:annotation>
@@ -11759,14 +11745,14 @@
       <xs:documentation>A name of a grouping of facilities, located in the same vicinity, which support particular functions. Installations may be elements of a base.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MILSTD2525-B-SIDC-Code" type="mo:MILSTD2525-B-SIDC-Type" nillable="true">
+  <xs:element name="MILSTD2525-B-SIDC-Code" type="mo:MILSTD2525-SIDC-Type" nillable="true">
     <xs:annotation>
-      <xs:documentation>A symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+      <xs:documentation>A MIL-STD-2525-B symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MILSTD2525-C-SIDC-Code" type="mo:MILSTD2525-C-SIDC-Type" nillable="true">
+  <xs:element name="MILSTD2525-C-SIDC-Code" type="mo:MILSTD2525-SIDC-Type" nillable="true">
     <xs:annotation>
-      <xs:documentation>A symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+      <xs:documentation>A MIL-STD-2525-C symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MILSTD2525-D-SIDC" type="mo:MILSTD2525-D-SIDC-Type" nillable="true">

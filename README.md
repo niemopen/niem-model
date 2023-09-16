@@ -51,3 +51,11 @@ The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued 
   - `cui:SpecifiedCategoryMarkingCode`
   - `cui:BasicCategoryMarkingCode`
   - `cui:DocumentMarkingLDC`
+
+### Harmonized MilOps MILSTD2525 Components (niemopen/niem-model#58)
+
+- Harmonized duplicate MILSTD2525-B and MILSTD2525-C types:
+  - Refactored `mo:MILSTD2525-B-SIDC-Type` and `mo:MILSTD2525-C-SIDC-Type` into a single `mo:MILSTD2525-SIDC-Type`
+  - Refactored `mo:MILSTD2525-B-SIDC-SimpleType` and `mo:MILSTD2525-C-SIDC-SimpleType` into a single `mo:MILSTD2525-SIDC-SimpleType`
+- Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
+- Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
