@@ -34,6 +34,7 @@ Merged or resolved definitions for non-unique codes in the following types:
 - `cyber:BreachClassificationCategoryCodeSimpleType`
 - `dea:DrugCodeSimpleType`
 - `em:NotificationFunctionCategoryCodeSimpleType`
+- `hazmat:HazmatCodeSimpleType`
 - `mmucc:DriverLicenseClassCodeSimpleType`
 - `mo:RegisteredServiceNameCodeSimpleType`
 - `usmtf:AngleUnitCodeSimpleType`
@@ -82,6 +83,10 @@ Updated English definitions and added alternate French definitions where applica
 - Changed the type from the 3-digit to the 5-digit FIPS county code for the following properties:
   - `hs:FosterCareLiablePlacementCountyCode`
   - `hs:PriorDetentionHoldingForCountyCode`
+
+#### Updated Hazardous Material codes ([#niemopen/niem-model#61](https://github.com/niemopen/niem-model/issues/61))
+
+- Updated code set for `hazmat:HazmatCodeSimpleType`
 
 #### Updated usps:StreetDirectionalCodeSimpleType ([niemopen/niem-model#62](https://github.com/niemopen/niem-model/issues/62))
 
