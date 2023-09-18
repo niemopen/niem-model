@@ -24,3 +24,14 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+#### Updated CBRN CaseMetadata and DataFileMetadata to have type nc:MetadataType ([niemopen/niem-model#24](https://github.com/niemopen/niem-model/issues/24))
+
+CBRN defines two metadata elements that have type `structures:MetadataType`:
+
+- `cbrn:CaseMetadata`
+- `cbrn:DataFileMetadata`, which are both of type structures:MetadataType.
+
+The `structures:MetadataType` does not carry content and is not meant to be used directly as a type of a property.
+
+Updated these two properties to have type `nc:MetadataType`.
