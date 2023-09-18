@@ -24,3 +24,9 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+#### Harmonized StudentType ([niemopen/niem-model#52](https://github.com/niemopen/niem-model/issues/52))
+
+The Human Services domain and the Learning and Development domain both define type `StudentType`.  Created a new `nc:StudentType` in Core and converted the two domain types to augmentations so student properties from either domain can be used together under the same Core object.
+
+Merged and moved the only overlapping property (`hs:StudentIdentification` / `lrn-dev:StudentID`) into Core as `nc:StudentIdentification`.
