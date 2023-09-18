@@ -2938,6 +2938,7 @@
           <xs:element ref="nc:SourceContactPersonAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:SourceIDText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:MetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -10143,6 +10144,11 @@
   <xs:element name="Metadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
     <xs:annotation>
       <xs:documentation>Information that further qualifies primary data; data about data.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for nc:MetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MilitaryBranchName" type="nc:TextType" nillable="true">

@@ -5574,12 +5574,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MetadataType">
+  <xs:complexType name="MetadataAugmentationType">
     <xs:annotation>
-      <xs:documentation>A data type for information that further qualifies the kind of data represented.</xs:documentation>
+      <xs:documentation>A data type for additional information about metadata.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="j:CriminalInformationIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:IntelligenceInformationIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -21081,9 +21081,9 @@
       <xs:documentation>True if the parolee requests independent evaluations to determine if the parolee meets the requirements of the Mentally Disordered Offender law; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="j:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="MetadataAugmentation" type="j:MetadataAugmentationType" substitutionGroup="nc:MetadataAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>Information that further qualifies the kind of data represented.</xs:documentation>
+      <xs:documentation>Additional information about metadata.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Metal" type="nc:SubstanceType" nillable="true">
