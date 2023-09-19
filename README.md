@@ -24,3 +24,11 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <!-- URI for NIEM Core for 6.0 -->
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
+
+#### Renamed Maritime domain's USMTFEnvironmentCategoryCode components ([niemopen/niem-model#23](https://github.com/niemopen/niem-model/issues/23))
+
+The names and definitions of the following components in the Maritime domain have been updated to remove the term "USMTF", as these are no longer defined by that standard:
+
+- `m:USMTFEnvironmentCategoryCode`
+- `m:USMTFEnvironmentCategoryCodeType`
+- `m:USMTFEnvironmentCategoryCodeSimpleType`
