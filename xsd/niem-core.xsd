@@ -1607,20 +1607,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EmployeeAssignmentAssociationType">
-    <xs:annotation>
-      <xs:documentation>A data type for an association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:EmploymentAssociationType">
-        <xs:sequence>
-          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeAssignmentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="EmployerType">
     <xs:annotation>
       <xs:documentation>A data type for an organization or person that employs a person.</xs:documentation>
@@ -1658,11 +1644,13 @@
           <xs:element ref="nc:EmployeePayHourlyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeePosition" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeRankAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSchedule" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeScheduleFixedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeShiftAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentStatus" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSupervisor" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1821,9 +1809,8 @@
       <xs:documentation>A data type for a tangible property (other than land or buildings) of more or less durable nature which is useful in carrying on the operations of a business.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -3675,6 +3662,53 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="PersonPronounsCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="he/him">
+        <xs:annotation>
+          <xs:documentation>he/him</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other">
+        <xs:annotation>
+          <xs:documentation>other</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="prefer not to say">
+        <xs:annotation>
+          <xs:documentation>prefer not to say</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="she/her">
+        <xs:annotation>
+          <xs:documentation>she/her</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="they/them">
+        <xs:annotation>
+          <xs:documentation>they/them</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation>unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PersonPronounsCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:PersonPronounsCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="PersonResidenceAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between a person and a location where that person lives.</xs:documentation>
@@ -3755,6 +3789,7 @@
           <xs:element ref="nc:PersonPhysicalDisabilityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPhysicalFeature" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPrimaryLanguage" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonPronounsAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonRaceAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonReligionAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonResidentAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -4068,9 +4103,8 @@
       <xs:documentation>A data type for a collection of written, printed, illustrated, or blank sheets, made of paper, parchment, or other material, usually fastened together to hinge at one side.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:DocumentType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfDocument" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationAuthorText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationISBNID" minOccurs="0" maxOccurs="unbounded"/>
@@ -4285,9 +4319,8 @@
       <xs:documentation>A data type for an account given of a particular matter, especially in the form of an official document, after thorough investigation or consideration by an appointed person or body.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:DocumentType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfDocument" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportAssignee" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportCoverageDateRange" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportDueDate" minOccurs="0" maxOccurs="unbounded"/>
@@ -4898,9 +4931,8 @@
       <xs:documentation>A data type for a property item used as an instrument of attack or defense.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponUser" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponInvolvedInActivity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponUsageAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -7671,14 +7703,9 @@
       <xs:documentation>A person who works for a business or a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmployeeAssignmentAssociationType" nillable="true">
+  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmploymentAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="EmployeeAssignmentAssociationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type nc:EmployeeAssignmentAssociationType</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EmployeeContactInformation" type="nc:ContactInformationType" nillable="true">
@@ -11691,6 +11718,21 @@
       <xs:documentation>An association between a person and a primary worker assigned to that person.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonPronounsAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPronounsCode" type="nc:PersonPronounsCodeType" substitutionGroup="nc:PersonPronounsAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPronounsText" type="nc:TextType" substitutionGroup="nc:PersonPronounsAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonRaceAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
@@ -12879,31 +12921,6 @@
   <xs:element name="RiskReductionProgram" type="nc:ProgramType" nillable="true">
     <xs:annotation>
       <xs:documentation>A program designed to lower the probability of undesirable outcomes.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a property of a role object. This specifies the base object, of which the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfDocument" type="nc:DocumentType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A document of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfItem" type="nc:ItemType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An entity of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfOrganization" type="nc:OrganizationType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An organization of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfPerson" type="nc:PersonType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A person of whom the role object is a function.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="RollValue" type="nc:Degree180PlusMinusType" nillable="true">
