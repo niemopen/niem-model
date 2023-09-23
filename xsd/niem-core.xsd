@@ -4746,6 +4746,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="niem-xs:string">
+        <xs:attribute ref="nc:metadataRef" use="optional"/>
         <xs:attribute ref="nc:partialIndicator" use="optional"/>
         <xs:attribute ref="nc:truncationIndicator" use="optional"/>
         <xs:attribute ref="nc:valueEmptyReasonCode" use="optional"/>
@@ -5024,6 +5025,11 @@
   <xs:attribute name="fiscalYearStartDate" type="xs:date">
     <xs:annotation>
       <xs:documentation>A date on which a fiscal year begins.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="metadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>An attribute reference to nc:Metadata.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="partialIndicator" type="xs:boolean">
