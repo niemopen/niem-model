@@ -2092,9 +2092,8 @@
       <xs:documentation>A data type for a motor vehicle driver involved in a traffic accident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicense" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashDriverContributingCircumstancesAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashDriverDistractionAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -2124,9 +2123,8 @@
       <xs:documentation>A data type for a non-motorist involved in a Traffic Accident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:NonMotoristStrikingVehicle" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:NonMotoristActionBeforeCrashAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:NonMotoristCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -2143,9 +2141,8 @@
       <xs:documentation>A data type for a motor vehicle passenger involved into a Traffic Accident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashPassengerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -2169,9 +2166,8 @@
       <xs:documentation>A data type for any person involved in a traffic accident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashPersonEMSTransportation" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashPersonInjury" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:AlcoholTestResultQuantityText" minOccurs="0" maxOccurs="unbounded"/>
@@ -2224,9 +2220,8 @@
       <xs:documentation>A data type for any vehicle occupant involved in a traffic accident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:OccupantAirBagDeployedAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:OccupantEjectionAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:OccupantProtectionSystemUseAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -2243,9 +2238,8 @@
       <xs:documentation>A data type for a motor vehicle involved in a traffic accident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:VehicleType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VehicleTrafficControlDeviceOperationalIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashVehicleOccupantsQuantity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CrashVehicleLegalSpeedRateMeasure" minOccurs="0" maxOccurs="unbounded"/>
@@ -2494,9 +2488,8 @@
       <xs:documentation>A data type for an organization that is formed to or intentionally conducts illegal activities.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:OrganizationType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CriminalOrganizationCautionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CriminalOrganizationMembershipHighQuantityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CriminalOrganizationMembershipInitiationText" minOccurs="0" maxOccurs="unbounded"/>
@@ -2699,9 +2692,8 @@
       <xs:documentation>A data type for a person who is expelled from country by a governmental authority.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ActualDeportationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DeporteeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -3385,9 +3377,8 @@
       <xs:documentation>A data type for a person involved in the enforcement of law.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementOfficialActivityCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementOfficialAssignmentCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementOfficialBadgeIdentification" minOccurs="0" maxOccurs="unbounded"/>
@@ -3527,9 +3518,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:RoleOfBinary" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:RoleOfBiometric" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:EvidenceRepresentation" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EvidenceAmount" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EvidenceDocumentationBinary" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EvidenceItemContactInformation" minOccurs="0" maxOccurs="unbounded"/>
@@ -3896,9 +3885,8 @@
       <xs:documentation>A data type for a name of a staff member assigned as an investigator to a hearing.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:HearingInvestigatorEmployeeAssignedDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:HearingInvestigatorEmployeeRequestDeniedReasonText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:HearingInvestigatorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -5043,9 +5031,8 @@
       <xs:documentation>A data type for a person involved in a judicial area of government.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:JudicialOfficialBarMembership" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:JudicialOfficialCourt" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:JudicialOfficialFirm" minOccurs="0" maxOccurs="unbounded"/>
@@ -5062,9 +5049,8 @@
       <xs:documentation>A data type for a person who serves on a jury and listens to a case to determine the guilt or innocence of a person accused of a crime.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:JurorDismissedDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:JurorDismissedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:JurorDismissedReasonText" minOccurs="0" maxOccurs="unbounded"/>
@@ -5175,10 +5161,8 @@
       <xs:documentation>A data type for an entity which has a contract to use a vehicle.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:EntityType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:LesseeJurisdictionAuthorityAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:AddressCountyAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:LesseeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -5191,10 +5175,8 @@
       <xs:documentation>A data type for an entity which conveys a vehicle by way of a lease.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:EntityType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:LessorIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:LessorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -5206,10 +5188,8 @@
       <xs:documentation>A data type for an entity that has a security interest on a property item.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:EntityType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:Lien" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:LienHolderAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -5574,12 +5554,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MetadataType">
+  <xs:complexType name="MetadataAugmentationType">
     <xs:annotation>
-      <xs:documentation>A data type for information that further qualifies the kind of data represented.</xs:documentation>
+      <xs:documentation>A data type for additional information about metadata.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="j:CriminalInformationIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:IntelligenceInformationIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -5604,9 +5584,8 @@
       <xs:documentation>A data type for details of a person whose whereabouts are unknown.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:MissingPersonCircumstanceAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:MissingPersonDeclarationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:MissingPersonDeclarationPerson" minOccurs="0" maxOccurs="unbounded"/>
@@ -6149,9 +6128,8 @@
       <xs:documentation>A data type for a person who is involved in an activity, but does not meet the criteria for other roles.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:OtherInvolvedPersonSequenceID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:InvolvementAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:OtherInvolvedPersonAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -6180,9 +6158,8 @@
       <xs:documentation>A data type for a person who is a member of a panel.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:PanelMemberRoleText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:PanelMemberTitleText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:PanelMemberAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -6545,9 +6522,8 @@
       <xs:documentation>A data type for a person who takes part in something.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ParticipantRoleCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ParticipantRelationshipText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ParticipantAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -6838,10 +6814,8 @@
       <xs:documentation>A data type for a pawn broker.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:EntityType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:PawnBrokerBranchName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:PawnBrokerLicenseIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:PawnBrokerName" minOccurs="0" maxOccurs="unbounded"/>
@@ -8752,9 +8726,8 @@
       <xs:documentation>A data type for information about a person who is required to register information with a law enforcement agency due to having been convicted of a certain type of crime.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:RegisteredOffenderAbsconderIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:RegisteredOffenderConditionsText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:RegisteredOffenderConviction" minOccurs="0" maxOccurs="unbounded"/>
@@ -9147,9 +9120,8 @@
       <xs:documentation>A data type for a person who is employed by the agency or institution.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:StaffMemberAffiliatedPrimaryProgram" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:StaffMemberAppliedForce" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:StaffMemberAssignedWeapon" minOccurs="0" maxOccurs="unbounded"/>
@@ -9588,10 +9560,8 @@
       <xs:documentation>A data type for a person or organization that is involved or suspected of being involved in a violation of a criminal statute, ordinance or rule.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:EntityType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DNACollectionStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:InvoluntaryMedicationAction" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:Remark" minOccurs="0" maxOccurs="unbounded"/>
@@ -10108,9 +10078,8 @@
       <xs:documentation>A data type for a role of an item used to facilitate commission of a crime.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ToolUsageText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ToolUser" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ToolAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -10229,9 +10198,8 @@
       <xs:documentation>A data type for an organization which brands vehicles.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:OrganizationType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VehicleBranderIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VehicleBranderCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VehicleBranderAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -10375,11 +10343,8 @@
       <xs:documentation>A data type for a person who suffers injury, loss, or death as a result of an incident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:EntityType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VictimContactedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VictimMO" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:VictimSeeksRestitutionDescriptionIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -10540,9 +10505,8 @@
       <xs:documentation>A data type for a person who has observed an incident.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:WitnessIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:WitnessSequenceNumberText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:WitnessAccountDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
@@ -17161,6 +17125,16 @@
       <xs:documentation>An augmentation point for EvidenceType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="EvidenceBinary" type="nc:BinaryType" substitutionGroup="j:EvidenceRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A binary object that acts as evidence.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EvidenceBiometric" type="biom:BiometricDataType" substitutionGroup="j:EvidenceRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A biometric data object that acts as evidence.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="EvidenceCollector" type="nc:PersonType" nillable="true">
     <xs:annotation>
       <xs:documentation>A person who collected a particular piece of evidence.</xs:documentation>
@@ -17174,6 +17148,11 @@
   <xs:element name="EvidenceDocumentationBinary" type="nc:BinaryType" nillable="true">
     <xs:annotation>
       <xs:documentation>An evidentiary document encoded in binary relating to the evidence.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EvidenceItem" type="nc:ItemType" substitutionGroup="j:EvidenceRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An item that acts as evidence.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EvidenceItemContactInformation" type="nc:ContactInformationType" nillable="true">
@@ -17214,6 +17193,11 @@
   <xs:element name="EvidenceReceiptIdentification" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An identification for a receipt issued for collection, analysis, and movement of Evidence.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EvidenceRepresentation" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a representation of evidence.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EvidenceReturnedIndicator" type="niem-xs:boolean" nillable="true">
@@ -21081,9 +21065,9 @@
       <xs:documentation>True if the parolee requests independent evaluations to determine if the parolee meets the requirements of the Mentally Disordered Offender law; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="j:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="MetadataAugmentation" type="j:MetadataAugmentationType" substitutionGroup="nc:MetadataAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>Information that further qualifies the kind of data represented.</xs:documentation>
+      <xs:documentation>Additional information about metadata.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Metal" type="nc:SubstanceType" nillable="true">
@@ -25619,16 +25603,6 @@
   <xs:element name="RiskScoreValue" type="nc:NumericType" nillable="true">
     <xs:annotation>
       <xs:documentation>A numeric score for the risk based on assessment.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfBinary" type="nc:BinaryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A binary object of which the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfBiometric" type="biom:BiometricDataType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A biometric object of which the role object is a function.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="RoommateAssociation" type="nc:PersonAssociationType" nillable="true">
