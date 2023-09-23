@@ -1607,20 +1607,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EmployeeAssignmentAssociationType">
-    <xs:annotation>
-      <xs:documentation>A data type for an association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:EmploymentAssociationType">
-        <xs:sequence>
-          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeAssignmentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="EmployerType">
     <xs:annotation>
       <xs:documentation>A data type for an organization or person that employs a person.</xs:documentation>
@@ -1658,11 +1644,13 @@
           <xs:element ref="nc:EmployeePayHourlyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeePosition" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeRankAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSchedule" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeScheduleFixedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeShiftAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentStatus" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSupervisor" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -7669,14 +7657,9 @@
       <xs:documentation>A person who works for a business or a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmployeeAssignmentAssociationType" nillable="true">
+  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmploymentAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="EmployeeAssignmentAssociationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type nc:EmployeeAssignmentAssociationType</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EmployeeContactInformation" type="nc:ContactInformationType" nillable="true">

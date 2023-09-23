@@ -272,6 +272,12 @@ Refactored `im:PersonCountryRoleType` to make immigration status more widely ava
 - Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
 - Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
 
+### Refactored nc:EmployeeAssignmentAssociation ([niemopen/niem-model#14](https://github.com/niemopen/niem-model/issues/14))
+
+Moved `nc:nc:EmployeeRegistrationAbstract` and `nc:EmployeeSupervisorIndicator` elements to from type `nc:EmployeeAssignmentAssociationType` to its parent type `nc:EmploymentAssociationType`.  This allows those properties to be used in any employment association, not just assignments.
+
+The child type `nc:EmployeeAssignmentAssociationType` was no longer needed and was removed.  Property `nc:EmployeeAssignmentAssociation` was updated to be of type `nc:EmploymentAssociationType`.
+
 ### Add pronouns to nc:PersonType ([niemopen/niem-model#15](https://github.com/niemopen/niem-model/issues/15))
 
 Add a substitution group with code and text substitutions for personal pronouns to `nc:PersonType`.
