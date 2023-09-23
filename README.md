@@ -435,6 +435,14 @@ Removed property `cbrn:ReportDateTime` ("A DateTime when a report was created.")
 
 Created a new property `hs:Wages` for the existing type `hs:WagesType`.  Added the new property to `hs:PersonAugmentationType`.
 
+### Renamed Maritime domain's USMTFEnvironmentCategoryCode components ([niemopen/niem-model#23](https://github.com/niemopen/niem-model/issues/23))
+
+The names and definitions of the following components in the Maritime domain have been updated to remove the term "USMTF", as these are no longer defined by that standard:
+
+- `m:USMTFEnvironmentCategoryCode`
+- `m:USMTFEnvironmentCategoryCodeType`
+- `m:USMTFEnvironmentCategoryCodeSimpleType`
+
 ### Updated Minimum Essential Metadata in MilOps ([niemopen/niem-model#40](https://github.com/niemopen/niem-model/issues/40))
 
 The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued by the DoD Chief Digital and Artificial Intelligence Officer in March 2023.   The following changes have been made:
