@@ -91,14 +91,13 @@
       <xs:documentation>A data type for a party authorized to act on behalf of another person, organization or thing.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:AgentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:AgentQualityAssuranceIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:AgentStatusCodeText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:AgentStatusText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:AgentAuthorizationIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:AgentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -158,11 +157,10 @@
       <xs:documentation>A data type for a name [and address] of a party to which merchandise or services are sold.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:BrokerIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:BrokerIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:BrokerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -173,11 +171,10 @@
       <xs:documentation>A data type for a name [and address] of a party to which merchandise or services are sold.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:BuyerIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:BuyerIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:BuyerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -188,13 +185,12 @@
       <xs:documentation>A data type for a name [and address] of party providing the transport of goods between named points.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:CarrierCodeAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:CarrierIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:CarrierIDCategory" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:CarrierName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:CarrierAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -240,11 +236,10 @@
       <xs:documentation>A data type representing the Name [and address] of party to which goods are consigned.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ConsigneeIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsigneeIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsigneeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -340,11 +335,10 @@
       <xs:documentation>A data type representing the Name [and address] of the party consigning goods as stipulated in the transport contract by the party ordering transport.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ConsignorIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsignorIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsignorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -355,11 +349,10 @@
       <xs:documentation>A data type representing the Name [and address] of the freight forwarder combining individual smaller consignments into a single larger shipment so called consolidated shipment) that is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ConsolidatorIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsolidatorIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsolidatorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -370,11 +363,10 @@
       <xs:documentation>A data type representing the Name [and address] of the consortium carrier.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ConsortiumCarrierIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsortiumCarrierIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ConsortiumCarrierAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -385,11 +377,10 @@
       <xs:documentation>A data type representing the Container Terminal Operator</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ContainerTerminalOperatorIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ContainerTerminalOperatorIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ContainerTerminalOperatorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -543,11 +534,10 @@
       <xs:documentation>A data type representing the Name [and address] of the receiving party of a consolidated shipment, who divides the latter into its original single consignments and undertakes to make them available to be delivered.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:DeconsolidatorIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:DeconsolidatorIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:DeconsolidatorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -623,11 +613,10 @@
       <xs:documentation>A data type for a name [and address] of party who makes - or on whose behalf - the export declaration - is made - and who is the owner of the goods or has similar right of disposal over them at the time when the declaration is accepted.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ExporterIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ExporterIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ExporterAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -769,11 +758,10 @@
       <xs:documentation>A data type providing the name [and address] of party who makes-or on whose behalf a Customs clearing agent or other authorized person makes- an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ImporterIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ImporterIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ImporterAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -784,11 +772,10 @@
       <xs:documentation>A data type representing a transit (in-bond) movement, the identity of the carrier's which transport the goods from consignor to exporting carrier and from importing carrier to consignee. A party providing the transport of goods between named points.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:IntermediateCarrierIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:IntermediateCarrierIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:IntermediateCarrierAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -799,11 +786,10 @@
       <xs:documentation>A data type representing the transit (in-bond) movement, the identity of the intermediate consignee who may take possession of the goods from consignor to exporting carrier and from importing carrier to consignee.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:IntermediateConsigneeIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:IntermediateConsigneeIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:IntermediateConsigneeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -914,11 +900,10 @@
       <xs:documentation>A data type representing the Name [and address] of party which manufactures goods.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ManufacturerIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ManufacturerIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ManufacturerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -929,11 +914,10 @@
       <xs:documentation>A data type representing the Name of the Master of a means of transport such as a vessel.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="nc:OrganizationType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:MasterIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:MasterIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:MasterNationalityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:MasterAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -957,11 +941,10 @@
       <xs:documentation>A data type representing a common carrier that does not operate the vessels.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:NonVesselOperatingCarrierIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:NonVesselOperatingCarrierIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:NonVesselOperatingCarrierAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -972,11 +955,10 @@
       <xs:documentation>A data type for a name [and address] of party to be notified.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:NotifyPartyIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:NotifyPartyIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:NotifyPartyAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1006,6 +988,20 @@
           <xs:element ref="it:GuaranteeReferenceID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:SecurityDetailsCodeText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ObligationGuaranteeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OrganizationRoleCategoryType">
+    <xs:annotation>
+      <xs:documentation>A data type for the role played by the Party/Organization in the given context of a transaction</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="it:OrganizationRoleCategoryDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="it:OrganizationRoleCategory" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="it:OrganizationRoleCategoryAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1048,9 +1044,9 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="it:RoleOfPartyCategoryDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="it:PartyRoleCategoryDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:PartyID" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfPartyCategory" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="it:PartyIDCategory" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:PartyIDCategoryAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1118,11 +1114,10 @@
       <xs:documentation>A data type for a name [and address] of slaughtering, freezing, or other processing establishment.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="nc:OrganizationType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:ProcessingEstablishmentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ProcessingEstablishmentIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ProcessingEstablishmentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1137,20 +1132,6 @@
         <xs:sequence>
           <xs:element ref="it:RepresentativePersonFunctionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:RepresentativePersonAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="RoleOfOrganizationCategoryType">
-    <xs:annotation>
-      <xs:documentation>A data type for the role played by the Party/Organization in the given context of a transaction</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="it:RoleOfOrganizationCategoryDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfOrganizationCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfOrganizationCategoryAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1178,11 +1159,10 @@
       <xs:documentation>A data type for a Name [and address] of a party selling merchandise or services to a buyer</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:SellerIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:SellerIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:SellerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1254,8 +1234,6 @@
           <xs:element ref="it:ShippingContainerLegalStatusIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ShippingContainerISO6346Abstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ShippingContainerKindAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="cbrn:ConveyanceColorPrimaryCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="cbrn:ConveyanceColorSecondaryCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:RemarkText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:ShippingContainerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -1267,11 +1245,10 @@
       <xs:documentation>A data type representing a party loading or unloading the cargo of (a ship) or vessel</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:StevedoreIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:StevedoreIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:StevedoreAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1282,11 +1259,10 @@
       <xs:documentation>A data type representing the Name [and address] of the location where the goods are loaded into the transport equipment.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:StuffingEstablishmentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:StuffingEstablishmentIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:StuffingEstablishmentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1483,11 +1459,10 @@
       <xs:documentation>A data type representing the Name [and address] of dangerous goods contact person or party who can provide detailed information concerning the dangerous goods shipment</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="it:PartyType">
         <xs:sequence>
           <xs:element ref="it:UNDGContactIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:UNDGContactIDCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="it:RoleOfParty" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="it:UNDGContactAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -3243,6 +3218,21 @@
       <xs:documentation>A name of the organization that operates a site.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="OrganizationRoleCategory" type="it:OrganizationRoleCategoryType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A Category of the role played by an organization in the given context of the transaction(Ex. Clearing house, Brokerage house...)</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OrganizationRoleCategoryAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for RoleOfOrganizationCategoryType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OrganizationRoleCategoryDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A text description of the role played by the party/organization in a given transaction.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="OtherChargesDeductionsAmount" type="nc:AmountType" nillable="true">
     <xs:annotation>
       <xs:documentation>An amount added or subtracted from the total invoice price not previously taken into account when determining the Customs value.</xs:documentation>
@@ -3333,6 +3323,11 @@
       <xs:documentation>An augmentation point for PartyIDType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PartyIDCategory" type="it:PartyIDCategoryType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A data type identifying the role of the Organization, Person or Thing associated with processing a Cargo entry.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PartyIDCategoryAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for PartyIDCategoryType.</xs:documentation>
@@ -3356,6 +3351,11 @@
   <xs:element name="PartyRelationshipIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if there is any relationship between two parties; false otherwise/if no relationship exists.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PartyRoleCategoryDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the role of the Party in a given context/transaction</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PaymentMethodCategoryText" type="nc:TextType" nillable="true">
@@ -3463,39 +3463,14 @@
       <xs:documentation>True if a hazardous material is a residue; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="RoleOfOrganizationCategory" type="it:RoleOfOrganizationCategoryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A Category of the role played by an organization in the given context of the transaction(Ex. Clearing house, Brokerage house...)</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="RoleOfOrganizationCategoryAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a role played by the Party/Organization in the given context of a transaction</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="RoleOfOrganizationCategoryAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for RoleOfOrganizationCategoryType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="RoleOfOrganizationCategoryCode" type="itcodes:RoleOfPartyCategoryCodeType" substitutionGroup="it:RoleOfOrganizationCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A role played by the Party/Organization in the given context of a transaction</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfOrganizationCategoryDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A text description of the role played by the party/organization in a given transaction.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfParty" type="it:PartyType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A role of the Organization, Person or Thing associated with processing a Cargo entry.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfPartyCategory" type="it:PartyIDCategoryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A data type identifying the role of the Organization, Person or Thing associated with processing a Cargo entry.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="RoleOfPartyCategoryAbstract" abstract="true">
@@ -3506,11 +3481,6 @@
   <xs:element name="RoleOfPartyCategoryCode" type="itcodes:RoleOfPartyCategoryCodeType" substitutionGroup="it:RoleOfPartyCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A role played by the Party/Organization in the given context of a transaction</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfPartyCategoryDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of the role of the Party in a given context/transaction</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Seal" type="it:SealType" nillable="true">
