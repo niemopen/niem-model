@@ -4579,6 +4579,19 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="StudentType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person formally engaged in learning, especially one enrolled in a school or college.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:PersonType">
+        <xs:sequence>
+          <xs:element ref="nc:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:StudentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="SubstanceMeasureType">
     <xs:annotation>
       <xs:documentation>A data type for a measure of the amount of something.</xs:documentation>
@@ -13366,6 +13379,21 @@
   <xs:element name="StreetPredirectional" type="nc:StreetDirectionalType" nillable="true">
     <xs:annotation>
       <xs:documentation>A direction that appears before a street name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Student" type="nc:StudentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person formally engaged in learning, especially one enrolled in a school or college.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StudentAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for type nc:StudentType</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StudentIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unique alphanumeric identification assigned to a student by an education organization.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SubFacility" type="nc:FacilityType" nillable="true">

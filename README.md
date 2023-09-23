@@ -307,6 +307,12 @@ Code set:
 - prefer not to share
 - unknown
 
+### Harmonized StudentType ([niemopen/niem-model#52](https://github.com/niemopen/niem-model/issues/52))
+
+The Human Services domain and the Learning and Development domain both define type `StudentType`.  Created a new `nc:StudentType` in Core and converted the two domain types to augmentations so student properties from either domain can be used together under the same Core object.
+
+Merged and moved the only overlapping property (`hs:StudentIdentification` / `lrn-dev:StudentID`) into Core as `nc:StudentIdentification`.
+
 ### Updated CBRN CaseMetadata and DataFileMetadata to have type nc:MetadataType ([niemopen/niem-model#24](https://github.com/niemopen/niem-model/issues/24))
 
 CBRN defines two metadata elements that have type `structures:MetadataType`:
