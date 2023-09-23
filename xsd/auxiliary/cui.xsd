@@ -1057,6 +1057,11 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:attribute name="portionMarkingMetadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>An attribute reference to cui:PortionMarkingMetadata.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
   <xs:element name="BasicCategoryMarkingCode" type="cui:BasicCategoryMarkingCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A Controlled Unclassified Information (CUI) category for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.</xs:documentation>
