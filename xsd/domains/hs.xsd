@@ -2767,38 +2767,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="JuvenileFamilyFinancialProblemCodeSimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for describing whether a family suffers from financial problems.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="No">
-        <xs:annotation>
-          <xs:documentation>No</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Unknown">
-        <xs:annotation>
-          <xs:documentation>Unknown</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Yes">
-        <xs:annotation>
-          <xs:documentation>Yes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="JuvenileFamilyFinancialProblemCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for describing whether a family suffers from financial problems.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="hs:JuvenileFamilyFinancialProblemCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:complexType name="JuvenileFireSettingCaseType">
     <xs:annotation>
       <xs:documentation>A data type for a juvenile firesetting case. This is specific to juveniles.</xs:documentation>
@@ -10240,7 +10208,7 @@
       <xs:documentation>A data concept for expressing the financial problems that a child or youth's family is experiencing.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="JuvenileFamilyFinancialProblemCode" type="hs:JuvenileFamilyFinancialProblemCodeType" substitutionGroup="hs:JuvenileFamilyFinancialProblemAbstract" nillable="true">
+  <xs:element name="JuvenileFamilyFinancialProblemCode" type="nc:YesNoUnknownCodeType" substitutionGroup="hs:JuvenileFamilyFinancialProblemAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A description of whether juvenile's family is experiencing financial problems.</xs:documentation>
     </xs:annotation>

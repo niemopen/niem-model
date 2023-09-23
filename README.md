@@ -278,6 +278,22 @@ Moved `nc:nc:EmployeeRegistrationAbstract` and `nc:EmployeeSupervisorIndicator` 
 
 The child type `nc:EmployeeAssignmentAssociationType` was no longer needed and was removed.  Property `nc:EmployeeAssignmentAssociation` was updated to be of type `nc:EmploymentAssociationType`.
 
+### Support specifying empty value reason on simple values ([niemopen/niem-model#34](https://github.com/niemopen/niem-model/issues/34))
+
+Created the following new attributes and added them to `nc:TextType` and `nc:QuantityType`:
+
+- `nc:valueEmptyReasonCode` of type `nc:EmptyReasonCodeSimpleType`
+- `nc:valueEmptyReasonText` of type `xs:string`
+
+*These new attributes can also be used throughout the model with the new support for attribute wildcards in NIEM 6.0.*
+
+Harmonized two domain code sets that represented a ternary choice with "Yes", "No", and "Unknown" code values with new code `nc:YesNoUnknownCodeType`:
+
+- `em:TernaryIndicatorCodeType`
+- `hs:JuvenileFamilyFinancialProblemCodeType`
+
+*This new code set can be used in places where a boolean with a null value cannot be used to indicate the value is unknown or not applicable.*
+
 ### Add pronouns to nc:PersonType ([niemopen/niem-model#15](https://github.com/niemopen/niem-model/issues/15))
 
 Add a substitution group with code and text substitutions for personal pronouns to `nc:PersonType`.
