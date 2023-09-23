@@ -670,9 +670,8 @@
       <xs:documentation>A data type for information about a participant.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseParticipantInvolvementText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseParticipantAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -783,9 +782,8 @@
       <xs:documentation>A data type for information about the caseworker.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseworkerCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseworkerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -1302,9 +1300,8 @@
       <xs:documentation>A data type for information about a person who has not yet reached the age of legal majority (i.e., adulthood).</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ChildRemovalDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CountyOfCustodyText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ChildAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -1332,12 +1329,11 @@
       <xs:documentation>A data type for information about a person who has not yet reached the age of majority and in whose interest a child welfare case has been initiated.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:ChildRemovalDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RemovalIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:FatherUnknownText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PlacementChangeReasonAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PlacementText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ChildVictimAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -1507,9 +1503,8 @@
       <xs:documentation>A data type for details about court event attendees</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseInvolvementDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CourtEventInputIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CourtEventAttendeeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -2772,38 +2767,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="JuvenileFamilyFinancialProblemCodeSimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for describing whether a family suffers from financial problems.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="No">
-        <xs:annotation>
-          <xs:documentation>No</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Unknown">
-        <xs:annotation>
-          <xs:documentation>Unknown</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Yes">
-        <xs:annotation>
-          <xs:documentation>Yes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="JuvenileFamilyFinancialProblemCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for describing whether a family suffers from financial problems.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="hs:JuvenileFamilyFinancialProblemCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:complexType name="JuvenileFireSettingCaseType">
     <xs:annotation>
       <xs:documentation>A data type for a juvenile firesetting case. This is specific to juveniles.</xs:documentation>
@@ -3019,9 +2982,8 @@
       <xs:documentation>A data type for a juvenile.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:JuvenileArrestedFriendsIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:JuvenileAttentionDisorderDiagnosisIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:JuvenileChildEverAdoptedIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -3541,11 +3503,10 @@
       <xs:documentation>A data type for a person related to a missing child.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:ChildRelationshipText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:Warrant" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:MissingChildRelatedPersonAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -3887,7 +3848,7 @@
       <xs:documentation>A data type for a person receiving medical care.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:CustodialEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:MedicalSummary" minOccurs="0" maxOccurs="unbounded"/>
@@ -3896,7 +3857,6 @@
           <xs:element ref="hs:ProviderEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ReportingEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SpeciesAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PatientAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -3947,6 +3907,7 @@
           <xs:element ref="hs:PersonGenderIdentityAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PersonPhysicalConditionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RecentLivingSituationCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:Wages" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -4402,9 +4363,8 @@
       <xs:documentation>A data type for information about the person filing the petition.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PetitionerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -4415,11 +4375,10 @@
       <xs:documentation>A data type for a person who is professionally qualified to prepare and dispense medicinal drugs.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:NPIIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StateLicenseIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PharmacistAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -5459,9 +5418,8 @@
       <xs:documentation>A data type for the party required to the next court event.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RequiredPartyAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -5644,9 +5602,8 @@
       <xs:documentation>A data type for information about a person who is considered a Serious Habitual Offender Drug Involved individual by a law enforcement agency.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SeriousHabitualOffenderDeterminingJurisdiction" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SeriousHabitualOffenderScoreText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SeriousHabitualOffenderParentNotifiedIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -6235,9 +6192,8 @@
       <xs:documentation>A data type for a student.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StudentCurrentEducationGradeLevelAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StudentCurrentEducationDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StudentCurrentEducationEnrollmentIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -10274,7 +10230,7 @@
       <xs:documentation>A data concept for expressing the financial problems that a child or youth's family is experiencing.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="JuvenileFamilyFinancialProblemCode" type="hs:JuvenileFamilyFinancialProblemCodeType" substitutionGroup="hs:JuvenileFamilyFinancialProblemAbstract" nillable="true">
+  <xs:element name="JuvenileFamilyFinancialProblemCode" type="nc:YesNoUnknownCodeType" substitutionGroup="hs:JuvenileFamilyFinancialProblemAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A description of whether juvenile's family is experiencing financial problems.</xs:documentation>
     </xs:annotation>
@@ -12532,6 +12488,11 @@
   <xs:element name="VisualDisabilityIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if the juvenile has a visual disability; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Wages" type="hs:WagesType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A payment made by an employer to an employee for work done in a specific period of time.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="WagesAugmentationPoint" abstract="true">
