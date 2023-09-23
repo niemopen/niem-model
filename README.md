@@ -272,6 +272,10 @@ Refactored `im:PersonCountryRoleType` to make immigration status more widely ava
 - Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
 - Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
 
+### Add hs:Wages ([niemopen/niem-model#13](https://github.com/niemopen/niem-model/issues/13))
+
+Created a new property `hs:Wages` for the existing type `hs:WagesType`.  Added the new property to `hs:PersonAugmentationType`.
+
 ### Updated Minimum Essential Metadata in MilOps ([niemopen/niem-model#40](https://github.com/niemopen/niem-model/issues/40))
 
 The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued by the DoD Chief Digital and Artificial Intelligence Officer in March 2023.   The following changes have been made:

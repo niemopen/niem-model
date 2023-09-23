@@ -3939,6 +3939,7 @@
           <xs:element ref="hs:PersonGenderIdentityAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PersonPhysicalConditionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RecentLivingSituationCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:Wages" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -12507,6 +12508,11 @@
   <xs:element name="VisualDisabilityIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if the juvenile has a visual disability; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Wages" type="hs:WagesType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A payment made by an employer to an employee for work done in a specific period of time.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="WagesAugmentationPoint" abstract="true">
