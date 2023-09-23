@@ -7,6 +7,7 @@
   ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
   xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
   xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:cui="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/"
   xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:iso_3166="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/"
@@ -107,6 +108,7 @@
     </xs:annotation>
   </xs:import>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" schemaLocation="../adapters/geospatial.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/" schemaLocation="../auxiliary/cui.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" schemaLocation="../codes/iso_3166.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/" schemaLocation="../codes/nga.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/" schemaLocation="../codes/xCard.xsd"/>
@@ -3786,6 +3788,9 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:DocumentTitleText" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentEffectiveDate" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentAuthor" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ClassificationReferenceDocumentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -4687,6 +4692,9 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="cui:SpecifiedCategoryMarkingCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cui:BasicCategoryMarkingCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cui:DocumentMarkingLDC" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:HandlingRestrictionsCUIAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -4817,18 +4825,6 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="mo:JNKEOperationalEnvironmentModelBundleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="LegalAuthorityType">
-    <xs:annotation>
-      <xs:documentation>A data type for the documented legal basis for mission activities associated with the creation, retention and use of a resource.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="mo:LegalAuthorityAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -6717,42 +6713,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:simpleType name="MILSTD2525-B-SIDC-SimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:pattern value="[A-Z0-9\-]{15}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MILSTD2525-B-SIDC-Type">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="mo:MILSTD2525-B-SIDC-SimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:simpleType name="MILSTD2525-C-SIDC-SimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:pattern value="[A-Z0-9\-]{15}"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MILSTD2525-C-SIDC-Type">
-    <xs:annotation>
-      <xs:documentation>A data type for a symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="mo:MILSTD2525-C-SIDC-SimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:simpleType name="MILSTD2525-C-StandardIdentityCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a code describing the standard identity of a track; codes defined by MIL-STD-2525C.</xs:documentation>
@@ -6849,18 +6809,42 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="MILSTD2525-SIDC-SimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a MIL-STD-2525 symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Z0-9\-]{15}">
+        <xs:annotation>
+          <xs:documentation>A 15-character ID with upper case letters, numbers, and hyphens</xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MILSTD2525-SIDC-Type">
+    <xs:annotation>
+      <xs:documentation>A data type for a MIL-STD-2525 symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="mo:MILSTD2525-SIDC-SimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="MinimumEssentialMetadataType">
     <xs:annotation>
-      <xs:documentation>A data type for metadata about a data resource necessary to support the ‘must have’ functions for any data across DoD, joint, interagency, and coalition at the time of ‘creation’ that will be exchanged.</xs:documentation>
+      <xs:documentation>A data type for metadata about a data resource that represents the DoD's minimum essential set.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="structures:MetadataType">
         <xs:sequence>
           <xs:element ref="mo:ResourceGlobalIdentification" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:ResourceDomainIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:LegalAuthority" minOccurs="1" maxOccurs="1"/>
-          <xs:element ref="mo:Creator" minOccurs="1" maxOccurs="1"/>
-          <xs:element ref="mo:OfficeOfRecord" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="mo:ResourceCreateDate" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DescriptionText" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="mo:AuthorizationReference" minOccurs="1" maxOccurs="unbounded"/>
+          <xs:element ref="mo:ResourceOriginator" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="mo:ResourceCustodian" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:ResourceFormat" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:SecurityClassificationInformation" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:DisclosureReleasability" minOccurs="1" maxOccurs="1"/>
@@ -8084,6 +8068,8 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:DocumentMediaCategoryText" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:BinarySizeValue" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="mo:ResourceFormatAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -10332,6 +10318,11 @@
       <xs:documentation>A URI for an organization or other authority that assigns identifiers to things identified.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="AuthorizationReference" type="nc:DocumentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A particular documented legal basis for mission activities associated with the creation, retention and use of a resource.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="BaseNode" type="mo:BaseNodeType" substitutionGroup="mo:BaseNodeAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A parent node for all type of specific node to be defined in the model</xs:documentation>
@@ -10735,11 +10726,6 @@
   <xs:element name="CPEMatchConditionalSetAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for type mo:CPEMatchConditionalSetType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="Creator" type="nc:EntityType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An entity primarily responsible for generating the resource.  For DoD, creator is synonymous with author, originator, and collector.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="CVEID" type="mo:CVEIDType" nillable="true">
@@ -11597,16 +11583,6 @@
       <xs:documentation>A JavaScript Object Notation (JSON) encoded string.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LegalAuthority" type="mo:LegalAuthorityType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A documented legal basis for mission activities associated with the creation, retention and use of a resource.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="LegalAuthorityAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type mo:LegalAuthorityType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="LinkConnectionMethodCode" type="mo:LinkConnectionMethodCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A code indicating the connection method of a network link.</xs:documentation>
@@ -11767,14 +11743,14 @@
       <xs:documentation>A name of a grouping of facilities, located in the same vicinity, which support particular functions. Installations may be elements of a base.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MILSTD2525-B-SIDC-Code" type="mo:MILSTD2525-B-SIDC-Type" nillable="true">
+  <xs:element name="MILSTD2525-B-SIDC-Code" type="mo:MILSTD2525-SIDC-Type" nillable="true">
     <xs:annotation>
-      <xs:documentation>A symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+      <xs:documentation>A MIL-STD-2525-B symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MILSTD2525-C-SIDC-Code" type="mo:MILSTD2525-C-SIDC-Type" nillable="true">
+  <xs:element name="MILSTD2525-C-SIDC-Code" type="mo:MILSTD2525-SIDC-Type" nillable="true">
     <xs:annotation>
-      <xs:documentation>A symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
+      <xs:documentation>A MIL-STD-2525-C symbol identification code, an alphanumeric code based on a database structure that provides the minimum elements required to construct the basic icon and/or a complete symbol. Also called SIDC.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MILSTD2525-D-SIDC" type="mo:MILSTD2525-D-SIDC-Type" nillable="true">
@@ -11804,7 +11780,7 @@
   </xs:element>
   <xs:element name="MinimumEssentialMetadata" type="mo:MinimumEssentialMetadataType" nillable="true">
     <xs:annotation>
-      <xs:documentation>Metadata about a data resource necessary to support the ‘must have’ functions for any data across DoD, joint, interagency, and coalition at the time of ‘creation’ that will be exchanged.</xs:documentation>
+      <xs:documentation>Metadata about a data resource.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MissionAugmentation" type="mo:MissionAugmentationType" substitutionGroup="nc:MissionAugmentationPoint" nillable="true">
@@ -12262,11 +12238,6 @@
       <xs:documentation>An augmentation point for type mo:OEMNodeType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="OfficeOfRecord" type="nc:EntityType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An entity that is legally responsible for making decisions related to the data asset (e.g. records management, declassification, eDiscovery, FOIA search, etc.).</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="OperatingSystem" type="mo:SoftwareType" nillable="true">
     <xs:annotation>
       <xs:documentation>A detailed description of the operating system using the Common Platform Enumeration Standard</xs:documentation>
@@ -12537,6 +12508,16 @@
       <xs:documentation>A level of target access required by the weapon.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="ResourceCreateDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date and time on which the data resource was created to include when a data resource came under government control (i.e., acquisition of third party data, etc.).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ResourceCustodian" type="nc:EntityType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An element that is legally responsible for making decisions related to the data asset (e.g. records management, declassification, eDiscovery, FOIA search, etc.), in DoD designated as data steward.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="ResourceDomainIdentification" type="mo:ResourceIdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A domain specific identification of a resource.</xs:documentation>
@@ -12570,6 +12551,11 @@
   <xs:element name="ResourceIdentificationAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for type mo:ResourceIdentificationType</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ResourceOriginator" type="nc:EntityType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An entity primarily responsible for generating the resource.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ResourceURI" type="niem-xs:anyURI" substitutionGroup="mo:ResourceIDAbstract" nillable="true">

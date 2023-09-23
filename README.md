@@ -272,6 +272,37 @@ Refactored `im:PersonCountryRoleType` to make immigration status more widely ava
 - Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
 - Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
 
+### Updated Minimum Essential Metadata in MilOps ([niemopen/niem-model#40](https://github.com/niemopen/niem-model/issues/40))
+
+The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued by the DoD Chief Digital and Artificial Intelligence Officer in March 2023.   The following changes have been made:
+
+- Updated the definitions of property `mo:MinimumEssentialMetadata` and type `mo:MinimumEssentialMetadataType`.
+- Renamed property `mo:LegalAuthority` as `mo:AuthorizationReference` and changed its type to `nc:DocumentType`.
+- Removed type `mo:LegalAuthorityType`.
+- Renamed property `mo:Creator` as `mo:ResourceOriginator` and updated its definition.
+- Renamed property `mo:OfficeOfRecord` as `mo:DataResourceCustodian` and updated its definition.
+- Added new property `mo:DataItemCreateDateTime` to type `mo:MinimumEssentialMetadataType`.
+- Added existing property `nc:DescriptionText` to type `mo:MinimumEssentialMetadataType`.
+- Added existing properties to type `mo:ResourceFormatType`:
+  - `nc:DocumentMediaCategoryText`
+  - `nc:BinarySizeValue`
+- Added existing properties to type `mo:ClassificationReferenceDocumentType`:
+  - `nc:DocumentTitleText`
+  - `nc:DocumentEffectiveDate`
+  - `nc:DocumentAuthor`.
+- Added existing properties to type `mo:HandlingRestrictionsCUIType`:
+  - `cui:SpecifiedCategoryMarkingCode`
+  - `cui:BasicCategoryMarkingCode`
+  - `cui:DocumentMarkingLDC`
+
+### Harmonized MilOps MILSTD2525 Components (niemopen/niem-model#58)
+
+- Harmonized duplicate MILSTD2525-B and MILSTD2525-C types:
+  - Refactored `mo:MILSTD2525-B-SIDC-Type` and `mo:MILSTD2525-C-SIDC-Type` into a single `mo:MILSTD2525-SIDC-Type`
+  - Refactored `mo:MILSTD2525-B-SIDC-SimpleType` and `mo:MILSTD2525-C-SIDC-SimpleType` into a single `mo:MILSTD2525-SIDC-SimpleType`
+- Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
+- Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
+
 ### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([niemopen/niem-model#41](https://github.com/niemopen/niem-model/issues/41))
 
 scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
@@ -279,3 +310,61 @@ scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a
 ### Updated scr:ChargeCategoryCodeSimpleType code definitions ([niemopen/niem-model#16](https://github.com/niemopen/niem-model/issues/16))
 
 Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
+
+## Code set updates
+
+### Updated FBI's National Crime Information Center (NCIC) codes
+
+**Changes from 5.2 as of the April 2023 quarterly update:**
+
+Added codes to the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:CALCodeSimpleType | Gun caliber |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:MotorcycleCodeSimpleType | Vehicle Make/Brand Name for Motorcycles and Parts |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:TrucksCodeSimpleType | Vehicle Make/Brand Name for Trucks and Parts |
+| ncic:VMACodeSimpleType | Vehicle Make |
+| ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
+
+Modified definitions of codes in the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:FarmCodeSimpleType | Vehicle Make/Brand Name for Farm and Garden Equipment and Parts |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:MotorcycleCodeSimpleType | Vehicle Make/Brand Name for Motorcycles and Parts |
+| ncic:SnowmobileCodeSimpleType | Vehicle Make/Brand Name for Snowmobiles and Parts |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:TrucksCodeSimpleType | Vehicle Make/Brand Name for Trucks and Parts |
+| ncic:VMACodeSimpleType | Vehicle Make |
+
+Removed codes from the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:IndianCodeSimpleType | Indian Nations |
+
+**Changes from the July 2023 quarterly update:**
+
+Added codes to the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:IndianCodeSimpleType | Indian Nations |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:TYPCodeSimpleType | Article Type |
+| ncic:VMACodeSimpleType | Vehicle Make |
+| ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
+
+Modified definitions of codes in the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:VMACodeSimpleType | Vehicle Make |
+| ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
