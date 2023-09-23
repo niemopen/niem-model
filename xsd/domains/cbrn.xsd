@@ -1674,17 +1674,15 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ReportType">
+  <xs:complexType name="ReportAugmentationType">
     <xs:annotation>
-      <xs:documentation>A data type for a report provided on an unsolicited basis; i.e., not in response to a request message (Pull), but by Push from the entity providing the report.</xs:documentation>
+      <xs:documentation>A data type for additional information about a report.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AugmentationType">
         <xs:sequence>
-          <xs:element ref="cbrn:ReportDateTime" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:CredentialsAuthenticationAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ActivityName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="cbrn:ReportAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2442,7 +2440,7 @@
       <xs:documentation>A description of the locale or location associated with a case when it was initiated. For a case that is a collection of cases, may describe a route or involved locations/locales.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CaseMetadata" type="structures:MetadataType" nillable="true">
+  <xs:element name="CaseMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about a case.</xs:documentation>
     </xs:annotation>
@@ -2882,7 +2880,7 @@
       <xs:documentation>A time stamp identifying when a data file was last modified.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DataFileMetadata" type="structures:MetadataType" nillable="true">
+  <xs:element name="DataFileMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about data file Security classification and marking attributes.</xs:documentation>
     </xs:annotation>
@@ -4472,14 +4470,9 @@
       <xs:documentation>A placeholder for comments intended to help the consumer of the data to understand better the information encapsulated by the parent element.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Report" type="cbrn:ReportType" nillable="true">
+  <xs:element name="ReportAugmentation" type="cbrn:ReportAugmentationType" substitutionGroup="nc:ReportAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>A report provided on an unsolicited basis; i.e., not in response to a request message (Pull), but by Push from the entity providing the report.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="ReportAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for cbrn:ReportType.</xs:documentation>
+      <xs:documentation>Additional information about a report.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ReportDateTime" type="niem-xs:dateTime" nillable="true">

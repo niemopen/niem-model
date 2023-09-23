@@ -307,6 +307,30 @@ Code set:
 - prefer not to share
 - unknown
 
+### Updated CBRN CaseMetadata and DataFileMetadata to have type nc:MetadataType ([niemopen/niem-model#24](https://github.com/niemopen/niem-model/issues/24))
+
+CBRN defines two metadata elements that have type `structures:MetadataType`:
+
+- `cbrn:CaseMetadata`
+- `cbrn:DataFileMetadata`, which are both of type structures:MetadataType.
+
+The `structures:MetadataType` does not carry content and is not meant to be used directly as a type of a property.
+
+Updated these two properties to have type `nc:MetadataType`.
+
+### Refactored cbrn:ReportType into an augmentation of nc:ReportType ([niemopen/niem-model#11](https://github.com/niemopen/niem-model/issues/11))
+
+Refactored the following in `cbrn:ReportType`:
+
+- `cbrn:ReportDateTime`
+- `cbrn:CredentialsAuthenticationAbstract`
+- `nc:ActivityName`
+- `cbrn:ReportAugmentationPoint`
+
+into an augmentation of `nc:ReportType`, making these properties more reusable.
+
+Removed property `cbrn:ReportDateTime` ("A DateTime when a report was created.") as it is no longer needed with `nc:DocumentCreationDate` available through `nc:DocumentType`, the parent type of `nc:ReportType`.
+
 ### Add hs:Wages ([niemopen/niem-model#13](https://github.com/niemopen/niem-model/issues/13))
 
 Created a new property `hs:Wages` for the existing type `hs:WagesType`.  Added the new property to `hs:PersonAugmentationType`.
