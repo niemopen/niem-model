@@ -1978,6 +1978,7 @@
         <xs:sequence>
           <xs:element ref="cbrn:RadRawTotalDoseValue" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:RadDetectorInformation" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="cbrn:TotalDoseMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1996,6 +1997,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cbrn:NonNegativeDoubleType">
+        <xs:attribute ref="cbrn:totalDoseMetadataRef" use="optional"/>
         <xs:attribute ref="cbrn:unitsText" use="required"/>
       </xs:extension>
     </xs:simpleContent>
@@ -2009,6 +2011,7 @@
         <xs:sequence>
           <xs:element ref="cbrn:RadDetectorInformation" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="cbrn:RadRawTotalExposureValue" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cbrn:TotalExposureMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2019,6 +2022,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cbrn:NonNegativeDoubleType">
+        <xs:attribute ref="cbrn:totalExposureMetadataRef" use="optional"/>
         <xs:attribute ref="cbrn:unitsText" use="required"/>
       </xs:extension>
     </xs:simpleContent>
@@ -2123,6 +2127,16 @@
   <xs:attribute name="systemSimulatedIndicator" type="xs:boolean">
     <xs:annotation>
       <xs:documentation>True if the system is simulated; false otherwise.  If the attribute is not present, the value is false.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="totalDoseMetadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>An attribute reference to cbrn:totalDoseMetadataRef.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="totalExposureMetadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>An attribute reference to cbrn:totalExposureMetadataRef.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="unitsText" type="xs:token">
@@ -4870,6 +4884,11 @@
       <xs:documentation>Metadata about the accumulated ambient dose equivalent since the last radiation detection instrument reset, with units microsieverts (Sv).</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="TotalDoseMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for cbrn:TotalDoseMetadataType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="TotalDoseNumeric" type="cbrn:TotalDoseType" nillable="true">
     <xs:annotation>
       <xs:documentation>A value for the accumulated ambient dose equivalent since the last radiation detection instrument reset, in microsieverts (Sv).</xs:documentation>
@@ -4888,6 +4907,11 @@
   <xs:element name="TotalExposureMetadata" type="cbrn:TotalExposureMetadataType" nillable="true" appinfo:appliesToTypes="structures:ObjectType">
     <xs:annotation>
       <xs:documentation>Metadata about accumulated exposure since the last instrument reset, in milliroentgen (mR).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TotalExposureMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for cbrn:TotalExposureMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="TotalExposureNumeric" type="cbrn:TotalExposureType" nillable="true">

@@ -479,6 +479,18 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="DocumentAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a document.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="cui:DocumentMarkingMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="DocumentMarkingLDCCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a Controlled Unclassified Information (CUI) Executive Agent-approved control that agencies may use to limit or specify CUI dissemination.</xs:documentation>
@@ -575,6 +587,19 @@
           <xs:element ref="cui:DecontrolSchedule" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="cui:RequiredIndicatorsText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cui:SupplementalAdministrativeMarkingAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cui:DocumentMarkingMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MessageAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a message.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="cui:DocumentMarkingMetadata" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -671,6 +696,19 @@
           <xs:element ref="cui:SpecifiedCategoryMarkingCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cui:BasicCategoryMarkingCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cui:PortionMarkingLDC" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cui:PortionMarkingMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ReportAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a report.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="cui:DocumentMarkingMetadata" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1059,6 +1097,11 @@
       <xs:documentation>A CUI Designation Indicator. Must include the designator's agency and may take any form that identifies the designating agency.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="DocumentAugmentation" type="cui:DocumentAugmentationType" substitutionGroup="nc:DocumentAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="DocumentMarkingLDC" type="cui:DocumentMarkingLDCType" nillable="true">
     <xs:annotation>
       <xs:documentation>A document marking for a Controlled Unclassified Information (CUI) Executive Agent-approved control that agencies may use to limit or specify CUI dissemination.</xs:documentation>
@@ -1079,6 +1122,11 @@
       <xs:documentation>Metadata about Controlled Unclassified Information (CUI) marking of a document.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="DocumentMarkingMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for cui:DocumentMarkingMetadataType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="LDC-DLONLYText" type="nc:TextType" nillable="true">
     <xs:annotation>
       <xs:documentation>A list of individuals, organizations, or entities for which dissemination is authorized.</xs:documentation>
@@ -1092,6 +1140,11 @@
   <xs:element name="LDCForeignDisclosureToAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a foreign country/international organization approved for the release or disclosure of classified information, for use with REL TO and DISPLAY ONLY limited dissemination controls for Controlled Unclassified Information (CUI).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MessageAugmentation" type="cui:MessageAugmentationType" substitutionGroup="nc:MessageAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a message.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PortionMarkingLDC" type="cui:PortionMarkingLDCType" nillable="true">
@@ -1112,6 +1165,16 @@
   <xs:element name="PortionMarkingMetadata" type="cui:PortionMarkingMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about the Controlled Unclassified Information (CUI) portion marking of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PortionMarkingMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for cui:PortionMarkingMetadataType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ReportAugmentation" type="cui:ReportAugmentationType" substitutionGroup="nc:ReportAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a report.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="RequiredIndicatorsText" type="nc:TextType" nillable="true">

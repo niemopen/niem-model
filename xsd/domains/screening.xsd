@@ -19864,6 +19864,7 @@
     <xs:complexContent>
       <xs:extension base="structures:AugmentationType">
         <xs:sequence>
+          <xs:element ref="scr:PersonMetadata" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonRole" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -20610,10 +20611,11 @@
       <xs:documentation>A data type for metadata about the data associated with a person being screened.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="nc:MetadataType">
         <xs:sequence>
           <xs:element ref="scr:ConfidenceLevel" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonConfidenceLevelPercent" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -23779,6 +23781,11 @@
   <xs:element name="PersonMetadata" type="scr:PersonMetadataType" nillable="true" appinfo:appliesToTypes="nc:PersonType">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Screening purposes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for scr:PersonMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonNameAugmentation" type="scr:PersonNameAugmentationType" substitutionGroup="nc:PersonNameAugmentationPoint" nillable="true">

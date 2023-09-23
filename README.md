@@ -23,6 +23,56 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
 
+## Refactored metadata as regular NIEM components ([niemopen/niem-naming-design-rules#8](https://github.com/niemopen/niem-naming-design-rules/issues/8))
+
+**NDR changes now treat metadata components like regular components:**
+
+- Metadata types can use type extension
+- Metadata types must support augmentation
+- Metadata properties may be contained in other types
+
+**Leveraged type extension for the following types:**
+
+- `scr:PersonMetadataType` now extends `nc:MetadataType`
+
+**Created augmentation points for the following metadata types:**
+
+- `nc:MetadataType`
+- `cbrn:TotalDoseMetadataType`
+- `cbrn:TotalExposureMetadataType`
+- `cui:DocumentMarkingMetadataType`
+- `cui:PortionMarkingMetadataType`
+- `mo:ImplementationSpecificSettingMetadataType`
+- `mo:MinimumEssentialMetadataType`
+- `mo:UncertaintyMetadataType`
+- `scr:PersonMetadataType`
+
+**Converted the following metadata types to augmentations of `nc:MetadataType`:**
+
+- `hs:MetadataType`
+- `j:MetadataType`
+
+**Added the following metadata properties to types:**
+
+- `cbrn:totalDoseMetadataRef`
+  - Added to type `cbrn:TotalDoseuSvType` as a metadata attribute augmentation
+- `cbrn:totalExposureMetadataRef`
+  - Added to type `cbrn:TotalExposuremRType` as a metadata attribute augmentation
+- `cui:DocumentMarkingMetadata`
+  - Added to type `cui:DocumentAugmentationType`
+  - Added to type `cui:ReportAugmentationType`
+  - Added to type `cui:MessageAugmentationType`
+- `mo:ImplementationSpecificSettingMetadata`
+  - Added to type `mo:SettingType`
+- `mo:MinimumEssentialMetadata`
+  - Added to type `mo:DocumentAugmentationType`
+  - Added to type `mo:ReportAugmentationType`
+  - Added to type `mo:MessageAugmentationType`
+- `mo:UncertaintyMetadata`
+  - Added to type `mo:MeasureAugmentationType`
+- `scr:PersonMetadata`
+  - Added to type `scr:PersonAugmentationType`
+
 ### Removed the roles construct ([niemopen/niem-naming-design-rules#6](https://github.com/niemopen/niem-naming-design-rules/issues/6))
 
 NIEM has previously used `RoleOf` properties and role types to be able to relate multiple objects in a message back to the same entity.  NDR 6.0 drops the role construct in favor of using the `structures:uri` attribute instead: objects in a message with the same uri value should be interpreted as different roles of the same entity.  This change was made to make NIEM simpler to learn and use, and to improve consistency for implementers.

@@ -3407,12 +3407,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MetadataType">
+  <xs:complexType name="MetadataAugmentationType">
     <xs:annotation>
-      <xs:documentation>A data type for metadata about a record.</xs:documentation>
+      <xs:documentation>A data type for additional information about metadata.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="hs:CreationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:LastUpdatedTrackingID" minOccurs="0" maxOccurs="unbounded"/>
@@ -10750,9 +10750,9 @@
       <xs:documentation>A description of past in-patient hospitalizations due to mental health issues.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="hs:MetadataType" nillable="true">
+  <xs:element name="MetadataAugmentation" type="hs:MetadataAugmentationType" substitutionGroup="nc:MetadataAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>Information that further qualifies primary juvenile data; data about data. A typical use is internal tracking IDs.</xs:documentation>
+      <xs:documentation>Additional information about metadata.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MethodOfPaymentAbstract" abstract="true">

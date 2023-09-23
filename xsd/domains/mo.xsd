@@ -4767,6 +4767,7 @@
       <xs:extension base="structures:MetadataType">
         <xs:sequence>
           <xs:element ref="mo:JSONEncodedText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:ImplementationSpecificSettingMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -6502,6 +6503,30 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="MeasureAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a measure.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="mo:UncertaintyMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MessageAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a message.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="mo:MinimumEssentialMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="MGRSCoordinateStringSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a complete coordinate string from the Military Grid Reference System (MGRS) which represents a location with a Universal Transverse Mercator (UTM) or Universal Polar Stereographic (UPS) coordinate and a unique military grid square.</xs:documentation>
@@ -6849,6 +6874,7 @@
           <xs:element ref="mo:SecurityClassificationInformation" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:DisclosureReleasability" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:HandlingRestrictions" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="mo:MinimumEssentialMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -8061,6 +8087,18 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="ReportAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a report.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="mo:MinimumEssentialMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="ResourceFormatType">
     <xs:annotation>
       <xs:documentation>A data type for information about the file format, physical medium, or dimensions of the resource.</xs:documentation>
@@ -8282,6 +8320,7 @@
           <xs:element ref="mo:SettingReadOnlyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:SettingExclusiveControlIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:SettingDisplayElementAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:ImplementationSpecificSettingMetadata" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:SettingAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -9154,6 +9193,7 @@
           <xs:element ref="mo:UncertaintyQualityMethodCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:UncertaintyQualityStrengthCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:UncertaintyComputationMethodAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:UncertaintyMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -11123,6 +11163,11 @@
       <xs:documentation>A element for disclosure information.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="DocumentAugmentation" type="mo:DocumentAugmentationType" substitutionGroup="nc:DocumentAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="EffectDuration" type="niem-xs:duration" nillable="true">
     <xs:annotation>
       <xs:documentation>A quantity of time that specifies the length of time which the target is under the influence of the intended effect.</xs:documentation>
@@ -11513,6 +11558,11 @@
       <xs:documentation>Metadata about settings that are specific to an implementation.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="ImplementationSpecificSettingMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for mo:ImplementationSpecificSettingMetadataType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="IndicatorSettingData" type="mo:IndicatorSettingDataType" substitutionGroup="mo:SettingDataRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A setting that is a true or false value</xs:documentation>
@@ -11693,6 +11743,16 @@
       <xs:documentation>A point whose coordinates are the arithmetic means of the coordinates of the separate points of impact/burst of a finite number of projectiles fired or released at the same aiming point under a given set of conditions.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="MeasureAugmentation" type="mo:MeasureAugmentationType" substitutionGroup="nc:MeasureAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a measure.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MessageAugmentation" type="mo:MessageAugmentationType" substitutionGroup="nc:MessageAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="MGRSCoordinateAbstract" substitutionGroup="nc:LocationGeospatialCoordinateAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a coordinate from the Military Grid Reference System (MGRS) which represents a location using the Universal Transverse Mercator (UTM) and the UPS grid systems and a unique military grid labeling convention.</xs:documentation>
@@ -11781,6 +11841,11 @@
   <xs:element name="MinimumEssentialMetadata" type="mo:MinimumEssentialMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about a data resource.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MinimumEssentialMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for mo:MinimumEssentialMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MissionAugmentation" type="mo:MissionAugmentationType" substitutionGroup="nc:MissionAugmentationPoint" nillable="true">
@@ -12503,6 +12568,11 @@
       <xs:documentation>An element for releasability information.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="ReportAugmentation" type="mo:ReportAugmentationType" substitutionGroup="nc:ReportAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a report.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="RequiredLevelOfAccessCode" type="mo:AccessLevelCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A level of target access required by the weapon.</xs:documentation>
@@ -13201,6 +13271,11 @@
   <xs:element name="UncertaintyMetadata" type="mo:UncertaintyMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies the uncertainty in primary data; uncertainty data about data.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UncertaintyMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for mo:UncertaintyMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="UncertaintyQualityMethodCode" type="mo:UncertaintyQualityMethodCodeType" nillable="true">
