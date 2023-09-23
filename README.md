@@ -271,3 +271,61 @@ Refactored `im:PersonCountryRoleType` to make immigration status more widely ava
 - Added a new Screening augmentation for `nc:PersonType`.
 - Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
 - Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
+
+## Code set updates
+
+### Updated FBI's National Crime Information Center (NCIC) codes
+
+**Changes from 5.2 as of the April 2023 quarterly update:**
+
+Added codes to the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:CALCodeSimpleType | Gun caliber |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:MotorcycleCodeSimpleType | Vehicle Make/Brand Name for Motorcycles and Parts |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:TrucksCodeSimpleType | Vehicle Make/Brand Name for Trucks and Parts |
+| ncic:VMACodeSimpleType | Vehicle Make |
+| ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
+
+Modified definitions of codes in the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:FarmCodeSimpleType | Vehicle Make/Brand Name for Farm and Garden Equipment and Parts |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:MotorcycleCodeSimpleType | Vehicle Make/Brand Name for Motorcycles and Parts |
+| ncic:SnowmobileCodeSimpleType | Vehicle Make/Brand Name for Snowmobiles and Parts |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:TrucksCodeSimpleType | Vehicle Make/Brand Name for Trucks and Parts |
+| ncic:VMACodeSimpleType | Vehicle Make |
+
+Removed codes from the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:IndianCodeSimpleType | Indian Nations |
+
+**Changes from the July 2023 quarterly update:**
+
+Added codes to the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:IndianCodeSimpleType | Indian Nations |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:TYPCodeSimpleType | Article Type |
+| ncic:VMACodeSimpleType | Vehicle Make |
+| ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
+
+Modified definitions of codes in the following types:
+
+| Code set | General description |
+|:-------- |:------------------- |
+| ncic:MAKCodeSimpleType | Gun make |
+| ncic:TrailersCodeSimpleType | Vehicle Make/Brand Name for Trailer Make |
+| ncic:VMACodeSimpleType | Vehicle Make |
+| ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
