@@ -303,6 +303,14 @@ The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued 
 - Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
 - Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
 
+### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([niemopen/niem-model#41](https://github.com/niemopen/niem-model/issues/41))
+
+scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
+
+### Updated scr:ChargeCategoryCodeSimpleType code definitions ([niemopen/niem-model#16](https://github.com/niemopen/niem-model/issues/16))
+
+Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
+
 ## Code set updates
 
 ### Updated FBI's National Crime Information Center (NCIC) codes

@@ -12985,7 +12985,7 @@
       </xs:enumeration>
       <xs:enumeration value="507">
         <xs:annotation>
-          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. ? 758</xs:documentation>
+          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. 758</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="508">
@@ -13060,7 +13060,7 @@
       </xs:enumeration>
       <xs:enumeration value="520">
         <xs:annotation>
-          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. ? 1546</xs:documentation>
+          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. 1546</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="521">
@@ -15350,7 +15350,7 @@
       </xs:enumeration>
       <xs:enumeration value="967">
         <xs:annotation>
-          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. ? 758</xs:documentation>
+          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. 758</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="968">
@@ -15425,7 +15425,7 @@
       </xs:enumeration>
       <xs:enumeration value="980">
         <xs:annotation>
-          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. ? 1546</xs:documentation>
+          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. 1546</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="981">
@@ -20871,6 +20871,7 @@
         <xs:sequence>
           <xs:element ref="scr:AgentPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonEncounter" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:Person" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PhysicalEncounterAgentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
