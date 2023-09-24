@@ -137,9 +137,25 @@ NIEM FIPS county codes (`fips:USCounty5DigitCodeSimpleType`) were updated with t
 
 </details>
 
+#### Updated GENC codes to version 3-12 ([niemopen/niem-model#76](https://github.com/niemopen/niem-model/issues/76))
+
+- No changes to the country code sets (3-character, 2-character, numeric) since version 3-11
+- Additions, deletions, and definition changes to the administrative subdivision codes (`genc:CountrySubdivisionCodeSimpleType`)
+- Updated the GENC code lists CSV files in the `xsd/codes/genc/` subdirectory
+- Note: The CSV now includes country names paired with the administrative subdivision codes rather than 3-character country codes, as this is the information that could be obtained from the data source
+
 #### Updated Hazardous Material codes ([#niemopen/niem-model#61](https://github.com/niemopen/niem-model/issues/61))
 
 - Updated code set for `hazmat:HazmatCodeSimpleType`
+
+#### Updated ISO 3166-1:2020 country codes ([niemopen/niem-model#77](https://github.com/niemopen/niem-model/issues/77))
+
+Updated the 3-character, 2-character, and numeric country codes with new definitions:
+
+| 3-Char | 2-Char | Num | Old definition    | New definition |
+|:------ |:------ |:--- |:----------------- | -------------- |
+NLD      | NL     | 528 | Netherlands (the) | Netherlands (Kingdom of the)
+TUR      | TR     | 792 | Turkey            | Türkiye
 
 #### Updated usps:StreetDirectionalCodeSimpleType ([niemopen/niem-model#62](https://github.com/niemopen/niem-model/issues/62))
 
