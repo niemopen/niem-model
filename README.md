@@ -72,7 +72,13 @@ Type | Pattern | Definition
 
 ### Code set updates
 
-### Updated Canada Post codes
+### Updated Bureau of Labor Statistics codes ([niemopen/niem-model#74](https://github.com/niemopen/niem-model/issues/74))
+
+BLS occupation codes are current in NIEM as of the latest BLS SOC April 15, 2020 update.
+
+Updated the definitions of BLS education level codes (`bls:EducationLevelCodeSimpleType`).
+
+#### Updated Canada Post codes ([niemopen/niem-model#67](https://github.com/niemopen/niem-model/issues/67))
 
 Deleted codes from `can:StreetCategoryCodeSimpleType`:
 
