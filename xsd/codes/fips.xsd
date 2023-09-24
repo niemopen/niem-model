@@ -1567,44 +1567,49 @@
           <xs:documentation>Yuma County</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09001">
+      <xs:enumeration value="09110">
         <xs:annotation>
-          <xs:documentation>Fairfield County</xs:documentation>
+          <xs:documentation>Capitol Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09003">
+      <xs:enumeration value="09120">
         <xs:annotation>
-          <xs:documentation>Hartford County</xs:documentation>
+          <xs:documentation>Greater Bridgeport Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09005">
+      <xs:enumeration value="09130">
         <xs:annotation>
-          <xs:documentation>Litchfield County</xs:documentation>
+          <xs:documentation>Lower Connecticut River Valley Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09007">
+      <xs:enumeration value="09140">
         <xs:annotation>
-          <xs:documentation>Middlesex County</xs:documentation>
+          <xs:documentation>Naugatuck Valley Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09009">
+      <xs:enumeration value="09150">
         <xs:annotation>
-          <xs:documentation>New Haven County</xs:documentation>
+          <xs:documentation>Northeastern Connecticut Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09011">
+      <xs:enumeration value="09160">
         <xs:annotation>
-          <xs:documentation>New London County</xs:documentation>
+          <xs:documentation>Northwest Hills Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09013">
+      <xs:enumeration value="09170">
         <xs:annotation>
-          <xs:documentation>Tolland County</xs:documentation>
+          <xs:documentation>South Central Connecticut Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="09015">
+      <xs:enumeration value="09180">
         <xs:annotation>
-          <xs:documentation>Windham County</xs:documentation>
+          <xs:documentation>Southeastern Connecticut Planning Region</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="09190">
+        <xs:annotation>
+          <xs:documentation>Western Connecticut Planning Region</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="10001">

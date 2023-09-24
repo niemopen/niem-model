@@ -105,6 +105,38 @@ Updated English definitions and added alternate French definitions where applica
   - `hs:FosterCareLiablePlacementCountyCode`
   - `hs:PriorDetentionHoldingForCountyCode`
 
+### Updated FIPS county codes ([niemopen/niem-model#75](https://github.com/niemopen/niem-model/issues/75))
+
+NIEM FIPS state codes (`fips:USStateNumericCodeSimpleType`) are current as of the US Census Bureau's FIPS 2022 Population Estimate FIPS Codes update, Internet Release Date August 2023.
+
+NIEM FIPS county codes (`fips:USCounty5DigitCodeSimpleType`) were updated with the latest revisions.  All changes were for the state of Connecticut.
+
+<details markdown="1">
+  <summary>Expand to see FIPS county codes changes</summary>
+  <br />
+
+  | Status  | Code  | Definition |
+  |:------- |:----- |:---------- |
+  removed   | 09001 | Fairfield County
+  removed   | 09003 | Hartford County
+  removed   | 09005 | Litchfield County
+  removed   | 09007 | Middlesex County
+  removed   | 09009 | New Haven County
+  removed   | 09011 | New London County
+  removed   | 09013 | Tolland County
+  removed   | 09015 | Windham County
+  added     | 09110 | Capitol Planning Region
+  added     | 09120 | Greater Bridgeport Planning Region
+  added     | 09130 | Lower Connecticut River Valley Planning Region
+  added     | 09140 | Naugatuck Valley Planning Region
+  added     | 09150 | Northeastern Connecticut Planning Region
+  added     | 09160 | Northwest Hills Planning Region
+  added     | 09170 | South Central Connecticut Planning Region
+  added     | 09180 | Southeastern Connecticut Planning Region
+  added     | 09190 | Western Connecticut Planning Region
+
+</details>
+
 #### Updated Hazardous Material codes ([#niemopen/niem-model#61](https://github.com/niemopen/niem-model/issues/61))
 
 - Updated code set for `hazmat:HazmatCodeSimpleType`
