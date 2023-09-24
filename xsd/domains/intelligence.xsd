@@ -13,7 +13,7 @@
   xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:ncic="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -36,12 +36,11 @@
     </xs:appinfo>
   </xs:annotation>
   <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" schemaLocation="../codes/iso_3166.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" schemaLocation="../codes/ncic.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/" schemaLocation="biom.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/" schemaLocation="jxdm.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:complexType name="AgencyInterestCategoryType">
     <xs:annotation>
       <xs:documentation>A data type for a groupings of persons by the reason they are of interest to intelligence.</xs:documentation>

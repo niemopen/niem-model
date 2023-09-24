@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
-  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
   version="psd01"
   xml:lang="en-US"
   xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
   ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
   xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
   xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:niem-gml="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
   xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
   xmlns:xls="http://release.niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -242,57 +242,57 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="AreaCurveAdapter" type="geo:CurveAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaCurveAdapter" type="niem-gml:CurveAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A geospatial curve.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaEnvelopeAdapter" type="geo:EnvelopeAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaEnvelopeAdapter" type="niem-gml:EnvelopeAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A rectangular geospatial area.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaPointAdapter" type="geo:PointAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaPointAdapter" type="niem-gml:PointAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A location specified by a 2D or 3D geometric point.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaPolygonAdapter" type="geo:PolygonAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaPolygonAdapter" type="niem-gml:PolygonAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A geospatial polygon.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaRegionGeometryAdapter" type="geo:GeometryAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaRegionGeometryAdapter" type="niem-gml:GeometryAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A GML geometry that describes a region.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EllipseAdapter" type="geo:EllipseAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="EllipseAdapter" type="niem-gml:EllipseAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An ellipse specified by a point, major axis, minor axis and rotation.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="FeatureAdapter" type="geo:FeatureAdapterType" nillable="true">
+  <xs:element name="FeatureAdapter" type="niem-gml:FeatureAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A generic GML feature adapter.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="GeometryAdapter" type="geo:GeometryAdapterType" nillable="true">
+  <xs:element name="GeometryAdapter" type="niem-gml:GeometryAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A general-purpose GML geometry adapter.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationFeatureAdapter" type="geo:FeatureAdapterType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
+  <xs:element name="LocationFeatureAdapter" type="niem-gml:FeatureAdapterType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>A GML feature that describes a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationGeometryAdapter" type="geo:GeometryAdapterType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
+  <xs:element name="LocationGeometryAdapter" type="niem-gml:GeometryAdapterType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>A GML geometry that describes a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationGeospatialPointAdapter" type="geo:PointAdapterType" substitutionGroup="nc:LocationGeospatialCoordinateAbstract" nillable="true">
+  <xs:element name="LocationGeospatialPointAdapter" type="niem-gml:PointAdapterType" substitutionGroup="nc:LocationGeospatialCoordinateAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A 2D or 3D geometric point.  A gml:Point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.</xs:documentation>
     </xs:annotation>

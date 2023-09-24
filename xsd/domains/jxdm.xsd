@@ -19,7 +19,7 @@
   xmlns:mmucc="https://docs.oasis-open.org/niemopen/ns/model/codes/mmucc/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:ndex="https://docs.oasis-open.org/niemopen/ns/model/codes/ndex/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:nlets="https://docs.oasis-open.org/niemopen/ns/model/codes/nlets/6.0/"
   xmlns:sar="https://docs.oasis-open.org/niemopen/ns/model/codes/pmise_sar/6.0/"
   xmlns:st="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/"
@@ -127,6 +127,7 @@
     </xs:appinfo>
   </xs:annotation>
   <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/aamva_d20/6.0/" schemaLocation="../codes/aamva_d20.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/" schemaLocation="../codes/apco.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/atf/6.0/" schemaLocation="../codes/atf.xsd"/>
@@ -142,7 +143,6 @@
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/" schemaLocation="immigration.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/" schemaLocation="st.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:complexType name="AcademicAssessmentType">
     <xs:annotation>
       <xs:documentation>A data type for an institution or agency assessment process for determining academic needs of a subject.</xs:documentation>

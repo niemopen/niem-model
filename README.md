@@ -548,6 +548,24 @@ scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a
 
 Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
 
+## Adapter updates
+
+### Standardized the convention for adapter namespaces ([niemopen/niem-model#35](https://github.com/niemopen/niem-model/issues/35))
+
+Updated adapter namespace prefixes, uris, and filenames to follow the convention used by the `niem-xs` namespace, which creates special kinds of proxy adapters for XML Schema simple types.
+
+NIEM adapter namespace prefixes and filenames now begin with `niem-` and then end with the external standard prefix:
+
+| External | 5.2 adapter | 6.0 adapter
+|:-------- |:----------- |:-----------
+xs         | niem-xs     | niem-xs
+cap        | edxl-cap    | niem-cap
+de         | edxl-de     | niem-de
+have       | edxl-have   | niem-have
+gml        | geo         | niem-gml
+
+Filenames and uris now follow the same convention.
+
 ## Code set updates
 
 ### Updated FBI's National Crime Information Center (NCIC) codes
