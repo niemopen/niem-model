@@ -34,7 +34,7 @@
     </xs:annotation>
   </xs:import>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:complexType name="CurveType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="CurveAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a curve is a 1-dimensional primitive. Curves are continuous, connected, and have a measurable length in terms of the coordinate system.  A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different</xs:documentation>
     </xs:annotation>
@@ -50,7 +50,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EllipseType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="EllipseAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for an ellipse specified by a point, major axis, minor axis and rotation.</xs:documentation>
     </xs:annotation>
@@ -66,7 +66,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EnvelopeType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="EnvelopeAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for an envelope, which defines an extent using a pair of positions defining opposite corners in arbitrary dimensions. The first direct position is the "lower corner" (a coordinate position consisting of all the minimal ordinates for each dimension for all points within</xs:documentation>
     </xs:annotation>
@@ -82,7 +82,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="FeatureType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="FeatureAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type that encapsulates a GML feature instance.</xs:documentation>
     </xs:annotation>
@@ -98,7 +98,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="GeometryType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="GeometryAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type that encapsulates a GML geometry element.</xs:documentation>
     </xs:annotation>
@@ -114,7 +114,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="LineStringType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="LineStringAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a geometric curve that consists of a single segment with linear interpolation.  A gml:LineString is a special curve that consists of a single segment with linear interpolation. It is defined by two or more coordinate tuples, with linear interpolation between them. The number of direct positions in the list shall be at least two.</xs:documentation>
     </xs:annotation>
@@ -130,7 +130,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiCurveType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiCurveAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more curves or line strings. A gml:MultiCurve is defined by one or more gml:AbstractCurve elements. The members of the geometric aggregate may be specified either using the "standard" property (gml:curveMember) or the array property (gml:curveMembers). It is also valid to use both the "standard" and the array properties in the same collection.</xs:documentation>
     </xs:annotation>
@@ -146,7 +146,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiGeometryType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiGeometryAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more geometries, potentially of different types. Gml:MultiGeometry is a collection of one or more GML geometry objects of arbitrary type. The members of the geometric aggregate may be specified either using the "</xs:documentation>
     </xs:annotation>
@@ -162,7 +162,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiPointType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiPointAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more points. A gml:MultiPoint consists of one or more gml:Points. The members of the geometric aggregate may be specified either using the "standard" property (gml:pointMember) or the array property (gml:pointMembers). It is also valid to use both the "standard" and the array properties in the same collection.</xs:documentation>
     </xs:annotation>
@@ -178,7 +178,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiSurfaceType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiSurfaceAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more Polygons or Surfaces.</xs:documentation>
     </xs:annotation>
@@ -194,7 +194,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="PointType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="PointAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a 2D or 3D geometric point.  A gml:Point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.</xs:documentation>
     </xs:annotation>
@@ -210,7 +210,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="PolygonType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="PolygonAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a polygon; a geometric surface defined by a single surface patch whose boundary is coplanar.  A gml:Polygon is a special surface that is defined by a single surface patch (see D.3.6). The boundary of this patch is coplanar and the polygon uses planar interpolation in its interior. The elements exterior and interior describe the surface boundary of the polygon.</xs:documentation>
     </xs:annotation>
@@ -226,7 +226,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="SurfaceType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="SurfaceAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a surface, which is a 2-dimensional primitive and is composed of one or more surface patches.  The surface patches are connected to one another.</xs:documentation>
     </xs:annotation>
@@ -242,57 +242,57 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="AreaCurve" type="geo:CurveType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaCurveAdapter" type="geo:CurveAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A geospatial curve.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaEnvelope" type="geo:EnvelopeType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaEnvelopeAdapter" type="geo:EnvelopeAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A rectangular geospatial area.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaPoint" type="geo:PointType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaPointAdapter" type="geo:PointAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A location specified by a 2D or 3D geometric point.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaPolygon" type="geo:PolygonType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaPolygonAdapter" type="geo:PolygonAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A geospatial polygon.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AreaRegionGeometry" type="geo:GeometryType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="AreaRegionGeometryAdapter" type="geo:GeometryAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A GML geometry that describes a region.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Ellipse" type="geo:EllipseType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="EllipseAdapter" type="geo:EllipseAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An ellipse specified by a point, major axis, minor axis and rotation.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Feature" type="geo:FeatureType" nillable="true">
+  <xs:element name="FeatureAdapter" type="geo:FeatureAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A generic GML feature adapter.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Geometry" type="geo:GeometryType" nillable="true">
+  <xs:element name="GeometryAdapter" type="geo:GeometryAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A general-purpose GML geometry adapter.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationFeature" type="geo:FeatureType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
+  <xs:element name="LocationFeatureAdapter" type="geo:FeatureAdapterType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>A GML feature that describes a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationGeometry" type="geo:GeometryType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
+  <xs:element name="LocationGeometryAdapter" type="geo:GeometryAdapterType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>A GML geometry that describes a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationGeospatialPoint" type="geo:PointType" substitutionGroup="nc:LocationGeospatialCoordinateAbstract" nillable="true">
+  <xs:element name="LocationGeospatialPointAdapter" type="geo:PointAdapterType" substitutionGroup="nc:LocationGeospatialCoordinateAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A 2D or 3D geometric point.  A gml:Point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.</xs:documentation>
     </xs:annotation>

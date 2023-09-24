@@ -9702,7 +9702,7 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="mo:WaypointName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:WaypointPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:WaypointPointAdapter" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:WaypointAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -9983,7 +9983,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84ExternalPolygonType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84ExternalPolygonAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a polygon having no interior regions, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
@@ -9999,7 +9999,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84LineStringType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84LineStringAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a series of connected line segments, using WGS84 coordinates</xs:documentation>
     </xs:annotation>
@@ -10022,7 +10022,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="mo:WGS84LocationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:WGS84LocationPointAdapter" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:LocationCylinderRadiusValue" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:LocationCylinderHalfHeightValue" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:LocationCreationCodeAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -10031,7 +10031,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84LocationPointType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84LocationPointAdapterType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a 3D geometric point, defined by a single coordinate tuple with values from the WGS84 coordinate reference system.</xs:documentation>
     </xs:annotation>
@@ -13511,7 +13511,7 @@
       <xs:documentation>A name of a waypoint.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WaypointPoint" type="geo:PointType" nillable="true">
+  <xs:element name="WaypointPointAdapter" type="geo:PointAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A point to which a moving object may be vectored.</xs:documentation>
     </xs:annotation>
@@ -13736,22 +13736,22 @@
       <xs:documentation>An augmentation point for type mo:WGS84LocationCylinderType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationEllipse" type="geo:EllipseType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="WGS84LocationEllipseAdapter" type="geo:EllipseAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A area region described by an ellipse specified by a point, major axis, minor axis and rotation, using WGS84, meters, and decimal degrees.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationExternalPolygon" type="mo:WGS84ExternalPolygonType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="WGS84LocationExternalPolygonAdapter" type="mo:WGS84ExternalPolygonAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An area region described by a polygon with no interior region, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationLineString" type="mo:WGS84LineStringType" nillable="true">
+  <xs:element name="WGS84LocationLineStringAdapter" type="mo:WGS84LineStringAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A data type for a series of connected line segments, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationPoint" type="mo:WGS84LocationPointType" nillable="true">
+  <xs:element name="WGS84LocationPointAdapter" type="mo:WGS84LocationPointAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A data type for a 3D geometric point, defined by a single coordinate tuple with values from the WGS84 coordinate reference system.</xs:documentation>
     </xs:annotation>

@@ -994,7 +994,7 @@
           <xs:element ref="cbrn:SpecialEventName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:SpecialEventStartDateTime" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:SpecialEventEndDateTime" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="cbrn:SpecialEventSecurityArea" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cbrn:SpecialEventSecurityAreaAdapter" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -4719,7 +4719,7 @@
       <xs:documentation>A Name of a special event.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="SpecialEventSecurityArea" type="geo:PolygonType" nillable="true">
+  <xs:element name="SpecialEventSecurityAreaAdapter" type="geo:PolygonAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>An area of operational security concern for a special event.</xs:documentation>
     </xs:annotation>
