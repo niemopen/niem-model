@@ -9983,12 +9983,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84ExternalPolygonAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84ExternalPolygonAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a polygon having no interior regions, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Polygon" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -9999,12 +9999,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84LineStringAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84LineStringAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a series of connected line segments, using WGS84 coordinates</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:LineString" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -10031,12 +10031,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84LocationPointAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84LocationPointAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a 3D geometric point, defined by a single coordinate tuple with values from the WGS84 coordinate reference system.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Point" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>

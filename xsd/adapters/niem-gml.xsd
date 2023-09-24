@@ -34,12 +34,12 @@
     </xs:annotation>
   </xs:import>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:complexType name="CurveAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="CurveAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a curve is a 1-dimensional primitive. Curves are continuous, connected, and have a measurable length in terms of the coordinate system.  A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Curve" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -50,12 +50,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EllipseAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="EllipseAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for an ellipse specified by a point, major axis, minor axis and rotation.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="xls:Ellipse" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -66,12 +66,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EnvelopeAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="EnvelopeAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for an envelope, which defines an extent using a pair of positions defining opposite corners in arbitrary dimensions. The first direct position is the "lower corner" (a coordinate position consisting of all the minimal ordinates for each dimension for all points within</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Envelope" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -82,12 +82,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="FeatureAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="FeatureAdapterType">
     <xs:annotation>
       <xs:documentation>A data type that encapsulates a GML feature instance.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:AbstractFeature" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -98,12 +98,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="GeometryAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="GeometryAdapterType">
     <xs:annotation>
       <xs:documentation>A data type that encapsulates a GML geometry element.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:AbstractGeometry" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -114,12 +114,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="LineStringAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="LineStringAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a geometric curve that consists of a single segment with linear interpolation.  A gml:LineString is a special curve that consists of a single segment with linear interpolation. It is defined by two or more coordinate tuples, with linear interpolation between them. The number of direct positions in the list shall be at least two.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:LineString" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -130,12 +130,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiCurveAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiCurveAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more curves or line strings. A gml:MultiCurve is defined by one or more gml:AbstractCurve elements. The members of the geometric aggregate may be specified either using the "standard" property (gml:curveMember) or the array property (gml:curveMembers). It is also valid to use both the "standard" and the array properties in the same collection.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:MultiCurve" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -146,12 +146,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiGeometryAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiGeometryAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more geometries, potentially of different types. Gml:MultiGeometry is a collection of one or more GML geometry objects of arbitrary type. The members of the geometric aggregate may be specified either using the "</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:MultiGeometry" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -162,12 +162,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiPointAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiPointAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more points. A gml:MultiPoint consists of one or more gml:Points. The members of the geometric aggregate may be specified either using the "standard" property (gml:pointMember) or the array property (gml:pointMembers). It is also valid to use both the "standard" and the array properties in the same collection.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:MultiPoint" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -178,12 +178,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MultiSurfaceAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="MultiSurfaceAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a geometry collection that includes one or more Polygons or Surfaces.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:MultiSurface" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -194,12 +194,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="PointAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="PointAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a 2D or 3D geometric point.  A gml:Point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Point" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -210,12 +210,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="PolygonAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="PolygonAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a polygon; a geometric surface defined by a single surface patch whose boundary is coplanar.  A gml:Polygon is a special surface that is defined by a single surface patch (see D.3.6). The boundary of this patch is coplanar and the polygon uses planar interpolation in its interior. The elements exterior and interior describe the surface boundary of the polygon.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Polygon" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -226,12 +226,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="SurfaceAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="SurfaceAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a surface, which is a 2-dimensional primitive and is composed of one or more surface patches.  The surface patches are connected to one another.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Surface" minOccurs="1" maxOccurs="1">
             <xs:annotation>

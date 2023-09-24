@@ -25,12 +25,12 @@
       <xs:documentation>Hospital Availability Exchange (HAVE)</xs:documentation>
     </xs:annotation>
   </xs:import>
-  <xs:complexType name="HaveAdapterType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="HaveAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for EDXL-HAVE which specifies an XML document format that allows the communication of the status of a hospital, its services, and its resources.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="have:HospitalStatus" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
