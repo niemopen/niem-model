@@ -17,7 +17,6 @@
   xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
   xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
   xmlns:xCard="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/"
-  xmlns:xls="http://release.niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -96,11 +95,6 @@
       <appinfo:LocalTerm term="X509" definition="A standard defining the format of public key certificates."/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0" schemaLocation="../external/ogc/ols/1.1.0/dhs-gmo/2.1.0/ols.xsd" appinfo:externalImportIndicator="true">
-    <xs:annotation>
-      <xs:documentation>A profile of OpenGeospatialConsortium (OpenGIS, OGC) OpenLS (Location Services) version 1.1 schemas. A profile of OpenGeospatialConsortium (OpenGIS, OGC) OpenLS (Location Services) version 1.1 schemas that have been edited to use GML version 3.2.1 schemas instead of the GML version 3.0 schemas that were current when OpenLS version 1.1 was promulgated.  See http://www.opengeospatial.org for documentation, http://schemas.opengis.net/ols/ for schemas.</xs:documentation>
-    </xs:annotation>
-  </xs:import>
   <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../external/ogc/gml/3.2.1/gml.xsd" appinfo:externalImportIndicator="true">
     <xs:annotation>
@@ -9989,22 +9983,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84EllipseType" appinfo:externalAdapterTypeIndicator="true">
-    <xs:annotation>
-      <xs:documentation>A data type for an ellipse specified by a point, major axis, minor axis and rotation, using WGS84 coordinates, meters, and decimal degrees.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="xls:Ellipse" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation>An ellipse specified by a point, major axis, minor axis and rotation.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="WGS84ExternalPolygonType" appinfo:externalAdapterTypeIndicator="true">
     <xs:annotation>
       <xs:documentation>A data type for a polygon having no interior regions, using WGS84 coordinates.</xs:documentation>
@@ -13758,7 +13736,7 @@
       <xs:documentation>An augmentation point for type mo:WGS84LocationCylinderType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationEllipse" type="mo:WGS84EllipseType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="WGS84LocationEllipse" type="geo:EllipseType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A area region described by an ellipse specified by a point, major axis, minor axis and rotation, using WGS84, meters, and decimal degrees.</xs:documentation>
     </xs:annotation>

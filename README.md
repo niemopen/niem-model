@@ -474,6 +474,12 @@ The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued 
 - Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
 - Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
 
+### Harmonized MilOps and GML Ellipse adapter type (niemopen/niem-model#12)
+
+GML adapter type `geo:EllipseType` and MilOps adapter type `mo:WGS84EllipseType` both wrap external GML element `xls:Ellipse` with the same cardinality.
+
+Removed the MilOps type as a duplicate and updated MilOps property `mo:WGS84LocationEllipse` (which carries additional semantics in the definition) to have type `geo:EllipseType`.
+
 ### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([niemopen/niem-model#41](https://github.com/niemopen/niem-model/issues/41))
 
 scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
