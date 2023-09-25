@@ -161,6 +161,10 @@ Updated the 3-character, 2-character, and numeric country codes with new definit
 NLD      | NL     | 528 | Netherlands (the) | Netherlands (Kingdom of the)
 TUR      | TR     | 792 | Turkey            | Türkiye
 
+#### Updated ISO 4217 currency codes ([niemopen/niem-model#79](https://github.com/niemopen/niem-model/issues/79))
+
+Updated ISO 4217 currency codes.
+
 #### Updated usps:StreetDirectionalCodeSimpleType ([niemopen/niem-model#62](https://github.com/niemopen/niem-model/issues/62))
 
 United States Postal Service street direction codes are the same, but the capitalization of the definitions has changed from uppercase to upper camel case.

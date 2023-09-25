@@ -327,11 +327,6 @@
           <xs:documentation>Lempira</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="HRK">
-        <xs:annotation>
-          <xs:documentation>Kuna</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="HTG">
         <xs:annotation>
           <xs:documentation>Gourde</xs:documentation>
@@ -667,6 +662,11 @@
           <xs:documentation>Saint Helena Pound</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="SLE">
+        <xs:annotation>
+          <xs:documentation>Leone</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="SLL">
         <xs:annotation>
           <xs:documentation>Leone</xs:documentation>
@@ -790,6 +790,11 @@
       <xs:enumeration value="UZS">
         <xs:annotation>
           <xs:documentation>Uzbekistan Sum</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VED">
+        <xs:annotation>
+          <xs:documentation>Bolívar Soberano</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="VES">
