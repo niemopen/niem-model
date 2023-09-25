@@ -957,14 +957,9 @@
           <xs:documentation>Andajin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="ajp">
+      <xs:enumeration value="ajs">
         <xs:annotation>
-          <xs:documentation>South Levantine Arabic</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ajt">
-        <xs:annotation>
-          <xs:documentation>Judeo-Tunisian Arabic</xs:documentation>
+          <xs:documentation>Algerian Jewish Sign Language</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="aju">
@@ -1579,7 +1574,7 @@
       </xs:enumeration>
       <xs:enumeration value="apc">
         <xs:annotation>
-          <xs:documentation>North Levantine Arabic</xs:documentation>
+          <xs:documentation>Levantine Arabic</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="apd">
@@ -4397,6 +4392,11 @@
           <xs:documentation>Daakaka</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="bpc">
+        <xs:annotation>
+          <xs:documentation>Mbuk</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="bpd">
         <xs:annotation>
           <xs:documentation>Banda-Banda</xs:documentation>
@@ -4639,7 +4639,7 @@
       </xs:enumeration>
       <xs:enumeration value="brb">
         <xs:annotation>
-          <xs:documentation>Lave</xs:documentation>
+          <xs:documentation>Brao</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="brc">
@@ -6647,6 +6647,11 @@
           <xs:documentation>Northern Ping Chinese</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="cnq">
+        <xs:annotation>
+          <xs:documentation>Chung</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="cnr">
         <xs:annotation>
           <xs:documentation>Montenegrin</xs:documentation>
@@ -7197,11 +7202,6 @@
           <xs:documentation>Usila Chinantec</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="cug">
-        <xs:annotation>
-          <xs:documentation>Chungmboko</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="cuh">
         <xs:annotation>
           <xs:documentation>Chuka</xs:documentation>
@@ -7315,6 +7315,11 @@
       <xs:enumeration value="cwt">
         <xs:annotation>
           <xs:documentation>Kuwaataay</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cxh">
+        <xs:annotation>
+          <xs:documentation>Cha'ari</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="cya">
@@ -8487,6 +8492,11 @@
           <xs:documentation>Disa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="dsk">
+        <xs:annotation>
+          <xs:documentation>Dokshi</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="dsl">
         <xs:annotation>
           <xs:documentation>Danish Sign Language</xs:documentation>
@@ -8505,6 +8515,11 @@
       <xs:enumeration value="dsq">
         <xs:annotation>
           <xs:documentation>Tadaksahak</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dsz">
+        <xs:annotation>
+          <xs:documentation>Mardin Sign Language</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="dta">
@@ -8544,7 +8559,7 @@
       </xs:enumeration>
       <xs:enumeration value="dtn">
         <xs:annotation>
-          <xs:documentation>Daats'i´in</xs:documentation>
+          <xs:documentation>Daatsʼíin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="dto">
@@ -8782,6 +8797,11 @@
           <xs:documentation>Jola-Fonyi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="dyr">
+        <xs:annotation>
+          <xs:documentation>Dyarim</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="dyu">
         <xs:annotation>
           <xs:documentation>Dyula</xs:documentation>
@@ -8795,6 +8815,11 @@
       <xs:enumeration value="dza">
         <xs:annotation>
           <xs:documentation>Tunzu</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dzd">
+        <xs:annotation>
+          <xs:documentation>Daza</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="dze">
@@ -8900,6 +8925,11 @@
       <xs:enumeration value="egl">
         <xs:annotation>
           <xs:documentation>Emilian</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="egm">
+        <xs:annotation>
+          <xs:documentation>Benamanga</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ego">
@@ -9194,7 +9224,7 @@
       </xs:enumeration>
       <xs:enumeration value="env">
         <xs:annotation>
-          <xs:documentation>Enwan (Edu State)</xs:documentation>
+          <xs:documentation>Enwan (Edo State)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="enw">
@@ -9395,6 +9425,11 @@
       <xs:enumeration value="etz">
         <xs:annotation>
           <xs:documentation>Semimi</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="eud">
+        <xs:annotation>
+          <xs:documentation>Eudeve</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="eus">
@@ -11035,6 +11070,11 @@
       <xs:enumeration value="gou">
         <xs:annotation>
           <xs:documentation>Gavar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gov">
+        <xs:annotation>
+          <xs:documentation>Goo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="gow">
@@ -12887,6 +12927,11 @@
           <xs:documentation>Eastern Canadian Inuktitut</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="ikh">
+        <xs:annotation>
+          <xs:documentation>Ikhin-Arokho</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="iki">
         <xs:annotation>
           <xs:documentation>Iko</xs:documentation>
@@ -13045,6 +13090,11 @@
       <xs:enumeration value="ims">
         <xs:annotation>
           <xs:documentation>Marsian</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="imt">
+        <xs:annotation>
+          <xs:documentation>Imotong</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="imy">
@@ -13432,6 +13482,11 @@
           <xs:documentation>Ingrian</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="izm">
+        <xs:annotation>
+          <xs:documentation>Kizamani</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="izr">
         <xs:annotation>
           <xs:documentation>Izere</xs:documentation>
@@ -13724,7 +13779,7 @@
       </xs:enumeration>
       <xs:enumeration value="jid">
         <xs:annotation>
-          <xs:documentation>Bu</xs:documentation>
+          <xs:documentation>Bu (Kaduna State)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="jie">
@@ -13999,7 +14054,7 @@
       </xs:enumeration>
       <xs:enumeration value="jrt">
         <xs:annotation>
-          <xs:documentation>Jorto</xs:documentation>
+          <xs:documentation>Jakattoe</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="jru">
@@ -14925,11 +14980,6 @@
       <xs:enumeration value="kgl">
         <xs:annotation>
           <xs:documentation>Kunggari</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="kgm">
-        <xs:annotation>
-          <xs:documentation>Karipúna</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="kgn">
@@ -15899,7 +15949,7 @@
       </xs:enumeration>
       <xs:enumeration value="koe">
         <xs:annotation>
-          <xs:documentation>Kacipo-Balesi</xs:documentation>
+          <xs:documentation>Kacipo-Bale Suri</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="kof">
@@ -16314,7 +16364,7 @@
       </xs:enumeration>
       <xs:enumeration value="krp">
         <xs:annotation>
-          <xs:documentation>Korop</xs:documentation>
+          <xs:documentation>Durop</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="krr">
@@ -16360,11 +16410,6 @@
       <xs:enumeration value="krz">
         <xs:annotation>
           <xs:documentation>Sota Kanum</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ksa">
-        <xs:annotation>
-          <xs:documentation>Shuwa-Zamani</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ksb">
@@ -17384,7 +17429,7 @@
       </xs:enumeration>
       <xs:enumeration value="lag">
         <xs:annotation>
-          <xs:documentation>Langi</xs:documentation>
+          <xs:documentation>Rangi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="lah">
@@ -17400,11 +17445,6 @@
       <xs:enumeration value="laj">
         <xs:annotation>
           <xs:documentation>Lango (Uganda)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="lak">
-        <xs:annotation>
-          <xs:documentation>Laka (Nigeria)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="lal">
@@ -17892,6 +17932,11 @@
           <xs:documentation>T'apo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="lgo">
+        <xs:annotation>
+          <xs:documentation>Lango (South Sudan)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="lgq">
         <xs:annotation>
           <xs:documentation>Logba</xs:documentation>
@@ -17900,6 +17945,11 @@
       <xs:enumeration value="lgr">
         <xs:annotation>
           <xs:documentation>Lengo</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lgs">
+        <xs:annotation>
+          <xs:documentation>Guinea-Bissau Sign Language</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="lgt">
@@ -18467,11 +18517,6 @@
           <xs:documentation>Lorediakarkar</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="lno">
-        <xs:annotation>
-          <xs:documentation>Lango (South Sudan)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="lns">
         <xs:annotation>
           <xs:documentation>Lamnso'</xs:documentation>
@@ -18524,7 +18569,7 @@
       </xs:enumeration>
       <xs:enumeration value="loh">
         <xs:annotation>
-          <xs:documentation>Narim</xs:documentation>
+          <xs:documentation>Laarim</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="loi">
@@ -18642,6 +18687,11 @@
           <xs:documentation>Lopit</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="lqr">
+        <xs:annotation>
+          <xs:documentation>Logir</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="lra">
         <xs:annotation>
           <xs:documentation>Rara Bakati'</xs:documentation>
@@ -18722,6 +18772,11 @@
           <xs:documentation>Burundian Sign Language</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="lsc">
+        <xs:annotation>
+          <xs:documentation>Albarradas Sign Language</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="lsd">
         <xs:annotation>
           <xs:documentation>Lishana Deni</xs:documentation>
@@ -18785,6 +18840,11 @@
       <xs:enumeration value="lsv">
         <xs:annotation>
           <xs:documentation>Sivia Sign Language</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lsw">
+        <xs:annotation>
+          <xs:documentation>Seychelles Sign Language</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="lsy">
@@ -18970,6 +19030,11 @@
       <xs:enumeration value="lvk">
         <xs:annotation>
           <xs:documentation>Lavukaleve</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lvl">
+        <xs:annotation>
+          <xs:documentation>Lwel</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="lvs">
@@ -23822,11 +23887,6 @@
           <xs:documentation>Nomlaki</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="nom">
-        <xs:annotation>
-          <xs:documentation>Nocamán</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="non">
         <xs:annotation>
           <xs:documentation>Old Norse</xs:documentation>
@@ -24457,6 +24517,11 @@
           <xs:documentation>Nawaru</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="nww">
+        <xs:annotation>
+          <xs:documentation>Ndwewe</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="nwx">
         <xs:annotation>
           <xs:documentation>Middle Newar</xs:documentation>
@@ -24687,6 +24752,11 @@
           <xs:documentation>Zeme Naga</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="nzr">
+        <xs:annotation>
+          <xs:documentation>Dir-Nyamzak-Mbarimi</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="nzs">
         <xs:annotation>
           <xs:documentation>New Zealand Sign Language</xs:documentation>
@@ -24875,6 +24945,11 @@
       <xs:enumeration value="oia">
         <xs:annotation>
           <xs:documentation>Oirata</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="oie">
+        <xs:annotation>
+          <xs:documentation>Okolie</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="oin">
@@ -26082,6 +26157,11 @@
           <xs:documentation>Phukha</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="phj">
+        <xs:annotation>
+          <xs:documentation>Pahari</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="phk">
         <xs:annotation>
           <xs:documentation>Phake</xs:documentation>
@@ -26175,11 +26255,6 @@
       <xs:enumeration value="pih">
         <xs:annotation>
           <xs:documentation>Pitcairn-Norfolk</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="pii">
-        <xs:annotation>
-          <xs:documentation>Pini</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="pij">
@@ -26362,11 +26437,6 @@
           <xs:documentation>Pali</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="plj">
-        <xs:annotation>
-          <xs:documentation>Polci</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="plk">
         <xs:annotation>
           <xs:documentation>Kohistani Shina</xs:documentation>
@@ -26472,11 +26542,6 @@
           <xs:documentation>Southern Pumi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="pmk">
-        <xs:annotation>
-          <xs:documentation>Pamlico</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="pml">
         <xs:annotation>
           <xs:documentation>Lingua Franca</xs:documentation>
@@ -26564,7 +26629,7 @@
       </xs:enumeration>
       <xs:enumeration value="png">
         <xs:annotation>
-          <xs:documentation>Pongu</xs:documentation>
+          <xs:documentation>Pangu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="pnh">
@@ -26892,11 +26957,6 @@
           <xs:documentation>Old Provençal (to 1500)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="prp">
-        <xs:annotation>
-          <xs:documentation>Parsi</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="prq">
         <xs:annotation>
           <xs:documentation>Ashéninka Perené</xs:documentation>
@@ -26944,7 +27004,7 @@
       </xs:enumeration>
       <xs:enumeration value="psc">
         <xs:annotation>
-          <xs:documentation>Persian Sign Language</xs:documentation>
+          <xs:documentation>Iranian Sign Language</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="psd">
@@ -27282,9 +27342,19 @@
           <xs:documentation>Pyen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="pze">
+        <xs:annotation>
+          <xs:documentation>Pesse</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pzh">
+        <xs:annotation>
+          <xs:documentation>Pazeh</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="pzn">
         <xs:annotation>
-          <xs:documentation>Para Naga</xs:documentation>
+          <xs:documentation>Jejara Naga</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="qua">
@@ -27847,6 +27917,11 @@
           <xs:documentation>Riang (India)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="rib">
+        <xs:annotation>
+          <xs:documentation>Bribri Sign Language</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="rif">
         <xs:annotation>
           <xs:documentation>Tarifit</xs:documentation>
@@ -28052,6 +28127,11 @@
           <xs:documentation>Marma</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="rnb">
+        <xs:annotation>
+          <xs:documentation>Brunca Sign Language</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="rnd">
         <xs:annotation>
           <xs:documentation>Ruund</xs:documentation>
@@ -28192,6 +28272,11 @@
           <xs:documentation>Romano-Serbian</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="rsk">
+        <xs:annotation>
+          <xs:documentation>Ruthenian</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="rsl">
         <xs:annotation>
           <xs:documentation>Russian Sign Language</xs:documentation>
@@ -28200,6 +28285,16 @@
       <xs:enumeration value="rsm">
         <xs:annotation>
           <xs:documentation>Miriwoong Sign Language</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rsn">
+        <xs:annotation>
+          <xs:documentation>Rwandan Sign Language</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rsw">
+        <xs:annotation>
+          <xs:documentation>Rishiwa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="rtc">
@@ -29557,11 +29652,6 @@
           <xs:documentation>Lamaholot</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="slq">
-        <xs:annotation>
-          <xs:documentation>Salchuq</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="slr">
         <xs:annotation>
           <xs:documentation>Salar</xs:documentation>
@@ -29620,11 +29710,6 @@
       <xs:enumeration value="smc">
         <xs:annotation>
           <xs:documentation>Som</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="smd">
-        <xs:annotation>
-          <xs:documentation>Sama</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="sme">
@@ -29735,11 +29820,6 @@
       <xs:enumeration value="sna">
         <xs:annotation>
           <xs:documentation>Shona</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="snb">
-        <xs:annotation>
-          <xs:documentation>Sebuyau</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="snc">
@@ -30559,7 +30639,7 @@
       </xs:enumeration>
       <xs:enumeration value="suq">
         <xs:annotation>
-          <xs:documentation>Suri</xs:documentation>
+          <xs:documentation>Tirmaga-Chai Suri</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="sur">
@@ -30910,11 +30990,6 @@
       <xs:enumeration value="szc">
         <xs:annotation>
           <xs:documentation>Semaq Beri</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="szd">
-        <xs:annotation>
-          <xs:documentation>Seru</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="sze">
@@ -32232,11 +32307,6 @@
           <xs:documentation>Samarokena</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="tmk">
-        <xs:annotation>
-          <xs:documentation>Northwestern Tamang</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="tml">
         <xs:annotation>
           <xs:documentation>Tamnim Citak</xs:documentation>
@@ -32457,6 +32527,11 @@
           <xs:documentation>Tojolabal</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="tok">
+        <xs:annotation>
+          <xs:documentation>Toki Pona</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="tol">
         <xs:annotation>
           <xs:documentation>Tolowa</xs:documentation>
@@ -32615,11 +32690,6 @@
       <xs:enumeration value="tpv">
         <xs:annotation>
           <xs:documentation>Tanapag</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="tpw">
-        <xs:annotation>
-          <xs:documentation>Tupí</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="tpx">
@@ -32794,7 +32864,7 @@
       </xs:enumeration>
       <xs:enumeration value="trv">
         <xs:annotation>
-          <xs:documentation>Taroko</xs:documentation>
+          <xs:documentation>Sediq</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="trw">
@@ -33195,6 +33265,11 @@
       <xs:enumeration value="tve">
         <xs:annotation>
           <xs:documentation>Te'un</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="tvi">
+        <xs:annotation>
+          <xs:documentation>Tulai</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="tvk">
@@ -33677,6 +33752,11 @@
           <xs:documentation>Ughele</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="ugh">
+        <xs:annotation>
+          <xs:documentation>Kubachi</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="ugn">
         <xs:annotation>
           <xs:documentation>Ugandan Sign Language</xs:documentation>
@@ -33852,6 +33932,11 @@
           <xs:documentation>Ulwa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="uly">
+        <xs:annotation>
+          <xs:documentation>Buli</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="uma">
         <xs:annotation>
           <xs:documentation>Umatilla</xs:documentation>
@@ -33975,6 +34060,11 @@
       <xs:enumeration value="unz">
         <xs:annotation>
           <xs:documentation>Unde Kaili</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="uon">
+        <xs:annotation>
+          <xs:documentation>Kulon</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="upi">
@@ -34170,11 +34260,6 @@
       <xs:enumeration value="uum">
         <xs:annotation>
           <xs:documentation>Urum</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="uun">
-        <xs:annotation>
-          <xs:documentation>Kulon-Pazeh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="uur">
@@ -34420,6 +34505,11 @@
       <xs:enumeration value="viv">
         <xs:annotation>
           <xs:documentation>Iduna</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="vjk">
+        <xs:annotation>
+          <xs:documentation>Bajjika</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="vka">
@@ -34709,7 +34799,7 @@
       </xs:enumeration>
       <xs:enumeration value="wad">
         <xs:annotation>
-          <xs:documentation>Wandamen</xs:documentation>
+          <xs:documentation>Wamesa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="wae">
@@ -34930,6 +35020,11 @@
       <xs:enumeration value="wdk">
         <xs:annotation>
           <xs:documentation>Wadikali</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wdt">
+        <xs:annotation>
+          <xs:documentation>Wendat</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="wdu">
@@ -35369,7 +35464,7 @@
       </xs:enumeration>
       <xs:enumeration value="wnb">
         <xs:annotation>
-          <xs:documentation>Wanambre</xs:documentation>
+          <xs:documentation>Mokati</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="wnc">
@@ -35532,11 +35627,6 @@
           <xs:documentation>Waluwarra</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="wrd">
-        <xs:annotation>
-          <xs:documentation>Warduji</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="wrg">
         <xs:annotation>
           <xs:documentation>Warungu</xs:documentation>
@@ -35660,6 +35750,11 @@
       <xs:enumeration value="wsv">
         <xs:annotation>
           <xs:documentation>Wotapuri-Katarqalai</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wtb">
+        <xs:annotation>
+          <xs:documentation>Matambwe</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="wtf">
@@ -35792,11 +35887,6 @@
           <xs:documentation>Wardandi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="wya">
-        <xs:annotation>
-          <xs:documentation>Wyandot</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="wyb">
         <xs:annotation>
           <xs:documentation>Wangaaybuwan-Ngiyambaa</xs:documentation>
@@ -35810,6 +35900,11 @@
       <xs:enumeration value="wym">
         <xs:annotation>
           <xs:documentation>Wymysorys</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wyn">
+        <xs:annotation>
+          <xs:documentation>Wyandot</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="wyr">
@@ -36102,6 +36197,11 @@
           <xs:documentation>Kwandu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="xdq">
+        <xs:annotation>
+          <xs:documentation>Kaitag</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="xdy">
         <xs:annotation>
           <xs:documentation>Malayic Dayak</xs:documentation>
@@ -36237,6 +36337,11 @@
           <xs:documentation>Khetrani</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="xhm">
+        <xs:annotation>
+          <xs:documentation>Middle Khmer (1400 to 1850 CE)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="xho">
         <xs:annotation>
           <xs:documentation>Xhosa</xs:documentation>
@@ -36359,7 +36464,7 @@
       </xs:enumeration>
       <xs:enumeration value="xkk">
         <xs:annotation>
-          <xs:documentation>Kaco'</xs:documentation>
+          <xs:documentation>Kachok</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="xkl">
@@ -36609,7 +36714,7 @@
       </xs:enumeration>
       <xs:enumeration value="xmx">
         <xs:annotation>
-          <xs:documentation>Maden</xs:documentation>
+          <xs:documentation>Salawati</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="xmy">
@@ -37035,11 +37140,6 @@
       <xs:enumeration value="xsr">
         <xs:annotation>
           <xs:documentation>Sherpa</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="xss">
-        <xs:annotation>
-          <xs:documentation>Assan</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="xsu">
@@ -37607,6 +37707,11 @@
           <xs:documentation>Chepya</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="ycr">
+        <xs:annotation>
+          <xs:documentation>Yilan Creole</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="yda">
         <xs:annotation>
           <xs:documentation>Yanda</xs:documentation>
@@ -37865,6 +37970,11 @@
       <xs:enumeration value="ykg">
         <xs:annotation>
           <xs:documentation>Northern Yukaghir</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ykh">
+        <xs:annotation>
+          <xs:documentation>Khamnigan Mongol</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="yki">
@@ -38737,6 +38847,11 @@
           <xs:documentation>Coatecas Altas Zapotec</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="zcd">
+        <xs:annotation>
+          <xs:documentation>Las Delicias Zapotec</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="zch">
         <xs:annotation>
           <xs:documentation>Central Hongshuihe Zhuang</xs:documentation>
@@ -38760,6 +38875,11 @@
       <xs:enumeration value="zeh">
         <xs:annotation>
           <xs:documentation>Eastern Hongshuihe Zhuang</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="zem">
+        <xs:annotation>
+          <xs:documentation>Zeem</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="zen">
@@ -38877,11 +38997,6 @@
           <xs:documentation>Kaimbulawa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="zkb">
-        <xs:annotation>
-          <xs:documentation>Koibal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="zkd">
         <xs:annotation>
           <xs:documentation>Kadu</xs:documentation>
@@ -38965,6 +39080,11 @@
       <xs:enumeration value="zlq">
         <xs:annotation>
           <xs:documentation>Liuqian Zhuang</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="zlu">
+        <xs:annotation>
+          <xs:documentation>Zul</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="zma">
@@ -39410,11 +39530,6 @@
       <xs:enumeration value="zty">
         <xs:annotation>
           <xs:documentation>Yatee Zapotec</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="zua">
-        <xs:annotation>
-          <xs:documentation>Zeem</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="zuh">

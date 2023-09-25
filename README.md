@@ -148,6 +148,10 @@ NIEM FIPS county codes (`fips:USCounty5DigitCodeSimpleType`) were updated with t
 
 - Updated code set for `hazmat:HazmatCodeSimpleType`
 
+### Updated ISO 639-3 language codes ([niemopen/niem-model#78](https://github.com/niemopen/niem-model/issues/78))
+
+Updated the ISO 639-3 language codes.
+
 #### Updated ISO 3166-1:2020 country codes ([niemopen/niem-model#77](https://github.com/niemopen/niem-model/issues/77))
 
 Updated the 3-character, 2-character, and numeric country codes with new definitions:
