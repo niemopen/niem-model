@@ -4121,9 +4121,8 @@
       <xs:documentation>A data type for a person who is a first responder</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PersonHumanResource" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:JobTitleOrRole" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:CheckInOutRecord" minOccurs="0" maxOccurs="unbounded"/>
@@ -5896,9 +5895,8 @@
       <xs:documentation>A data type for a person receiving or registered to receive medical treatment.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PatientConditionName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PatientConditionOnsetDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PatientDiagnosis" minOccurs="0" maxOccurs="unbounded"/>
@@ -6739,9 +6737,8 @@
       <xs:documentation>A data type for an expert or staff that participates in emergency preparedness and response activities.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ResponderIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ResponderOrganization" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ResponderAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -6935,13 +6932,12 @@
       <xs:documentation>A data type for a structure that contains additional information about a Service Call Originator</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="em:CallerCategoryText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementOfficialBadgeIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementUnitIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:OrganizationName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ServiceCallOriginatorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -7199,38 +7195,6 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="TernaryIndicatorCodeSimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a Ternary Indicator</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="No">
-        <xs:annotation>
-          <xs:documentation>No</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Unknown">
-        <xs:annotation>
-          <xs:documentation>Unknown</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Yes">
-        <xs:annotation>
-          <xs:documentation>Yes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="TernaryIndicatorCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for a Ternary Indicator code (Yes, No, Unknown)</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="em:TernaryIndicatorCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="TestAugmentationType">
     <xs:annotation>
@@ -12855,7 +12819,7 @@
       <xs:documentation>A data concept for a code list for identification information types for a resource e.g.  ID card number etc.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ImmediateNeedsTernaryIndicatorCode" type="em:TernaryIndicatorCodeType" nillable="true">
+  <xs:element name="ImmediateNeedsTernaryIndicatorCode" type="nc:YesNoUnknownCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>An indication if there are immediate needs (Yes, No, Unknown)</xs:documentation>
     </xs:annotation>

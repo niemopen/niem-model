@@ -310,20 +310,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:complexType name="AgentAssociationType">
-    <xs:annotation>
-      <xs:documentation>A data type for a relationship between a Person and a Person Role</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:AssociationType">
-        <xs:sequence>
-          <xs:element ref="scr:AgentPerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AgentPersonRole" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AgentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="AircraftFlightPlanSummaryAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between a flight plan summary, an aircraft, and a carrier.</xs:documentation>
@@ -12999,7 +12985,7 @@
       </xs:enumeration>
       <xs:enumeration value="507">
         <xs:annotation>
-          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. ? 758</xs:documentation>
+          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. 758</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="508">
@@ -13074,7 +13060,7 @@
       </xs:enumeration>
       <xs:enumeration value="520">
         <xs:annotation>
-          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. ? 1546</xs:documentation>
+          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. 1546</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="521">
@@ -15364,7 +15350,7 @@
       </xs:enumeration>
       <xs:enumeration value="967">
         <xs:annotation>
-          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. ? 758</xs:documentation>
+          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. 758</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="968">
@@ -15439,7 +15425,7 @@
       </xs:enumeration>
       <xs:enumeration value="980">
         <xs:annotation>
-          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. ? 1546</xs:documentation>
+          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. 1546</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="981">
@@ -19871,6 +19857,19 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="PersonAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a person.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="scr:PersonMetadata" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonRole" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="PersonBiometricAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association that distinguishes physical characteristics captured at the time of person encounter.</xs:documentation>
@@ -20612,10 +20611,11 @@
       <xs:documentation>A data type for metadata about the data associated with a person being screened.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="nc:MetadataType">
         <xs:sequence>
           <xs:element ref="scr:ConfidenceLevel" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonConfidenceLevelPercent" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -20779,7 +20779,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="im:NaturalizedCitizenRole" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:NaturalizedCitizen" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:AlienNumberIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
@@ -20873,7 +20873,7 @@
         <xs:sequence>
           <xs:element ref="scr:AgentPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonEncounter" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AgentPersonRole" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:Person" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PhysicalEncounterAgentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -21012,9 +21012,8 @@
       <xs:documentation>A data type for additional information about an Alien being screened.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="im:AlienType">
         <xs:sequence>
-          <xs:element ref="im:RoleOfAlienAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PrincipalIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:VisaWaiverIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:AlienCategoryText" minOccurs="0" maxOccurs="unbounded"/>
@@ -21067,11 +21066,9 @@
       <xs:documentation>A data type for additional information about Persons being Screened</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:PersonRole" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonTelephoneNumber" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:Biographic" minOccurs="0" maxOccurs="unbounded"/>
@@ -21891,24 +21888,9 @@
       <xs:documentation>True if DHS had advanced manifest information on the traveler prior to person crossing; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AgentAssociation" type="scr:AgentAssociationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An association between a PERSON and a PERSON ROLE</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AgentAssociationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for AgentAssociationType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="AgentPerson" type="nc:PersonType" nillable="true">
     <xs:annotation>
       <xs:documentation>An Agent of Department of Homeland Security.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AgentPersonRole" type="scr:PersonRoleType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A part played by a Person in an Encounter.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="AircraftFlightPlanSummaryAssociation" type="scr:AircraftFlightPlanSummaryAssociationType" nillable="true">
@@ -23556,6 +23538,11 @@
       <xs:documentation>A date that a Person arrived in the U.S.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonAugmentation" type="scr:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonBiometricAssociation" type="scr:PersonBiometricAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between a person and distinguishing physical characteristic captured at the time of PERSON ENCOUNTER.</xs:documentation>
@@ -23791,9 +23778,14 @@
       <xs:documentation>A data concept for a status of the medical condition of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonMetadata" type="scr:PersonMetadataType" nillable="true" appinfo:appliesToTypes="nc:PersonType">
+  <xs:element name="PersonMetadata" type="scr:PersonMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Screening purposes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for scr:PersonMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonNameAugmentation" type="scr:PersonNameAugmentationType" substitutionGroup="nc:PersonNameAugmentationPoint" nillable="true">
