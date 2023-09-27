@@ -1059,7 +1059,7 @@
   </xs:complexType>
   <xs:attribute name="portionMarkingMetadataRef" type="xs:IDREFS">
     <xs:annotation>
-      <xs:documentation>An attribute reference to cui:PortionMarkingMetadata.</xs:documentation>
+      <xs:documentation>A list of metadata objects about Controlled Unclassified Information (CUI) portion marking that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:element name="BasicCategoryMarkingCode" type="cui:BasicCategoryMarkingCodeType" nillable="true">

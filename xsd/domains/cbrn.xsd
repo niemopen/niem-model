@@ -2131,12 +2131,12 @@
   </xs:attribute>
   <xs:attribute name="totalDoseMetadataRef" type="xs:IDREFS">
     <xs:annotation>
-      <xs:documentation>An attribute reference to cbrn:totalDoseMetadataRef.</xs:documentation>
+      <xs:documentation>A list of metadata objects about the accumulated ambient dose equivalent since the last radiation detection instrument reset, with units microsieverts (Sv), that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="totalExposureMetadataRef" type="xs:IDREFS">
     <xs:annotation>
-      <xs:documentation>An attribute reference to cbrn:totalExposureMetadataRef.</xs:documentation>
+      <xs:documentation>A list of metadata objects about accumulated exposure since the last instrument reset, in milliroentgen (mR), that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="unitsText" type="xs:token">
