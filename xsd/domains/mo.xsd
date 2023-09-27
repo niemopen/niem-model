@@ -4437,6 +4437,18 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="DocumentAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a document.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="mo:MinimumEssentialMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="EllipseType">
     <xs:annotation>
       <xs:documentation>A data type for an ellipse, expressed as an XY plane (projected onto earth's surface) ellipse. The major axis is oriented along reported azimuth, with zero being due North.</xs:documentation>
