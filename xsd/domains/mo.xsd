@@ -4437,6 +4437,18 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="DocumentAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a document.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="mo:MinimumEssentialMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="EllipseType">
     <xs:annotation>
       <xs:documentation>A data type for an ellipse, expressed as an XY plane (projected onto earth's surface) ellipse. The major axis is oriented along reported azimuth, with zero being due North.</xs:documentation>
@@ -10238,7 +10250,7 @@
       <xs:documentation>A vertical elevation of an object above a surface (as sea level or land) of a planet or natural satellite.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AnalyticNoteMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="AnalyticNoteMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about analyst notes throughout the model, this tracks any notes or comments made regarding data.</xs:documentation>
     </xs:annotation>
@@ -10523,7 +10535,7 @@
       <xs:documentation>A digital signature computed upon this X.509 certificate.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CETMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="CETMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Cyber Effectiveness Table (CET) data; data about data.</xs:documentation>
     </xs:annotation>
@@ -12538,7 +12550,7 @@
       <xs:documentation>A description the programming language used.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ProvenanceMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="ProvenanceMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about nodes and links in a network.</xs:documentation>
     </xs:annotation>
@@ -13358,7 +13370,7 @@
       <xs:documentation>An identifier for a seven-character alphanumeric code that describes a unique increment of a unit deployment, i.e., advance party, main body, equipment by sea and air, reception team, or trail party, in the time-phased force and deployment data. Also called ULN. (JP 3-35)</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="UnitMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="UnitMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies primary data about a unit; data about unit data.</xs:documentation>
     </xs:annotation>
@@ -13538,7 +13550,7 @@
       <xs:documentation>A point to which a moving object may be vectored.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WCMMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="WCMMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Weapon Characterization Model (WCM) data; data about data.</xs:documentation>
     </xs:annotation>

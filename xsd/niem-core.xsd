@@ -5030,7 +5030,7 @@
   </xs:attribute>
   <xs:attribute name="metadataRef" type="xs:IDREFS">
     <xs:annotation>
-      <xs:documentation>An attribute reference to nc:Metadata.</xs:documentation>
+      <xs:documentation>A list of metadata objects that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="partialIndicator" type="xs:boolean">
@@ -10233,7 +10233,7 @@
       <xs:documentation>A body or main content of a message.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="Metadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies primary data; data about data.</xs:documentation>
     </xs:annotation>
