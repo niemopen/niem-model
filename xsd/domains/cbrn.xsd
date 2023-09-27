@@ -4879,7 +4879,7 @@
       <xs:documentation>A value for the total counts observed.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="TotalDoseMetadata" type="cbrn:TotalDoseMetadataType" nillable="true" appinfo:appliesToTypes="structures:ObjectType">
+  <xs:element name="TotalDoseMetadata" type="cbrn:TotalDoseMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about the accumulated ambient dose equivalent since the last radiation detection instrument reset, with units microsieverts (Sv).</xs:documentation>
     </xs:annotation>
@@ -4904,7 +4904,7 @@
       <xs:documentation>A total efficiency calibration. The total efficiency at any value of energy is the ratio of the total recorded pulses in a spectrum to the number of photons emitted from a source at that energy.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="TotalExposureMetadata" type="cbrn:TotalExposureMetadataType" nillable="true" appinfo:appliesToTypes="structures:ObjectType">
+  <xs:element name="TotalExposureMetadata" type="cbrn:TotalExposureMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about accumulated exposure since the last instrument reset, in milliroentgen (mR).</xs:documentation>
     </xs:annotation>
