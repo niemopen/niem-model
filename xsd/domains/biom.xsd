@@ -8478,7 +8478,11 @@
       <xs:documentation>A data type for a specific pattern</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:token">
-      <xs:pattern value="&lt;&gt;"/>
+      <xs:pattern value="&lt;&gt;">
+        <xs:annotation>
+          <xs:documentation>Indicator for center of the lip (left &lt; followed by right &gt;)</xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="LipPrintCodeSimpleType">

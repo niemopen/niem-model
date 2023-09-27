@@ -1260,11 +1260,6 @@
           <xs:documentation>Information protected by tribal, regional, and/or local laws that has been or potentially has been accessed, potentially accessed, manipulated, destroyed, or rendered unusable as a result of a compromise</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="Medical and emergency information">
-        <xs:annotation>
-          <xs:documentation>Medical and Emergency Information that has been or potentially has been accessed, potentially accessed, manipulated, destroyed, or rendered unusable as a result of a compromise</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="Medical and Emergency Information">
         <xs:annotation>
           <xs:documentation>Medical and Emergency Information has been accessed, potentially accessed, manipulated, destroyed, or rendered unusable as a result of a breach</xs:documentation>

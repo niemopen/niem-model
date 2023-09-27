@@ -853,7 +853,7 @@
       </xs:enumeration>
       <xs:enumeration value="NL">
         <xs:annotation>
-          <xs:documentation>Netherlands (the)</xs:documentation>
+          <xs:documentation>Netherlands (Kingdom of the)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NO">
@@ -1148,7 +1148,7 @@
       </xs:enumeration>
       <xs:enumeration value="TR">
         <xs:annotation>
-          <xs:documentation>Turkey</xs:documentation>
+          <xs:documentation>Türkiye</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TT">
@@ -2120,7 +2120,7 @@
       </xs:enumeration>
       <xs:enumeration value="NLD">
         <xs:annotation>
-          <xs:documentation>Netherlands (the)</xs:documentation>
+          <xs:documentation>Netherlands (Kingdom of the)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NOR">
@@ -2420,7 +2420,7 @@
       </xs:enumeration>
       <xs:enumeration value="TUR">
         <xs:annotation>
-          <xs:documentation>Turkey</xs:documentation>
+          <xs:documentation>Türkiye</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TUV">
@@ -3302,7 +3302,7 @@
       </xs:enumeration>
       <xs:enumeration value="528">
         <xs:annotation>
-          <xs:documentation>Netherlands (the)</xs:documentation>
+          <xs:documentation>Netherlands (Kingdom of the)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="531">
@@ -3682,7 +3682,7 @@
       </xs:enumeration>
       <xs:enumeration value="792">
         <xs:annotation>
-          <xs:documentation>Turkey</xs:documentation>
+          <xs:documentation>Türkiye</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="795">
