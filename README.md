@@ -5,6 +5,32 @@ This is the NIEM 6.0 major release.
 
 In a major version, content may be updated in any namespace, including Core. Changes may also be made to the NIEM architecture, which may be reflected in the structure and layout of the NIEM schemas.
 
+## Package contents
+
+### General package layout
+
+| Folder | Normative | Description |
+|:------ | --------- | ----------- |
+**csv**  | no | Contents of the NIEM model represented as CSV files.  Provided for developers to support easy import of NIEM data, including namespace, property, type, code, and other information from this version.
+**docs** | no | Additional documentation artifacts: <ul><li>A model spreadsheet, listing information about NIEM properties and types.  Core and domain content are on their own tabs.</li><li>A code spreadsheet, listing all of the code sets in the model.</li><li>A change log spreadsheet, listing changes from the previous versions.</li><li>Namespace CSV files, listing basic namespace information and the authorities responsible for managing them.</li></ul>
+**images** | no | Images for the OASIS specification.
+**json&#8209;ld** | no | A context file for JSON-LD support, assigning standard NIEM namespace prefixes to full URIs to support aliases.  This is similar to namespace prefix declarations in NIEM XML, assigning specific versions of namespaces to prefixes.
+**styles** | no | Stylesheets for the OASIS specification.
+**xsd**    | yes | The full set of XML schemas that normatively represent the NIEM 6.0 data model.
+
+### XML Schema folder layout
+
+| Folder or file   | Description |
+|:---------------- |:----------- |
+**xsd/adapters/**  | Adapter namespaces can adapter types that wrap the contents of external standards so they can be used in NIEM exchanges without triggering NDR conformance errors.
+**xsd/auxiliary/** | Auxiliary namespaces are like light-weight domains, containing NIEM-conformant properties and types from an authoritative source without its own governance body in NIEM.
+**xsd/codes/**     | Code namespaces define properties and types exclusively to represent code sets.  Some code namespaces are managed by authoritative sources within NIEM; others are NIEM representations of public standards.
+**xsd/domains/**   | Domain namespaces define properties and types for communities of interest and are (or were) backed by their own governance bodies in NIEM.
+**xsd/external/**  | External standards are standards defined outside of NIEM but included to better support interoperability.
+**xsd/utility/**   | Utility schemas provide XML architecture support to the model.  Includes support for such things as referencing and linked data, conformance targets, and NIEM Code Lists specification support for codes defined outside of schema enumerations.
+**xsd/niem-core.xsd** | The NIEM Core namespace, containing general-purpose content managed collaboratively by the NBAC.
+**xsd/xml&#8209;catalog.xml** | A file that maps namespace URIs to their file locations.  Can be updated and used to override default import statement locations in XML schemas.
+
 ## Key updates based on NDR 6.0 changes
 
 The following are the key changes made to the model based on updates to the NDR for version 6.0.
