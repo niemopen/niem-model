@@ -11,8 +11,8 @@
   xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:fips="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-gml="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:usda_fsa="https://docs.oasis-open.org/niemopen/ns/model/codes/usda_fsa/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -37,8 +37,8 @@
       <appinfo:LocalTerm term="USDA" literal="United States Department of Agriculture"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" schemaLocation="../adapters/geospatial.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/" schemaLocation="../adapters/niem-gml.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ag_codes/6.0/" schemaLocation="../codes/ag_codes.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" schemaLocation="../codes/fips.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/usda_fsa/6.0/" schemaLocation="../codes/usda_fsa.xsd"/>
@@ -379,22 +379,22 @@
       <xs:documentation>A data concept for geospatial coordinates.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationLineStringCoordinates" type="geo:LineStringType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
+  <xs:element name="LocationLineStringCoordinatesAdapter" type="niem-gml:LineStringAdapterType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A line string is a special curve that consists of a single segment with linear interpolation. It is defined by two or more coordinate tuples, with linear interpolation between.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationMultiSurfaceCoordinates" type="geo:MultiSurfaceType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
+  <xs:element name="LocationMultiSurfaceCoordinatesAdapter" type="niem-gml:MultiSurfaceAdapterType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A geometry collection that includes one or more Polygons or Surfaces.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationPointCoordinates" type="geo:PointType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
+  <xs:element name="LocationPointCoordinatesAdapter" type="niem-gml:PointAdapterType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A 2D or 3D geometric point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationPolygonCoordinates" type="geo:PolygonType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
+  <xs:element name="LocationPolygonCoordinatesAdapter" type="niem-gml:PolygonAdapterType" substitutionGroup="ag:LocationCoordinatesAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A gml Polygon is a special surface that is defined by a single surface patch. The boundary of this patch is coplanar and the polygon uses planar interpolation in its interior.</xs:documentation>
     </xs:annotation>

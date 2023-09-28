@@ -23,6 +23,66 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 <xs:schema targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" ...>
 ```
 
+### Added "Adapter" as a representation term ([niemopen/niem-naming-design-rules#5](https://github.com/niemopen/niem-naming-design-rules/issues/5))
+
+The NDR has added "Adapter" as a new representation term for properties and types to better clarify which components contain non-conformant content.
+
+Example:
+
+- Adapter property `geo:Curve` has been renamed as `geo:CurveAdapter`
+- Adapter type `geo:CurveType` has been renamed as `geo:CurveAdapterType`
+
+<details markdown="1">
+  <summary>Expand to see the list of affected properties:</summary>
+  <br />
+
+- ag:LocationLineStringCoordinates
+- ag:LocationMultiSurfaceCoordinates
+- ag:LocationPointCoordinates
+- ag:LocationPolygonCoordinates
+- cbrn:SpecialEventSecurityArea
+- geo:AreaCurve
+- geo:AreaEnvelope
+- geo:AreaPoint
+- geo:AreaPolygon
+- geo:AreaRegionGeometry
+- geo:Ellipse
+- geo:Feature
+- geo:Geometry
+- geo:LocationFeature
+- geo:LocationGeometry
+- geo:LocationGeospatialPoint
+- mo:WaypointPoint
+- mo:WGS84LocationEllipse
+- mo:WGS84LocationExternalPolygon
+- mo:WGS84LocationLineString
+- mo:WGS84LocationPoint
+
+</details>
+
+<details markdown="1">
+  <summary>Expand to see the list of affected types:</summary>
+  <br />
+
+- geo:CurveType
+- geo:EllipseType
+- geo:EnvelopeType
+- geo:FeatureType
+- geo:GeometryType
+- geo:LineStringType
+- geo:MultiCurveType
+- geo:MultiGeometryType
+- geo:MultiPointType
+- geo:MultiSurfaceType
+- geo:PointType
+- geo:PolygonType
+- geo:SurfaceType
+- mo:WGS84ExternalPolygonType
+- mo:WGS84LineStringType
+- mo:WGS84LocationPointType
+
+</details>
+
 ### Refactored metadata as regular NIEM components ([niemopen/niem-naming-design-rules#8](https://github.com/niemopen/niem-naming-design-rules/issues/8))
 
 **NDR changes now treat metadata components like regular components:**
@@ -523,6 +583,12 @@ The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued 
 - Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
 - Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
 
+### Harmonized MilOps and GML Ellipse adapter type (niemopen/niem-model#12)
+
+GML adapter type `geo:EllipseType` and MilOps adapter type `mo:WGS84EllipseType` both wrap external GML element `xls:Ellipse` with the same cardinality.
+
+Removed the MilOps type as a duplicate and updated MilOps property `mo:WGS84LocationEllipse` (which carries additional semantics in the definition) to have type `geo:EllipseType`.
+
 ### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([niemopen/niem-model#41](https://github.com/niemopen/niem-model/issues/41))
 
 scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
@@ -530,6 +596,24 @@ scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a
 ### Updated scr:ChargeCategoryCodeSimpleType code definitions ([niemopen/niem-model#16](https://github.com/niemopen/niem-model/issues/16))
 
 Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
+
+## Adapter updates
+
+### Standardized the convention for adapter namespaces ([niemopen/niem-model#35](https://github.com/niemopen/niem-model/issues/35))
+
+Updated adapter namespace prefixes, uris, and filenames to follow the convention used by the `niem-xs` namespace, which creates special kinds of proxy adapters for XML Schema simple types.
+
+NIEM adapter namespace prefixes and filenames now begin with `niem-` and then end with the external standard prefix:
+
+| External | 5.2 adapter | 6.0 adapter
+|:-------- |:----------- |:-----------
+xs         | niem-xs     | niem-xs
+cap        | edxl-cap    | niem-cap
+de         | edxl-de     | niem-de
+have       | edxl-have   | niem-have
+gml        | geo         | niem-gml
+
+Filenames and uris now follow the same convention.
 
 ## Code set updates
 

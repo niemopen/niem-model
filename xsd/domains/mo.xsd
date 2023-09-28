@@ -3,8 +3,7 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd
-                      https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
   ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
   xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
@@ -14,11 +13,10 @@
   xmlns:mo="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:nga="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/"
-  xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-gml="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xCard="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/"
-  xmlns:xls="https://docs.oasis-open.org/niemopen/ns/model/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -97,23 +95,13 @@
       <appinfo:LocalTerm term="X509" definition="A standard defining the format of public key certificates."/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import
-    namespace="https://docs.oasis-open.org/niemopen/ns/model/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"
-    schemaLocation="../external/ogc/ols/1.1.0/dhs-gmo/2.1.0/ols.xsd"
-    appinfo:externalImportIndicator="true">
-    <xs:annotation>
-      <xs:documentation>A profile of OpenGeospatialConsortium (OpenGIS, OGC) OpenLS (Location Services) version 1.1 schemas. A profile of OpenGeospatialConsortium (OpenGIS, OGC) OpenLS (Location Services) version 1.1 schemas that have been edited to use GML version 3.2.1 schemas instead of the GML version 3.0 schemas that were current when OpenLS version 1.1 was promulgated.  See http://www.opengeospatial.org for documentation, http://schemas.opengis.net/ols/ for schemas.</xs:documentation>
-    </xs:annotation>
-  </xs:import>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
-    schemaLocation="../utility/structures.xsd" />
   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../external/ogc/gml/3.2.1/gml.xsd" appinfo:externalImportIndicator="true">
     <xs:annotation>
       <xs:documentation>Geography Markup Language (GML) version 3.2.1 schemas.  See http://www.opengeospatial.org OGC document 07-036 for documentation: "The Geography Markup Language (GML) was originally developed within the Open Geospatial Consortium, Inc. (OGC). ISO 19136 was prepared by ISO/TC 211 jointly with the OGC."  See http://schemas.opengis.net/gml/ for schemas.</xs:documentation>
     </xs:annotation>
   </xs:import>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" schemaLocation="../adapters/geospatial.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/" schemaLocation="../adapters/niem-gml.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/" schemaLocation="../auxiliary/cui.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" schemaLocation="../codes/iso_3166.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/" schemaLocation="../codes/nga.xsd"/>
@@ -9706,7 +9694,7 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="mo:WaypointName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:WaypointPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:WaypointPointAdapter" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:WaypointAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -9987,28 +9975,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84EllipseType" appinfo:externalAdapterTypeIndicator="true">
-    <xs:annotation>
-      <xs:documentation>A data type for an ellipse specified by a point, major axis, minor axis and rotation, using WGS84 coordinates, meters, and decimal degrees.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="xls:Ellipse" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation>An ellipse specified by a point, major axis, minor axis and rotation.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="WGS84ExternalPolygonType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84ExternalPolygonAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a polygon having no interior regions, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Polygon" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -10019,12 +9991,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84LineStringType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84LineStringAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a series of connected line segments, using WGS84 coordinates</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:LineString" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -10042,7 +10014,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="mo:WGS84LocationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:WGS84LocationPointAdapter" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:LocationCylinderRadiusValue" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:LocationCylinderHalfHeightValue" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:LocationCreationCodeAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -10051,12 +10023,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="WGS84LocationPointType" appinfo:externalAdapterTypeIndicator="true">
+  <xs:complexType name="WGS84LocationPointAdapterType">
     <xs:annotation>
       <xs:documentation>A data type for a 3D geometric point, defined by a single coordinate tuple with values from the WGS84 coordinate reference system.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AdapterType">
         <xs:sequence>
           <xs:element ref="gml:Point" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -13531,7 +13503,7 @@
       <xs:documentation>A name of a waypoint.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WaypointPoint" type="geo:PointType" nillable="true">
+  <xs:element name="WaypointPointAdapter" type="niem-gml:PointAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A point to which a moving object may be vectored.</xs:documentation>
     </xs:annotation>
@@ -13756,22 +13728,22 @@
       <xs:documentation>An augmentation point for type mo:WGS84LocationCylinderType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationEllipse" type="mo:WGS84EllipseType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="WGS84LocationEllipseAdapter" type="niem-gml:EllipseAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A area region described by an ellipse specified by a point, major axis, minor axis and rotation, using WGS84, meters, and decimal degrees.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationExternalPolygon" type="mo:WGS84ExternalPolygonType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
+  <xs:element name="WGS84LocationExternalPolygonAdapter" type="mo:WGS84ExternalPolygonAdapterType" substitutionGroup="nc:AreaRegionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An area region described by a polygon with no interior region, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationLineString" type="mo:WGS84LineStringType" nillable="true">
+  <xs:element name="WGS84LocationLineStringAdapter" type="mo:WGS84LineStringAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A data type for a series of connected line segments, using WGS84 coordinates.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WGS84LocationPoint" type="mo:WGS84LocationPointType" nillable="true">
+  <xs:element name="WGS84LocationPointAdapter" type="mo:WGS84LocationPointAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>A data type for a 3D geometric point, defined by a single coordinate tuple with values from the WGS84 coordinate reference system.</xs:documentation>
     </xs:annotation>

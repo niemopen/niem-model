@@ -17,6 +17,19 @@
     <xs:anyAttribute processContents="strict" namespace="##other" />
   </xs:attributeGroup>
 
+  <xs:complexType name="AdapterType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data type for a type that contains a single non-conformant property from an external standard for use in NIEM.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="structures:ObjectAugmentationPoint" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute ref="structures:id" />
+    <xs:attribute ref="structures:ref" />
+    <xs:attribute ref="structures:uri" />
+    <xs:anyAttribute processContents="strict" namespace="##other" />
+  </xs:complexType>
+
   <xs:complexType name="AssociationType" abstract="true">
     <xs:annotation>
       <xs:documentation>A data type for a relationship between two or more objects, including any properties of that relationship.</xs:documentation>

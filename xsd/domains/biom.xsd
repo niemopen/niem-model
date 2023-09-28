@@ -12,7 +12,7 @@
   xmlns:mo="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:ncic="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -69,7 +69,7 @@
       <appinfo:LocalTerm term="Y-STR" literal="Short tandem repeat (STR) on the Y-chromosome"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/" schemaLocation="../codes/iso_639-3.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" schemaLocation="../codes/ncic.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/" schemaLocation="mo.xsd"/>
