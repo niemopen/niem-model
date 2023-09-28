@@ -7246,7 +7246,7 @@
           <xs:element ref="mo:ObservedObjectSpecificPlatformAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ObservedObjectSymbolAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ObservedObjectStandardIdentityCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:ObservedObjectAllegianceCountryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:ObservedObjectAllegianceCountry" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ObservationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>

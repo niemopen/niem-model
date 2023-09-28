@@ -597,17 +597,6 @@ scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a
 
 Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
 
-### Harmonized AAMVA country code sets supporting the DHS Western Hemisphere Travel Initiative (WHTI) for the Enhanced Driver License (EDL)
-
-Harmonized duplicate code sets into a single `aamva_d20:CountryWHTICodeType`:
-
-- `aamva_d20:CountryCodeType`
-- `aamva_d20:DHSDriverLicenseIssuingCountryCodeType`
-
-Updated type of property `j:CountryWHTICode` to the new type.
-
-Removed property `j:DriverLicenseIssuingCountryCode` since it will no longer be necessary with the full set of NIEM country representations available via `nc:CountryType`. See [niemopen/niem-model#22](https://github.com/niemopen/niem-model/issues/22) for more.
-
 ### Refactored abstract country properties to be of type nc:CountryType ([#niemopen/niem-model#22](https://github.com/niemopen/niem-model/issues/22))
 
 Updated the following properties to no longer be abstract and to have type `nc:CountryType`, permitting any country representations in NIEM to be used:

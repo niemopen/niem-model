@@ -14040,7 +14040,7 @@
       <xs:documentation>A staff member responsible to observe, conduct, or lead an activity with a subject.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CountryWHTICode" type="aamva_d20:CountryWHTICodeType" substitutionGroup="nc:CountryRepresentation" nillable="true">
+  <xs:element name="CountryWHTICode" type="aamva_d20:CountryCodeType" substitutionGroup="nc:CountryRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A country specified by DHS as part of the DHS Western Hemisphere Travel Initiative.</xs:documentation>
     </xs:annotation>
