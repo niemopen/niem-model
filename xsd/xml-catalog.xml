@@ -57,7 +57,7 @@
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/infrastructureProtection/6.0/" uri="domains/infrastructureProtection.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/intelligence/6.0/" uri="domains/intelligence.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/" uri="domains/internationalTrade.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/" uri="domains/jxdm.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/" uri="domains/justice.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/learn-dev/6.0/" uri="domains/learn-dev.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/" uri="domains/maritime.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/" uri="domains/mo.xsd"/>

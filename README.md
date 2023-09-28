@@ -605,9 +605,29 @@ Updated the following properties to no longer be abstract and to have type `nc:C
 - j:DriverLicenseIssuingCountryAbstract
 - mo:ObservedObjectAllegianceCountryAbstract
 
+### Synchronized Justice domain version number
+
+The NIEM Justice domain originated from the GLOBAL Justice XML Data Model (GJXDM), the predecessor to NIEM.  Since the beginning of NIEM, the Justice domain has continued to use GJXDM version numbers for its own version (2 major version numbers ahead) rather than NIEM version numbers.
+
+For consistency and easier tool support going forward, the Justice domain version numbers have now been synchronized with the rest of the model.
+
+The new pattern for NIEM URIs under OASIS prevent collisions with older versions.  The domain identifier is also being changed from `jxdm` to `justice` to make clear that the new version number applies to the NIEM Justice domain, not the GJXDM.
+
+**NIEM 5.2:**
+
+- URI: http://release.niem.gov/niem/domains/jxdm/7.2/
+- Definition: "Justice"
+- Filename" "jxdm.xsd"
+
+**NIEM 6.0:**
+
+- URI: https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/
+- Definition: "Justice domain 6.0 / GJXDM 8.0"
+- Filename" "jxdm.xsd"
+
 ### Adapter updates
 
-### Standardized the convention for adapter namespaces ([niemopen/niem-model#35](https://github.com/niemopen/niem-model/issues/35))
+#### Standardized the convention for adapter namespaces ([niemopen/niem-model#35](https://github.com/niemopen/niem-model/issues/35))
 
 Updated adapter namespace prefixes, uris, and filenames to follow the convention used by the `niem-xs` namespace, which creates special kinds of proxy adapters for XML Schema simple types.
 

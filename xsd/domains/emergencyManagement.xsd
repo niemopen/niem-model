@@ -16,7 +16,7 @@
   xmlns:have-codes="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_have/6.0/"
   xmlns:iso_639-3="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/"
   xmlns:it="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/"
-  xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/"
+  xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/"
   xmlns:mo="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:niem-cap="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/"
@@ -80,7 +80,7 @@
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/" schemaLocation="../codes/iso_639-3.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/" schemaLocation="biom.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/" schemaLocation="internationalTrade.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/" schemaLocation="jxdm.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/" schemaLocation="justice.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/" schemaLocation="mo.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
