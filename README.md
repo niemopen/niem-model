@@ -806,3 +806,7 @@ Added CSV files documenting the NIEMOpen Technical Steering Committee (TSC) or T
 
 - `namespaces.csv` - Presents the information ordered by namespace category and namespace prefix.
 - `namespaces-by-authority.csv` - Presents the information ordered by the namespace authority.
+
+### Other changes
+
+- Renamed the `xlsx` subfolder as `docs`
