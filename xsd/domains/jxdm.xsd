@@ -3,15 +3,15 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
   xmlns:aamva_d20="https://docs.oasis-open.org/niemopen/ns/model/codes/aamva_d20/6.0/"
   xmlns:apco="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:atf="https://docs.oasis-open.org/niemopen/ns/model/codes/atf/6.0/"
   xmlns:biom="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/"
   xmlns:cbrn="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:em="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/"
   xmlns:hs="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
   xmlns:im="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
@@ -23,7 +23,7 @@
   xmlns:nlets="https://docs.oasis-open.org/niemopen/ns/model/codes/nlets/6.0/"
   xmlns:sar="https://docs.oasis-open.org/niemopen/ns/model/codes/pmise_sar/6.0/"
   xmlns:st="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:ucr="https://docs.oasis-open.org/niemopen/ns/model/codes/ucr/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -126,7 +126,7 @@
       <appinfo:LocalTerm term="XRays" literal="X-Rays"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/aamva_d20/6.0/" schemaLocation="../codes/aamva_d20.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/" schemaLocation="../codes/apco.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/atf/6.0/" schemaLocation="../codes/atf.xsd"/>
@@ -142,7 +142,7 @@
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/" schemaLocation="immigration.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/" schemaLocation="st.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AcademicAssessmentType">
     <xs:annotation>
       <xs:documentation>A data type for an institution or agency assessment process for determining academic needs of a subject.</xs:documentation>

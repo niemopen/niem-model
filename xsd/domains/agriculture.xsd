@@ -3,17 +3,17 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/agriculture/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
   xmlns:ag="https://docs.oasis-open.org/niemopen/ns/model/domains/agriculture/6.0/"
   xmlns:ag_codes="https://docs.oasis-open.org/niemopen/ns/model/codes/ag_codes/6.0/"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:fips="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/"
-  xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:usda_fsa="https://docs.oasis-open.org/niemopen/ns/model/codes/usda_fsa/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,13 +37,13 @@
       <appinfo:LocalTerm term="USDA" literal="United States Department of Agriculture"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" schemaLocation="../adapters/geospatial.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ag_codes/6.0/" schemaLocation="../codes/ag_codes.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" schemaLocation="../codes/fips.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/usda_fsa/6.0/" schemaLocation="../codes/usda_fsa.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AcreageSubmissionFileType">
     <xs:annotation>
       <xs:documentation>A data type containing the entire set of the crops planted on a farm, itemized down to the acreage of individual fields and subfields and the individual producer stakeholders.</xs:documentation>
