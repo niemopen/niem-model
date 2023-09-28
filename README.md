@@ -810,3 +810,4 @@ Added CSV files documenting the NIEMOpen Technical Steering Committee (TSC) or T
 ### Other changes
 
 - Renamed the `xlsx` subfolder as `docs`
+- Merged the GENC codes lists XML catalog formerly at `xsd/codes/genc/xml-catalog.xml` into the primary XML catalog at `xsd/xml-catalog.xml`.

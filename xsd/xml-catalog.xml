@@ -1,72 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/" uri="adapters/niem-cap.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-de/6.0/" uri="adapters/niem-de.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/" uri="adapters/niem-gml.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-have/6.0/" uri="adapters/niem-have.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" uri="adapters/niem-xs.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/" uri="auxiliary/cui.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/statistics/6.0/" uri="auxiliary/statistics.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/aamva_d20/6.0/" uri="codes/aamva_d20.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ag_codes/6.0/" uri="codes/ag_codes.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/" uri="codes/apco.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/atf/6.0/" uri="codes/atf.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/bls/6.0/" uri="codes/bls.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/canada_post/6.0/" uri="codes/canada_post.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/cbrncl/6.0/" uri="codes/cbrncl.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/commodity/6.0/" uri="codes/commodity.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/dea_ctlsub/6.0/" uri="codes/dea.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_have/6.0/" uri="codes/have-codes.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_rm/6.0/" uri="codes/edxl_rm.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/fema/6.0/" uri="codes/fema.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" uri="codes/fips.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/genc/6.0/" uri="codes/genc.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/hazmat/6.0/" uri="codes/hazmat.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/hl7/6.0/" uri="codes/hl7.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" uri="codes/iso_3166.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_4217/6.0/" uri="codes/iso_4217.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/" uri="codes/iso_639-3.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-5/6.0/" uri="codes/iso_639-5.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/it_codes/6.0/" uri="codes/it_codes.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/jc3iedm/6.0/" uri="codes/jc3iedm.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/jp2-0/6.0/" uri="codes/jp2-0.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/jp3-52/6.0/" uri="codes/jp3-52.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/mmucc/6.0/" uri="codes/mmucc.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/nces/6.0/" uri="codes/nces.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" uri="codes/ncic.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ndex/6.0/" uri="codes/ndex.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/" uri="codes/nga.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/nlets/6.0/" uri="codes/nlets.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/occs/6.0/" uri="codes/occs.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/opm/6.0/" uri="codes/opm.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/pmise_sar/6.0/" uri="codes/sar.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/stix/6.0/" uri="codes/stix.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ucr/6.0/" uri="codes/ucr.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/unece_rec20/6.0/" uri="codes/unece_rec20.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/usda_fsa/6.0/" uri="codes/usda_fsa.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/usps/6.0/" uri="codes/usps.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/" uri="codes/xCard.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/agriculture/6.0/" uri="domains/agriculture.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/" uri="domains/biom.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/" uri="domains/cbrn.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/cyber/6.0/" uri="domains/cyber.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/" uri="domains/emergencyManagement.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/" uri="domains/hs.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/" uri="domains/immigration.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/infrastructureProtection/6.0/" uri="domains/infrastructureProtection.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/intelligence/6.0/" uri="domains/intelligence.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/" uri="domains/internationalTrade.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/" uri="domains/justice.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/learn-dev/6.0/" uri="domains/learn-dev.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/" uri="domains/maritime.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/" uri="domains/mo.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" uri="domains/screening.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/" uri="domains/st.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/usmtf/6.0/" uri="domains/mo-usmtf.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" uri="niem-core.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" uri="utility/structures.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/" uri="utility/code-lists-instance.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/" uri="utility/conformanceTargets.xsd"/>
-  <nextCatalog catalog="codes/genc/xml-catalog.xml"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/"
+    uri="adapters/niem-cap.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-de/6.0/"
+    uri="adapters/niem-de.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
+    uri="adapters/niem-gml.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-have/6.0/"
+    uri="adapters/niem-have.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+    uri="adapters/niem-xs.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/"
+    uri="auxiliary/cui.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/statistics/6.0/"
+    uri="auxiliary/statistics.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/aamva_d20/6.0/"
+    uri="codes/aamva_d20.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ag_codes/6.0/"
+    uri="codes/ag_codes.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/" uri="codes/apco.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/atf/6.0/" uri="codes/atf.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/bls/6.0/" uri="codes/bls.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/canada_post/6.0/"
+    uri="codes/canada_post.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/cbrncl/6.0/" uri="codes/cbrncl.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/commodity/6.0/"
+    uri="codes/commodity.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/dea_ctlsub/6.0/"
+    uri="codes/dea.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_have/6.0/"
+    uri="codes/have-codes.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_rm/6.0/"
+    uri="codes/edxl_rm.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/fema/6.0/" uri="codes/fema.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" uri="codes/fips.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/genc/6.0/" uri="codes/genc.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/hazmat/6.0/" uri="codes/hazmat.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/hl7/6.0/" uri="codes/hl7.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/"
+    uri="codes/iso_3166.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_4217/6.0/"
+    uri="codes/iso_4217.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/"
+    uri="codes/iso_639-3.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-5/6.0/"
+    uri="codes/iso_639-5.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/it_codes/6.0/"
+    uri="codes/it_codes.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/jc3iedm/6.0/"
+    uri="codes/jc3iedm.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/jp2-0/6.0/" uri="codes/jp2-0.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/jp3-52/6.0/" uri="codes/jp3-52.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/mmucc/6.0/" uri="codes/mmucc.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/nces/6.0/" uri="codes/nces.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" uri="codes/ncic.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ndex/6.0/" uri="codes/ndex.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/" uri="codes/nga.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/nlets/6.0/" uri="codes/nlets.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/occs/6.0/" uri="codes/occs.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/opm/6.0/" uri="codes/opm.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/pmise_sar/6.0/" uri="codes/sar.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/stix/6.0/" uri="codes/stix.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/ucr/6.0/" uri="codes/ucr.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/unece_rec20/6.0/"
+    uri="codes/unece_rec20.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/usda_fsa/6.0/"
+    uri="codes/usda_fsa.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/usps/6.0/" uri="codes/usps.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/" uri="codes/xCard.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/agriculture/6.0/"
+    uri="domains/agriculture.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/"
+    uri="domains/biom.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/" uri="domains/cbrn.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/cyber/6.0/"
+    uri="domains/cyber.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/"
+    uri="domains/emergencyManagement.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
+    uri="domains/hs.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
+    uri="domains/immigration.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/infrastructureProtection/6.0/"
+    uri="domains/infrastructureProtection.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/intelligence/6.0/"
+    uri="domains/intelligence.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/"
+    uri="domains/internationalTrade.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/"
+    uri="domains/justice.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/learn-dev/6.0/"
+    uri="domains/learn-dev.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/"
+    uri="domains/maritime.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
+    uri="domains/mo.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
+    uri="domains/screening.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/"
+    uri="domains/st.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/usmtf/6.0/"
+    uri="domains/mo-usmtf.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" uri="niem-core.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
+    uri="utility/structures.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/"
+    uri="utility/code-lists-instance.xsd" />
+  <uri name="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+    uri="utility/conformanceTargets.xsd" />
+  <uri name="http://api.nsgreg.nga.mil/geo-political/GENC/2/3-12"
+    uri="codes/genc/genc_geo-political_3-12_char2.csv" />
+  <uri name="urn:us:gov:dod:nga:def:geo-political:GENC:2:3-12"
+    uri="codes/genc/genc_geo-political_3-12_char2.csv" />
+  <uri name="http://api.nsgreg.nga.mil/geo-political/GENC/3/3-12"
+    uri="codes/genc/genc_geo-political_3-12_char3.csv" />
+  <uri name="urn:us:gov:dod:nga:def:geo-political:GENC:3:3-12"
+    uri="codes/genc/genc_geo-political_3-12_char3.csv" />
+  <uri name="http://api.nsgreg.nga.mil/geo-political/GENC/n/3-12"
+    uri="codes/genc/genc_geo-political_3-12_numeric.csv" />
+  <uri name="urn:us:gov:dod:nga:def:geo-political:GENC:n:3-12"
+    uri="codes/genc/genc_geo-political_3-12_numeric.csv" />
+  <uri name="http://api.nsgreg.nga.mil/geo-division/GENC/6/3-12"
+    uri="codes/genc/genc_geo-division_3-12_char6.csv" />
+  <uri name="urn:us:gov:dod:nga:def:geo-division:GENC:6:3-12" uri="codes/genc/genc_geo-division_3-12_char6.csv" />
 </catalog>
