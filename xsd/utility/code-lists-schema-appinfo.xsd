@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
-   targetNamespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
-   version="5.0"
-   xml:lang="en-US"
-   xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
-   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
+  version="psd01"
+  xml:lang="en-US"
+  xmlns:clsa="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation>This schema provides annotations for connecting content defined within an XML Schema document to the content of code lists.</xs:documentation>

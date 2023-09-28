@@ -3,17 +3,17 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:biom="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:iso_639-3="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/"
   xmlns:mo="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:ncic="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -69,12 +69,12 @@
       <appinfo:LocalTerm term="Y-STR" literal="Short tandem repeat (STR) on the Y-chromosome"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/" schemaLocation="../codes/iso_639-3.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" schemaLocation="../codes/ncic.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/" schemaLocation="mo.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="AcquisitionLightingSpectrumCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a lighting spectrum used in capturing an iris image</xs:documentation>
@@ -8478,7 +8478,11 @@
       <xs:documentation>A data type for a specific pattern</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:token">
-      <xs:pattern value="&lt;&gt;"/>
+      <xs:pattern value="&lt;&gt;">
+        <xs:annotation>
+          <xs:documentation>Indicator for center of the lip (left &lt; followed by right &gt;)</xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="LipPrintCodeSimpleType">

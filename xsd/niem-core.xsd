@@ -3,14 +3,14 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:cli="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:cli="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -49,10 +49,10 @@
       <appinfo:LocalTerm term="UTM" literal="Universal Transverse Mercator"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="utility/code-lists-instance.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="utility/structures.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="external/xml.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/" schemaLocation="utility/code-lists-instance.xsd"/>
   <xs:complexType name="ActivityConveyanceAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between an activity and a conveyance.</xs:documentation>
@@ -1607,20 +1607,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EmployeeAssignmentAssociationType">
-    <xs:annotation>
-      <xs:documentation>A data type for an association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:EmploymentAssociationType">
-        <xs:sequence>
-          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeAssignmentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="EmployerType">
     <xs:annotation>
       <xs:documentation>A data type for an organization or person that employs a person.</xs:documentation>
@@ -1658,11 +1644,13 @@
           <xs:element ref="nc:EmployeePayHourlyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeePosition" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeRankAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSchedule" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeScheduleFixedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeShiftAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentStatus" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSupervisor" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1821,9 +1809,8 @@
       <xs:documentation>A data type for a tangible property (other than land or buildings) of more or less durable nature which is useful in carrying on the operations of a business.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -2909,7 +2896,7 @@
       <xs:documentation>A data type for information that further qualifies primary data; data about data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="nc:AdministrativeID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:CaveatText" minOccurs="0" maxOccurs="unbounded"/>
@@ -2938,6 +2925,7 @@
           <xs:element ref="nc:SourceContactPersonAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:SourceIDText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:MetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -3675,6 +3663,53 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="PersonPronounsCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="he/him">
+        <xs:annotation>
+          <xs:documentation>he/him</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other">
+        <xs:annotation>
+          <xs:documentation>other</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="prefer not to say">
+        <xs:annotation>
+          <xs:documentation>prefer not to say</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="she/her">
+        <xs:annotation>
+          <xs:documentation>she/her</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="they/them">
+        <xs:annotation>
+          <xs:documentation>they/them</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation>unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PersonPronounsCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:PersonPronounsCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="PersonResidenceAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between a person and a location where that person lives.</xs:documentation>
@@ -3755,6 +3790,7 @@
           <xs:element ref="nc:PersonPhysicalDisabilityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPhysicalFeature" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPrimaryLanguage" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonPronounsAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonRaceAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonReligionAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonResidentAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -4068,9 +4104,8 @@
       <xs:documentation>A data type for a collection of written, printed, illustrated, or blank sheets, made of paper, parchment, or other material, usually fastened together to hinge at one side.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:DocumentType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfDocument" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationAuthorText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationISBNID" minOccurs="0" maxOccurs="unbounded"/>
@@ -4117,6 +4152,8 @@
     <xs:simpleContent>
       <xs:extension base="nc:NumericType">
         <xs:attribute ref="nc:quantityUnitText" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonCode" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonText" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -4283,9 +4320,8 @@
       <xs:documentation>A data type for an account given of a particular matter, especially in the form of an official document, after thorough investigation or consideration by an appointed person or body.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:DocumentType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfDocument" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportAssignee" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportCoverageDateRange" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportDueDate" minOccurs="0" maxOccurs="unbounded"/>
@@ -4544,6 +4580,19 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="StudentType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person formally engaged in learning, especially one enrolled in a school or college.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:PersonType">
+        <xs:sequence>
+          <xs:element ref="nc:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:StudentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="SubstanceMeasureType">
     <xs:annotation>
       <xs:documentation>A data type for a measure of the amount of something.</xs:documentation>
@@ -4698,8 +4747,11 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="niem-xs:string">
+        <xs:attribute ref="nc:metadataRef" use="optional"/>
         <xs:attribute ref="nc:partialIndicator" use="optional"/>
         <xs:attribute ref="nc:truncationIndicator" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonCode" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonText" use="optional"/>
         <xs:attribute ref="xml:lang" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
@@ -4894,9 +4946,8 @@
       <xs:documentation>A data type for a property item used as an instrument of attack or defense.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponUser" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponInvolvedInActivity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponUsageAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -4917,6 +4968,38 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="YesNoUnknownCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a ternary or three-option indicator representing true/yes, false/no, and unknown.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="No">
+        <xs:annotation>
+          <xs:documentation>No</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:documentation>Unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Yes">
+        <xs:annotation>
+          <xs:documentation>Yes</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="YesNoUnknownCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a ternary or three-option indicator representing true/yes, false/no, and unknown.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:YesNoUnknownCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
   <xs:simpleType name="ZuluDateTimeSimpleType">
     <xs:annotation>
@@ -4943,6 +5026,11 @@
   <xs:attribute name="fiscalYearStartDate" type="xs:date">
     <xs:annotation>
       <xs:documentation>A date on which a fiscal year begins.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="metadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>A list of metadata objects that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="partialIndicator" type="xs:boolean">
@@ -4978,6 +5066,16 @@
   <xs:attribute name="truncationIndicator" type="xs:boolean">
     <xs:annotation>
       <xs:documentation>True if the length of a string is greater than the length of the field within which the string was stored in the exporting system; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="valueEmptyReasonCode" type="nc:EmptyReasonCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A reason why a data value was not provided.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="valueEmptyReasonText" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A reason why a data value was not provided.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="yearFirstMonthDate" type="xs:gMonth">
@@ -7625,14 +7723,9 @@
       <xs:documentation>A person who works for a business or a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmployeeAssignmentAssociationType" nillable="true">
+  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmploymentAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="EmployeeAssignmentAssociationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type nc:EmployeeAssignmentAssociationType</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EmployeeContactInformation" type="nc:ContactInformationType" nillable="true">
@@ -10140,9 +10233,14 @@
       <xs:documentation>A body or main content of a message.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="Metadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies primary data; data about data.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for nc:MetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MilitaryBranchName" type="nc:TextType" nillable="true">
@@ -11645,6 +11743,21 @@
       <xs:documentation>An association between a person and a primary worker assigned to that person.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonPronounsAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPronounsCode" type="nc:PersonPronounsCodeType" substitutionGroup="nc:PersonPronounsAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPronounsText" type="nc:TextType" substitutionGroup="nc:PersonPronounsAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonRaceAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
@@ -12835,31 +12948,6 @@
       <xs:documentation>A program designed to lower the probability of undesirable outcomes.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="RoleOfAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a property of a role object. This specifies the base object, of which the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfDocument" type="nc:DocumentType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A document of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfItem" type="nc:ItemType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An entity of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfOrganization" type="nc:OrganizationType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An organization of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfPerson" type="nc:PersonType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A person of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="RollValue" type="nc:Degree180PlusMinusType" nillable="true">
     <xs:annotation>
       <xs:documentation>An angle of rotation of a thing about its longitudinal axis, measured in degrees between the lateral axis and the horizontal plane; negative values indicate the left side is rotated downward.</xs:documentation>
@@ -13303,6 +13391,21 @@
   <xs:element name="StreetPredirectional" type="nc:StreetDirectionalType" nillable="true">
     <xs:annotation>
       <xs:documentation>A direction that appears before a street name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Student" type="nc:StudentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person formally engaged in learning, especially one enrolled in a school or college.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StudentAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for type nc:StudentType</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StudentIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unique alphanumeric identification assigned to a student by an education organization.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SubFacility" type="nc:FacilityType" nillable="true">
