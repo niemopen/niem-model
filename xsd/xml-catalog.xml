@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <uri name="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" uri="utility/code-lists-instance.xsd"/>
-  <uri name="http://release.niem.gov/niem/conformanceTargets/3.0/" uri="utility/conformanceTargets.xsd"/>
-  <uri name="http://release.niem.gov/niem/structures/5.0/" uri="utility/structures.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/edxl-cap/6.0/" uri="adapters/edxl-cap.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/edxl-de/6.0/" uri="adapters/edxl-de.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/edxl-have/6.0/" uri="adapters/edxl-have.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-de/6.0/" uri="adapters/edxl-de.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" uri="adapters/geospatial.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-have/6.0/" uri="adapters/edxl-have.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" uri="adapters/niem-xs.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/" uri="auxiliary/cui.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/statistics/6.0/" uri="auxiliary/statistics.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/codes/aamva_d20/6.0/" uri="codes/aamva_d20.xsd"/>
@@ -67,6 +65,8 @@
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/surfaceTransportation/6.0/" uri="domains/st.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/domains/usmtf/6.0/" uri="domains/mo-usmtf.xsd"/>
   <uri name="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" uri="niem-core.xsd"/>
-  <uri name="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" uri="adapters/niem-xs.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" uri="utility/structures.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/" uri="utility/code-lists-instance.xsd"/>
+  <uri name="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/" uri="utility/conformanceTargets.xsd"/>
   <nextCatalog catalog="codes/genc/xml-catalog.xml"/>
 </catalog>

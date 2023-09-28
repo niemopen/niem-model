@@ -73,6 +73,10 @@ NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to
 - `scr:PersonMetadata`
   - Added to type `scr:PersonAugmentationType`
 
+**Changed the default parent type:**
+
+Changed the default parent of metadata types from `structures:MetadataType` to `structures:ObjectType`.
+
 ### Removed the roles construct ([niemopen/niem-naming-design-rules#6](https://github.com/niemopen/niem-naming-design-rules/issues/6))
 
 NIEM has previously used `RoleOf` properties and role types to be able to relate multiple objects in a message back to the same entity.  NDR 6.0 drops the role construct in favor of using the `structures:uri` attribute instead: objects in a message with the same uri value should be interpreted as different roles of the same entity.  This change was made to make NIEM simpler to learn and use, and to improve consistency for implementers.
@@ -365,7 +369,7 @@ The following is a summary of the key changes made in this release.  More detail
 
 In addition to removing the `RoleOf` construct from the model due to NDR updates, other properties and types using the `Role` representation term were reviewed and updated as appropriate to improve consistency with the rest of the model.
 
-**Renamed remaining RoleOf properties and types**
+**Renamed remaining RoleOf properties and types:**
 
 Renamed additional properties and types that were using `RoleOf` as the class term but were not using the `RoleOf` construct as defined by the NDR:
 
@@ -378,7 +382,7 @@ Property | it:RoleOfOrganizationCategory | it:OrganizationRoleCategory
 Property | it:RoleOfOrganizationCategoryAugmentationPoint | it:OrganizationRoleCategoryAugmentationPoint
 Type | it:RoleOfOrganizationCategoryType | it:OrganizationRoleCategoryType
 
-**Removed the Role representation term**
+**Removed the Role representation term:**
 
 Removed extraneous `Role` representation terms from a list of properties and their corresponding types and augmentation point properties.  For example, `im:AlienRole` has been renamed `im:Alien`.
 
@@ -398,14 +402,14 @@ The following properties have been renamed:
 - im:OtherAlienRole
 - im:ResidentRole
 
-**Refactored im:PersonCountryRoleType**
+**Refactored im:PersonCountryRoleType:**
 
 Refactored `im:PersonCountryRoleType` to make immigration status more widely available for reuse:
 
 - Moved `im:ImmigrationStatus` from `im:PersonCountryRoleType` to `im:PersonAugmentationType`, making it available wherever `nc:PersonType` is used.
 - Updated `im:PersonCountryRoleType` to extend `nc:PersonType`.
 
-**Refactored scr:PersonRole**
+**Refactored scr:PersonRole:**
 
 - Added a new Screening augmentation for `nc:PersonType`.
 - Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.

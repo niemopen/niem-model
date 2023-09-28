@@ -3,20 +3,20 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/codes/bls/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:bls="https://docs.oasis-open.org/niemopen/ns/model/codes/bls/6.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>US Bureau of Labor Statistics (BLS)</xs:documentation>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="EducationLevelCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a typical education needed for entry - represents the typical education level most workers need to enter an occupation.</xs:documentation>

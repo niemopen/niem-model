@@ -3,15 +3,15 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
-  xmlns:xls="http://release.niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
+  xmlns:xls="https://docs.oasis-open.org/niemopen/ns/model/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -22,12 +22,12 @@
       <appinfo:LocalTerm term="OGC" literal="Open Geospatial Consortium"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0" schemaLocation="../external/ogc/ols/1.1.0/dhs-gmo/2.1.0/ols.xsd" appinfo:externalImportIndicator="true">
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/external/ogc/xls/1.1.0/dhs-gmo/2.1.0" schemaLocation="../external/ogc/ols/1.1.0/dhs-gmo/2.1.0/ols.xsd" appinfo:externalImportIndicator="true">
     <xs:annotation>
       <xs:documentation>A profile of OpenGeospatialConsortium (OpenGIS, OGC) OpenLS (Location Services) version 1.1 schemas. A profile of OpenGeospatialConsortium (OpenGIS, OGC) OpenLS (Location Services) version 1.1 schemas that have been edited to use GML version 3.2.1 schemas instead of the GML version 3.0 schemas that were current when OpenLS version 1.1 was promulgated.  See http://www.opengeospatial.org for documentation, http://schemas.opengis.net/ols/ for schemas.</xs:documentation>
     </xs:annotation>
   </xs:import>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../external/ogc/gml/3.2.1/gml.xsd" appinfo:externalImportIndicator="true">
     <xs:annotation>
       <xs:documentation>Geography Markup Language (GML) version 3.2.1 schemas.  See http://www.opengeospatial.org OGC document 07-036 for documentation: "The Geography Markup Language (GML) was originally developed within the Open Geospatial Consortium, Inc. (OGC). ISO 19136 was prepared by ISO/TC 211 jointly with the OGC."  See http://schemas.opengis.net/gml/ for schemas.</xs:documentation>

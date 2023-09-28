@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
-    targetNamespace="http://release.niem.gov/niem/conformanceTargets/3.0/"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  version="psd01"
+  xml:lang="en-US"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:attribute name="conformanceTargets">
     <xs:simpleType>
