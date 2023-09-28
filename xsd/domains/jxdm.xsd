@@ -2981,7 +2981,7 @@
           <xs:element ref="j:DriverLicenseExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseIssueDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicensePerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseIssuingCountryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:DriverLicenseIssuingCountry" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseREALIDComplianceAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseBaseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -15940,14 +15940,9 @@
       <xs:documentation>A date when a driver license or driver license permit is issued or renewed.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseIssuingCountryAbstract" abstract="true">
+  <xs:element name="DriverLicenseIssuingCountry" type="nc:CountryType" nillable="true">
     <xs:annotation>
-      <xs:documentation>A data concept for an identifier of the country in which an identity document was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseIssuingCountryCode" type="aamva_d20:DHSDriverLicenseIssuingCountryCodeType" substitutionGroup="j:DriverLicenseIssuingCountryAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identifier of the country in which an identity document was issued.</xs:documentation>
+      <xs:documentation>A country in which an identity document was issued.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="DriverLicenseLimitedTermIndicator" type="niem-xs:boolean" nillable="true">

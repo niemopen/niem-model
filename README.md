@@ -597,7 +597,15 @@ scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a
 
 Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
 
-## Adapter updates
+### Refactored abstract country properties to be of type nc:CountryType ([#niemopen/niem-model#22](https://github.com/niemopen/niem-model/issues/22))
+
+Updated the following properties to no longer be abstract and to have type `nc:CountryType`, permitting any country representations in NIEM to be used:
+
+- intel:IdentificationIssuingCountryAbstract
+- j:DriverLicenseIssuingCountryAbstract
+- mo:ObservedObjectAllegianceCountryAbstract
+
+### Adapter updates
 
 ### Standardized the convention for adapter namespaces ([niemopen/niem-model#35](https://github.com/niemopen/niem-model/issues/35))
 

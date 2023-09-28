@@ -7246,7 +7246,7 @@
           <xs:element ref="mo:ObservedObjectSpecificPlatformAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ObservedObjectSymbolAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ObservedObjectStandardIdentityCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="mo:ObservedObjectAllegianceCountryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="mo:ObservedObjectAllegianceCountry" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ObservationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -12148,9 +12148,9 @@
       <xs:documentation>A data concept for an activity of an observed object.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ObservedObjectAllegianceCountryAbstract" abstract="true">
+  <xs:element name="ObservedObjectAllegianceCountry" type="nc:CountryType" nillable="true">
     <xs:annotation>
-      <xs:documentation>A data concept for a country of allegiance of an observed object.</xs:documentation>
+      <xs:documentation>A country of allegiance of an observed object.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ObservedObjectBattleDimensionAbstract" abstract="true">
