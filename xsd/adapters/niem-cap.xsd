@@ -3,19 +3,19 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:cap="urn:oasis:names:tc:emergency:cap:1.1"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:niem-cap="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>NIEM adapter for Common Alerting Protocol</xs:documentation>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="urn:oasis:names:tc:emergency:cap:1.1" schemaLocation="../external/cap.xsd" appinfo:externalImportIndicator="true">
     <xs:annotation>
       <xs:documentation>Common Alerting Protocol (CAP) is a simple but general format for exchanging effective warning messages based on best practices identified in academic research and real-world experience.</xs:documentation>

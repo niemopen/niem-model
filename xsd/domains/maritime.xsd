@@ -3,10 +3,10 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:hazmat="https://docs.oasis-open.org/niemopen/ns/model/codes/hazmat/6.0/"
   xmlns:iso_3166="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/"
   xmlns:m="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/"
@@ -14,7 +14,7 @@
   xmlns:ncic="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/"
   xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -52,13 +52,13 @@
       <appinfo:LocalTerm term="USMTF" literal="United States Message Text Format"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/hazmat/6.0/" schemaLocation="../codes/hazmat.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" schemaLocation="../codes/iso_3166.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" schemaLocation="../codes/ncic.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="CANUSLexiconAPR07CategoryCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a category defined by the April 2007 Canada/USA Bi-National Vessel of Interest (VOI) Lexicon category codes.</xs:documentation>

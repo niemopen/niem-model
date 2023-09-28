@@ -3,10 +3,10 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:cui="https://docs.oasis-open.org/niemopen/ns/model/auxiliary/cui/6.0/"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:iso_3166="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/"
@@ -15,7 +15,7 @@
   xmlns:nga="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/"
   xmlns:niem-gml="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
   xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xCard="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -95,7 +95,6 @@
       <appinfo:LocalTerm term="X509" definition="A standard defining the format of public key certificates."/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../external/ogc/gml/3.2.1/gml.xsd" appinfo:externalImportIndicator="true">
     <xs:annotation>
       <xs:documentation>Geography Markup Language (GML) version 3.2.1 schemas.  See http://www.opengeospatial.org OGC document 07-036 for documentation: "The Geography Markup Language (GML) was originally developed within the Open Geospatial Consortium, Inc. (OGC). ISO 19136 was prepared by ISO/TC 211 jointly with the OGC."  See http://schemas.opengis.net/gml/ for schemas.</xs:documentation>
@@ -108,6 +107,7 @@
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/nga/6.0/" schemaLocation="../codes/nga.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/xCard/6.0/" schemaLocation="../codes/xCard.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="AbbreviatedNameSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a shortened name.</xs:documentation>
@@ -4431,6 +4431,18 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="DocumentAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a document.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="mo:MinimumEssentialMetadata" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="EllipseType">
     <xs:annotation>
       <xs:documentation>A data type for an ellipse, expressed as an XY plane (projected onto earth's surface) ellipse. The major axis is oriented along reported azimuth, with zero being due North.</xs:documentation>
@@ -4758,7 +4770,7 @@
       <xs:documentation>A data type for metadata about properties that are encoded in an implementation specific means.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="mo:JSONEncodedText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:ImplementationSpecificSettingMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -6855,7 +6867,7 @@
       <xs:documentation>A data type for metadata about a data resource that represents the DoD's minimum essential set.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="mo:ResourceGlobalIdentification" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="mo:ResourceDomainIdentification" minOccurs="0" maxOccurs="unbounded"/>
@@ -7738,12 +7750,7 @@
       </xs:enumeration>
       <xs:enumeration value="ftp">
         <xs:annotation>
-          <xs:documentation>File Transfer Protocol [Control].</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ftp">
-        <xs:annotation>
-          <xs:documentation>FTP.</xs:documentation>
+          <xs:documentation>File Transfer Protocol [Control]; FTP.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ftp-agent">
@@ -7753,12 +7760,7 @@
       </xs:enumeration>
       <xs:enumeration value="ftp-data">
         <xs:annotation>
-          <xs:documentation>File Transfer [Default Data].</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ftp-data">
-        <xs:annotation>
-          <xs:documentation>FTP.</xs:documentation>
+          <xs:documentation>File Transfer [Default Data]; FTP.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ftps">
@@ -7778,12 +7780,7 @@
       </xs:enumeration>
       <xs:enumeration value="http">
         <xs:annotation>
-          <xs:documentation>HTTP.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="http">
-        <xs:annotation>
-          <xs:documentation>World Wide Web HTTP.</xs:documentation>
+          <xs:documentation>World Wide Web HTTP; HTTP.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="http-mgmt">
@@ -7813,12 +7810,7 @@
       </xs:enumeration>
       <xs:enumeration value="imaps">
         <xs:annotation>
-          <xs:documentation>IMAP over TLS protocol.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="imaps">
-        <xs:annotation>
-          <xs:documentation>imap4 protocol over TLS/SSL.</xs:documentation>
+          <xs:documentation>IMAP over TLS protocol; imap4 protocol over TLS/SSL.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="imsp">
@@ -9181,7 +9173,7 @@
       <xs:documentation>A data type for metadata about information representing a set of uncertainty measures.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="mo:UncertaintyFunctionalUseCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="mo:UncertaintyQualityMethodCode" minOccurs="0" maxOccurs="unbounded"/>
@@ -10216,7 +10208,7 @@
       <xs:documentation>A vertical elevation of an object above a surface (as sea level or land) of a planet or natural satellite.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AnalyticNoteMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="AnalyticNoteMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about analyst notes throughout the model, this tracks any notes or comments made regarding data.</xs:documentation>
     </xs:annotation>
@@ -10501,7 +10493,7 @@
       <xs:documentation>A digital signature computed upon this X.509 certificate.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CETMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="CETMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Cyber Effectiveness Table (CET) data; data about data.</xs:documentation>
     </xs:annotation>
@@ -12516,7 +12508,7 @@
       <xs:documentation>A description the programming language used.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ProvenanceMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="ProvenanceMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about nodes and links in a network.</xs:documentation>
     </xs:annotation>
@@ -13336,7 +13328,7 @@
       <xs:documentation>An identifier for a seven-character alphanumeric code that describes a unique increment of a unit deployment, i.e., advance party, main body, equipment by sea and air, reception team, or trail party, in the time-phased force and deployment data. Also called ULN. (JP 3-35)</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="UnitMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="UnitMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies primary data about a unit; data about unit data.</xs:documentation>
     </xs:annotation>
@@ -13516,7 +13508,7 @@
       <xs:documentation>A point to which a moving object may be vectored.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WCMMetadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="WCMMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Weapon Characterization Model (WCM) data; data about data.</xs:documentation>
     </xs:annotation>

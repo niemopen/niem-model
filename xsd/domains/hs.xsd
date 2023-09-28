@@ -3,10 +3,10 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:fips="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/"
   xmlns:hs="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
   xmlns:im="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
@@ -14,7 +14,7 @@
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
   xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -48,13 +48,13 @@
       <appinfo:LocalTerm term="VA" literal="Veterans Affairs"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" schemaLocation="../codes/fips.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/" schemaLocation="immigration.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/" schemaLocation="jxdm.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AbuseNeglectInjuryType">
     <xs:annotation>
       <xs:documentation>A data type for an applied augmentation for type nc:InjuryType</xs:documentation>
@@ -6187,30 +6187,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:complexType name="StudentType">
-    <xs:annotation>
-      <xs:documentation>A data type for a student.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:PersonType">
-        <xs:sequence>
-          <xs:element ref="hs:StudentCurrentEducationGradeLevelAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationEnrollmentIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationEnrollmentEndDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationTruancyIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:EducationalIssues" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:EducationalAdjustmentAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentSpecialEducationEligibleIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentSpecialEducationDetails" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentSchoolConductChangeText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentPhotoImage" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="SubjectChildAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between a subject and a child.</xs:documentation>
@@ -9845,7 +9821,7 @@
       <xs:documentation>A date of most recent removal from a foster home.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="FosterCareLiablePlacementCountyCode" type="fips:USCounty3DigitCodeType" nillable="true">
+  <xs:element name="FosterCareLiablePlacementCountyCode" type="fips:USCounty5DigitCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A FIPS code of the legal liable county with the current placement setting.</xs:documentation>
     </xs:annotation>
@@ -11390,7 +11366,7 @@
       <xs:documentation>A data concept for describing a county for whom a person was held in a prior detention.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PriorDetentionHoldingForCountyCode" type="fips:USCounty3DigitCodeType" substitutionGroup="hs:PriorDetentionHoldingForCountyAbstract" nillable="true">
+  <xs:element name="PriorDetentionHoldingForCountyCode" type="fips:USCounty5DigitCodeType" substitutionGroup="hs:PriorDetentionHoldingForCountyAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A county for whom a person was held in a prior detention.</xs:documentation>
     </xs:annotation>
