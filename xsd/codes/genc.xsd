@@ -3,14 +3,14 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/codes/genc/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/ ../utility/code-lists-schema-appinfo.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/ ../utility/code-lists-schema-appinfo.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:clsa="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:genc="https://docs.oasis-open.org/niemopen/ns/model/codes/genc/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -20,8 +20,8 @@
       <appinfo:LocalTerm term="Alpha3" definition="Three-letter"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="CountryAlpha2CodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for country codes.</xs:documentation>
@@ -5347,12 +5347,12 @@
       </xs:enumeration>
       <xs:enumeration value="BA-BIH">
         <xs:annotation>
-          <xs:documentation>Bosnia and Herzegovina, Federation of</xs:documentation>
+          <xs:documentation>Bosnia and Herzegovina, Federation of; Bosne i Hercegovine, Federacija</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BA-BRC">
         <xs:annotation>
-          <xs:documentation>Brcko District</xs:documentation>
+          <xs:documentation>Brcko District; Brčko Distrikt</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BA-SRP">
@@ -5777,7 +5777,7 @@
       </xs:enumeration>
       <xs:enumeration value="BE-BRU">
         <xs:annotation>
-          <xs:documentation>Brussels-Capital Region</xs:documentation>
+          <xs:documentation>Brussels-Capital Region; Brussels Hoofdstedelijk Gewest; Bruxelles-Capitale</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BE-VAN">
@@ -5792,7 +5792,7 @@
       </xs:enumeration>
       <xs:enumeration value="BE-VLG">
         <xs:annotation>
-          <xs:documentation>Flanders</xs:documentation>
+          <xs:documentation>Flanders; Vlaanderen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BE-VLI">
@@ -5812,7 +5812,7 @@
       </xs:enumeration>
       <xs:enumeration value="BE-WAL">
         <xs:annotation>
-          <xs:documentation>Wallonia</xs:documentation>
+          <xs:documentation>Wallonie; Wallonia</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BE-WBR">
@@ -7052,7 +7052,7 @@
       </xs:enumeration>
       <xs:enumeration value="BY-BR">
         <xs:annotation>
-          <xs:documentation>Brestskaya Voblasts’</xs:documentation>
+          <xs:documentation>Brestskaya Voblasts’; Brestskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BY-HM">
@@ -7062,27 +7062,27 @@
       </xs:enumeration>
       <xs:enumeration value="BY-HO">
         <xs:annotation>
-          <xs:documentation>Homyel’skaya Voblasts’</xs:documentation>
+          <xs:documentation>Homyel’skaya Voblasts’; Gomel’skaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BY-HR">
         <xs:annotation>
-          <xs:documentation>Hrodzyenskaya Voblasts’</xs:documentation>
+          <xs:documentation>Hrodzyenskaya Voblasts’; Grodnenskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BY-MA">
         <xs:annotation>
-          <xs:documentation>Mahilyowskaya Voblasts’</xs:documentation>
+          <xs:documentation>Mahilyowskaya Voblasts’; Mogilëvskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BY-MI">
         <xs:annotation>
-          <xs:documentation>Minskaya Voblasts’</xs:documentation>
+          <xs:documentation>Minskaya Voblasts’; Minskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BY-VI">
         <xs:annotation>
-          <xs:documentation>Vitsyebskaya Voblasts’</xs:documentation>
+          <xs:documentation>Vitsyebskaya Voblasts’; Vitebskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BZ-BZ">
@@ -7122,7 +7122,7 @@
       </xs:enumeration>
       <xs:enumeration value="CA-BC">
         <xs:annotation>
-          <xs:documentation>British Columbia</xs:documentation>
+          <xs:documentation>British Columbia; Colombie-Britannique</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-MB">
@@ -7132,22 +7132,22 @@
       </xs:enumeration>
       <xs:enumeration value="CA-NB">
         <xs:annotation>
-          <xs:documentation>New Brunswick</xs:documentation>
+          <xs:documentation>New Brunswick; Nouveau-Brunswick</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-NL">
         <xs:annotation>
-          <xs:documentation>Newfoundland and Labrador</xs:documentation>
+          <xs:documentation>Newfoundland and Labrador; Terre-Neuve-et-Labrador</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-NS">
         <xs:annotation>
-          <xs:documentation>Nova Scotia</xs:documentation>
+          <xs:documentation>Nova Scotia; Nouvelle-Écosse</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-NT">
         <xs:annotation>
-          <xs:documentation>Northwest Territories</xs:documentation>
+          <xs:documentation>Northwest Territories; Territoires du Nord-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-NU">
@@ -7162,12 +7162,12 @@
       </xs:enumeration>
       <xs:enumeration value="CA-PE">
         <xs:annotation>
-          <xs:documentation>Prince Edward Island</xs:documentation>
+          <xs:documentation>Prince Edward Island; Île-du-Prince-Édouard</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-QC">
         <xs:annotation>
-          <xs:documentation>Quebec</xs:documentation>
+          <xs:documentation>Québec</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CA-SK">
@@ -7472,7 +7472,7 @@
       </xs:enumeration>
       <xs:enumeration value="CH-BE">
         <xs:annotation>
-          <xs:documentation>Bern</xs:documentation>
+          <xs:documentation>Bern; Berne</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CH-BL">
@@ -7487,7 +7487,7 @@
       </xs:enumeration>
       <xs:enumeration value="CH-FR">
         <xs:annotation>
-          <xs:documentation>Freiburg</xs:documentation>
+          <xs:documentation>Fribourg; Freiburg</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CH-GE">
@@ -7502,7 +7502,7 @@
       </xs:enumeration>
       <xs:enumeration value="CH-GR">
         <xs:annotation>
-          <xs:documentation>Graubünden</xs:documentation>
+          <xs:documentation>Graubünden; Grischun; Grigioni</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CH-JU">
@@ -7572,7 +7572,7 @@
       </xs:enumeration>
       <xs:enumeration value="CH-VS">
         <xs:annotation>
-          <xs:documentation>Wallis</xs:documentation>
+          <xs:documentation>Valais; Wallis</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CH-ZG">
@@ -7747,12 +7747,12 @@
       </xs:enumeration>
       <xs:enumeration value="CM-EN">
         <xs:annotation>
-          <xs:documentation>Far North</xs:documentation>
+          <xs:documentation>Extrême-Nord; Far North</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CM-ES">
         <xs:annotation>
-          <xs:documentation>East</xs:documentation>
+          <xs:documentation>Est; East</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CM-LT">
@@ -7762,27 +7762,27 @@
       </xs:enumeration>
       <xs:enumeration value="CM-NO">
         <xs:annotation>
-          <xs:documentation>North</xs:documentation>
+          <xs:documentation>Nord; North</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CM-NW">
         <xs:annotation>
-          <xs:documentation>North-West</xs:documentation>
+          <xs:documentation>North-West; Nord-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CM-OU">
         <xs:annotation>
-          <xs:documentation>West</xs:documentation>
+          <xs:documentation>Ouest; West</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CM-SU">
         <xs:annotation>
-          <xs:documentation>South</xs:documentation>
+          <xs:documentation>Sud; South</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CM-SW">
         <xs:annotation>
-          <xs:documentation>South-West</xs:documentation>
+          <xs:documentation>South-West; Sud-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CN-AH">
@@ -7877,7 +7877,7 @@
       </xs:enumeration>
       <xs:enumeration value="CN-NM">
         <xs:annotation>
-          <xs:documentation>Inner Mongolia</xs:documentation>
+          <xs:documentation>Nei Mongol; Inner Mongolia</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CN-NX">
@@ -7927,7 +7927,7 @@
       </xs:enumeration>
       <xs:enumeration value="CN-XZ">
         <xs:annotation>
-          <xs:documentation>Tibet</xs:documentation>
+          <xs:documentation>Tibet; Xizang</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CN-YN">
@@ -8837,7 +8837,7 @@
       </xs:enumeration>
       <xs:enumeration value="DE-BY">
         <xs:annotation>
-          <xs:documentation>Bavaria</xs:documentation>
+          <xs:documentation>Bavaria; Bayern</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-HB">
@@ -8847,7 +8847,7 @@
       </xs:enumeration>
       <xs:enumeration value="DE-HE">
         <xs:annotation>
-          <xs:documentation>Hesse</xs:documentation>
+          <xs:documentation>Hesse; Hessen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-HH">
@@ -8857,22 +8857,22 @@
       </xs:enumeration>
       <xs:enumeration value="DE-MV">
         <xs:annotation>
-          <xs:documentation>Mecklenburg-Western Pomerania</xs:documentation>
+          <xs:documentation>Mecklenburg-Western Pomerania; Mecklenburg-Vorpommern</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-NI">
         <xs:annotation>
-          <xs:documentation>Lower Saxony</xs:documentation>
+          <xs:documentation>Lower Saxony; Niedersachsen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-NW">
         <xs:annotation>
-          <xs:documentation>North Rhine-Westphalia</xs:documentation>
+          <xs:documentation>North Rhine-Westphalia; Nordrhein-Westfalen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-RP">
         <xs:annotation>
-          <xs:documentation>Rhineland-Palatinate</xs:documentation>
+          <xs:documentation>Rhineland-Palatinate; Rheinland-Pfalz</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-SH">
@@ -8887,17 +8887,17 @@
       </xs:enumeration>
       <xs:enumeration value="DE-SN">
         <xs:annotation>
-          <xs:documentation>Saxony</xs:documentation>
+          <xs:documentation>Saxony; Sachsen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-ST">
         <xs:annotation>
-          <xs:documentation>Saxony-Anhalt</xs:documentation>
+          <xs:documentation>Saxony-Anhalt; Sachsen-Anhalt</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DE-TH">
         <xs:annotation>
-          <xs:documentation>Thuringia</xs:documentation>
+          <xs:documentation>Thuringia; Thüringen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DJ-AR">
@@ -9832,7 +9832,7 @@
       </xs:enumeration>
       <xs:enumeration value="ES-AN">
         <xs:annotation>
-          <xs:documentation>Andalusia</xs:documentation>
+          <xs:documentation>Andalusia; Andalucía</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-AR">
@@ -9897,17 +9897,17 @@
       </xs:enumeration>
       <xs:enumeration value="ES-CL">
         <xs:annotation>
-          <xs:documentation>Castille-Leon</xs:documentation>
+          <xs:documentation>Castille-Leon; Castilla y León</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-CM">
         <xs:annotation>
-          <xs:documentation>Castille-La Mancha</xs:documentation>
+          <xs:documentation>Castille-La Mancha; Castilla-La Mancha</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-CN">
         <xs:annotation>
-          <xs:documentation>Canary Islands</xs:documentation>
+          <xs:documentation>Canary Islands; Canarias</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-CO">
@@ -9927,7 +9927,7 @@
       </xs:enumeration>
       <xs:enumeration value="ES-CT">
         <xs:annotation>
-          <xs:documentation>Catalonia</xs:documentation>
+          <xs:documentation>Catalonia; Catalonha; Cataluña; Catalunya</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-CU">
@@ -9977,7 +9977,7 @@
       </xs:enumeration>
       <xs:enumeration value="ES-IB">
         <xs:annotation>
-          <xs:documentation>Balearic Islands</xs:documentation>
+          <xs:documentation>Balearic Islands; Illes Balears</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-J">
@@ -10042,7 +10042,7 @@
       </xs:enumeration>
       <xs:enumeration value="ES-NC">
         <xs:annotation>
-          <xs:documentation>Navarre</xs:documentation>
+          <xs:documentation>Nafarroa; Navarra; Navarre</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-O">
@@ -10072,7 +10072,7 @@
       </xs:enumeration>
       <xs:enumeration value="ES-PV">
         <xs:annotation>
-          <xs:documentation>Basque Country</xs:documentation>
+          <xs:documentation>Basque Country; Euskadi; País Vasco</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-RI">
@@ -10142,7 +10142,7 @@
       </xs:enumeration>
       <xs:enumeration value="ES-VC">
         <xs:annotation>
-          <xs:documentation>Valencia</xs:documentation>
+          <xs:documentation>Valencia; Valenciana, Comunitat</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ES-VI">
@@ -10217,82 +10217,82 @@
       </xs:enumeration>
       <xs:enumeration value="FI-01">
         <xs:annotation>
-          <xs:documentation>Ahvenanmaa</xs:documentation>
+          <xs:documentation>Åland; Ahvenanmaa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-02">
         <xs:annotation>
-          <xs:documentation>Etelä-Karjala</xs:documentation>
+          <xs:documentation>Etelä-Karjala; Södra Karelen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-03">
         <xs:annotation>
-          <xs:documentation>Etelä-Pohjanmaa</xs:documentation>
+          <xs:documentation>Etelä-Pohjanmaa; Södra Österbotten</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-04">
         <xs:annotation>
-          <xs:documentation>Etelä-Savo</xs:documentation>
+          <xs:documentation>Etelä-Savo; Södra Savolax</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-05">
         <xs:annotation>
-          <xs:documentation>Kainuu</xs:documentation>
+          <xs:documentation>Kainuu; Kajanaland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-06">
         <xs:annotation>
-          <xs:documentation>Kanta-Häme</xs:documentation>
+          <xs:documentation>Kanta-Häme; Egentliga Tavastland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-07">
         <xs:annotation>
-          <xs:documentation>Keski-Pohjanmaa</xs:documentation>
+          <xs:documentation>Keski-Pohjanmaa; Mellersta Österbotten</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-08">
         <xs:annotation>
-          <xs:documentation>Keski-Suomi</xs:documentation>
+          <xs:documentation>Keski-Suomi; Mellersta Finland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-09">
         <xs:annotation>
-          <xs:documentation>Kymenlaakso</xs:documentation>
+          <xs:documentation>Kymenlaakso; Kymmenedalen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-10">
         <xs:annotation>
-          <xs:documentation>Lappi</xs:documentation>
+          <xs:documentation>Lappi; Lappland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-11">
         <xs:annotation>
-          <xs:documentation>Pirkanmaa</xs:documentation>
+          <xs:documentation>Pirkanmaa; Birkaland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-12">
         <xs:annotation>
-          <xs:documentation>Pohjanmaa</xs:documentation>
+          <xs:documentation>Pohjanmaa; Österbotten</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-13">
         <xs:annotation>
-          <xs:documentation>Pohjois-Karjala</xs:documentation>
+          <xs:documentation>Pohjois-Karjala; Norra Karelen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-14">
         <xs:annotation>
-          <xs:documentation>Pohjois-Pohjanmaa</xs:documentation>
+          <xs:documentation>Pohjois-Pohjanmaa; Norra Österbotten</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-15">
         <xs:annotation>
-          <xs:documentation>Pohjois-Savo</xs:documentation>
+          <xs:documentation>Pohjois-Savo; Norra Savolax</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-16">
         <xs:annotation>
-          <xs:documentation>Päijät-Häme</xs:documentation>
+          <xs:documentation>Päijät-Häme; Päijänne-Tavastland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-17">
@@ -10302,12 +10302,12 @@
       </xs:enumeration>
       <xs:enumeration value="FI-18">
         <xs:annotation>
-          <xs:documentation>Uusimaa</xs:documentation>
+          <xs:documentation>Uusimaa; Nyland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FI-19">
         <xs:annotation>
-          <xs:documentation>Varsinais-Suomi</xs:documentation>
+          <xs:documentation>Varsinais-Suomi; Egentliga Finland</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FJ-01">
@@ -11067,7 +11067,7 @@
       </xs:enumeration>
       <xs:enumeration value="FR-COR">
         <xs:annotation>
-          <xs:documentation>Corsica</xs:documentation>
+          <xs:documentation>Corse; Corsica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="FR-CVL">
@@ -11182,7 +11182,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-AGY">
         <xs:annotation>
-          <xs:documentation>Ynys Môn</xs:documentation>
+          <xs:documentation>Isle of Anglesey; Ynys Môn</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-AND">
@@ -11237,7 +11237,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-BGE">
         <xs:annotation>
-          <xs:documentation>Pen-y-bont ar Ogwr</xs:documentation>
+          <xs:documentation>Bridgend; Pen-y-bont ar Ogwr</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-BGW">
@@ -11317,7 +11317,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-CAY">
         <xs:annotation>
-          <xs:documentation>Caerffili</xs:documentation>
+          <xs:documentation>Caerphilly; Caerffili</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-CBF">
@@ -11367,7 +11367,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-CMN">
         <xs:annotation>
-          <xs:documentation>Sir Gaerfyrddin</xs:documentation>
+          <xs:documentation>Carmarthenshire; Sir Gaerfyrddin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-CON">
@@ -11382,7 +11382,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-CRF">
         <xs:annotation>
-          <xs:documentation>Caerdydd</xs:documentation>
+          <xs:documentation>Cardiff; Caerdydd</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-CRY">
@@ -11407,7 +11407,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-DEN">
         <xs:annotation>
-          <xs:documentation>Sir Ddinbych</xs:documentation>
+          <xs:documentation>Denbighshire; Sir Ddinbych</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-DER">
@@ -11527,7 +11527,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-FLN">
         <xs:annotation>
-          <xs:documentation>Sir y Fflint</xs:documentation>
+          <xs:documentation>Flintshire; Sir y Fflint</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-FMO">
@@ -11762,7 +11762,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-MON">
         <xs:annotation>
-          <xs:documentation>Monmouthshire</xs:documentation>
+          <xs:documentation>Monmouthshire; Sir Fynwy</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-MRT">
@@ -11847,7 +11847,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-NTL">
         <xs:annotation>
-          <xs:documentation>Castell-nedd Port Talbot</xs:documentation>
+          <xs:documentation>Neath Port Talbot; Castell-nedd Port Talbot</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-NTT">
@@ -11867,7 +11867,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-NWP">
         <xs:annotation>
-          <xs:documentation>Casnewydd</xs:documentation>
+          <xs:documentation>Newport; Casnewydd</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-NYK">
@@ -11892,7 +11892,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-PEM">
         <xs:annotation>
-          <xs:documentation>Sir Benfro</xs:documentation>
+          <xs:documentation>Pembrokeshire; Sir Benfro</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-PKN">
@@ -11937,7 +11937,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-RCT">
         <xs:annotation>
-          <xs:documentation>Rhondda Cynon Taf</xs:documentation>
+          <xs:documentation>Rhondda Cynon Taff; Rhondda Cynon Taf</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-RDB">
@@ -12102,7 +12102,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-SWA">
         <xs:annotation>
-          <xs:documentation>Abertawe</xs:documentation>
+          <xs:documentation>Swansea; Abertawe</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-SWD">
@@ -12137,7 +12137,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-TOF">
         <xs:annotation>
-          <xs:documentation>Tor-faen</xs:documentation>
+          <xs:documentation>Torfaen; Tor-faen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-TRF">
@@ -12152,7 +12152,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-VGL">
         <xs:annotation>
-          <xs:documentation>Bro Morgannwg</xs:documentation>
+          <xs:documentation>Vale of Glamorgan, The; Bro Morgannwg</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-WAR">
@@ -12242,7 +12242,7 @@
       </xs:enumeration>
       <xs:enumeration value="GB-WRX">
         <xs:annotation>
-          <xs:documentation>Wrecsam</xs:documentation>
+          <xs:documentation>Wrexham; Wrecsam</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GB-WSM">
@@ -12302,12 +12302,12 @@
       </xs:enumeration>
       <xs:enumeration value="GE-AB">
         <xs:annotation>
-          <xs:documentation>Abkhazia</xs:documentation>
+          <xs:documentation>Abkhazia; Apkhazeti</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GE-AJ">
         <xs:annotation>
-          <xs:documentation>Ajaria</xs:documentation>
+          <xs:documentation>Ajaria; Ach’ara</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GE-GU">
@@ -12373,11 +12373,6 @@
       <xs:enumeration value="GH-AH">
         <xs:annotation>
           <xs:documentation>Ashanti</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GH-BA">
-        <xs:annotation>
-          <xs:documentation>Brong-Ahafo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="GH-BE">
@@ -13242,52 +13237,52 @@
       </xs:enumeration>
       <xs:enumeration value="HT-AR">
         <xs:annotation>
-          <xs:documentation>Artibonite</xs:documentation>
+          <xs:documentation>Artibonite; Latibonit</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-CE">
         <xs:annotation>
-          <xs:documentation>Centre</xs:documentation>
+          <xs:documentation>Centre; Sant</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-GA">
         <xs:annotation>
-          <xs:documentation>Grand’Anse</xs:documentation>
+          <xs:documentation>Grand’Anse; Grandans</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-ND">
         <xs:annotation>
-          <xs:documentation>Nord</xs:documentation>
+          <xs:documentation>Nord; Nò</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-NE">
         <xs:annotation>
-          <xs:documentation>Nord-Est</xs:documentation>
+          <xs:documentation>Nord-Est; Nòdès</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-NI">
         <xs:annotation>
-          <xs:documentation>Nippes</xs:documentation>
+          <xs:documentation>Nippes; Nip</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-NO">
         <xs:annotation>
-          <xs:documentation>Nord-Ouest</xs:documentation>
+          <xs:documentation>Nord-Ouest; Nòdwès</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-OU">
         <xs:annotation>
-          <xs:documentation>Ouest</xs:documentation>
+          <xs:documentation>Ouest; Lwès</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-SD">
         <xs:annotation>
-          <xs:documentation>Sud</xs:documentation>
+          <xs:documentation>Sud; Sid</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HT-SE">
         <xs:annotation>
-          <xs:documentation>Sud-Est</xs:documentation>
+          <xs:documentation>Sud-Est; Sidès</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="HU-BA">
@@ -13712,102 +13707,102 @@
       </xs:enumeration>
       <xs:enumeration value="IE-C">
         <xs:annotation>
-          <xs:documentation>Connaught</xs:documentation>
+          <xs:documentation>Connaught; Connacht</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-CE">
         <xs:annotation>
-          <xs:documentation>Clare</xs:documentation>
+          <xs:documentation>Clare; An Clár</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-CN">
         <xs:annotation>
-          <xs:documentation>Cavan</xs:documentation>
+          <xs:documentation>Cavan; An Cabhán</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-CO">
         <xs:annotation>
-          <xs:documentation>Cork</xs:documentation>
+          <xs:documentation>Cork; Corcaigh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-CR">
         <xs:annotation>
-          <xs:documentation>Cork</xs:documentation>
+          <xs:documentation>Cork; Corcaigh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-CW">
         <xs:annotation>
-          <xs:documentation>Carlow</xs:documentation>
+          <xs:documentation>Carlow; Ceatharlach</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-DL">
         <xs:annotation>
-          <xs:documentation>Donegal</xs:documentation>
+          <xs:documentation>Donegal; Dún na nGall</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-DR">
         <xs:annotation>
-          <xs:documentation>Dún Laoghaire-Rathdown</xs:documentation>
+          <xs:documentation>Dún Laoghaire-Rathdown; Dún Laoghaire-Rath an Dúin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-DU">
         <xs:annotation>
-          <xs:documentation>Dublin</xs:documentation>
+          <xs:documentation>Dublin; Baile Átha Cliath</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-FI">
         <xs:annotation>
-          <xs:documentation>Fingal</xs:documentation>
+          <xs:documentation>Fingal; Fine Gall</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-G">
         <xs:annotation>
-          <xs:documentation>Galway</xs:documentation>
+          <xs:documentation>Galway; Gaillimh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-GA">
         <xs:annotation>
-          <xs:documentation>Galway</xs:documentation>
+          <xs:documentation>Galway; Gaillimh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-KE">
         <xs:annotation>
-          <xs:documentation>Kildare</xs:documentation>
+          <xs:documentation>Kildare; Cill Dara</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-KK">
         <xs:annotation>
-          <xs:documentation>Kilkenny</xs:documentation>
+          <xs:documentation>Kilkenny; Cill Chainnigh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-KY">
         <xs:annotation>
-          <xs:documentation>Kerry</xs:documentation>
+          <xs:documentation>Kerry; Ciarraí</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-L">
         <xs:annotation>
-          <xs:documentation>Leinster</xs:documentation>
+          <xs:documentation>Leinster; Laighin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-LC">
         <xs:annotation>
-          <xs:documentation>Limerick</xs:documentation>
+          <xs:documentation>Limerick; Luimneach</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-LD">
         <xs:annotation>
-          <xs:documentation>Longford</xs:documentation>
+          <xs:documentation>Longford; An Longfort</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-LH">
         <xs:annotation>
-          <xs:documentation>Louth</xs:documentation>
+          <xs:documentation>Louth; Lú</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-LM">
         <xs:annotation>
-          <xs:documentation>Leitrim</xs:documentation>
+          <xs:documentation>Leitrim; Liatroim</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-LS">
@@ -13817,102 +13812,102 @@
       </xs:enumeration>
       <xs:enumeration value="IE-M">
         <xs:annotation>
-          <xs:documentation>Munster</xs:documentation>
+          <xs:documentation>Munster; An Mhumhain</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-MH">
         <xs:annotation>
-          <xs:documentation>Meath</xs:documentation>
+          <xs:documentation>Meath; An Mhí</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-MN">
         <xs:annotation>
-          <xs:documentation>Monaghan</xs:documentation>
+          <xs:documentation>Monaghan; Muineachán</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-MO">
         <xs:annotation>
-          <xs:documentation>Mayo</xs:documentation>
+          <xs:documentation>Mayo; Maigh Eo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-OY">
         <xs:annotation>
-          <xs:documentation>Offaly</xs:documentation>
+          <xs:documentation>Offaly; Uíbh Fhailí</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-RN">
         <xs:annotation>
-          <xs:documentation>Roscommon</xs:documentation>
+          <xs:documentation>Roscommon; Ros Comáin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-SD">
         <xs:annotation>
-          <xs:documentation>South Dublin</xs:documentation>
+          <xs:documentation>South Dublin; Baile Átha Cliath Theas</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-SO">
         <xs:annotation>
-          <xs:documentation>Sligo</xs:documentation>
+          <xs:documentation>Sligo; Sligeach</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-TA">
         <xs:annotation>
-          <xs:documentation>Tipperary</xs:documentation>
+          <xs:documentation>Tipperary; Tiobraid Árann</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-U">
         <xs:annotation>
-          <xs:documentation>Ulster</xs:documentation>
+          <xs:documentation>Ulster; Ulaidh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-WF">
         <xs:annotation>
-          <xs:documentation>Waterford</xs:documentation>
+          <xs:documentation>Waterford; Port Láirge</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-WH">
         <xs:annotation>
-          <xs:documentation>Westmeath</xs:documentation>
+          <xs:documentation>Westmeath; An Iarmhí</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-WW">
         <xs:annotation>
-          <xs:documentation>Wicklow</xs:documentation>
+          <xs:documentation>Wicklow; Cill Mhantáin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IE-WX">
         <xs:annotation>
-          <xs:documentation>Wexford</xs:documentation>
+          <xs:documentation>Wexford; Loch Garman</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IL-D">
         <xs:annotation>
-          <xs:documentation>Southern</xs:documentation>
+          <xs:documentation>Southern; HaDarom</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IL-HA">
         <xs:annotation>
-          <xs:documentation>Haifa</xs:documentation>
+          <xs:documentation>Haifa; H̱efa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IL-JM">
         <xs:annotation>
-          <xs:documentation>Jerusalem</xs:documentation>
+          <xs:documentation>Jerusalem; Yerushalayim</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IL-M">
         <xs:annotation>
-          <xs:documentation>Central</xs:documentation>
+          <xs:documentation>Central; HaMerkaz</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IL-TA">
         <xs:annotation>
-          <xs:documentation>Tel Aviv</xs:documentation>
+          <xs:documentation>Tel-Aviv; Tel Aviv</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IL-Z">
         <xs:annotation>
-          <xs:documentation>Northern</xs:documentation>
+          <xs:documentation>HaTsafon; Northern</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IN-AN">
@@ -14003,6 +13998,11 @@
       <xs:enumeration value="IN-KL">
         <xs:annotation>
           <xs:documentation>Kerala</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IN-LA">
+        <xs:annotation>
+          <xs:documentation>Ladākh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IN-LD">
@@ -14102,7 +14102,7 @@
       </xs:enumeration>
       <xs:enumeration value="IQ-AR">
         <xs:annotation>
-          <xs:documentation>Arbīl</xs:documentation>
+          <xs:documentation>Arbīl; Hewlêr</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IQ-BA">
@@ -14122,7 +14122,7 @@
       </xs:enumeration>
       <xs:enumeration value="IQ-DA">
         <xs:annotation>
-          <xs:documentation>Dahūk</xs:documentation>
+          <xs:documentation>Dahūk; Dihok</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IQ-DI">
@@ -14177,7 +14177,7 @@
       </xs:enumeration>
       <xs:enumeration value="IQ-SU">
         <xs:annotation>
-          <xs:documentation>As Sulaymānīyah</xs:documentation>
+          <xs:documentation>As Sulaymānīyah; Slêmanî</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IQ-WA">
@@ -14712,22 +14712,22 @@
       </xs:enumeration>
       <xs:enumeration value="IT-21">
         <xs:annotation>
-          <xs:documentation>Piedmont</xs:documentation>
+          <xs:documentation>Piedmont; Piemonte</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-23">
         <xs:annotation>
-          <xs:documentation>Vallée d’Aoste</xs:documentation>
+          <xs:documentation>Valle d’Aosta; Vallée d’Aoste</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-25">
         <xs:annotation>
-          <xs:documentation>Lombardy</xs:documentation>
+          <xs:documentation>Lombardy; Lombardia</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-32">
         <xs:annotation>
-          <xs:documentation>Trentino-Südtirol</xs:documentation>
+          <xs:documentation>Trentino-Alto Adige; Trentino-Südtirol</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-34">
@@ -14752,7 +14752,7 @@
       </xs:enumeration>
       <xs:enumeration value="IT-52">
         <xs:annotation>
-          <xs:documentation>Tuscany</xs:documentation>
+          <xs:documentation>Tuscany; Toscana</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-55">
@@ -14897,7 +14897,7 @@
       </xs:enumeration>
       <xs:enumeration value="IT-BZ">
         <xs:annotation>
-          <xs:documentation>Bozen</xs:documentation>
+          <xs:documentation>Bolzano; Bozen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-CA">
@@ -14918,11 +14918,6 @@
       <xs:enumeration value="IT-CH">
         <xs:annotation>
           <xs:documentation>Chieti</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="IT-CI">
-        <xs:annotation>
-          <xs:documentation>Carbonia-Iglesias</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-CL">
@@ -14998,11 +14993,6 @@
       <xs:enumeration value="IT-GE">
         <xs:annotation>
           <xs:documentation>Genova</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="IT-GO">
-        <xs:annotation>
-          <xs:documentation>Gorizia</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-GR">
@@ -15110,19 +15100,9 @@
           <xs:documentation>Nuoro</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="IT-OG">
-        <xs:annotation>
-          <xs:documentation>Ogliastra</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="IT-OR">
         <xs:annotation>
           <xs:documentation>Oristano</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="IT-OT">
-        <xs:annotation>
-          <xs:documentation>Olbia-Tempio</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-PA">
@@ -15153,11 +15133,6 @@
       <xs:enumeration value="IT-PI">
         <xs:annotation>
           <xs:documentation>Pisa</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="IT-PN">
-        <xs:annotation>
-          <xs:documentation>Pordenone</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-PO">
@@ -15300,19 +15275,9 @@
           <xs:documentation>Terni</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="IT-TS">
-        <xs:annotation>
-          <xs:documentation>Trieste</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="IT-TV">
         <xs:annotation>
           <xs:documentation>Treviso</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="IT-UD">
-        <xs:annotation>
-          <xs:documentation>Udine</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-VA">
@@ -15343,11 +15308,6 @@
       <xs:enumeration value="IT-VR">
         <xs:annotation>
           <xs:documentation>Verona</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="IT-VS">
-        <xs:annotation>
-          <xs:documentation>Medio Campidano</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="IT-VT">
@@ -15962,12 +15922,12 @@
       </xs:enumeration>
       <xs:enumeration value="KG-B">
         <xs:annotation>
-          <xs:documentation>Batken</xs:documentation>
+          <xs:documentation>Batken; Batkenskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-C">
         <xs:annotation>
-          <xs:documentation>Chüy</xs:documentation>
+          <xs:documentation>Chüy; Chuyskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-GB">
@@ -15977,52 +15937,52 @@
       </xs:enumeration>
       <xs:enumeration value="KG-GO">
         <xs:annotation>
-          <xs:documentation>Osh</xs:documentation>
+          <xs:documentation>Osh; Gorod Oš; Gorod Osh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-J">
         <xs:annotation>
-          <xs:documentation>Jalal-Abad</xs:documentation>
+          <xs:documentation>Jalal-Abad; Dzhalal-Abadskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-N">
         <xs:annotation>
-          <xs:documentation>Naryn</xs:documentation>
+          <xs:documentation>Naryn; Narynskaya Oblast</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-O">
         <xs:annotation>
-          <xs:documentation>Osh</xs:documentation>
+          <xs:documentation>Osh; Oshskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-T">
         <xs:annotation>
-          <xs:documentation>Talas</xs:documentation>
+          <xs:documentation>Talas; Talasskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KG-Y">
         <xs:annotation>
-          <xs:documentation>Ysyk-Köl</xs:documentation>
+          <xs:documentation>Ysyk-Köl; Issyk-Kul‘skaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-1">
         <xs:annotation>
-          <xs:documentation>Banteay Meanchey</xs:documentation>
+          <xs:documentation>Bântéay Méan Choăy; Banteay Meanchey</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-10">
         <xs:annotation>
-          <xs:documentation>Kratie</xs:documentation>
+          <xs:documentation>Krâchéh; Kratie</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-11">
         <xs:annotation>
-          <xs:documentation>Mondolkiri</xs:documentation>
+          <xs:documentation>Mondolkiri; Môndôl Kiri</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-12">
         <xs:annotation>
-          <xs:documentation>Phnom Penh</xs:documentation>
+          <xs:documentation>Phnum Pénh; Phnom Penh</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-13">
@@ -16037,52 +15997,52 @@
       </xs:enumeration>
       <xs:enumeration value="KH-15">
         <xs:annotation>
-          <xs:documentation>Pursat</xs:documentation>
+          <xs:documentation>Poŭthĭsăt; Pursat</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-16">
         <xs:annotation>
-          <xs:documentation>Ratanakiri</xs:documentation>
+          <xs:documentation>Rôtânôkiri; Ratanakiri</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-17">
         <xs:annotation>
-          <xs:documentation>Siem Reap</xs:documentation>
+          <xs:documentation>Siĕm Réab; Siem Reap</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-18">
         <xs:annotation>
-          <xs:documentation>Preah Sihanouk</xs:documentation>
+          <xs:documentation>Preăh Seihânŭ; Preah Sihanouk</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-19">
         <xs:annotation>
-          <xs:documentation>Stung Treng</xs:documentation>
+          <xs:documentation>Stœ̆ng Trêng; Stung Treng</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-2">
         <xs:annotation>
-          <xs:documentation>Battambang</xs:documentation>
+          <xs:documentation>Battambang; Bătdâmbâng</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-20">
         <xs:annotation>
-          <xs:documentation>Svay Rieng</xs:documentation>
+          <xs:documentation>Svay Riĕng</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-21">
         <xs:annotation>
-          <xs:documentation>Takeo</xs:documentation>
+          <xs:documentation>Takeo; Takêv</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-22">
         <xs:annotation>
-          <xs:documentation>Oddar Meanchey</xs:documentation>
+          <xs:documentation>Oddar Meanchey; Ŏtdâr Méan Choăy</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-23">
         <xs:annotation>
-          <xs:documentation>Kep</xs:documentation>
+          <xs:documentation>Kêb; Kep</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-24">
@@ -16102,22 +16062,22 @@
       </xs:enumeration>
       <xs:enumeration value="KH-4">
         <xs:annotation>
-          <xs:documentation>Kampong Chhnang</xs:documentation>
+          <xs:documentation>Kâmpóng Chhnăng</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-5">
         <xs:annotation>
-          <xs:documentation>Kampong Speu</xs:documentation>
+          <xs:documentation>Kâmpóng Spœ; Kampong Speu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-6">
         <xs:annotation>
-          <xs:documentation>Kampong Thom</xs:documentation>
+          <xs:documentation>Kampong Thom; Kâmpóng Thum</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-7">
         <xs:annotation>
-          <xs:documentation>Kampot</xs:documentation>
+          <xs:documentation>Kâmpôt</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KH-8">
@@ -16127,22 +16087,37 @@
       </xs:enumeration>
       <xs:enumeration value="KH-9">
         <xs:annotation>
-          <xs:documentation>Koh Kong</xs:documentation>
+          <xs:documentation>Koh Kong; Kaôh Kŏng</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="KI-G">
+        <xs:annotation>
+          <xs:documentation>Gilbert Islands</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="KI-L">
+        <xs:annotation>
+          <xs:documentation>Line Islands</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="KI-P">
+        <xs:annotation>
+          <xs:documentation>Phoenix Islands</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KM-A">
         <xs:annotation>
-          <xs:documentation>Hanzwān</xs:documentation>
+          <xs:documentation>Anjouan; Hanzwān; Ndzuwani</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KM-G">
         <xs:annotation>
-          <xs:documentation>Inghāzījā</xs:documentation>
+          <xs:documentation>Grande Comore; N’gazidja; Inghāzījā</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KM-M">
         <xs:annotation>
-          <xs:documentation>Mūhaylī</xs:documentation>
+          <xs:documentation>Mohéli; Mūhaylī; Mwali</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KN-01">
@@ -16402,87 +16377,87 @@
       </xs:enumeration>
       <xs:enumeration value="KZ-AKM">
         <xs:annotation>
-          <xs:documentation>Aqmola</xs:documentation>
+          <xs:documentation>Aqmola; Akmolinskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-AKT">
         <xs:annotation>
-          <xs:documentation>Aqtöbe</xs:documentation>
+          <xs:documentation>Aqtöbe; Aktyubinskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-ALA">
         <xs:annotation>
-          <xs:documentation>Almaty</xs:documentation>
+          <xs:documentation>Almaty; Almaty, Gorod</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-ALM">
         <xs:annotation>
-          <xs:documentation>Almaty</xs:documentation>
+          <xs:documentation>Almaty; Almatinskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-AST">
         <xs:annotation>
-          <xs:documentation>Astana</xs:documentation>
+          <xs:documentation>Astana; Astana, Gorod</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-ATY">
         <xs:annotation>
-          <xs:documentation>Atyraū</xs:documentation>
+          <xs:documentation>Atyraū; Atyrauskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-KAR">
         <xs:annotation>
-          <xs:documentation>Qaraghandy</xs:documentation>
+          <xs:documentation>Qaraghandy; Karagandinskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-KUS">
         <xs:annotation>
-          <xs:documentation>Qostanay</xs:documentation>
+          <xs:documentation>Qostanay; Kostanayskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-KZY">
         <xs:annotation>
-          <xs:documentation>Qyzylorda</xs:documentation>
+          <xs:documentation>Qyzylorda; Kyzylordinskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-MAN">
         <xs:annotation>
-          <xs:documentation>Mangghystaū</xs:documentation>
+          <xs:documentation>Mangghystaū; Mangistauskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-PAV">
         <xs:annotation>
-          <xs:documentation>Pavlodar</xs:documentation>
+          <xs:documentation>Pavlodar; Pavlodarskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-SEV">
         <xs:annotation>
-          <xs:documentation>North Kazakhstan</xs:documentation>
+          <xs:documentation>North Kazakhstan; Soltüstik Qazaqstan</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-SHY">
         <xs:annotation>
-          <xs:documentation>Shymkent</xs:documentation>
+          <xs:documentation>Severo-Kazakhstanskaya Oblast’; Shymkent</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-VOS">
         <xs:annotation>
-          <xs:documentation>East Kazakhstan</xs:documentation>
+          <xs:documentation>East Kazakhstan; Vostochno-Kazakhstanskaya Oblast’; Shyghys Qazaqstan</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-YUZ">
         <xs:annotation>
-          <xs:documentation>Türkistan</xs:documentation>
+          <xs:documentation>Türkistan; Turkestanskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-ZAP">
         <xs:annotation>
-          <xs:documentation>West Kazakhstan</xs:documentation>
+          <xs:documentation>West Kazakhstan; Batys Qazaqstan; Zapadno-Kazakhstanskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="KZ-ZHA">
         <xs:annotation>
-          <xs:documentation>Zhambyl</xs:documentation>
+          <xs:documentation>Zhambyl; Zhambylskaya Oblast’</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="LA-AT">
@@ -16782,7 +16757,7 @@
       </xs:enumeration>
       <xs:enumeration value="LK-4">
         <xs:annotation>
-          <xs:documentation>North Central</xs:documentation>
+          <xs:documentation>Northern</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="LK-41">
@@ -16847,7 +16822,7 @@
       </xs:enumeration>
       <xs:enumeration value="LK-7">
         <xs:annotation>
-          <xs:documentation>Northern</xs:documentation>
+          <xs:documentation>North Central</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="LK-71">
@@ -18907,7 +18882,7 @@
       </xs:enumeration>
       <xs:enumeration value="ME-20">
         <xs:annotation>
-          <xs:documentation>Ulcinj</xs:documentation>
+          <xs:documentation>Ulcinj; Ulqin</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ME-21">
@@ -18917,7 +18892,7 @@
       </xs:enumeration>
       <xs:enumeration value="ME-22">
         <xs:annotation>
-          <xs:documentation>Gusinje</xs:documentation>
+          <xs:documentation>Gusinje; Guci</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ME-23">
@@ -18927,7 +18902,7 @@
       </xs:enumeration>
       <xs:enumeration value="ME-24">
         <xs:annotation>
-          <xs:documentation>Tuzi</xs:documentation>
+          <xs:documentation>Tuzi; Tuz</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MG-A">
@@ -18937,7 +18912,7 @@
       </xs:enumeration>
       <xs:enumeration value="MG-D">
         <xs:annotation>
-          <xs:documentation>Antsiranana</xs:documentation>
+          <xs:documentation>Antsiranana; Antisiran̈ana</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MG-F">
@@ -18962,12 +18937,12 @@
       </xs:enumeration>
       <xs:enumeration value="MH-ALK">
         <xs:annotation>
-          <xs:documentation>Ailuk</xs:documentation>
+          <xs:documentation>Ailuk; Aelok</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-ALL">
         <xs:annotation>
-          <xs:documentation>Ailinglaplap</xs:documentation>
+          <xs:documentation>Ailinglaplap; Aelōn̄ḷapḷap</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-ARN">
@@ -18982,32 +18957,32 @@
       </xs:enumeration>
       <xs:enumeration value="MH-EBO">
         <xs:annotation>
-          <xs:documentation>Ebon</xs:documentation>
+          <xs:documentation>Ebon; Epoon</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-ENI">
         <xs:annotation>
-          <xs:documentation>Enewetak</xs:documentation>
+          <xs:documentation>Enewetak; Ānewetak &amp; Wūjlan̄</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-JAB">
         <xs:annotation>
-          <xs:documentation>Jabat</xs:documentation>
+          <xs:documentation>Jabat; Jebat</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-JAL">
         <xs:annotation>
-          <xs:documentation>Jaluit</xs:documentation>
+          <xs:documentation>Jaluit; Jālwōj</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-KIL">
         <xs:annotation>
-          <xs:documentation>Kili</xs:documentation>
+          <xs:documentation>Kili; Pikinni &amp; Kōle</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-KWA">
         <xs:annotation>
-          <xs:documentation>Kwajalein</xs:documentation>
+          <xs:documentation>Kwajalein; Kuwajleen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-L">
@@ -19022,7 +18997,7 @@
       </xs:enumeration>
       <xs:enumeration value="MH-LIB">
         <xs:annotation>
-          <xs:documentation>Lib</xs:documentation>
+          <xs:documentation>Lib; Ellep</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-LIK">
@@ -19032,7 +19007,7 @@
       </xs:enumeration>
       <xs:enumeration value="MH-MAJ">
         <xs:annotation>
-          <xs:documentation>Majuro</xs:documentation>
+          <xs:documentation>Majuro; Mājro</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-MAL">
@@ -19042,27 +19017,27 @@
       </xs:enumeration>
       <xs:enumeration value="MH-MEJ">
         <xs:annotation>
-          <xs:documentation>Mejit</xs:documentation>
+          <xs:documentation>Mejit; Mājej</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-MIL">
         <xs:annotation>
-          <xs:documentation>Mili</xs:documentation>
+          <xs:documentation>Mili; Mile</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-NMK">
         <xs:annotation>
-          <xs:documentation>Namdrik</xs:documentation>
+          <xs:documentation>Namdrik; Namdik</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-NMU">
         <xs:annotation>
-          <xs:documentation>Namu</xs:documentation>
+          <xs:documentation>Namu; Namo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-RON">
         <xs:annotation>
-          <xs:documentation>Rongelap</xs:documentation>
+          <xs:documentation>Rongelap; Ron̄ḷap</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-T">
@@ -19077,17 +19052,17 @@
       </xs:enumeration>
       <xs:enumeration value="MH-UTI">
         <xs:annotation>
-          <xs:documentation>Utrik</xs:documentation>
+          <xs:documentation>Utrik; Utrōk</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-WTH">
         <xs:annotation>
-          <xs:documentation>Wotho</xs:documentation>
+          <xs:documentation>Wotho; Utrōk</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MH-WTJ">
         <xs:annotation>
-          <xs:documentation>Wotje</xs:documentation>
+          <xs:documentation>Wotje; Wōtto</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MK-02">
@@ -20002,22 +19977,22 @@
       </xs:enumeration>
       <xs:enumeration value="MT-48">
         <xs:annotation>
-          <xs:documentation>Saint Julian</xs:documentation>
+          <xs:documentation>San Ġiljan; Saint Julian</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MT-49">
         <xs:annotation>
-          <xs:documentation>Saint John</xs:documentation>
+          <xs:documentation>San Ġwann; Saint John</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MT-50">
         <xs:annotation>
-          <xs:documentation>Saint Lawrence</xs:documentation>
+          <xs:documentation>San Lawrenz; Saint Lawrence</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MT-51">
         <xs:annotation>
-          <xs:documentation>Saint Paul’s Bay</xs:documentation>
+          <xs:documentation>San Pawl il-Baħar; Saint Paul’s Bay</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MT-52">
@@ -20027,12 +20002,12 @@
       </xs:enumeration>
       <xs:enumeration value="MT-53">
         <xs:annotation>
-          <xs:documentation>Saint Lucia</xs:documentation>
+          <xs:documentation>Santa Luċija; Saint Lucia</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MT-54">
         <xs:annotation>
-          <xs:documentation>Saint Venera</xs:documentation>
+          <xs:documentation>Santa Venera; Saint Venera</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MT-55">
@@ -21277,12 +21252,12 @@
       </xs:enumeration>
       <xs:enumeration value="NO-19">
         <xs:annotation>
-          <xs:documentation>Troms</xs:documentation>
+          <xs:documentation>Troms; Romsa</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NO-20">
         <xs:annotation>
-          <xs:documentation>Finnmark</xs:documentation>
+          <xs:documentation>Finnmark; Finnmárku </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NO-50">
@@ -21290,99 +21265,39 @@
           <xs:documentation>Trøndelag</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-1">
+      <xs:enumeration value="NP-P1">
         <xs:annotation>
-          <xs:documentation>Madhyamanchal</xs:documentation>
+          <xs:documentation>Province Number One</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-2">
+      <xs:enumeration value="NP-P2">
         <xs:annotation>
-          <xs:documentation>Madhya Pashchimanchal</xs:documentation>
+          <xs:documentation>Province Number Two</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-3">
+      <xs:enumeration value="NP-P3">
         <xs:annotation>
-          <xs:documentation>Pashchimanchal</xs:documentation>
+          <xs:documentation>Province Number Three</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-4">
+      <xs:enumeration value="NP-P4">
         <xs:annotation>
-          <xs:documentation>Purwanchal</xs:documentation>
+          <xs:documentation>Gaṇḍakī</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-5">
+      <xs:enumeration value="NP-P5">
         <xs:annotation>
-          <xs:documentation>Sudur Pashchimanchal</xs:documentation>
+          <xs:documentation>Province Number Five</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-BA">
+      <xs:enumeration value="NP-P6">
         <xs:annotation>
-          <xs:documentation>Bāgmatī</xs:documentation>
+          <xs:documentation>Karṇālī</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NP-BH">
+      <xs:enumeration value="NP-P7">
         <xs:annotation>
-          <xs:documentation>Bherī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-DH">
-        <xs:annotation>
-          <xs:documentation>Dhawalāgiri</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-GA">
-        <xs:annotation>
-          <xs:documentation>Gandakī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-JA">
-        <xs:annotation>
-          <xs:documentation>Janakpur</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-KA">
-        <xs:annotation>
-          <xs:documentation>Karnālī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-KO">
-        <xs:annotation>
-          <xs:documentation>Kosī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-LU">
-        <xs:annotation>
-          <xs:documentation>Lumbinī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-MA">
-        <xs:annotation>
-          <xs:documentation>Mahākālī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-ME">
-        <xs:annotation>
-          <xs:documentation>Mechī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-NA">
-        <xs:annotation>
-          <xs:documentation>Nārāyanī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-RA">
-        <xs:annotation>
-          <xs:documentation>Rāptī</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-SA">
-        <xs:annotation>
-          <xs:documentation>Sagarmāthā</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NP-SE">
-        <xs:annotation>
-          <xs:documentation>Setī</xs:documentation>
+          <xs:documentation>Sudūrpashchim</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NR-01">
@@ -22332,7 +22247,7 @@
       </xs:enumeration>
       <xs:enumeration value="PH-MAN">
         <xs:annotation>
-          <xs:documentation>Manila</xs:documentation>
+          <xs:documentation>Manila; Maynila</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PH-MAR">
@@ -22812,7 +22727,7 @@
       </xs:enumeration>
       <xs:enumeration value="PT-20">
         <xs:annotation>
-          <xs:documentation>Azores</xs:documentation>
+          <xs:documentation>Açores; Azores</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PT-30">
@@ -24087,7 +24002,7 @@
       </xs:enumeration>
       <xs:enumeration value="RS-VO">
         <xs:annotation>
-          <xs:documentation>Vojvodina</xs:documentation>
+          <xs:documentation>Vojvodina; Voivodina; Vajdaság</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="RU-AD">
@@ -24397,7 +24312,7 @@
       </xs:enumeration>
       <xs:enumeration value="RU-SE">
         <xs:annotation>
-          <xs:documentation>North Ossetia</xs:documentation>
+          <xs:documentation>Severnaya Osetiya-Alaniya; North Ossetia</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="RU-SMO">
@@ -24512,22 +24427,22 @@
       </xs:enumeration>
       <xs:enumeration value="RW-02">
         <xs:annotation>
-          <xs:documentation>Eastern Province</xs:documentation>
+          <xs:documentation>Eastern Province; Iburasirazuba; Est</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="RW-03">
         <xs:annotation>
-          <xs:documentation>Northern Province</xs:documentation>
+          <xs:documentation>Northern Province; Amajyaruguru; Nord</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="RW-04">
         <xs:annotation>
-          <xs:documentation>Western Province</xs:documentation>
+          <xs:documentation>Western Province; Ouest; Iburengerazuba</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="RW-05">
         <xs:annotation>
-          <xs:documentation>Southern Province</xs:documentation>
+          <xs:documentation>Southern Province; Sud; Amajyepfo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SA-01">
@@ -25202,7 +25117,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-040">
         <xs:annotation>
-          <xs:documentation>Isola</xs:documentation>
+          <xs:documentation>Izola; Isola</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SI-041">
@@ -25252,7 +25167,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-050">
         <xs:annotation>
-          <xs:documentation>Capodistria</xs:documentation>
+          <xs:documentation>Koper; Capodistria</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SI-051">
@@ -25297,7 +25212,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-059">
         <xs:annotation>
-          <xs:documentation>Lendva</xs:documentation>
+          <xs:documentation>Lendava; Lendva</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SI-060">
@@ -25452,7 +25367,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-090">
         <xs:annotation>
-          <xs:documentation>Pirano</xs:documentation>
+          <xs:documentation>Piran; Pirano</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SI-091">
@@ -25777,7 +25692,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-156">
         <xs:annotation>
-          <xs:documentation>Dobronak</xs:documentation>
+          <xs:documentation>Dobrovnik; Dobronak</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SI-157">
@@ -25802,7 +25717,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-161">
         <xs:annotation>
-          <xs:documentation>Hodos</xs:documentation>
+          <xs:documentation>Hodoš</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SI-162">
@@ -26062,7 +25977,7 @@
       </xs:enumeration>
       <xs:enumeration value="SI-213">
         <xs:annotation>
-          <xs:documentation>Ancarano</xs:documentation>
+          <xs:documentation>Ankaran; Ancarano</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SK-BC">
@@ -27187,22 +27102,22 @@
       </xs:enumeration>
       <xs:enumeration value="TL-AN">
         <xs:annotation>
-          <xs:documentation>Ainaro</xs:documentation>
+          <xs:documentation>Ainaro; Ainaru</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-BA">
         <xs:annotation>
-          <xs:documentation>Baucau</xs:documentation>
+          <xs:documentation>Baucau; Baukau</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-BO">
         <xs:annotation>
-          <xs:documentation>Bobonaro</xs:documentation>
+          <xs:documentation>Bobonaro; Bobonaru</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-CO">
         <xs:annotation>
-          <xs:documentation>Kovalima</xs:documentation>
+          <xs:documentation>Kovalima; Covalima</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-DI">
@@ -27217,12 +27132,12 @@
       </xs:enumeration>
       <xs:enumeration value="TL-LA">
         <xs:annotation>
-          <xs:documentation>Lautém</xs:documentation>
+          <xs:documentation>Lautém; Lautein</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-LI">
         <xs:annotation>
-          <xs:documentation>Likisá</xs:documentation>
+          <xs:documentation>Likisá; Liquiçá</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-MF">
@@ -27232,17 +27147,17 @@
       </xs:enumeration>
       <xs:enumeration value="TL-MT">
         <xs:annotation>
-          <xs:documentation>Manatuto</xs:documentation>
+          <xs:documentation>Manatuto; Manatutu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-OE">
         <xs:annotation>
-          <xs:documentation>Oé-Cusse Ambeno</xs:documentation>
+          <xs:documentation>Oé-Cusse Ambeno; Oekusi Ambenu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TL-VI">
         <xs:annotation>
-          <xs:documentation>Viqueque</xs:documentation>
+          <xs:documentation>Viqueque; Vikeke</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TM-A">
@@ -27942,32 +27857,32 @@
       </xs:enumeration>
       <xs:enumeration value="TW-CHA">
         <xs:annotation>
-          <xs:documentation>Changhua</xs:documentation>
+          <xs:documentation>Changhua; Zhanghua</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-CYI">
         <xs:annotation>
-          <xs:documentation>Chiayi</xs:documentation>
+          <xs:documentation>Chiayi; Jiayi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-CYQ">
         <xs:annotation>
-          <xs:documentation>Chiayi</xs:documentation>
+          <xs:documentation>Jiayi; Chiayi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-HSQ">
         <xs:annotation>
-          <xs:documentation>Hsinchu</xs:documentation>
+          <xs:documentation>Hsinchu; Xinzhu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-HSZ">
         <xs:annotation>
-          <xs:documentation>Hsinchu</xs:documentation>
+          <xs:documentation>Hsinchu; Xinzhu</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-HUA">
         <xs:annotation>
-          <xs:documentation>Hualien</xs:documentation>
+          <xs:documentation>Hualian; Hualien</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-ILA">
@@ -27977,22 +27892,22 @@
       </xs:enumeration>
       <xs:enumeration value="TW-KEE">
         <xs:annotation>
-          <xs:documentation>Keelung</xs:documentation>
+          <xs:documentation>Keelung; Jilong</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-KHH">
         <xs:annotation>
-          <xs:documentation>Kaohsiung</xs:documentation>
+          <xs:documentation>Kaohsiung; Gaoxiong</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-KIN">
         <xs:annotation>
-          <xs:documentation>Kinmen</xs:documentation>
+          <xs:documentation>Jinmen; Kinmen</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-LIE">
         <xs:annotation>
-          <xs:documentation>Lienchiang</xs:documentation>
+          <xs:documentation>Lianjiang; Lienchiang</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-MIA">
@@ -28017,7 +27932,7 @@
       </xs:enumeration>
       <xs:enumeration value="TW-PIF">
         <xs:annotation>
-          <xs:documentation>Pingtung</xs:documentation>
+          <xs:documentation>Pingtung; Pingdong</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-TAO">
@@ -28032,17 +27947,17 @@
       </xs:enumeration>
       <xs:enumeration value="TW-TPE">
         <xs:annotation>
-          <xs:documentation>Taipei</xs:documentation>
+          <xs:documentation>Taipei; Taibei</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-TTT">
         <xs:annotation>
-          <xs:documentation>Taitung</xs:documentation>
+          <xs:documentation>Taidong; Taitung</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-TXG">
         <xs:annotation>
-          <xs:documentation>Taichung</xs:documentation>
+          <xs:documentation>Taichung; Taizhong</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TW-YUN">
@@ -28077,12 +27992,12 @@
       </xs:enumeration>
       <xs:enumeration value="TZ-06">
         <xs:annotation>
-          <xs:documentation>Pemba North</xs:documentation>
+          <xs:documentation>Pemba North; Kaskazini Pemba</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TZ-07">
         <xs:annotation>
-          <xs:documentation>Zanzibar North</xs:documentation>
+          <xs:documentation>Zanzibar North; Kaskazini Unguja</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TZ-08">
@@ -28097,12 +28012,12 @@
       </xs:enumeration>
       <xs:enumeration value="TZ-10">
         <xs:annotation>
-          <xs:documentation>Pemba South</xs:documentation>
+          <xs:documentation>Pemba South; Kusini Pemba</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TZ-11">
         <xs:annotation>
-          <xs:documentation>Zanzibar Central/South</xs:documentation>
+          <xs:documentation>Zanzibar Central/South; Kusini Unguja</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TZ-12">
@@ -28122,7 +28037,7 @@
       </xs:enumeration>
       <xs:enumeration value="TZ-15">
         <xs:annotation>
-          <xs:documentation>Zanzibar Urban/West</xs:documentation>
+          <xs:documentation>Zanzibar Urban/West; Mjini Magharibi</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TZ-16">
@@ -28142,7 +28057,7 @@
       </xs:enumeration>
       <xs:enumeration value="TZ-19">
         <xs:annotation>
-          <xs:documentation>Coast</xs:documentation>
+          <xs:documentation>Coast; Pwani</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="TZ-20">
@@ -28465,6 +28380,11 @@
           <xs:documentation>Kyotera</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="UG-126">
+        <xs:annotation>
+          <xs:documentation>Kasanda</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="UG-201">
         <xs:annotation>
           <xs:documentation>Bugiri</xs:documentation>
@@ -28562,7 +28482,7 @@
       </xs:enumeration>
       <xs:enumeration value="UG-220">
         <xs:annotation>
-          <xs:documentation>Bukwa</xs:documentation>
+          <xs:documentation>Bukwo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="UG-221">
@@ -28633,6 +28553,21 @@
       <xs:enumeration value="UG-234">
         <xs:annotation>
           <xs:documentation>Namisindwa</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-235">
+        <xs:annotation>
+          <xs:documentation>Bugweri</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-236">
+        <xs:annotation>
+          <xs:documentation>Kapelebyong</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-237">
+        <xs:annotation>
+          <xs:documentation>Kalaki</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="UG-301">
@@ -28795,6 +28730,31 @@
           <xs:documentation>Pakwach</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="UG-333">
+        <xs:annotation>
+          <xs:documentation>Kwania</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-334">
+        <xs:annotation>
+          <xs:documentation>Nabilatuk</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-335">
+        <xs:annotation>
+          <xs:documentation>Karenga</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-336">
+        <xs:annotation>
+          <xs:documentation>Madi-Okollo</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-337">
+        <xs:annotation>
+          <xs:documentation>Obongi</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="UG-401">
         <xs:annotation>
           <xs:documentation>Bundibugyo</xs:documentation>
@@ -28948,6 +28908,26 @@
       <xs:enumeration value="UG-431">
         <xs:annotation>
           <xs:documentation>Rukiga</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-432">
+        <xs:annotation>
+          <xs:documentation>Kikuube</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-433">
+        <xs:annotation>
+          <xs:documentation>Kazo</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-434">
+        <xs:annotation>
+          <xs:documentation>Kitagwenda</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UG-435">
+        <xs:annotation>
+          <xs:documentation>Rwampara</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="UG-C">
@@ -29962,52 +29942,52 @@
       </xs:enumeration>
       <xs:enumeration value="XK-01">
         <xs:annotation>
-          <xs:documentation>Deçan</xs:documentation>
+          <xs:documentation>Deçan; Dečani</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-02">
         <xs:annotation>
-          <xs:documentation>Dragaš</xs:documentation>
+          <xs:documentation>Dragash; Dragaš</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-03">
         <xs:annotation>
-          <xs:documentation>Ferizaj</xs:documentation>
+          <xs:documentation>Ferizaj; Uroševac</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-04">
         <xs:annotation>
-          <xs:documentation>Fushë Kosovë</xs:documentation>
+          <xs:documentation>Fushë Kosovë; Kosovo Polje</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-05">
         <xs:annotation>
-          <xs:documentation>Gjakovë</xs:documentation>
+          <xs:documentation>Gjakovë; Đakovica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-06">
         <xs:annotation>
-          <xs:documentation>Gjilan</xs:documentation>
+          <xs:documentation>Gjilan; Gnjilane</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-07">
         <xs:annotation>
-          <xs:documentation>Gllogovc</xs:documentation>
+          <xs:documentation>Gllogovc; Glogovac</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-08">
         <xs:annotation>
-          <xs:documentation>Gračanica</xs:documentation>
+          <xs:documentation>Graçanicë; Gračanica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-09">
         <xs:annotation>
-          <xs:documentation>Hani i Elezit</xs:documentation>
+          <xs:documentation>Hani i Elezit; Đeneral Janković</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-10">
         <xs:annotation>
-          <xs:documentation>Istog</xs:documentation>
+          <xs:documentation>Istog; Istok</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-11">
@@ -30022,67 +30002,67 @@
       </xs:enumeration>
       <xs:enumeration value="XK-13">
         <xs:annotation>
-          <xs:documentation>Kamenicë</xs:documentation>
+          <xs:documentation>Kamenicë; Kamenica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-14">
         <xs:annotation>
-          <xs:documentation>Klinë</xs:documentation>
+          <xs:documentation>Klinë; Klina</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-15">
         <xs:annotation>
-          <xs:documentation>Kllokot</xs:documentation>
+          <xs:documentation>Kllokot; Klokot</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-16">
         <xs:annotation>
-          <xs:documentation>Leposaviq</xs:documentation>
+          <xs:documentation>Leposaviq; Leposavić</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-17">
         <xs:annotation>
-          <xs:documentation>Lipjan</xs:documentation>
+          <xs:documentation>Lipjan; Lipljan</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-18">
         <xs:annotation>
-          <xs:documentation>Malishevë</xs:documentation>
+          <xs:documentation>Malishevë; Mališevo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-19">
         <xs:annotation>
-          <xs:documentation>Mamushë</xs:documentation>
+          <xs:documentation>Mamushë; Mamuša</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-21">
         <xs:annotation>
-          <xs:documentation>Novobërdë</xs:documentation>
+          <xs:documentation>Novobërdë; Novo Brdo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-22">
         <xs:annotation>
-          <xs:documentation>Obiliq</xs:documentation>
+          <xs:documentation>Obiliq; Obilić</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-23">
         <xs:annotation>
-          <xs:documentation>Partesh</xs:documentation>
+          <xs:documentation>Partesh; Parteš</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-24">
         <xs:annotation>
-          <xs:documentation>Pejë</xs:documentation>
+          <xs:documentation>Pejë; Peć</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-25">
         <xs:annotation>
-          <xs:documentation>Podujevë</xs:documentation>
+          <xs:documentation>Podujevë; Podujevo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-26">
         <xs:annotation>
-          <xs:documentation>Prishtinë</xs:documentation>
+          <xs:documentation>Prishtinë; Priština</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-27">
@@ -30092,42 +30072,42 @@
       </xs:enumeration>
       <xs:enumeration value="XK-28">
         <xs:annotation>
-          <xs:documentation>Rahovec</xs:documentation>
+          <xs:documentation>Rahovec; Orahovac</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-29">
         <xs:annotation>
-          <xs:documentation>Ranillug</xs:documentation>
+          <xs:documentation>Ranillug; Ranilug</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-30">
         <xs:annotation>
-          <xs:documentation>Shtërpcë</xs:documentation>
+          <xs:documentation>Shtërpcë; Štrpce</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-31">
         <xs:annotation>
-          <xs:documentation>Shtime</xs:documentation>
+          <xs:documentation>Shtime; Štimlje</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-32">
         <xs:annotation>
-          <xs:documentation>Skenderaj</xs:documentation>
+          <xs:documentation>Skenderaj; Srbica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-33">
         <xs:annotation>
-          <xs:documentation>Suharekë</xs:documentation>
+          <xs:documentation>Suharekë; Suva Reka</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-34">
         <xs:annotation>
-          <xs:documentation>Viti</xs:documentation>
+          <xs:documentation>Viti; Vitina</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-35">
         <xs:annotation>
-          <xs:documentation>Vushtrri</xs:documentation>
+          <xs:documentation>Vushtrri; Vučitrn</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-36">
@@ -30142,12 +30122,12 @@
       </xs:enumeration>
       <xs:enumeration value="XK-38">
         <xs:annotation>
-          <xs:documentation>Mitrovicë e Jug</xs:documentation>
+          <xs:documentation>Mitrovicë e Jugut; Južna Mitrovica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="XK-39">
         <xs:annotation>
-          <xs:documentation>Mitrovicë e Veriut</xs:documentation>
+          <xs:documentation>Mitrovicë e Veriut; Severna Mitrovica</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="YE-AB">

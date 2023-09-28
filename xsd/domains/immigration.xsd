@@ -3,17 +3,17 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:hs="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
   xmlns:im="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
   xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -38,12 +38,12 @@
       <appinfo:LocalTerm term="USCIS" literal="United States Citizenship and Immigration Services"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/" schemaLocation="hs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/jxdm/8.0/" schemaLocation="jxdm.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AlienAlertType">
     <xs:annotation>
       <xs:documentation>A data type for the significant information regarding an alien communicated to immigration or enforcement officials notifying them of potential risk or risks.</xs:documentation>
@@ -60,7 +60,7 @@
           <xs:element ref="scr:AlertCategoryClassificationCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:AlertDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:AlertMedicalIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienRole" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:Alien" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:AlienAlertAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -128,17 +128,17 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="AlienExchangeVisitorRoleType">
+  <xs:complexType name="AlienExchangeVisitorType">
     <xs:annotation>
       <xs:documentation>A data type for a non-immigrant alien who visits the United States to participate in either an educational or cultural exchange program that is approved by the United States Department of State.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:NonImmigrantRoleType">
+      <xs:extension base="im:NonImmigrantType">
         <xs:sequence>
           <xs:element ref="im:ExchangeVisitorAdmission" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:ExchangeVisitorCategoryCode" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:ExchangeVisitorCategoryDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienExchangeVisitorRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienExchangeVisitorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -185,33 +185,6 @@
         <xs:sequence>
           <xs:element ref="im:AlienMiscellaneousIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:AlienMiscellaneousNumberIDAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="AlienRoleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a foreign born person who is not a citizen of the United States.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="im:PersonCountryRoleType">
-        <xs:sequence>
-          <xs:element ref="im:AlienAlert" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienCautionMedicalConditionCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienEncounter" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienFelonCategoryText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienFelonDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienFile" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienIDDetails" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienLocation" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienMatchCandidate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienPriorDeportationIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienSpecialClassCategoryText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienSpecialClassCodeDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienVoluntaryReturnIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AlienDetention" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:EnforcementEncounter" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -336,15 +309,42 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="AlienStudentRoleType">
+  <xs:complexType name="AlienStudentType">
     <xs:annotation>
       <xs:documentation>A data type for a non-immigrant alien enrolled full-time in an approved, accredited or certified United States educational or vocational program</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:NonImmigrantRoleType">
+      <xs:extension base="im:NonImmigrantType">
         <xs:sequence>
           <xs:element ref="im:AlienStudentAdmission" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:AlienStudentRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienStudentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AlienType">
+    <xs:annotation>
+      <xs:documentation>A data type for a foreign born person who is not a citizen of the United States.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="im:PersonCountryRoleType">
+        <xs:sequence>
+          <xs:element ref="im:AlienAlert" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienCautionMedicalConditionCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienEncounter" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienFelonCategoryText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienFelonDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienFile" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienIDDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienLocation" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienMatchCandidate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienPriorDeportationIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienSpecialClassCategoryText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienSpecialClassCodeDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienVoluntaryReturnIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:AlienDetention" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:EnforcementEncounter" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:AlienAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1908,14 +1908,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="CitizenRoleType">
+  <xs:complexType name="CitizenType">
     <xs:annotation>
       <xs:documentation>A data type for the role of Citizen that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="im:PersonCountryRoleType">
         <xs:sequence>
-          <xs:element ref="im:CitizenRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:CitizenAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2431,15 +2431,15 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ForeignBornChildOfCitizenRoleType">
+  <xs:complexType name="ForeignBornChildOfCitizenType">
     <xs:annotation>
       <xs:documentation>A data type for the role of Foreign Born Child of Citizen that is played by a Person with respect to a Country.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:CitizenRoleType">
+      <xs:extension base="im:CitizenType">
         <xs:sequence>
           <xs:element ref="im:CitizenshipCertificateIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:ForeignBornChildOfCitizenRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:ForeignBornChildOfCitizenAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2449,9 +2449,8 @@
       <xs:documentation>A data type for the classification of the person employed by the Department of Homeland Security (DHS) Immigration and Customs Enforcement (ICE) agency.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEEmployeeAssistantUSAttorneyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEEmployeeAttorneyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEEmployeeBadgeIdentification" minOccurs="0" maxOccurs="unbounded"/>
@@ -2470,23 +2469,22 @@
       <xs:documentation>A data type for the classification of the authorized enforcement officer employed by the Department of Homeland Security (DHS) Immigration and Customs Enforcement (ICE) agency.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEOfficerCategoryText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:ICEOfficerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ImmigrantRoleType">
+  <xs:complexType name="ImmigrantType">
     <xs:annotation>
       <xs:documentation>A data type for the role of Immigrant that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:AlienRoleType">
+      <xs:extension base="im:AlienType">
         <xs:sequence>
-          <xs:element ref="im:ImmigrantRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:ImmigrantAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2642,7 +2640,7 @@
           <xs:element ref="im:BeneficiaryReceivedOtherBenefitsCaseReceiptNumberIdentification" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="im:PermanentResidentAdjustmentApplicant" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="im:PermanentResidentAdjustmentCaseReceiptNumberIdentification" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="im:AlienExchangeVisitorRole" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="im:AlienExchangeVisitor" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="im:ExchangeVisitorTwoYearForeignResidentRequirementIndicator" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="im:ExchangeVisitorTwoYearForeignResidentWaiverIndicator" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="im:ExchangeVisitorCaseReceiptNumberIdentification" minOccurs="0" maxOccurs="1"/>
@@ -7849,15 +7847,15 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="LawfulPermanentResidentRoleType">
+  <xs:complexType name="LawfulPermanentResidentType">
     <xs:annotation>
       <xs:documentation>A data type for the role of Lawful Permanent Resident that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:ImmigrantRoleType">
+      <xs:extension base="im:ImmigrantType">
         <xs:sequence>
           <xs:element ref="im:LawfulPermanentResidentReasonDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:LawfulPermanentResidentRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:LawfulPermanentResidentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -7887,7 +7885,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="NationalRoleType">
+  <xs:complexType name="NationalType">
     <xs:annotation>
       <xs:documentation>A data type for the role of National that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
@@ -7895,35 +7893,35 @@
       <xs:extension base="im:PersonCountryRoleType">
         <xs:sequence>
           <xs:element ref="im:NationalReasonDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:NationalRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:NationalAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="NaturalizedCitizenRoleType">
+  <xs:complexType name="NaturalizedCitizenType">
     <xs:annotation>
       <xs:documentation>A data type for the role of Naturalized Citizen that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:CitizenRoleType">
+      <xs:extension base="im:CitizenType">
         <xs:sequence>
           <xs:element ref="im:NaturalizationAddress" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:NaturalizationCertificateIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:NaturalizationDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:NaturalizationCourtName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:NaturalizedCitizenRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:NaturalizedCitizenAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="NonImmigrantRoleType">
+  <xs:complexType name="NonImmigrantType">
     <xs:annotation>
       <xs:documentation>A data type for the role of NonImmigrant that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:AlienRoleType">
+      <xs:extension base="im:AlienType">
         <xs:sequence>
-          <xs:element ref="im:NonImmigrantRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:NonImmigrantAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -7946,14 +7944,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="OtherAlienRoleType">
+  <xs:complexType name="OtherAlienType">
     <xs:annotation>
       <xs:documentation>A data type for the Other Alien role that is played by a Person who cannot be categorized as either an Immigrant or NonImmigrant with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="im:AlienRoleType">
+      <xs:extension base="im:AlienType">
         <xs:sequence>
-          <xs:element ref="im:OtherAlienRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:OtherAlienAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -7982,6 +7980,7 @@
     <xs:complexContent>
       <xs:extension base="structures:AugmentationType">
         <xs:sequence>
+          <xs:element ref="im:ImmigrationStatus" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonUnionAssociation" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -8006,10 +8005,8 @@
       <xs:documentation>A data type for the role played by the Person with respect to a Country</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="im:ImmigrationStatus" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:Person" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:PersonCountryRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -8064,7 +8061,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ResidentRoleType">
+  <xs:complexType name="ResidentType">
     <xs:annotation>
       <xs:documentation>A data type for the role of Resident that is played by a Person with respect to a Country</xs:documentation>
     </xs:annotation>
@@ -8072,7 +8069,7 @@
       <xs:extension base="im:PersonCountryRoleType">
         <xs:sequence>
           <xs:element ref="im:ResidentReasonDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="im:ResidentRoleAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:ResidentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -8442,6 +8439,11 @@
       <xs:documentation>True if there is an alert warning associated with an alien; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="Alien" type="im:AlienType" substitutionGroup="im:PersonCountryRole" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A foreign born person who is not a citizen of the United States.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="AlienAlert" type="im:AlienAlertType" nillable="true">
     <xs:annotation>
       <xs:documentation>An alert for the Department of Homeland Security (DHS), Immigration and Customs Enforcement (ICE) if the alien has been formally removed from the U.S. or could pose a risk based on safety or other factors.</xs:documentation>
@@ -8455,6 +8457,11 @@
   <xs:element name="AlienAsylumRequestIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if the encounter is with an alien seeking asylum; false otherwise</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AlienAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for AlienType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="AlienBorderCrossingIndicator" type="niem-xs:boolean" nillable="true">
@@ -8492,24 +8499,24 @@
       <xs:documentation>An augmentation point for AlienEncounterType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="AlienExchangeVisitor" type="im:AlienExchangeVisitorType" substitutionGroup="im:NonImmigrant" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A non-immigrant alien who visits the United States to participate in either an educational or cultural exchange program that is approved by the United States Department of State.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="AlienExchangeVisitorAdmissionAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for AlienExchangeVisitorAdmissionType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="AlienExchangeVisitorAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for AlienExchangeVisitorType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="AlienExchangeVisitorProgram" type="nc:ProgramType" nillable="true">
     <xs:annotation>
       <xs:documentation>An educational or cultural program of study sponsored by an authorized institution in the United States and offered to non-immigrant aliens.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AlienExchangeVisitorRole" type="im:AlienExchangeVisitorRoleType" substitutionGroup="im:NonImmigrantRole" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A non-immigrant alien who visits the United States to participate in either an educational or cultural exchange program that is approved by the United States Department of State.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AlienExchangeVisitorRoleAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for AlienExchangeVisitorRoleType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="AlienFelonCategoryText" type="nc:TextType" nillable="true">
@@ -8612,16 +8619,6 @@
       <xs:documentation>True if the encounter is with a non-criminal alien who has a tendency to slip back into previously recorded criminal activities; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AlienRole" type="im:AlienRoleType" substitutionGroup="im:PersonCountryRole" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A foreign born person who is not a citizen of the United States.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AlienRoleAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for AlienRoleType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="AlienSmuggledCostAmount" type="nc:AmountType" nillable="true">
     <xs:annotation>
       <xs:documentation>A cost associated with smuggling an alien to the United States.</xs:documentation>
@@ -8642,6 +8639,11 @@
       <xs:documentation>A field indicating the description for the associated special class code for alien person detention.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="AlienStudent" type="im:AlienStudentType" substitutionGroup="im:NonImmigrant" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A non-immigrant alien enrolled full-time in an approved, accredited or certified United States educational or vocational program</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="AlienStudentAdmission" type="im:AlienStudentAdmissionType" nillable="true">
     <xs:annotation>
       <xs:documentation>An entrance of a non-immigrant alien into full-time in an approved, accredited or certified United States educational or vocational program.</xs:documentation>
@@ -8650,6 +8652,11 @@
   <xs:element name="AlienStudentAdmissionAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for AlienStudentAdmissionType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AlienStudentAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for AlienStudentType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="AlienStudentAuthorization" type="im:AlienStudentAuthorizationType" nillable="true">
@@ -8705,16 +8712,6 @@
   <xs:element name="AlienStudentProgramExtensionRequestAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for AlienStudentProgramExtensionRequestType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AlienStudentRole" type="im:AlienStudentRoleType" substitutionGroup="im:NonImmigrantRole" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A non-immigrant alien enrolled full-time in an approved, accredited or certified United States educational or vocational program</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AlienStudentRoleAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for AlienStudentRoleType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="AlienVoluntaryReturnIndicator" type="niem-xs:boolean" nillable="true">
@@ -8932,14 +8929,14 @@
       <xs:documentation>True if the requester would like a change of non immigrant status; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CitizenRole" type="im:CitizenRoleType" substitutionGroup="im:PersonCountryRole" nillable="true">
+  <xs:element name="Citizen" type="im:CitizenType" substitutionGroup="im:PersonCountryRole" nillable="true">
     <xs:annotation>
       <xs:documentation>a native or naturalized person who owes allegiance to a government and is entitled to protection from it</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CitizenRoleAugmentationPoint" abstract="true">
+  <xs:element name="CitizenAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for CitizenRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for CitizenType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="CitizenshipCertificateIdentification" type="nc:IdentificationType" nillable="true">
@@ -9442,14 +9439,14 @@
       <xs:documentation>A method used to select and arrange financial support for EXCHANGE VISITORs.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ForeignBornChildOfCitizenRole" type="im:ForeignBornChildOfCitizenRoleType" substitutionGroup="im:CitizenRole" nillable="true">
+  <xs:element name="ForeignBornChildOfCitizen" type="im:ForeignBornChildOfCitizenType" substitutionGroup="im:Citizen" nillable="true">
     <xs:annotation>
-      <xs:documentation>A role of Foreign Born Child of Citizen Role Type that is played by a Person with respect to a Country</xs:documentation>
+      <xs:documentation>A foreign-born child of a citizen with respect to a country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ForeignBornChildOfCitizenRoleAugmentationPoint" abstract="true">
+  <xs:element name="ForeignBornChildOfCitizenAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for ForeignBornChildOfCitizenRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for ForeignBornChildOfCitizenType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="FormAllotmentQuantity" type="nc:QuantityType" nillable="true">
@@ -9547,14 +9544,14 @@
       <xs:documentation>A kind of Department of Homeland Security (DHS), Immigration and Customs Enforcement (ICE) officer.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ImmigrantRole" type="im:ImmigrantRoleType" substitutionGroup="im:AlienRole" nillable="true">
+  <xs:element name="Immigrant" type="im:ImmigrantType" substitutionGroup="im:Alien" nillable="true">
     <xs:annotation>
       <xs:documentation>A person immigrating to a country with a path to staying legally in a country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ImmigrantRoleAugmentationPoint" abstract="true">
+  <xs:element name="ImmigrantAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for ImmigrantRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for ImmigrantType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ImmigrantVisaApplicant" type="nc:PersonType" nillable="true">
@@ -9812,19 +9809,19 @@
       <xs:documentation>A free form field with detailed description about the attorney.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LawfulPermanentResidentReasonDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of the reason why a Person is considered a lawful permanent resident.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="LawfulPermanentResidentRole" type="im:LawfulPermanentResidentRoleType" substitutionGroup="im:ImmigrantRole" nillable="true">
+  <xs:element name="LawfulPermanentResident" type="im:LawfulPermanentResidentType" substitutionGroup="im:Immigrant" nillable="true">
     <xs:annotation>
       <xs:documentation>A person that has been made a lawful resident of a country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LawfulPermanentResidentRoleAugmentationPoint" abstract="true">
+  <xs:element name="LawfulPermanentResidentAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for LawfulPermanentResidentRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for LawfulPermanentResidentType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LawfulPermanentResidentReasonDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the reason why a Person is considered a lawful permanent resident.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="LeftCountryIndicator" type="niem-xs:boolean" nillable="true">
@@ -9902,19 +9899,19 @@
       <xs:documentation>True if there are multiple beneficiaries of the benefit request; false otherwise</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NationalReasonDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of the reason why a Person is considered a National.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="NationalRole" type="im:NationalRoleType" substitutionGroup="im:PersonCountryRole" nillable="true">
+  <xs:element name="National" type="im:NationalType" substitutionGroup="im:PersonCountryRole" nillable="true">
     <xs:annotation>
       <xs:documentation>An individual who owes his sole allegiance to the United States, including all U.S. citizens, and including some individuals who are not U.S. citizens. These individuals would include citizens of certain U.S. possessions such as American Samoa and Northern Mariana Islands</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NationalRoleAugmentationPoint" abstract="true">
+  <xs:element name="NationalAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for NationalRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for NationalType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NationalReasonDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the reason why a Person is considered a National.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="NaturalizationAddress" type="nc:AddressType" substitutionGroup="nc:Address" nillable="true">
@@ -9932,14 +9929,14 @@
       <xs:documentation>A description of the details of the alien's U.S. Naturalization.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NaturalizedCitizenRole" type="im:NaturalizedCitizenRoleType" substitutionGroup="im:CitizenRole" nillable="true">
+  <xs:element name="NaturalizedCitizen" type="im:NaturalizedCitizenType" substitutionGroup="im:Citizen" nillable="true">
     <xs:annotation>
       <xs:documentation>A Person who has been naturalized in a country as a new citizen.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NaturalizedCitizenRoleAugmentationPoint" abstract="true">
+  <xs:element name="NaturalizedCitizenAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for NaturalizedCitizenRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for NaturalizedCitizenType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="NextSessionStartDate" type="nc:DateType" nillable="true">
@@ -9947,19 +9944,19 @@
       <xs:documentation>A date on which the next school session begins for the alien student.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NonImmigrantInspectionAdmissionStatus" type="nc:StatusType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A current status of non-immigrant inspection and admission into the country.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="NonImmigrantRole" type="im:NonImmigrantRoleType" substitutionGroup="im:AlienRole" nillable="true">
+  <xs:element name="NonImmigrant" type="im:NonImmigrantType" substitutionGroup="im:Alien" nillable="true">
     <xs:annotation>
       <xs:documentation>A person immigrating a country with no immigration path to staying legally in a country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NonImmigrantRoleAugmentationPoint" abstract="true">
+  <xs:element name="NonImmigrantAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for NonImmigrantRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for NonImmigrantType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NonImmigrantInspectionAdmissionStatus" type="nc:StatusType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A current status of non-immigrant inspection and admission into the country.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="NonImmigrantWorkerPetitionConcurrentlyFiledIndicator" type="niem-xs:boolean" nillable="true">
@@ -10022,14 +10019,14 @@
       <xs:documentation>True if the sole or surviving parent has irrevocable released the orphan for emigration and adoption in writing; false otherwise</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="OtherAlienRole" type="im:OtherAlienRoleType" substitutionGroup="im:AlienRole" nillable="true">
+  <xs:element name="OtherAlien" type="im:OtherAlienType" substitutionGroup="im:Alien" nillable="true">
     <xs:annotation>
-      <xs:documentation>A data type for the Other Alien role that is played by a Person who cannot be categorized as either an Immigrant or NonImmigrant with respect to a Country</xs:documentation>
+      <xs:documentation>A person who cannot be categorized as either an Immigrant or NonImmigrant with respect to a Country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="OtherAlienRoleAugmentationPoint" abstract="true">
+  <xs:element name="OtherAlienAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for OtherAlienRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for OtherAlienType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="OtherFundsAmount" type="nc:AmountType" nillable="true">
@@ -10327,19 +10324,19 @@
       <xs:documentation>A date on which the alien needs to be removed from the United States based on the removal order.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ResidentReasonDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of the reason why a Person is considered a Resident.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="ResidentRole" type="im:ResidentRoleType" substitutionGroup="im:PersonCountryRole" nillable="true">
+  <xs:element name="Resident" type="im:ResidentType" substitutionGroup="im:PersonCountryRole" nillable="true">
     <xs:annotation>
       <xs:documentation>A person who resides in a particular place permanently or for an extended period</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ResidentRoleAugmentationPoint" abstract="true">
+  <xs:element name="ResidentAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for ResidentRoleType.</xs:documentation>
+      <xs:documentation>An augmentation point for ResidentType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ResidentReasonDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the reason why a Person is considered a Resident.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ResponseDescriptionText" type="nc:TextType" nillable="true">
@@ -10360,11 +10357,6 @@
   <xs:element name="ResponseYesIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if Yes has been specified; false otherwise.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfAlienAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for the role of an Alien who is being processed as part of a Screening Encounter.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ScholarshipGrantAmount" type="nc:AmountType" nillable="true">

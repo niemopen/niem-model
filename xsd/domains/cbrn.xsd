@@ -3,17 +3,17 @@
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/"
   version="psd01"
   xml:lang="en-US"
-  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:cbrn="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/"
   xmlns:cbrncl="https://docs.oasis-open.org/niemopen/ns/model/codes/cbrncl/6.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:geo="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
-  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/"
+  xmlns:niem-gml="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
   xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
@@ -53,12 +53,12 @@
       <appinfo:LocalTerm term="XY" literal="A two dimensional array or pair of values for a data point"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/geospatial/6.0/" schemaLocation="../adapters/geospatial.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-gml/6.0/" schemaLocation="../adapters/niem-gml.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/cbrncl/6.0/" schemaLocation="../codes/cbrncl.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/proxy/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AcknowledgementDataType">
     <xs:annotation>
       <xs:documentation>A data type for information regarding an acknowledgement.</xs:documentation>
@@ -994,7 +994,7 @@
           <xs:element ref="cbrn:SpecialEventName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:SpecialEventStartDateTime" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:SpecialEventEndDateTime" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="cbrn:SpecialEventSecurityArea" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cbrn:SpecialEventSecurityAreaAdapter" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1674,17 +1674,15 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ReportType">
+  <xs:complexType name="ReportAugmentationType">
     <xs:annotation>
-      <xs:documentation>A data type for a report provided on an unsolicited basis; i.e., not in response to a request message (Pull), but by Push from the entity providing the report.</xs:documentation>
+      <xs:documentation>A data type for additional information about a report.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="structures:AugmentationType">
         <xs:sequence>
-          <xs:element ref="cbrn:ReportDateTime" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:CredentialsAuthenticationAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ActivityName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="cbrn:ReportAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1976,10 +1974,11 @@
       <xs:documentation>A data type for metadata about Total Dose data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="cbrn:RadRawTotalDoseValue" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="cbrn:RadDetectorInformation" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="cbrn:TotalDoseMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1998,6 +1997,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cbrn:NonNegativeDoubleType">
+        <xs:attribute ref="cbrn:totalDoseMetadataRef" use="optional"/>
         <xs:attribute ref="cbrn:unitsText" use="required"/>
       </xs:extension>
     </xs:simpleContent>
@@ -2007,10 +2007,11 @@
       <xs:documentation>A data type for metadata about Total Exposure data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="cbrn:RadDetectorInformation" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="cbrn:RadRawTotalExposureValue" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="cbrn:TotalExposureMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2021,6 +2022,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cbrn:NonNegativeDoubleType">
+        <xs:attribute ref="cbrn:totalExposureMetadataRef" use="optional"/>
         <xs:attribute ref="cbrn:unitsText" use="required"/>
       </xs:extension>
     </xs:simpleContent>
@@ -2125,6 +2127,16 @@
   <xs:attribute name="systemSimulatedIndicator" type="xs:boolean">
     <xs:annotation>
       <xs:documentation>True if the system is simulated; false otherwise.  If the attribute is not present, the value is false.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="totalDoseMetadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>A list of metadata objects about the accumulated ambient dose equivalent since the last radiation detection instrument reset, with units microsieverts (Sv), that apply to a node or object represented by an XML element.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="totalExposureMetadataRef" type="xs:IDREFS">
+    <xs:annotation>
+      <xs:documentation>A list of metadata objects about accumulated exposure since the last instrument reset, in milliroentgen (mR), that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="unitsText" type="xs:token">
@@ -2442,7 +2454,7 @@
       <xs:documentation>A description of the locale or location associated with a case when it was initiated. For a case that is a collection of cases, may describe a route or involved locations/locales.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CaseMetadata" type="structures:MetadataType" nillable="true">
+  <xs:element name="CaseMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about a case.</xs:documentation>
     </xs:annotation>
@@ -2882,7 +2894,7 @@
       <xs:documentation>A time stamp identifying when a data file was last modified.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DataFileMetadata" type="structures:MetadataType" nillable="true">
+  <xs:element name="DataFileMetadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about data file Security classification and marking attributes.</xs:documentation>
     </xs:annotation>
@@ -4472,14 +4484,9 @@
       <xs:documentation>A placeholder for comments intended to help the consumer of the data to understand better the information encapsulated by the parent element.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Report" type="cbrn:ReportType" nillable="true">
+  <xs:element name="ReportAugmentation" type="cbrn:ReportAugmentationType" substitutionGroup="nc:ReportAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>A report provided on an unsolicited basis; i.e., not in response to a request message (Pull), but by Push from the entity providing the report.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="ReportAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for cbrn:ReportType.</xs:documentation>
+      <xs:documentation>Additional information about a report.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ReportDateTime" type="niem-xs:dateTime" nillable="true">
@@ -4712,7 +4719,7 @@
       <xs:documentation>A Name of a special event.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="SpecialEventSecurityArea" type="geo:PolygonType" nillable="true">
+  <xs:element name="SpecialEventSecurityAreaAdapter" type="niem-gml:PolygonAdapterType" nillable="true">
     <xs:annotation>
       <xs:documentation>An area of operational security concern for a special event.</xs:documentation>
     </xs:annotation>
@@ -4872,9 +4879,14 @@
       <xs:documentation>A value for the total counts observed.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="TotalDoseMetadata" type="cbrn:TotalDoseMetadataType" nillable="true" appinfo:appliesToTypes="structures:ObjectType">
+  <xs:element name="TotalDoseMetadata" type="cbrn:TotalDoseMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about the accumulated ambient dose equivalent since the last radiation detection instrument reset, with units microsieverts (Sv).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TotalDoseMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for cbrn:TotalDoseMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="TotalDoseNumeric" type="cbrn:TotalDoseType" nillable="true">
@@ -4892,9 +4904,14 @@
       <xs:documentation>A total efficiency calibration. The total efficiency at any value of energy is the ratio of the total recorded pulses in a spectrum to the number of photons emitted from a source at that energy.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="TotalExposureMetadata" type="cbrn:TotalExposureMetadataType" nillable="true" appinfo:appliesToTypes="structures:ObjectType">
+  <xs:element name="TotalExposureMetadata" type="cbrn:TotalExposureMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Metadata about accumulated exposure since the last instrument reset, in milliroentgen (mR).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TotalExposureMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for cbrn:TotalExposureMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="TotalExposureNumeric" type="cbrn:TotalExposureType" nillable="true">
