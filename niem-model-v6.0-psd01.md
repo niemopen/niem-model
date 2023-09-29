@@ -18,7 +18,7 @@
 
 ## Project Specification Draft 01
 
-## 23 September 2023
+## 29 September 2023
 
 &nbsp;
 
@@ -57,43 +57,46 @@ Christina Medlin (christina.medlin@gtri.gatech.edu), [Georgia Tech Research Inst
 
 This prose specification is one component of a Work Product that also includes:
 
-<!-- TODO: Additional artifacts - add descriptions -->
-
-- NIEM Documentation files, including:
-
-  - NIEM CSV files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/csv/
-  - NIEM JSON-LD files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/json-ld/
-  - NIEM XLSX files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xlsx/
-
-- Complete Schema list: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/schemas.html
+- Complete XML Schema list: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/schemas.html
 
   - NIEM Core Schema: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/niem-core.xsd
   - NIEM Domain Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/domains/
+  - NIEM Adapter Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/adapters/
   - NIEM Auxiliary Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/auxiliary/
-  - NIEM Code List Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/codes/
-  - NIEM Adapter Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/external/
-  - Special NIEM Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/utility/
+  - NIEM Code Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/codes/
+  - NIEM External Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/external/
+  - NIEM Utility Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/utility/
 
-<!-- TODO: Additional artifacts - Other parts -->
-- Other parts (list titles and/or file names)
+- NIEM Documentation files, including:
+
+  - NIEM README: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/README.md/
+  - NIEM documentation files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/docs/
+
+- Other artifacts:
+
+  - NIEM CSV files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/csv/
+  - NIEM JSON-LD files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/json-ld/
+  - NIEM XML Catalog: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/xml-catalog.xml
 
 #### Related work:
 
 This specification replaces or supersedes:
 
-<!-- TODO: Replaces 5.2 URL - Use GitHub instead? -->
 - _NIEM 5.2_. https://release.niem.gov/niem/5.2/.
 
 This specification is related to:
 
-<!-- TODO: Related work section - Old 5.0 legacy specs vs not yet available 6.0 OASIS specs -->
-- _National Information Exchange Model Naming and Design Rules_. Version 5.0 December 18, 2020. NIEM Technical Architecture Committee (NTAC). https://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/niem-ndr-5.0.html.  (likely update to 6.0)
-- Related specifications (include hyperlink, preferably to HTML format) \
+- _National Information Exchange Model Naming and Design Rules_. Version 5.0 December 18, 2020. NIEM Technical Architecture Committee (NTAC). https://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/niem-ndr-5.0.html.
+
+- _NIEM Code Lists Specification_.  Version 4.0 November 7, 2017. NIEM Technical Architecture Committee (NTAC).  https://reference.niem.gov/niem/specification/code-lists/4.0/niem-code-lists-4.0.html.
+
+- _National Information Exchange Model Conformance Specification_. Version 5.0 March 19, 2021. NIEM Technical Architecture Committee (NTAC). https://reference.niem.gov/niem/specification/conformance/5.0/niem-conformance-spec-5.0.html.
+
+- _Conformance Targets Attribute Specification (CTAS) Project Specification 01_. Version 3.0 22 February 2023. Edited by Tom Carlson.
 
 #### Abstract:
 
-<!-- TODO: Abstract -->
-The National Information Exchange Model (NIEM) is a common vocabulary that enables efficient information exchange across diverse public and private organizations.
+NIEM is a data model that enables efficient information exchange across diverse public and private organizations. NIEM can improve interoperability among message exchange partners by providing consistent rules, reusable data components, and repeatable processes.
 
 #### Status:
 
@@ -113,7 +116,7 @@ When referencing this specification the following citation format should be used
 
 **[NIEM-Model-v6.0]**
 
-_NIEM Model Version 6.0_. Edited by Christina Medlin. 23 September 2023. OASIS Project Specification Draft 01. https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html.
+_NIEM Model Version 6.0_. Edited by Christina Medlin. 29 September 2023. OASIS Project Specification Draft 01. https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html.
 
 -------
 
@@ -136,12 +139,38 @@ For complete copyright information please see the Notices section in the Appendi
 
 # 1 Introduction
 
+The NIEM Business Architecture Committee (NBAC) Technical Steering Committee manages the NIEM Model.
+
 <!-- TODO: Label sections that are not normative -->
 
 ## 1.1 Changes from earlier Versions
 
-<!-- TODO: Changes from earlier versions -->
-This optional section provides a description of significant differences from previously published, differently numbered Versions of this specification, if any. (Detailed revision history of this numbered Version should be tracked in an Appendix.)
+Significant changes to the NIEM model in 6.0 from version 5.2 include:
+
+- Core and cross-domain harmonization
+
+- Updates to support the transition of NIEM to an OASIS Open Project, including namespace URI changes.
+
+- Updates to support upcoming [NIEM-NDR-v6.0] changes, including:
+  - Adapter changes - new representation terms and a simpler type syntax.
+  - Attribute augmentations - allows message designers to create semantically-named attribute references from simple data properties to supplemental content.
+  - Attribute wildcards - allows declared attributes to be added to any NIEM element property.
+  - Metadata changes - metadata is now treated like regular objects, can be included in types where applicable, and can be augmented and extended.
+  - Role changes - leverages standard type extension and the existing `structures:uri` attribute to relate different roles of the same entity in a message together, replacing the previous `RoleOf` construct.
+
+- Updates related to new digital identity requirements led by the Emergency Management domain, including:
+  - `nc:IdentificationType` and related augmentation types
+  - `nc:LicenseType` *(new)* to support other kinds of licenses with NIEM
+  - `j:DriverLicenseType` and related types
+  - `nc:PassportType`, which now extends `nc:IdentificationType`
+  - `em:PersonIDCardType`, which has been refactored to augment `nc:IdentificationType`
+  - `em:PersonCredentialInformationType`, which has been refactored to augment `nc:IdentificationType`
+  - `m:SeamanLicenseType`, which can now be represented by the new `nc:LicenseType`
+  - `m:MerchantMarinerDocumentType`, which can now be represented by the new `nc:LicenseType`
+
+- Code set updates, including updates provided by the FBI for the National Crime Information Center (NCIC) codes, and version 3-12 of the GENC standard.
+
+- Synchronized the Justice domain version number with the rest of the model
 
 ## 1.2 Glossary
 
@@ -161,64 +190,107 @@ NIEM   | NIEMOpen, the NIEM Open Project under OASIS
 NMO    | NIEM Management Office TSC
 NTAC   | NIEM Technical Architecture Committee TSC
 PGB    | NIEM Project Governing Board
-SC     | Sub-Committee
 TSC    | Technical Steering Committee
+
+-------
+
+# 2 The NIEM Model
+
+The NIEM model is a data model made up of a collection of properties and types defined within a set of namespaces, organized by governance authority.  NIEM components can be leveraged as reusable building blocks in information exchanges, providing consistency and well-defined semantics that support interoperability among various exchange partners.
+
+## 2.1 The NIEM architecture
+
+The architecture of the NIEM model is governed by the NDR, which provides:
+
+- general-purpose rules for naming, defining, and modeling components
+- special constructs and techniques to represent features including:
+  - associations, creating relationships between properties
+  - adapters, as the mechanism to support the use of non-conformant external standards within NIEM
+  - augmentations, to better support the need for extensions in a multi-domain model
+  - roles, linking related but distinct objects in a message back to the same entity
+  - representations, conceptually supporting multiple type inheritance
+  - references within a message
+  - linked data
+  - security markup
+- language-specific syntax rules
+- an RDF interpretation of the underlying data model
+- rules for extending the NIEM model to meet local requirements
+
+Initially, NIEM has been limited to XML-based exchanges.  NIEM is working to provide similar levels of support for JSON-LD, and mechanisms to support other languages as well.
+
+Major versions of the NIEM Model correspond to major versions of the NDR.  The architecture of the NIEM Model v6.0 is defined by [NIEM-NDR-v6.0].
+
+## 2.2 NIEM Namespaces
+
+Properties and types in NIEM are defined in namespaces, which are organized by governance or authoritative source.  New content may be added to existing namespaces with approval by their governance body through standard OASIS Open Project processes.  The NBAC, NTAC, and domain subcommittees may stand up new namespaces as needed.
+
+### 2.2.1 NIEM Core
+
+NIEM Core is the collection of general-purpose content that does not belong to any one authoritative source.  As such, this content is managed collaboratively by the NBAC, which includes representatives from the NIEM domain subcommittees.
+
+### 2.2.2 Domains
+
+NIEM domains are namespaces for communities of interest that have stood up their own formal governance bodies as NBAC subcommittees within NIEM.  The NBAC manages domains in cases of dormant governance.
+
+### 2.2.3 Codes
+
+While code sets can be defined in NIEM Core, domains, and other namespaces, code namespaces are almost exclusively code sets.  Some NIEM code namespaces are actively managed by domain subcommittees or authoritative sources which work directly with NIEM.  Other NIEM code namespaces are managed by the NBAC or domain subcommittees and reflect publicly available code sources, modified to conform to NIEM NDR rules.
+
+### 2.2.4 Adapters
+
+Adapters are provided by the NDR as the mechanism to support non-conformant external standards in NIEM schemas and instances without triggering conformance violations.  Like code sets, while adapters can be defined in other namespaces, adapter namespaces are for namespaces that exclusively define adapters.
+
+### 2.2.5 Auxiliary
+
+Auxiliary namespaces are like to light-weight domains.  They define community of interest content beyond just code sets, but without the governance requirements of NIEM domains.
+
+### 2.2.6 External
+
+External namespaces in NIEM are non-conformant external standards.  These are provided for when the use of other standards defined outside of NIEM would provide greater interoperability than to create NIEM-conformant components representing those standards.  Properties from external standards are wrapped by NIEM adapter types, which prevent NDR conformance rules from triggering errors on their use.
+
+### 2.2.7 Utility
+
+Utility namespaces in NIEM provide architectures support from the NDR and other NIEM technical specifications.  They provide mechanisms to support such things as ids and references, linked data, IC-ISM and NTK security markup, dynamic code list support and code list support for codes defined in CSVs, Genericode, and other non-schema enumeration formats.
 
 -------
 
 # 3 Conformance
 
-<!-- TODO: Conformance -->
-(Note: The [OASIS TC Process](https://www.oasis-open.org/policies-guidelines/tc-process-2017-05-26/#wpComponentsConfClause) requires that a specification approved by the OP for public review, or for publication at the Project Specification or OASIS Standard level must include a separate section, listing a set of numbered conformance clauses, to which any implementation of the specification must adhere in order to claim conformance to the specification (or any optional portion thereof). This is done by listing the conformance clauses here.
+The NIEM Model 6.0 XML Schemas are the only normative representation of the [NIEM-Model-v6.0] for the purposes of document validation.
 
-For the definition of "conformance clause," see [OASIS Defined Terms](https://www.oasis-open.org/policies-guidelines/oasis-defined-terms-2018-05-22/#dConformanceClause).
+## 3.1 Conformant instance document
 
-See "Guidelines to Writing Conformance Clauses":
-http://docs.oasis-open.org/templates/TCHandbook/ConformanceGuidelines.html.
+A conformant instance document will be defined and governed by [NIEM-Conformance-v6.0].
 
-Remove this note before submitting for publication.)
+## 3.2 Conformant schema document set
+
+A conformant schema document set will be defined and governed by [NIEM-Conformance-v6.0].
+
+### 3.3 Conformant message specification
+
+A conformant message specification will be defined and governed by [NIEM-Conformance-v6.0].
 
 -------
 
 # Appendix A. References
 
-<!-- TODO: References -->
-
-This appendix contains the normative and informative references that are used in this document. Any normative work cited in the body of the text as needed to implement the work product must be listed in the Normative References section below. Each reference to a separate document or artifact in this work must be listed here and must be identified as either a Normative or an Informative Reference. Normative references are specific (identified by date of publication and/or edition number or version number) and Informative references are either specific or non-specific.
-
-While any hyperlinks included in this appendix were valid at the time of publication, OASIS cannot guarantee their long-term validity.
-
-(Note - Reference sources:
-
-For references to IETF RFCs, use the approved citation formats at:
-http://docs.oasis-open.org/templates/ietf-rfc-list/ietf-rfc-list.html.
-
-For references to W3C Recommendations, use the approved citation formats at:
-http://docs.oasis-open.org/templates/w3c-recommendations-list/w3c-recommendations-list.html.
-
-Remove this note before submitting for publication.)
+<!-- TODO: Check References -->
 
 ## A.1 Normative References
 
-<!-- TODO: Normative References -->
+###### [NIEM-Conformance-v5.0]
 
-The following documents are referenced in such a way that some or all of their content constitutes requirements of this document.
+NIEM Technical Architecture Committee (NTAC), "National Information Exchange Model Conformance Specification", Version 5.0, March 19, 2021. https://reference.niem.gov/niem/specification/conformance/5.0/niem-conformance-spec-5.0.html.
 
-###### [RFC2119]
+###### [NIEM-Conformance-v6.0]
 
-Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997, http://www.rfc-editor.org/info/rfc2119.
+NIEM Technical Architecture Committee (NTAC).  Current working draft available at https://github.com/niemopen/conformance-specification/tree/dev.
 
-###### [RFC8174]
+###### [NIEM-NDR-v6.0]
 
-Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017, http://www.rfc-editor.org/info/rfc8174.
+NIEM Technical Architecture Committee (NTAC).  Current working draft available at https://github.com/niemopen/niem-naming-design-rules/tree/dev.
 
 ## A.2 Informative References
-
-<!-- TODO: Informative References -->
-
-###### [RFC3552]
-
-Rescorla, E. and B. Korver, "Guidelines for Writing RFC Text on Security Considerations", BCP 72, RFC 3552, DOI 10.17487/RFC3552, July 2003, https://www.rfc-editor.org/info/rfc3552.
 
 -------
 
@@ -240,21 +312,18 @@ Remove this note before submitting for publication.)
 
 # Appendix C. Acknowledgments
 
-<!-- TODO: Acknowledgements -->
-`(Note: A Work Product approved by the OP should include a list of people who participated in the development of the Work Product. This is generally done by collecting the list of names in this appendix. This list should be initially compiled by the Chair, and any Member of the OP may add or remove their names from the list by request. Remove this note before submitting for publication.)`
-
 ## C.1 Special Thanks
 
 Substantial contributions to this document from the following individuals are gratefully acknowledged:
 
-- **Kamran Atri**, NBAC TSC
-- **Chuck Chipman**, MilOps Domain Subcommittee
-- **April Mitchell**, NBAC TSC
+- **Kamran Atri**, NBAC TSC co-chair, Emergency Management Domain Subcommittee
+- **Chuck Chipman**, NTAC TSC, MilOps Domain Subcommittee
+- **April Mitchell**, NBAC TSC, Justice Domain Subcommittee
 
 <!-- TODO: Review HSC list -->
 Special thanks are given to the following individuals for their assistance in reviewing and resolving harmonization and other content issues affecting the model:
 
-**NIEMOpen NBAC TSC Harmonization Subcommittee Members:**
+**NBAC Harmonization Subcommittee Members:**
 
 | First Name | Last Name    | Domain Subcommittee or COI |
 | :--------- | :----------- | :------------------------- |
@@ -281,7 +350,7 @@ Josh         | Wilson       | Biometrics
 <!-- TODO: Review NTAC list -->
 Special thanks are also given to the following individuals for their guidance and expertise on architectural-related changes to the model:
 
-**NIEMOpen NTAC TSC Members:**
+**NTAC Members:**
 
 | First Name | Last Name    | Domain Subcommittee or COI |
 | :--------- | :----------- | :------------------------- |
@@ -294,6 +363,7 @@ Mike         | Hulme        | Unisys
 Eric         | Jahn         | Alexandria Consulting
 Dave         | Kemp         | NSA
 Vamsi        | Kondannagari | DHS
+Peter        | Madruga      | GTRI
 Christina    | Medlin       | GTRI
 Scott        | Renner       | MITRE; NTAC Co-Chair
 Duncan       | Sparrell     | sFractal Consulting
@@ -305,7 +375,7 @@ Stephen      | Sullivan     | BAH; NBAC Secretary
 <!-- TODO: Review NBAC list -->
 The following individuals have participated in the creation of this specification and are gratefully acknowledged:
 
-**NIEMOpen NBAC TSC Members:**
+**NBAC Members:**
 
 | First Name | Last Name  | Company  | Domain Subcommittee or COI
 | :--------- | :--------- | :------- |:--------------------------
@@ -336,7 +406,7 @@ Thomas       | Krul       | Public Safety Canada | NBAC Co-Chair
 Payton       | Lamb       | Commonwealth of Virginia <br /> Office of Data Governance and Analytics (ODGA) | PGB
 Shunda       | Louis      | BAH/Joint Staff J6 | NMO, Harmonization SC Co-Chair
 Christina    | Medlin     | GTRI/Joint Staff J6 | Harmonization SC Co-chair
-April        | Mitchell   | FBI      | Justice Co-Chair
+April        | Mitchell   | FBI      | Justice Co-Chair; PGB
 Scott        | Renner     | MITRE/Joint Staff J6 | NTAC Co-Chair
 Beth         | Smalley    | Joint Staff J6 | MilOps Co-Chair
 Duncan       | Sparrell   | sFractal | NTAC, PGB
@@ -350,6 +420,8 @@ Paul         | Wormeli    | Wormeli Consulting | NMO Communication and Outreach 
 -------
 
 # Appendix D. Revision History
+
+More detailed change descriptions are included in the README file in this package.
 
 Revision tracking is managed by GitHub.
 

@@ -211,6 +211,10 @@ The new pattern for NIEM URIs under OASIS prevent collisions with older versions
 - Definition: "Justice domain 6.0 / GJXDM 8.0"
 - Filename: "justice.xsd"
 
+#### Updated NCIC codes
+
+See the [National Crime Information Center (NCIC) codes](#national-crime-information-center-ncic-codes) update in the Codes section below.
+
 ### Maritime
 
 #### Renamed USMTFEnvironmentCategoryCode components ([#23](https://github.com/niemopen/niem-model/issues/23))
