@@ -1,17 +1,286 @@
 
-# NIEM 6.0
+# NIEM Model Version 6.0
 
-This is the NIEM 6.0 major release.
+NIEM is a data model that enables efficient information exchange across diverse public and private organizations.
 
-In a major version, content may be updated in any namespace, including Core. Changes may also be made to the NIEM architecture, which may be reflected in the structure and layout of the NIEM schemas.
+As a major version, content may be updated in any namespace, including Core. Changes may also be made to the NIEM architecture, which may be reflected in the structure and layout of the NIEM schemas.
 
-## Key updates based on NDR 6.0 changes
+This document includes information that highlights the changes since the previous version, NIEM 5.2.  More details about the changes are available from the [6.0 issues list](https://github.com/niemopen/niem-model/labels/6.0) in the NIEM Model issue tracker on GitHub, and in the change log spreadsheet in this package.
 
-The following are the key changes made to the model based on updates to the NDR for version 6.0.
+## Package contents
+
+### General package layout
+
+| Folder | Normative | Description |
+|:------ | --------- | ----------- |
+**csv**  | no | Contents of the NIEM model represented as CSV files.  Provided for developers to support easy import of NIEM data, including namespace, property, type, code, and other information from this version.
+**docs** | no | Additional documentation artifacts: <ul><li>A model spreadsheet, listing information about NIEM properties and types.  Core and domain content are on their own tabs.</li><li>A code spreadsheet, listing all of the code sets in the model.</li><li>A change log spreadsheet, listing changes from the previous versions.</li><li>Namespace CSV files, listing basic namespace information and the authorities responsible for managing them.</li></ul>
+**images** | no | Images for the OASIS specification.
+**json&#8209;ld** | no | A context file for JSON-LD support, assigning standard NIEM namespace prefixes to full URIs to support aliases.  This is similar to namespace prefix declarations in NIEM XML, assigning specific versions of namespaces to prefixes.
+**styles** | no | Stylesheets for the OASIS specification.
+**xsd**    | yes | The full set of XML schemas that normatively represent the NIEM 6.0 data model.
+
+### XML Schema folder layout
+
+| Folder or file   | Description |
+|:---------------- |:----------- |
+**xsd/adapters/**  | Adapter namespaces can adapter types that wrap the contents of external standards so they can be used in NIEM exchanges without triggering NDR conformance errors.
+**xsd/auxiliary/** | Auxiliary namespaces are like light-weight domains, containing NIEM-conformant properties and types from an authoritative source without its own governance body in NIEM.
+**xsd/codes/**     | Code namespaces define properties and types exclusively to represent code sets.  Some code namespaces are managed by authoritative sources within NIEM; others are NIEM representations of public standards.
+**xsd/domains/**   | Domain namespaces define properties and types for communities of interest and are (or were) backed by their own governance bodies in NIEM.
+**xsd/external/**  | External standards are standards defined outside of NIEM but included to better support interoperability.
+**xsd/utility/**   | Utility schemas provide XML architecture support to the model.  Includes support for such things as referencing and linked data, conformance targets, and NIEM Code Lists specification support for codes defined outside of schema enumerations.
+**xsd/niem-core.xsd** | The NIEM Core namespace, containing general-purpose content managed collaboratively by the NBAC.
+**xsd/xml&#8209;catalog.xml** | A file that maps namespace URIs to their file locations.  Can be updated and used to override default import statement locations in XML schemas.
+
+## Core and cross-domain content changes
+
+### Standardized the convention used for adapter namespaces ([#35](https://github.com/niemopen/niem-model/issues/35))
+
+Updated adapter namespace prefixes, uris, and filenames to follow the convention used by the `niem-xs` namespace, which creates special kinds of proxy adapters for XML Schema simple types.
+
+NIEM adapter namespace prefixes and filenames now begin with `niem-` and then end with the external standard prefix:
+
+| External | 5.2 adapter | 6.0 adapter
+|:-------- |:----------- |:-----------
+xs         | niem-xs     | niem-xs
+cap        | edxl-cap    | niem-cap
+de         | edxl-de     | niem-de
+have       | edxl-have   | niem-have
+gml        | geo         | niem-gml
+
+Filenames and uris now follow the same convention.
+
+### Refactored abstract country properties to be of type nc:CountryType ([#22](https://github.com/niemopen/niem-model/issues/22))
+
+Updated the following properties to no longer be abstract and to have type `nc:CountryType`, permitting any country representations in NIEM to be used:
+
+- intel:IdentificationIssuingCountryAbstract
+- j:DriverLicenseIssuingCountryAbstract
+- mo:ObservedObjectAllegianceCountryAbstract
+
+### Refactored nc:EmployeeAssignmentAssociation ([#14](https://github.com/niemopen/niem-model/issues/14))
+
+Moved `nc:nc:EmployeeRegistrationAbstract` and `nc:EmployeeSupervisorIndicator` elements to from type `nc:EmployeeAssignmentAssociationType` to its parent type `nc:EmploymentAssociationType`.  This allows those properties to be used in any employment association, not just assignments.
+
+The child type `nc:EmployeeAssignmentAssociationType` was no longer needed and was removed.  Property `nc:EmployeeAssignmentAssociation` was updated to be of type `nc:EmploymentAssociationType`.
+
+### Added support to specify empty value reason for simple values ([#34](https://github.com/niemopen/niem-model/issues/34))
+
+Created the following new attributes and added them to `nc:TextType` and `nc:QuantityType`:
+
+- `nc:valueEmptyReasonCode` of type `nc:EmptyReasonCodeSimpleType`
+- `nc:valueEmptyReasonText` of type `xs:string`
+
+*These new attributes can also be used throughout the model with the new support for attribute wildcards in NIEM 6.0.*
+
+Harmonized two domain code sets that represented a ternary choice with "Yes", "No", and "Unknown" code values with new code `nc:YesNoUnknownCodeType`:
+
+- `em:TernaryIndicatorCodeType`
+- `hs:JuvenileFamilyFinancialProblemCodeType`
+
+*This new code set can be used in places where a boolean with a null value cannot be used to indicate the value is unknown or not applicable.*
+
+### Added pronouns to nc:PersonType ([#15](https://github.com/niemopen/niem-model/issues/15))
+
+Add a substitution group with code and text substitutions for personal pronouns to `nc:PersonType`.
+
+Code set:
+
+- she/her
+- he/him
+- they/them
+- other
+- prefer not to share
+- unknown
+
+### Refactored non-RoleOf role components ([#38](https://github.com/niemopen/niem-model/issues/38))
+
+In addition to removing the `RoleOf` construct from the model due to NDR updates ([niemopen/niem-naming-design-rules#6](https://github.com/niemopen/niem-naming-design-rules/issues/6)), other properties and types using the `Role` representation term were reviewed and updated as appropriate to improve naming consistency with the rest of the model.
+
+**Renamed remaining RoleOf properties and types:**
+
+Renamed additional properties and types that were using `RoleOf` as the class term but were not using the `RoleOf` construct as defined by the NDR in 5.0 and previous versions:
+
+Component | Original name | Updated name
+--------- | ------------- | ------------
+Property | it:RoleOfCategory | it:PartyIDCategory
+Property | it:RoleOfCategoryDescriptionText | it:PartyRoleCategoryDescriptionText
+Property | it:RoleOfOrganizationCategoryDescriptionText | it:OrganizationRoleCategoryDescriptionText
+Property | it:RoleOfOrganizationCategory | it:OrganizationRoleCategory
+Property | it:RoleOfOrganizationCategoryAugmentationPoint | it:OrganizationRoleCategoryAugmentationPoint
+Type | it:RoleOfOrganizationCategoryType | it:OrganizationRoleCategoryType
+
+**Removed the Role representation term:**
+
+Removed extraneous `Role` representation terms from a list of properties and their corresponding types and augmentation point properties.  For example, `im:AlienRole` has been renamed `im:Alien`.
+
+The following properties have been renamed:
+
+- im:AlienExchangeVisitorRole
+- im:AlienRole
+- im:AlienStudentRole
+- im:CitizenRole
+- im:ForeignBornChildOfCitizenRole
+- im:ImmigrantRole
+- im:LawfulPermanentResidentRole
+- im:NationalRole
+- im:NaturalizedCitizenRole
+- im:NonImmigrantRole
+- im:PersonCountryRole
+- im:OtherAlienRole
+- im:ResidentRole
+
+**Refactored im:PersonCountryRoleType:**
+
+Refactored `im:PersonCountryRoleType` to make immigration status more widely available for reuse:
+
+- Moved `im:ImmigrationStatus` from `im:PersonCountryRoleType` to `im:PersonAugmentationType`, making it available wherever `nc:PersonType` is used.
+- Updated `im:PersonCountryRoleType` to extend `nc:PersonType`.
+
+**Refactored scr:PersonRole:**
+
+- Added a new Screening augmentation for `nc:PersonType`.
+- Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
+- Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
+
+### Harmonized StudentType ([#52](https://github.com/niemopen/niem-model/issues/52))
+
+The Human Services domain and the Learning and Development domain both define type `StudentType`.  Created a common student type in Core and converted the domain types to augmentations.
+
+- Created a new `nc:StudentType` in Core
+  - Merged and moved the only overlapping properties (`hs:StudentIdentification` / `lrn-dev:StudentID`) to `nc:StudentIdentification`.
+- Converted `hs:StudentType` to `hs:StudentAugmentationType`
+- Converted `lrn-dev:StudentType` to `lrn-dev:StudentAugmentationType`
+
+*NIEM exchanges can now use properties from both domains in the same student object from Core.*
+
+## Domain changes
+
+### CBRN
+
+#### Updated CaseMetadata and DataFileMetadata types ([#24](https://github.com/niemopen/niem-model/issues/24))
+
+CBRN defines two metadata elements that have type `structures:MetadataType`:
+
+- `cbrn:CaseMetadata`
+- `cbrn:DataFileMetadata`, which are both of type structures:MetadataType.
+
+The `structures:MetadataType` does not carry content and is not meant to be used directly as a type of a property.
+
+Updated these two properties to have type `nc:MetadataType`.
+
+#### Refactored cbrn:ReportType into an augmentation of nc:ReportType ([#11](https://github.com/niemopen/niem-model/issues/11))
+
+Refactored the following in `cbrn:ReportType`:
+
+- `cbrn:ReportDateTime`
+- `cbrn:CredentialsAuthenticationAbstract`
+- `nc:ActivityName`
+- `cbrn:ReportAugmentationPoint`
+
+into an augmentation of `nc:ReportType`, making these properties more reusable.
+
+Removed property `cbrn:ReportDateTime` ("A DateTime when a report was created.") as it is no longer needed with `nc:DocumentCreationDate` available through `nc:DocumentType`, the parent type of `nc:ReportType`.
+
+### Human Services
+
+#### Added hs:Wages ([#13](https://github.com/niemopen/niem-model/issues/13))
+
+Created a new property `hs:Wages` for the existing type `hs:WagesType`.  Added the new property to `hs:PersonAugmentationType`.
+
+### Justice
+
+#### Synchronized the Justice domain's version number ([#42](https://github.com/niemopen/niem-model/issues/42))
+
+The NIEM Justice domain originated from the GLOBAL Justice XML Data Model (GJXDM), the predecessor to NIEM.  Since the beginning of NIEM, the Justice domain has continued to use GJXDM version numbers for its own version (2 major version numbers ahead) rather than NIEM version numbers.
+
+For consistency and easier tool support going forward, the Justice domain version numbers have now been synchronized with the rest of the model.
+
+The new pattern for NIEM URIs under OASIS prevent collisions with older versions.  The domain identifier is also being changed from `jxdm` to `justice` to make clear that the new version number applies to the NIEM Justice domain, not the GJXDM.
+
+**NIEM 5.2:**
+
+- URI: http://release.niem.gov/niem/domains/jxdm/7.2/
+- Definition: "Justice"
+- Filename: "jxdm.xsd"
+
+**NIEM 6.0:**
+
+- URI: https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/
+- Definition: "Justice domain 6.0 / GJXDM 8.0"
+- Filename: "justice.xsd"
+
+#### Updated NCIC codes
+
+See the [National Crime Information Center (NCIC) codes](#national-crime-information-center-ncic-codes) update in the Codes section below.
+
+### Maritime
+
+#### Renamed USMTFEnvironmentCategoryCode components ([#23](https://github.com/niemopen/niem-model/issues/23))
+
+The names and definitions of the following components in the Maritime domain have been updated to remove the term "USMTF", as these are no longer defined by that standard:
+
+- `m:USMTFEnvironmentCategoryCode`
+- `m:USMTFEnvironmentCategoryCodeType`
+- `m:USMTFEnvironmentCategoryCodeSimpleType`
+
+### MilOps
+
+#### Updated Minimum Essential Metadata ([#40](https://github.com/niemopen/niem-model/issues/40))
+
+The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued by the DoD Chief Digital and Artificial Intelligence Officer in March 2023.   The following changes have been made:
+
+- Updated the definitions of property `mo:MinimumEssentialMetadata` and type `mo:MinimumEssentialMetadataType`.
+- Renamed property `mo:LegalAuthority` as `mo:AuthorizationReference` and changed its type to `nc:DocumentType`.
+- Removed type `mo:LegalAuthorityType`.
+- Renamed property `mo:Creator` as `mo:ResourceOriginator` and updated its definition.
+- Renamed property `mo:OfficeOfRecord` as `mo:DataResourceCustodian` and updated its definition.
+- Added new property `mo:DataItemCreateDateTime` to type `mo:MinimumEssentialMetadataType`.
+- Added existing property `nc:DescriptionText` to type `mo:MinimumEssentialMetadataType`.
+- Added existing properties to type `mo:ResourceFormatType`:
+  - `nc:DocumentMediaCategoryText`
+  - `nc:BinarySizeValue`
+- Added existing properties to type `mo:ClassificationReferenceDocumentType`:
+  - `nc:DocumentTitleText`
+  - `nc:DocumentEffectiveDate`
+  - `nc:DocumentAuthor`.
+- Added existing properties to type `mo:HandlingRestrictionsCUIType`:
+  - `cui:SpecifiedCategoryMarkingCode`
+  - `cui:BasicCategoryMarkingCode`
+  - `cui:DocumentMarkingLDC`
+
+#### Harmonized MILSTD2525 Components ([#58](https://github.com/niemopen/niem-model/issues/58))
+
+- Harmonized duplicate MILSTD2525-B and MILSTD2525-C types:
+  - Refactored `mo:MILSTD2525-B-SIDC-Type` and `mo:MILSTD2525-C-SIDC-Type` into a single `mo:MILSTD2525-SIDC-Type`
+  - Refactored `mo:MILSTD2525-B-SIDC-SimpleType` and `mo:MILSTD2525-C-SIDC-SimpleType` into a single `mo:MILSTD2525-SIDC-SimpleType`
+- Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
+- Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
+
+#### Harmonized MilOps and GML Ellipse adapter types ([#12](https://github.com/niemopen/niem-model/issues/12))
+
+GML adapter type `geo:EllipseType` and MilOps adapter type `mo:WGS84EllipseType` both wrap external GML element `xls:Ellipse` with the same cardinality.
+
+Removed the MilOps type as a duplicate and updated MilOps property `mo:WGS84LocationEllipse` (which carries additional semantics in the definition) to have type `geo:EllipseType`.
+
+### Screening
+
+#### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([#41](https://github.com/niemopen/niem-model/issues/41))
+
+scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
+
+#### Updated scr:ChargeCategoryCodeSimpleType code definitions ([#16](https://github.com/niemopen/niem-model/issues/16))
+
+Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
+
+## Model updates based on NDR 6.0 changes
+
+The following are the key changes made to the model based on upcoming updates to the NIEM Naming and Design Rules (NDR) Specification for version 6.0.
 
 *Note: The example XML schema snippets below have been simplified and shortened for better readability.*
 
-### Updated namespace URIs ([niemopen/niem-model#25](https://github.com/niemopen/niem-model/issues/25))
+### Updated namespace URIs ([#25](https://github.com/niemopen/niem-model/issues/25))
 
 NIEM is now an OASIS Open Project.  URIs for each namespace have been updated to follow the [OASIS Naming Directives, XML Namespace Identifiers and Namespace Documents](http://docs.oasis-open.org/specGuidelines/ndr/namingDirectives.html#xml-namespaces).
 
@@ -136,6 +405,50 @@ Example:
 **Changed the default parent type:**
 
 Changed the default parent of metadata types from `structures:MetadataType` to `structures:ObjectType`.
+
+### Added attribute augmentations for nc:Metadata and cui:PortionMarkingMetadata ([#46](https://github.com/niemopen/niem-model/issues/46))
+
+The NDR is removing support for the `structures:metadata` and `structures:relationshipMetadata` attributes.  Metadata properties can now be added to class types directly, via augmentation, or via extension.
+
+For data types (representing a value, like a string or a number), element metadata properties cannot be attached directly.  Instead, the NDR will now support attribute augmentations, which allow attributes to be created with representation term `Ref` and type `xs:IDREFS`.  This XML Schema type allows a set of space-delimited xs:IDREF values, or pointers in XML.
+
+Example schema changes from Core:
+
+```diff
++ <xs:attribute name="portionMarkingMetadataRef" type="xs:IDREFS">
++   <xs:annotation>
++     <xs:documentation>An attribute reference to cui:PortionMarkingMetadata.</xs:documentation>
++   </xs:annotation>
++ </xs:attribute>
+
+  <xs:element name="PortionMarkingMetadata" type="cui:PortionMarkingMetadataType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Metadata about the Controlled Unclassified Information
+       (CUI) portion marking of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+```
+
+Example usage in a message:
+
+```diff
+<my:Message>
+  <nc:Person>
+    <nc:PersonName>
+-     <nc:PersonSurName structures:metadata="P01">Smith</nc:PersonSurName>
++     <nc:PersonSurName cui:portionMarkingMetadataRef="P01">Smith</nc:PersonSurName>
+    </nc:PersonName>
+  </nc:Person>
+
+  <cui:PortionMarkingMetadata structures:id="M01">
+    <!-- ... -->
+  </cui:PortionMarkingMetadata>
+</my:Message>
+```
+
+The `structures` metadata attributes were very generic and did not convey what kind of information should be referenced.  These new attribute augmentations have semantic names, making the requirements of a message specification clearer.
+
+This approach should be used along with the new support for attribute wildcards in the `structures` schema, allowing message designers to attach declared attributes to NIEM-conformant complex types (classes or complex data types).
 
 ### Removed the roles construct ([niemopen/niem-naming-design-rules#6](https://github.com/niemopen/niem-naming-design-rules/issues/6))
 
@@ -332,53 +645,9 @@ This example from the Justice domain shows multiple `RoleOf` properties replaced
 
 </details>
 
-### Added attribute augmentations for nc:Metadata and cui:PortionMarkingMetadata ([niemopen/niem-model#46](https://github.com/niemopen/niem-model/issues/46))
+### Resolved or merged non-unique enumeration definitions ([niemopen/niem-naming-design-rules#30](https://github.com/niemopen/niem-naming-design-rules/issues/30))
 
-The NDR is removing support for the `structures:metadata` and `structures:relationshipMetadata` attributes.  Metadata properties can now be added to class types directly, via augmentation, or via extension.
-
-For data types (representing a value, like a string or a number), element metadata properties cannot be attached directly.  Instead, the NDR will now support attribute augmentations, which allow attributes to be created with representation term `Ref` and type `xs:IDREFS`.  This XML Schema type allows a set of space-delimited xs:IDREF values, or pointers in XML.
-
-Example schema changes from Core:
-
-```diff
-+ <xs:attribute name="portionMarkingMetadataRef" type="xs:IDREFS">
-+   <xs:annotation>
-+     <xs:documentation>An attribute reference to cui:PortionMarkingMetadata.</xs:documentation>
-+   </xs:annotation>
-+ </xs:attribute>
-
-  <xs:element name="PortionMarkingMetadata" type="cui:PortionMarkingMetadataType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>Metadata about the Controlled Unclassified Information
-       (CUI) portion marking of a document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-```
-
-Example usage in a message:
-
-```diff
-<my:Message>
-  <nc:Person>
-    <nc:PersonName>
--     <nc:PersonSurName structures:metadata="P01">Smith</nc:PersonSurName>
-+     <nc:PersonSurName cui:portionMarkingMetadataRef="P01">Smith</nc:PersonSurName>
-    </nc:PersonName>
-  </nc:Person>
-
-  <cui:PortionMarkingMetadata structures:id="M01">
-    <!-- ... -->
-  </cui:PortionMarkingMetadata>
-</my:Message>
-```
-
-The `structures` metadata attributes were very generic and did not convey what kind of information should be referenced.  These new attribute augmentations have semantic names, making the requirements of a message specification clearer.
-
-This approach should be used along with the new support for attribute wildcards in the `structures` schema, allowing message designers to attach declared attributes to NIEM-conformant complex types (classes or complex data types).
-
-### Require unique enumerations ([niemopen/niem-naming-design-rules#30](https://github.com/niemopen/niem-naming-design-rules/issues/30))
-
-Merged or resolved definitions for non-unique codes in the following types:
+NDR 6.0 will require enumerations to be unique within a type.  Merged or resolved definitions for non-unique codes in the following types:
 
 - `can:StreetDirectionCodeSimpleType` - *Merged English and French definitions*
 - `cbrncl:FacilityUsageCodeSimpleType`
@@ -405,11 +674,11 @@ Replaced a code in type `usmtf:RadioactiveHalfLifeCodeSimpleType`:
 Removed property `fips:County3DigitCode` and related types to eliminate many non-unique code values.
 
 - Use `fips:CountyCode` for unique 5-digit county codes that begin with a 2-digit state code.
-- See also issue ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59)).
+- See also issue ([#59](https://github.com/niemopen/niem-model/issues/59)).
 
-### Require definitions for patterns ([niemopen/niem-naming-design-rules#12](https://github.com/niemopen/niem-naming-design-rules/issues/12))
+### Added definitions for patterns ([niemopen/niem-naming-design-rules#12](https://github.com/niemopen/niem-naming-design-rules/issues/12))
 
-The NDR now requires definitions for patterns, along with enumerations.
+NDR 6.0 will require definitions for patterns, along with the current requirement for definitions for enumerations.
 
 Added the following definitions to the following patterns for simple types:
 
@@ -421,231 +690,122 @@ Type | Pattern | Definition
 `mo:MILSTD2525-C-SIDC-SimpleType` | `[A-Z0-9\-]{15}` | A 15-character ID with upper case letters, numbers, and hyphens
 `mo:MILSTD2525-B-SIDC-SimpleType` | `[A-Z0-9\-]{15}` | A 15-character ID with upper case letters, numbers, and hyphens
 
-## Key content changes
-
-The following is a summary of the key changes made in this release.  More details are available from the [6.0 issues list](https://github.com/niemopen/niem-model/labels/6.0) in the NIEM Model issue tracker, and the change log spreadsheet in the release package.
-
-### Refactored other role components ([niemopen/niem-model#38](https://github.com/niemopen/niem-model/issues/38))
-
-In addition to removing the `RoleOf` construct from the model due to NDR updates, other properties and types using the `Role` representation term were reviewed and updated as appropriate to improve consistency with the rest of the model.
-
-**Renamed remaining RoleOf properties and types:**
-
-Renamed additional properties and types that were using `RoleOf` as the class term but were not using the `RoleOf` construct as defined by the NDR:
-
-Component | Original name | Updated name
---------- | ------------- | ------------
-Property | it:RoleOfCategory | it:PartyIDCategory
-Property | it:RoleOfCategoryDescriptionText | it:PartyRoleCategoryDescriptionText
-Property | it:RoleOfOrganizationCategoryDescriptionText | it:OrganizationRoleCategoryDescriptionText
-Property | it:RoleOfOrganizationCategory | it:OrganizationRoleCategory
-Property | it:RoleOfOrganizationCategoryAugmentationPoint | it:OrganizationRoleCategoryAugmentationPoint
-Type | it:RoleOfOrganizationCategoryType | it:OrganizationRoleCategoryType
-
-**Removed the Role representation term:**
-
-Removed extraneous `Role` representation terms from a list of properties and their corresponding types and augmentation point properties.  For example, `im:AlienRole` has been renamed `im:Alien`.
-
-The following properties have been renamed:
-
-- im:AlienExchangeVisitorRole
-- im:AlienRole
-- im:AlienStudentRole
-- im:CitizenRole
-- im:ForeignBornChildOfCitizenRole
-- im:ImmigrantRole
-- im:LawfulPermanentResidentRole
-- im:NationalRole
-- im:NaturalizedCitizenRole
-- im:NonImmigrantRole
-- im:PersonCountryRole
-- im:OtherAlienRole
-- im:ResidentRole
-
-**Refactored im:PersonCountryRoleType:**
-
-Refactored `im:PersonCountryRoleType` to make immigration status more widely available for reuse:
-
-- Moved `im:ImmigrationStatus` from `im:PersonCountryRoleType` to `im:PersonAugmentationType`, making it available wherever `nc:PersonType` is used.
-- Updated `im:PersonCountryRoleType` to extend `nc:PersonType`.
-
-**Refactored scr:PersonRole:**
-
-- Added a new Screening augmentation for `nc:PersonType`.
-- Moved `scr:PersonRole` from `scr:ScreeningPersonType` to the new augmentation.
-- Removed properties `scr:AgentPersonRole`, `scr:AgentAssociation`, and type `scr:AgentAssociationType` as they are no longer needed to relate an agent to a role.
-
-### Refactored nc:EmployeeAssignmentAssociation ([niemopen/niem-model#14](https://github.com/niemopen/niem-model/issues/14))
-
-Moved `nc:nc:EmployeeRegistrationAbstract` and `nc:EmployeeSupervisorIndicator` elements to from type `nc:EmployeeAssignmentAssociationType` to its parent type `nc:EmploymentAssociationType`.  This allows those properties to be used in any employment association, not just assignments.
-
-The child type `nc:EmployeeAssignmentAssociationType` was no longer needed and was removed.  Property `nc:EmployeeAssignmentAssociation` was updated to be of type `nc:EmploymentAssociationType`.
-
-### Support specifying empty value reason on simple values ([niemopen/niem-model#34](https://github.com/niemopen/niem-model/issues/34))
-
-Created the following new attributes and added them to `nc:TextType` and `nc:QuantityType`:
-
-- `nc:valueEmptyReasonCode` of type `nc:EmptyReasonCodeSimpleType`
-- `nc:valueEmptyReasonText` of type `xs:string`
-
-*These new attributes can also be used throughout the model with the new support for attribute wildcards in NIEM 6.0.*
-
-Harmonized two domain code sets that represented a ternary choice with "Yes", "No", and "Unknown" code values with new code `nc:YesNoUnknownCodeType`:
-
-- `em:TernaryIndicatorCodeType`
-- `hs:JuvenileFamilyFinancialProblemCodeType`
-
-*This new code set can be used in places where a boolean with a null value cannot be used to indicate the value is unknown or not applicable.*
-
-### Add pronouns to nc:PersonType ([niemopen/niem-model#15](https://github.com/niemopen/niem-model/issues/15))
-
-Add a substitution group with code and text substitutions for personal pronouns to `nc:PersonType`.
-
-Code set:
-
-- she/her
-- he/him
-- they/them
-- other
-- prefer not to share
-- unknown
-
-### Harmonized StudentType ([niemopen/niem-model#52](https://github.com/niemopen/niem-model/issues/52))
-
-The Human Services domain and the Learning and Development domain both define type `StudentType`.  Created a new `nc:StudentType` in Core and converted the two domain types to augmentations so student properties from either domain can be used together under the same Core object.
-
-Merged and moved the only overlapping property (`hs:StudentIdentification` / `lrn-dev:StudentID`) into Core as `nc:StudentIdentification`.
-
-### Updated CBRN CaseMetadata and DataFileMetadata to have type nc:MetadataType ([niemopen/niem-model#24](https://github.com/niemopen/niem-model/issues/24))
-
-CBRN defines two metadata elements that have type `structures:MetadataType`:
-
-- `cbrn:CaseMetadata`
-- `cbrn:DataFileMetadata`, which are both of type structures:MetadataType.
-
-The `structures:MetadataType` does not carry content and is not meant to be used directly as a type of a property.
-
-Updated these two properties to have type `nc:MetadataType`.
-
-### Refactored cbrn:ReportType into an augmentation of nc:ReportType ([niemopen/niem-model#11](https://github.com/niemopen/niem-model/issues/11))
-
-Refactored the following in `cbrn:ReportType`:
-
-- `cbrn:ReportDateTime`
-- `cbrn:CredentialsAuthenticationAbstract`
-- `nc:ActivityName`
-- `cbrn:ReportAugmentationPoint`
-
-into an augmentation of `nc:ReportType`, making these properties more reusable.
-
-Removed property `cbrn:ReportDateTime` ("A DateTime when a report was created.") as it is no longer needed with `nc:DocumentCreationDate` available through `nc:DocumentType`, the parent type of `nc:ReportType`.
-
-### Add hs:Wages ([niemopen/niem-model#13](https://github.com/niemopen/niem-model/issues/13))
-
-Created a new property `hs:Wages` for the existing type `hs:WagesType`.  Added the new property to `hs:PersonAugmentationType`.
-
-### Renamed Maritime domain's USMTFEnvironmentCategoryCode components ([niemopen/niem-model#23](https://github.com/niemopen/niem-model/issues/23))
-
-The names and definitions of the following components in the Maritime domain have been updated to remove the term "USMTF", as these are no longer defined by that standard:
-
-- `m:USMTFEnvironmentCategoryCode`
-- `m:USMTFEnvironmentCategoryCodeType`
-- `m:USMTFEnvironmentCategoryCodeSimpleType`
-
-### Updated Minimum Essential Metadata in MilOps ([niemopen/niem-model#40](https://github.com/niemopen/niem-model/issues/40))
-
-The DoD Minimum Essential Metadata were updated by DoD Metadata Guidance issued by the DoD Chief Digital and Artificial Intelligence Officer in March 2023.   The following changes have been made:
-
-- Updated the definitions of property `mo:MinimumEssentialMetadata` and type `mo:MinimumEssentialMetadataType`.
-- Renamed property `mo:LegalAuthority` as `mo:AuthorizationReference` and changed its type to `nc:DocumentType`.
-- Removed type `mo:LegalAuthorityType`.
-- Renamed property `mo:Creator` as `mo:ResourceOriginator` and updated its definition.
-- Renamed property `mo:OfficeOfRecord` as `mo:DataResourceCustodian` and updated its definition.
-- Added new property `mo:DataItemCreateDateTime` to type `mo:MinimumEssentialMetadataType`.
-- Added existing property `nc:DescriptionText` to type `mo:MinimumEssentialMetadataType`.
-- Added existing properties to type `mo:ResourceFormatType`:
-  - `nc:DocumentMediaCategoryText`
-  - `nc:BinarySizeValue`
-- Added existing properties to type `mo:ClassificationReferenceDocumentType`:
-  - `nc:DocumentTitleText`
-  - `nc:DocumentEffectiveDate`
-  - `nc:DocumentAuthor`.
-- Added existing properties to type `mo:HandlingRestrictionsCUIType`:
-  - `cui:SpecifiedCategoryMarkingCode`
-  - `cui:BasicCategoryMarkingCode`
-  - `cui:DocumentMarkingLDC`
-
-### Harmonized MilOps MILSTD2525 Components (niemopen/niem-model#58)
-
-- Harmonized duplicate MILSTD2525-B and MILSTD2525-C types:
-  - Refactored `mo:MILSTD2525-B-SIDC-Type` and `mo:MILSTD2525-C-SIDC-Type` into a single `mo:MILSTD2525-SIDC-Type`
-  - Refactored `mo:MILSTD2525-B-SIDC-SimpleType` and `mo:MILSTD2525-C-SIDC-SimpleType` into a single `mo:MILSTD2525-SIDC-SimpleType`
-- Updated property `mo:MILSTD2525-B-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
-- Updated property `mo:MILSTD2525-C-SIDC-Code` to have the new harmonized type `mo:MILSTD2525-SIDC-Type` and to make the definition unique.
-
-### Harmonized MilOps and GML Ellipse adapter type (niemopen/niem-model#12)
-
-GML adapter type `geo:EllipseType` and MilOps adapter type `mo:WGS84EllipseType` both wrap external GML element `xls:Ellipse` with the same cardinality.
-
-Removed the MilOps type as a duplicate and updated MilOps property `mo:WGS84LocationEllipse` (which carries additional semantics in the definition) to have type `geo:EllipseType`.
-
-### Added nc:Person to scr:PhysicalEncounterAgentAssociationType ([niemopen/niem-model#41](https://github.com/niemopen/niem-model/issues/41))
-
-scr:PhysicalEncounterAgentAssociationType is defined as a relationship between a DHS agent and a person. The association was updated to add the missing `nc:Person` property.
-
-### Updated scr:ChargeCategoryCodeSimpleType code definitions ([niemopen/niem-model#16](https://github.com/niemopen/niem-model/issues/16))
-
-Removed a invalid section character from four code definitions in type scr:ChargeCategoryCodeSimpleType.
-
-### Refactored abstract country properties to be of type nc:CountryType ([#niemopen/niem-model#22](https://github.com/niemopen/niem-model/issues/22))
-
-Updated the following properties to no longer be abstract and to have type `nc:CountryType`, permitting any country representations in NIEM to be used:
-
-- intel:IdentificationIssuingCountryAbstract
-- j:DriverLicenseIssuingCountryAbstract
-- mo:ObservedObjectAllegianceCountryAbstract
-
-### Synchronized Justice domain version number
-
-The NIEM Justice domain originated from the GLOBAL Justice XML Data Model (GJXDM), the predecessor to NIEM.  Since the beginning of NIEM, the Justice domain has continued to use GJXDM version numbers for its own version (2 major version numbers ahead) rather than NIEM version numbers.
-
-For consistency and easier tool support going forward, the Justice domain version numbers have now been synchronized with the rest of the model.
-
-The new pattern for NIEM URIs under OASIS prevent collisions with older versions.  The domain identifier is also being changed from `jxdm` to `justice` to make clear that the new version number applies to the NIEM Justice domain, not the GJXDM.
-
-**NIEM 5.2:**
-
-- URI: http://release.niem.gov/niem/domains/jxdm/7.2/
-- Definition: "Justice"
-- Filename" "jxdm.xsd"
-
-**NIEM 6.0:**
-
-- URI: https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/
-- Definition: "Justice domain 6.0 / GJXDM 8.0"
-- Filename" "jxdm.xsd"
-
-### Adapter updates
-
-#### Standardized the convention for adapter namespaces ([niemopen/niem-model#35](https://github.com/niemopen/niem-model/issues/35))
-
-Updated adapter namespace prefixes, uris, and filenames to follow the convention used by the `niem-xs` namespace, which creates special kinds of proxy adapters for XML Schema simple types.
-
-NIEM adapter namespace prefixes and filenames now begin with `niem-` and then end with the external standard prefix:
-
-| External | 5.2 adapter | 6.0 adapter
-|:-------- |:----------- |:-----------
-xs         | niem-xs     | niem-xs
-cap        | edxl-cap    | niem-cap
-de         | edxl-de     | niem-de
-have       | edxl-have   | niem-have
-gml        | geo         | niem-gml
-
-Filenames and uris now follow the same convention.
-
 ## Code set updates
 
-### Updated FBI's National Crime Information Center (NCIC) codes
+Links to publicly-available code sources change over time.  The most recent information as to how to update NBAC-managed code sets is available on the wiki of the NIEM model repo at https://github.com/niemopen/niem-model/wiki/Code-updates.
+
+### Bureau of Labor Statistics ([#74](https://github.com/niemopen/niem-model/issues/74))
+
+Updated Bureau of Labor Statistics codes.
+
+- BLS occupation codes are current in NIEM as of the latest BLS SOC April 15, 2020 update.
+- Updated the definitions of BLS education level codes (`bls:EducationLevelCodeSimpleType`).
+
+### Canada Post ([#67](https://github.com/niemopen/niem-model/issues/67))
+
+Updated Canada Post codes as of the current values available on September 15, 2023.
+
+Deleted codes from `can:StreetCategoryCodeSimpleType`:
+
+- `AUT` - Autoroute
+- `COURS` - Cours
+
+Updated English definitions and added alternate French definitions where applicable for the following types:
+
+- `can:CanadianProvinceCodeSimpleType`
+- `can:StreetCategoryCodeSimpleType`
+
+### DEA Controlled Substances ([#60](https://github.com/niemopen/niem-model/issues/60))
+
+Updated the Drug Enforcement Administration (DEA) controlled substance codes as of September 16, 2023.
+
+- Updated definitions for `dea:DEAClassScheduleCodeCodeSimpleType`
+- Updated code set for `dea:DrugCodeSimpleType`
+  - Added and removed codes
+  - Updated existing code definitions
+
+### FIPS US counties and states
+
+Updated US Census Bureau Federal Information Processing Series (FIPS) county and state codes as of the "2022 Population Estimates FIPS Codes" geography reference file, Internet Release Date August 2023 .
+
+#### Removed fips:County3DigitCode and types ([#59](https://github.com/niemopen/niem-model/issues/59))
+
+- Removed property `fips:County3DigitCode` and types to eliminate many non-unique code values.
+  - Note: Use `fips:CountyCode` for unique 5-digit county codes.
+- Changed the type from the 3-digit to the 5-digit FIPS county code for the following properties:
+  - `hs:FosterCareLiablePlacementCountyCode`
+  - `hs:PriorDetentionHoldingForCountyCode`
+
+#### Updated county codes ([#75](https://github.com/niemopen/niem-model/issues/75))
+
+- NIEM FIPS state codes (`fips:USStateNumericCodeSimpleType`) are current as of the US Census Bureau's FIPS 2022 Population Estimate FIPS Codes update, Internet Release Date August 2023.
+
+- NIEM FIPS county codes (`fips:USCounty5DigitCodeSimpleType`) were updated with the latest revisions.  All changes were for the state of Connecticut.
+
+<details markdown="1">
+  <summary>Expand to see FIPS county codes changes</summary>
+  <br />
+
+  | Status  | Code  | Definition |
+  |:------- |:----- |:---------- |
+  removed   | 09001 | Fairfield County
+  removed   | 09003 | Hartford County
+  removed   | 09005 | Litchfield County
+  removed   | 09007 | Middlesex County
+  removed   | 09009 | New Haven County
+  removed   | 09011 | New London County
+  removed   | 09013 | Tolland County
+  removed   | 09015 | Windham County
+  added     | 09110 | Capitol Planning Region
+  added     | 09120 | Greater Bridgeport Planning Region
+  added     | 09130 | Lower Connecticut River Valley Planning Region
+  added     | 09140 | Naugatuck Valley Planning Region
+  added     | 09150 | Northeastern Connecticut Planning Region
+  added     | 09160 | Northwest Hills Planning Region
+  added     | 09170 | South Central Connecticut Planning Region
+  added     | 09180 | Southeastern Connecticut Planning Region
+  added     | 09190 | Western Connecticut Planning Region
+
+</details>
+
+### GENC codes ([#76](https://github.com/niemopen/niem-model/issues/76))
+
+Updated Geopolitical Entities, Names, and Codes (GENC) to version 3-12.
+
+- No changes to the country code sets (3-character, 2-character, numeric) since version 3-11
+- Additions, deletions, and definition changes to the administrative subdivision codes (`genc:CountrySubdivisionCodeSimpleType`)
+- Also updated the GENC code lists CSV files in the `xsd/codes/genc/` subdirectory
+  - Note: The CSV now includes country names paired with the administrative subdivision codes rather than 3-character country codes, as this is the information that could be obtained from the current data source
+  - Updated the GENC XML catalog information, now contained in `xsd/xml-catalog.xml`.
+
+### Hazardous Materials ([#niemopen/niem-model#61](https://github.com/niemopen/niem-model/issues/61))
+
+Updated the US Department of Transportation (DOT) Pipeline and Hazardous Materials Safety Administration (PHMSA) to the August 31st, 2023 update.
+
+- Updated code set for `hazmat:HazmatCodeSimpleType`
+
+### ISO 3166-1:2020 country codes ([#77](https://github.com/niemopen/niem-model/issues/77))
+
+Updated ISO 3166 country codes as of September 24, 2023, with the following new definitions:
+
+| 3-Char | 2-Char | Num | Old definition    | New definition |
+|:------ |:------ |:--- |:----------------- | -------------- |
+NLD      | NL     | 528 | Netherlands (the) | Netherlands (Kingdom of the)
+TUR      | TR     | 792 | Turkey            | Türkiye
+
+The ISO update for country subdivision codes require purchase.
+
+### ISO 4217 currency codes ([#79](https://github.com/niemopen/niem-model/issues/79))
+
+Updated ISO 4217 currency codes as of the January 1, 2023 update.
+
+### ISO 639-3 language codes ([#78](https://github.com/niemopen/niem-model/issues/78))
+
+Updated the ISO 639-3 language codes as of the January 23, 2023 update.
+
+### National Crime Information Center (NCIC) codes
+
+Updated the Federal Bureau of Investigation (FBI) National Crime Information Center (NCIC) codes.
 
 **Changes from 5.2 as of the April 2023 quarterly update:**
 
@@ -701,99 +861,23 @@ Modified definitions of codes in the following types:
 | ncic:VMACodeSimpleType | Vehicle Make |
 | ncic:VMOCodeSimpleType | Vehicle Model for Automobiles, Light-Duty Vans, Light-Duty Trucks, and Parts |
 
-### Updated Bureau of Labor Statistics codes ([niemopen/niem-model#74](https://github.com/niemopen/niem-model/issues/74))
+### USPS codes ([#62](https://github.com/niemopen/niem-model/issues/62))
 
-BLS occupation codes are current in NIEM as of the latest BLS SOC April 15, 2020 update.
+Updated United States Postal Service (USPS) codes as of September 15, 2023:
 
-Updated the definitions of BLS education level codes (`bls:EducationLevelCodeSimpleType`).
+- Updated the capitalization of `usps:StreetDirectionalCodeSimpleType` street direction code definitions
 
-### Updated Canada Post codes ([niemopen/niem-model#67](https://github.com/niemopen/niem-model/issues/67))
+## Package updates
 
-Deleted codes from `can:StreetCategoryCodeSimpleType`:
+### Added namespace authority documentation ([#36](https://github.com/niemopen/niem-model/issues/36))
 
-- `AUT` - Autoroute
-- `COURS` - Cours
+Added CSV files documenting the NIEMOpen Technical Steering Committee (TSC) or TSC Subcommittee responsible for the content of NIEM namespaces.
 
-Updated English definitions and added alternate French definitions where applicable for the following types:
+- `docs/namespaces.csv` - Presents the information ordered by namespace category and namespace prefix.
+- `docs/namespaces-by-authority.csv` - Presents the information ordered by the namespace authority.
 
-- `can:CanadianProvinceCodeSimpleType`
-- `can:StreetCategoryCodeSimpleType`
+### Additional package changes
 
-### Updated DEA Controlled Substance codes ([niemopen/niem-model#60](https://github.com/niemopen/niem-model/issues/60))
-
-- Updated definitions for `dea:DEAClassScheduleCodeCodeSimpleType`
-- Updated code set for `dea:DrugCodeSimpleType`
-  - Added and removed codes
-  - Updated existing code definitions
-
-### Removed fips:County3DigitCode and types ([niemopen/niem-model#59](https://github.com/niemopen/niem-model/issues/59))
-
-- Removed property `fips:County3DigitCode` and types to eliminate many non-unique code values.
-  - Note: Use `fips:CountyCode` for unique 5-digit county codes.
-- Changed the type from the 3-digit to the 5-digit FIPS county code for the following properties:
-  - `hs:FosterCareLiablePlacementCountyCode`
-  - `hs:PriorDetentionHoldingForCountyCode`
-
-### Updated FIPS county codes ([niemopen/niem-model#75](https://github.com/niemopen/niem-model/issues/75))
-
-NIEM FIPS state codes (`fips:USStateNumericCodeSimpleType`) are current as of the US Census Bureau's FIPS 2022 Population Estimate FIPS Codes update, Internet Release Date August 2023.
-
-NIEM FIPS county codes (`fips:USCounty5DigitCodeSimpleType`) were updated with the latest revisions.  All changes were for the state of Connecticut.
-
-<details markdown="1">
-  <summary>Expand to see FIPS county codes changes</summary>
-  <br />
-
-  | Status  | Code  | Definition |
-  |:------- |:----- |:---------- |
-  removed   | 09001 | Fairfield County
-  removed   | 09003 | Hartford County
-  removed   | 09005 | Litchfield County
-  removed   | 09007 | Middlesex County
-  removed   | 09009 | New Haven County
-  removed   | 09011 | New London County
-  removed   | 09013 | Tolland County
-  removed   | 09015 | Windham County
-  added     | 09110 | Capitol Planning Region
-  added     | 09120 | Greater Bridgeport Planning Region
-  added     | 09130 | Lower Connecticut River Valley Planning Region
-  added     | 09140 | Naugatuck Valley Planning Region
-  added     | 09150 | Northeastern Connecticut Planning Region
-  added     | 09160 | Northwest Hills Planning Region
-  added     | 09170 | South Central Connecticut Planning Region
-  added     | 09180 | Southeastern Connecticut Planning Region
-  added     | 09190 | Western Connecticut Planning Region
-
-</details>
-
-### Updated GENC codes to version 3-12 ([niemopen/niem-model#76](https://github.com/niemopen/niem-model/issues/76))
-
-- No changes to the country code sets (3-character, 2-character, numeric) since version 3-11
-- Additions, deletions, and definition changes to the administrative subdivision codes (`genc:CountrySubdivisionCodeSimpleType`)
-- Updated the GENC code lists CSV files in the `xsd/codes/genc/` subdirectory
-- Note: The CSV now includes country names paired with the administrative subdivision codes rather than 3-character country codes, as this is the information that could be obtained from the data source
-
-### Updated Hazardous Material codes ([#niemopen/niem-model#61](https://github.com/niemopen/niem-model/issues/61))
-
-- Updated code set for `hazmat:HazmatCodeSimpleType`
-
-### Updated ISO 639-3 language codes ([niemopen/niem-model#78](https://github.com/niemopen/niem-model/issues/78))
-
-Updated the ISO 639-3 language codes.
-
-### Updated ISO 3166-1:2020 country codes ([niemopen/niem-model#77](https://github.com/niemopen/niem-model/issues/77))
-
-Updated the 3-character, 2-character, and numeric country codes with new definitions:
-
-| 3-Char | 2-Char | Num | Old definition    | New definition |
-|:------ |:------ |:--- |:----------------- | -------------- |
-NLD      | NL     | 528 | Netherlands (the) | Netherlands (Kingdom of the)
-TUR      | TR     | 792 | Turkey            | Türkiye
-
-### Updated ISO 4217 currency codes ([niemopen/niem-model#79](https://github.com/niemopen/niem-model/issues/79))
-
-Updated ISO 4217 currency codes.
-
-### Updated usps:StreetDirectionalCodeSimpleType ([niemopen/niem-model#62](https://github.com/niemopen/niem-model/issues/62))
-
-United States Postal Service street direction codes are the same, but the capitalization of the definitions has changed from uppercase to upper camel case.
+- Renamed the `xlsx` subfolder as `docs`
+- Merged the GENC codes lists XML catalog formerly at `xsd/codes/genc/xml-catalog.xml` into the primary XML catalog at `xsd/xml-catalog.xml`.
+- Added the NIEMOpen OASIS specification file and the supporting `images` and `styles` folders.
