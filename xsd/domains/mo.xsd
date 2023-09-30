@@ -11570,7 +11570,7 @@
   </xs:element>
   <xs:element name="IPv6AddressNetworkText" type="niem-xs:string" nillable="true">
     <xs:annotation>
-      <xs:documentation>A netwwork portion of an identifier assigned to a computer or other device connected to a TCP/IP network, based on version 6 of the Internet Protocol.</xs:documentation>
+      <xs:documentation>A network portion of an identifier assigned to a computer or other device connected to a TCP/IP network, based on version 6 of the Internet Protocol.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="IPv6CIDRAddressID" type="niem-xs:string" nillable="true">

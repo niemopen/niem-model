@@ -18,7 +18,7 @@
 
 ## Project Specification Draft 01
 
-## 29 September 2023
+## 30 September 2023
 
 &nbsp;
 
@@ -86,13 +86,13 @@ This specification replaces or supersedes:
 
 This specification is related to:
 
-- _National Information Exchange Model Naming and Design Rules_. Version 5.0 December 18, 2020. NIEM Technical Architecture Committee (NTAC). https://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/niem-ndr-5.0.html.
+- _NIEM Naming and Design Rules Specification Version 6.0_. Work in progress.
 
-- _NIEM Code Lists Specification_.  Version 4.0 November 7, 2017. NIEM Technical Architecture Committee (NTAC).  https://reference.niem.gov/niem/specification/code-lists/4.0/niem-code-lists-4.0.html.
+- _NIEM Code Lists Specification Version 6.0_.  Work in progress.
 
-- _National Information Exchange Model Conformance Specification_. Version 5.0 March 19, 2021. NIEM Technical Architecture Committee (NTAC). https://reference.niem.gov/niem/specification/conformance/5.0/niem-conformance-spec-5.0.html.
+- _NIEM Conformance Specification Version 6.0_. Work in progress.
 
-- _Conformance Targets Attribute Specification (CTAS) Project Specification 01_. Version 3.0 22 February 2023. Edited by Tom Carlson.
+- _NIEM Conformance Targets Attribute Specification Version 6.0_. Work in progress.
 
 #### Abstract:
 
@@ -102,7 +102,7 @@ NIEM is a data model that enables efficient information exchange across diverse 
 
 This document was last revised or approved by the Project Governing Board of the OASIS NIEMOpen OP on the above date. The level of approval is also listed above. Check the "Latest stage" location noted above for possible later revisions of this document. Any other numbered Versions and other technical work produced by the Open Project (OP) are listed at http://www.niemopen.org/.
 
-Comments on this work can be provided by opening issues in the project repository or by sending email to the project's public comment list: niemopen@lists.oasis-open-projects.org. List information is available at https://lists.oasis-open-projects.org/g/niemopen.
+Comments on this work can be provided by opening [issues](https://github.com/niemopen/niem-model/issues/new) in the [model repository](https://github.com/niemopen/niem-model) or by sending email to the project's public comment list: niemopen-comment@lists.oasis-open-projects.org. List information is available at https://lists.oasis-open-projects.org/g/niemopen-comment.
 
 Note that any machine-readable content ([Computer Language Definitions](https://www.oasis-open.org/policies-guidelines/tc-process-2017-05-26/#wpComponentsCompLang)) declared Normative for this Work Product is provided in separate plain text files. In the event of a discrepancy between any such plain text file and display content in the Work Product's prose narrative document(s), the content in the separate plain text file prevails.
 
@@ -116,7 +116,7 @@ When referencing this specification the following citation format should be used
 
 **[NIEM-Model-v6.0]**
 
-_NIEM Model Version 6.0_. Edited by Christina Medlin. 29 September 2023. OASIS Project Specification Draft 01. https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html.
+_NIEM Model Version 6.0_. Edited by Christina Medlin. 30 September 2023. OASIS Project Specification Draft 01. https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html.
 
 -------
 
@@ -131,8 +131,6 @@ For complete copyright information please see the Notices section in the Appendi
 -------
 
 # Table of Contents
-
-<!-- TODO: Update TOC -->
 
 - [1 Introduction](#1-introduction)
   - [1.1 Changes from earlier versions](#11-changes-from-earlier-versions)
@@ -150,9 +148,6 @@ For complete copyright information please see the Notices section in the Appendi
     - [2.1.7 Utility](#217-utility)
   - [2.2 The NIEM architecture](#22-the-niem-architecture)
 - [3 Conformance](#3-conformance)
-  - [3.1 Conformant instance document](#31-conformant-instance-document)
-  - [3.2 Conformant schema document set](#32-conformant-schema-document-set)
-  - [3.3 Conformant message specification](#33-conformant-message-specification)
 - [Appendix A. References](#appendix-a-references)
   - [A.1 Normative References](#a1-normative-references)
   - [A.2 Informative References](#a2-informative-references)
@@ -194,7 +189,10 @@ Significant changes to the NIEM model in version 6.0 from previous version 5.2 i
   - `m:SeamanLicenseType`, which can now be represented by the new `nc:LicenseType`
   - `m:MerchantMarinerDocumentType`, which can now be represented by the new `nc:LicenseType`
 
-- Code set updates, including updates provided by the FBI for the National Crime Information Center (NCIC) codes, and version 3-12 of the GENC standard.
+- Code set updates, including:
+
+  - Updates provided by the FBI for the National Crime Information Center (NCIC) codes
+  - GENC codes, version 3-12
 
 - Synchronized the Justice domain version number with the rest of the model
 
@@ -226,9 +224,7 @@ TSC    | Technical Steering Committee
 
 ## 2.1 Content
 
-The NIEM Business Architecture Committee (NBAC) Technical Steering Committee manages the content of the NIEM Model.
-
-Properties and types in NIEM are defined in namespaces, which are organized by governance or authoritative source.  New content may be added to existing namespaces with approval by their governance body through standard OASIS Open Project processes.  The NBAC, NTAC, and domain subcommittees may stand up new namespaces as needed.
+Properties and types in NIEM are defined in namespaces, which are organized by governance or authoritative source:
 
 ### 2.1.1 NIEM Core
 
@@ -236,19 +232,19 @@ NIEM Core is the collection of general-purpose content that does not belong to a
 
 ### 2.1.2 Domains
 
-NIEM domains are namespaces for communities of interest that have stood up their own formal governance bodies as NBAC subcommittees within NIEM.  The NBAC manages domains in cases of dormant governance.
+NIEM domains are namespaces for communities of interest that have stood up their own formal governance bodies as NBAC subcommittees within NIEM.
 
 ### 2.1.3 Codes
 
-While code sets can be defined in NIEM Core, domains, and other namespaces, code namespaces are almost exclusively code sets.  Some NIEM code namespaces are actively managed by domain subcommittees or authoritative sources which work directly with NIEM.  Other NIEM code namespaces are managed by the NBAC or domain subcommittees and reflect publicly available code sources, modified to conform to NIEM NDR rules.
+While code sets can be defined in NIEM Core, domains, and other namespaces, code namespaces are almost exclusively comprised of code sets.  Some NIEM code namespaces are actively managed by domain subcommittees or authoritative sources which work directly with NIEM.  Other NIEM code namespaces are managed by the NBAC or domain subcommittees and reflect publicly available code sources, modified to conform to NIEM NDR rules.
 
 ### 2.1.4 Adapters
 
-Adapters are provided by the NDR as the mechanism to support non-conformant external standards in NIEM schemas and instances without triggering conformance violations.  Like code sets, while adapters can be defined in other namespaces, adapter namespaces are for namespaces that exclusively define adapters.
+Adapters are provided by the NDR as the mechanism to support non-conformant external standards in NIEM schemas and instances without triggering conformance violations.  Like code sets, while adapters can be defined in other namespaces, adapter namespaces are for namespaces that exclusively define adapters for external standards.
 
 ### 2.1.5 Auxiliary
 
-Auxiliary namespaces are like to light-weight domains.  They define community of interest content beyond just code sets, but without the governance requirements of NIEM domains.
+Auxiliary namespaces define content representing communities of interest or standards.  Unlike domains, they do not require formal governance bodies within NIEM.
 
 ### 2.1.6 External
 
@@ -290,40 +286,29 @@ Major versions of the NIEM Model correspond to major versions of the NDR.  The a
 
 <!-- TODO: Review Conformance -->
 
-The NIEM Model 6.0 XML Schemas are the only normative representation of the [NIEM-Model-v6.0] for the purposes of document validation.
+This specification normatively defines NIEM Model Version 6.0 with a set of reference XML schemas.
 
-## 3.1 Conformant instance document
+The NIEM Naming and Design Rules [NIEM-NDR-v6.0] defines conformance targets, Schematron and text rules, and guidance for the conformant use of NIEM in messages and message specifications.
 
-A conformant instance document will be defined and governed by [NIEM-Conformance-v6.0].
-
-## 3.2 Conformant schema document set
-
-A conformant schema document set will be defined and governed by [NIEM-Conformance-v6.0].
-
-## 3.3 Conformant message specification
-
-A conformant message specification will be defined and governed by [NIEM-Conformance-v6.0].
+The NIEM Conformance Specification [NIEM-Conformance-v6.0] describes NIEM conformance.
 
 -------
 
 # Appendix A. References
 
 <!-- TODO: Check References -->
-<!-- TODO: Manage references to NIEM 6.0 technical specifications that do not yet exist -->
 
 ## A.1 Normative References
 
-###### [NIEM-Conformance-v5.0]
-
-NIEM Technical Architecture Committee (NTAC), "National Information Exchange Model Conformance Specification", Version 5.0, March 19, 2021. https://reference.niem.gov/niem/specification/conformance/5.0/niem-conformance-spec-5.0.html.
-
 ###### [NIEM-Conformance-v6.0]
 
-NIEM Technical Architecture Committee (NTAC).  Current working draft available at https://github.com/niemopen/conformance-specification/tree/dev.
+<!-- TODO: Get template for Conformance specification for better work-in-progress reference -->
+_NIEM Conformance Specification Version 6.0_. Work in progress.
 
 ###### [NIEM-NDR-v6.0]
 
-NIEM Technical Architecture Committee (NTAC).  Current working draft available at https://github.com/niemopen/niem-naming-design-rules/tree/dev.
+<!-- TODO: Get template for NDR specification for better work-in-progress reference -->
+_NIEM Naming and Design Rules Specification Version 6.0_. Work in progress.
 
 ###### [RFC2119]
 
