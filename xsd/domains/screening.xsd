@@ -17992,18 +17992,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="IdentificationAugmentationType">
-    <xs:annotation>
-      <xs:documentation>A data type for additional information about an identification.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:AugmentationType">
-        <xs:sequence>
-          <xs:element ref="scr:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="ImageFeatureExtractionType">
     <xs:annotation>
       <xs:documentation>A data type that specifies details of the image extraction</xs:documentation>
@@ -20629,6 +20617,8 @@
         <xs:sequence>
           <xs:element ref="scr:SoundexIndexValueText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonNameOriginText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonPrimaryName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonSecondaryName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:DesignationCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute ref="scr:nameTranslationCategoryCode" use="optional"/>
@@ -20766,7 +20756,7 @@
           <xs:element ref="im:SEVISID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PhotoRequestIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:AdmittedDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonSearchResultAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -20916,6 +20906,38 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="PilotLicenseMedicalAssessmentCategoryCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a kind of medical assessment for a pilot license.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>A 1st Class medical is required when flight operations require an Air Transport Pilot (ATP) certificate.  An ATP is required to act as the Pilot in Command (PIC) or Captain of a scheduled airliner.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>A 2nd Class medical is required when flight operations require a Commercial Pilot certificate.  A Commercial certificate is required essentially to get paid to be a pilot.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>A 3rd Class medical is required for all other flight operations that require an FAA Medical Certificate.  This includes Student Pilots pursuing a Recreational or Private certificate, Recreational and Private pilots, and most Flight Instructors.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PilotLicenseMedicalAssessmentCategoryCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a kind of medical assessment for a pilot license.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="scr:PilotLicenseMedicalAssessmentCategoryCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:simpleType name="RiskCategoryCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type describing the kinds of risk categories for screening purposes</xs:documentation>
@@ -23008,16 +23030,6 @@
       <xs:documentation>True if the person arrested has requested a court hearing; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IdentificationAugmentation" type="scr:IdentificationAugmentationType" substitutionGroup="nc:IdentificationAugmentationPoint" nillable="true">
-    <xs:annotation>
-      <xs:documentation>Additional information about an identification.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationStatusAdvisoryText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A text that describes special or advisory information about a particular Identification ID</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="IdentityStatusAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for an aggregated status of biometrically linked encounters for an identified individual.</xs:documentation>
@@ -23808,6 +23820,11 @@
       <xs:documentation>An augmentation point for PersonPhoneAssociationType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonPrimaryName" type="nc:PersonNameTextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A primary name of a person, which may be the family name, the maiden name, the surname, or the entire name in cases where the name cannot be divided into two parts.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonRole" type="scr:PersonRoleType" nillable="true">
     <xs:annotation>
       <xs:documentation>A part played by a Person in an Encounter.</xs:documentation>
@@ -23868,6 +23885,11 @@
       <xs:documentation>An augmentation point for PersonSearchResultType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonSecondaryName" type="nc:PersonNameTextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A secondary name of a person, which may include given names, middle names, forenames, familiar names, initials, or any other secondary names.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonStatusSummary" type="scr:PersonStatusSummaryType" nillable="true">
     <xs:annotation>
       <xs:documentation>A status of Person involved in a Screening Encounter.</xs:documentation>
@@ -23901,6 +23923,11 @@
   <xs:element name="PhysicalEncounterAgentAssociationAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for PhysicalEncounterAgentAssociationType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PilotLicenseMedicalAssessmentCategoryCode" type="scr:PilotLicenseMedicalAssessmentCategoryCodeType" substitutionGroup="nc:LicenseMedicalAssessmentCategoryAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A kind of medical assessment for a pilot license.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PrimaryDispositionText" type="nc:TextType" nillable="true">

@@ -2951,43 +2951,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="DriverLicenseBaseEndorsementType">
-    <xs:annotation>
-      <xs:documentation>A data type for an endorsement on a driver license or driver license permit which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicenseEndorsementText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseEndorsementEndDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseHMEThreatDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseHMEThreatAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseBaseEndorsementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DriverLicenseBaseType">
-    <xs:annotation>
-      <xs:documentation>A data type for an authorization issued to a driver granting driving privileges.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicenseCardDesignRevisionDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseLimitedTermIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseMedicalCertification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseIssueDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseIssuingCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseREALIDComplianceAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseBaseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="DriverLicenseDrivingIncidentAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between a driver license and a driving incident.</xs:documentation>
@@ -3009,87 +2972,11 @@
       <xs:documentation>A data type for an endorsement on a driver license which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="j:DriverLicenseBaseEndorsementType">
+      <xs:extension base="nc:LicenseEndorsementType">
         <xs:sequence>
-          <xs:element ref="j:DriverLicenseEndorsementCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:DriverLicenseHMEThreatDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:DriverLicenseHMEThreatAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseEndorsementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DriverLicenseMedicalCertificationType">
-    <xs:annotation>
-      <xs:documentation>A data type for a medical certification associated with a driver license.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicenseMedicalCertificationExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseMedicalCertificationIssueDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseSkillsPerformanceEvaluationEffectiveDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseSkillsPerformanceEvaluationExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseWaiverExemptEffectiveDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseWaiverExemptExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseWaiverExemptExpirationIndefiniteIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseMedicalCertificationRestrictionAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseMedicalCertificationStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseMedicalSelfCertificationAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseMedicalCertificationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DriverLicensePermitEndorsementType">
-    <xs:annotation>
-      <xs:documentation>A data type for an endorsement on a driver license permit which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="j:DriverLicenseBaseEndorsementType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicensePermitEndorsementCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitEndorsementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DriverLicensePermitRestrictionType">
-    <xs:annotation>
-      <xs:documentation>A data type for a restriction applicable to a driver permit.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="j:DrivingRestrictionType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicensePermitRestrictionCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitRestrictionAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DriverLicensePermitType">
-    <xs:annotation>
-      <xs:documentation>A data type for a driver license permit issued to a driver granting conditional or limited driving privileges.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="j:DriverLicenseBaseType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicensePermitClassificationText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitRestriction" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitEndorsement" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DriverLicenseRestrictionType">
-    <xs:annotation>
-      <xs:documentation>A data type for a restriction applicable to a driver license.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="j:DrivingRestrictionType">
-        <xs:sequence>
-          <xs:element ref="j:DriverLicenseRestrictionCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseRestrictionAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -3099,20 +2986,16 @@
       <xs:documentation>A data type for a license issued to a person granting driving privileges.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="j:DriverLicenseBaseType">
+      <xs:extension base="nc:LicenseType">
         <xs:sequence>
           <xs:element ref="j:DriverLicenseEnhancedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseCommercialClassAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseCommercialStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseNonCommercialClassText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseNonCommercialStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermit" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicensePermitQuantity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseWithdrawal" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseWithdrawalPendingIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseCardIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseRestriction" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DriverLicenseEndorsement" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DriverLicenseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -3172,21 +3055,6 @@
           <xs:element ref="j:DrivingIncidentTrafficDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DrivingIncidentWeatherDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:DrivingIncidentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DrivingRestrictionType">
-    <xs:annotation>
-      <xs:documentation>A data type for a restriction applicable to a driver permit or license.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="j:DrivingRestrictionAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DrivingRestrictionDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DrivingRestrictionEndDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:DrivingRestrictionAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -14440,7 +14308,7 @@
       <xs:documentation>An augmentation point for CrashDriverType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CrashDriverAuthorizationRestriction" type="j:DrivingRestrictionType" nillable="true">
+  <xs:element name="CrashDriverAuthorizationRestriction" type="nc:LicenseRestrictionType" nillable="true">
     <xs:annotation>
       <xs:documentation>A restriction on a driver license or driver license permit.</xs:documentation>
     </xs:annotation>
@@ -14495,7 +14363,7 @@
       <xs:documentation>A Type of License assigned by authorizing agent issuing a driver license to the individual.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CrashDriverLicensePermitStatusCode" type="mmucc:DriverLicensePermitStatusCodeType" substitutionGroup="j:DriverLicensePermitStatusAbstract" nillable="true">
+  <xs:element name="CrashDriverLicensePermitStatusCode" type="mmucc:DriverLicensePermitStatusCodeType" substitutionGroup="nc:LicensePermitStatusAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A current status of an individuals driver license at the time of the crash.</xs:documentation>
     </xs:annotation>
@@ -14510,7 +14378,7 @@
       <xs:documentation>A vehicle-related violation, which applies to a driver involved in a crash.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CrashDrivingRestrictionCode" type="mmucc:DrivingRestrictionCodeType" substitutionGroup="j:DrivingRestrictionAbstract" nillable="true">
+  <xs:element name="CrashDrivingRestrictionCode" type="mmucc:DrivingRestrictionCodeType" substitutionGroup="nc:LicenseRestrictionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A Restriction assigned to an individuals driver license by the license examiner.</xs:documentation>
     </xs:annotation>
@@ -15805,26 +15673,6 @@
       <xs:documentation>An augmentation point for DriverLicenseType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseBase" type="j:DriverLicenseBaseType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An authorization issued to a driver granting driving privileges.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseBaseAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for DriverLicenseBaseType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseBaseEndorsementAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for DriverLicenseBaseEndorsementType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseCardDesignRevisionDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An implementation date of the most recent version or modification to the visible design of a jurisdictions driver license or ID card.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="DriverLicenseCardIdentification" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An identification that is affixed to the raw materials (card stock, laminate, etc.) used in producing driver licenses and ID cards. The numbers are issued by the material's manufacturer and provide a unique reference to a card within a jurisdiction.</xs:documentation>
@@ -15875,7 +15723,7 @@
       <xs:documentation>An augmentation point for DriverLicenseDrivingIncidentAssociationType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseEndorsement" type="j:DriverLicenseEndorsementType" nillable="true">
+  <xs:element name="DriverLicenseEndorsement" type="j:DriverLicenseEndorsementType" substitutionGroup="nc:LicenseEndorsement" nillable="true">
     <xs:annotation>
       <xs:documentation>An endorsement on a driver license or driver license permit which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
     </xs:annotation>
@@ -15885,17 +15733,7 @@
       <xs:documentation>An augmentation point for type j:DriverLicenseEndorsementType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseEndorsementCode" type="aamva_d20:DrivingEndorsementCodeType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An endorsement on a driver license or driver license permit which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseEndorsementEndDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date on which an endorsement for a driver license ends.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseEndorsementText" type="nc:TextType" nillable="true">
+  <xs:element name="DriverLicenseEndorsementCode" type="aamva_d20:DrivingEndorsementCodeType" substitutionGroup="nc:LicenseEndorsementAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An endorsement on a driver license or driver license permit which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
     </xs:annotation>
@@ -15903,11 +15741,6 @@
   <xs:element name="DriverLicenseEnhancedIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if a driver license is an Enhanced Driver License in accordance with US Department of Homeland Security criteria; false otherwise.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseExpirationDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date after which a driver license or driver license permit is no longer valid.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="DriverLicenseHMEThreatAbstract" abstract="true">
@@ -15930,72 +15763,17 @@
       <xs:documentation>A determination if a driver should be issued a HAZMAT Endorsement, as determined by the TSA adjudication process.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A driver license identification or driver license permit identification, including the number and state.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseIssueDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date when a driver license or driver license permit is issued or renewed.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseIssuingCountry" type="nc:CountryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A country in which an identity document was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseLimitedTermIndicator" type="niem-xs:boolean" nillable="true">
-    <xs:annotation>
-      <xs:documentation>True if a driver license or identification card is classified by DHS regulations as a temporary or limited-term document (i.e. the expiration date of the card is limited to the duration of an aliens legal stay in the U.S.); false otherwise.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertification" type="j:DriverLicenseMedicalCertificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A medical certification associated with a driver license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for j:DriverLicenseMedicalCertificationType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationExpirationDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date on which a medical certificate issued to a commercial driver expires.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationIssueDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date on which a medical practitioner issued a medical certificate to a commercial driver.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationRestrictionAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a restriction imposed on a commercial driver by a medical examiner.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationRestrictionCode" type="aamva_d20:DriverLicenseMedicalCertificationRestrictionCodeType" substitutionGroup="j:DriverLicenseMedicalCertificationRestrictionAbstract" nillable="true">
+  <xs:element name="DriverLicenseMedicalCertificationRestrictionCode" type="aamva_d20:DriverLicenseMedicalCertificationRestrictionCodeType" substitutionGroup="nc:LicenseMedicalCertificationRestrictionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A restriction imposed on a commercial driver by a medical examiner.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationStatusAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for an indication of the status of a driver's medical certification.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalCertificationStatusCode" type="aamva_d20:DriverLicenseMedicalCertificationStatusCodeType" substitutionGroup="j:DriverLicenseMedicalCertificationStatusAbstract" nillable="true">
+  <xs:element name="DriverLicenseMedicalCertificationStatusCode" type="aamva_d20:DriverLicenseMedicalCertificationStatusCodeType" substitutionGroup="nc:LicenseMedicalCertificationStatusAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An indication of the status of a driver's medical certification.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseMedicalSelfCertificationAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a driver's self certification of the commercial driver's status regarding 49 CFR 390.3 and the type of driving.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseMedicalSelfCertificationCode" type="aamva_d20:DriverLicenseMedicalSelfCertificationCodeType" substitutionGroup="j:DriverLicenseMedicalSelfCertificationAbstract" nillable="true">
+  <xs:element name="DriverLicenseMedicalSelfCertificationCode" type="aamva_d20:DriverLicenseMedicalSelfCertificationCodeType" substitutionGroup="nc:LicenseMedicalSelfCertificationAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A driver's self certification of the commercial driver's status regarding 49 CFR 390.3 and the type of driving.</xs:documentation>
     </xs:annotation>
@@ -16020,124 +15798,39 @@
       <xs:documentation>A current status of an individual's non-commercial privilege (base) type.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicensePermit" type="j:DriverLicensePermitType" nillable="true">
+  <xs:element name="DriverLicensePermit" type="nc:LicensePermitType" substitutionGroup="nc:LicensePermit" nillable="true">
     <xs:annotation>
       <xs:documentation>A driver license permit issued to a driver granting conditional or limited driving privileges.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicensePermitAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for DriverLicensePermitType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitClassificationText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A kind of commercial or non-commercial vehicle that a licensed driver has been examined on and approved to operate subject to a permit.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitEndorsement" type="j:DriverLicensePermitEndorsementType" nillable="true">
+  <xs:element name="DriverLicensePermitEndorsement" type="j:DriverLicenseEndorsementType" substitutionGroup="nc:LicenseEndorsement" nillable="true">
     <xs:annotation>
       <xs:documentation>An endorsement on a driver license which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicensePermitEndorsementAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type j:DriverLicensePermitEndorsementType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitEndorsementCode" type="aamva_d20:DriverLicensePermitEndorsementCodeType" nillable="true">
+  <xs:element name="DriverLicensePermitEndorsementCode" type="aamva_d20:DriverLicensePermitEndorsementCodeType" substitutionGroup="nc:LicenseEndorsementAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An endorsement on a driver license permit which authorizes the operation of specified types of vehicles carrying specified loads.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicensePermitQuantity" type="niem-xs:nonNegativeInteger" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A number of driver permits issued on a license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitRestriction" type="j:DriverLicensePermitRestrictionType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A restriction on a driver license permit.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitRestrictionAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type j:DriverLicensePermitRestrictionType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitRestrictionCode" type="aamva_d20:DrivingPermitRestrictionCodeType" nillable="true">
+  <xs:element name="DriverLicensePermitRestrictionCode" type="aamva_d20:DrivingPermitRestrictionCodeType" substitutionGroup="nc:LicenseRestrictionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A category of a driving restriction on a permit.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicensePermitStatusAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a current status of an individuals driver license permit.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePermitStatusCode" type="aamva_d20:DrivingStatusCodeType" substitutionGroup="j:DriverLicensePermitStatusAbstract" nillable="true">
+  <xs:element name="DriverLicensePermitStatusCode" type="aamva_d20:DrivingStatusCodeType" substitutionGroup="nc:LicensePermitStatusAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A current status of an individuals driver license permit.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicensePermitStatusText" type="nc:TextType" substitutionGroup="j:DriverLicensePermitStatusAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A current status of an individuals driver license permit.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicensePerson" type="nc:PersonType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A person to which a driver license or driver license permit is assigned.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseREALIDComplianceAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for an indication of the degree to which a driver license or ID Card is compliant with the REAL ID A data concept for act.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseREALIDComplianceCode" type="aamva_d20:DriverLicenseREALIDComplianceCodeType" substitutionGroup="j:DriverLicenseREALIDComplianceAbstract" nillable="true">
+  <xs:element name="DriverLicenseREALIDComplianceCode" type="aamva_d20:DriverLicenseREALIDComplianceCodeType" substitutionGroup="nc:IdentificationREALIDComplianceAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An indication of the degree to which a driver license or ID Card is compliant with the REAL ID Act.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseRestriction" type="j:DriverLicenseRestrictionType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A restriction on a driver license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseRestrictionAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type j:DriverLicenseRestrictionType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseRestrictionCode" type="aamva_d20:DrivingRestrictionCodeType" nillable="true">
+  <xs:element name="DriverLicenseRestrictionCode" type="aamva_d20:DrivingRestrictionCodeType" substitutionGroup="nc:LicenseRestrictionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A category of a driving restriction on a license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseSkillsPerformanceEvaluationEffectiveDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A start date of the most recent variance of a medical certificate, due to a commercial driver's Skills Performance Evaluation.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseSkillsPerformanceEvaluationExpirationDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An expiration date of the most recent variance of a medical certificate, due to a commercial driver's Skills Performance Evaluation.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseWaiverExemptEffectiveDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A start date of the most recent variance of a medical certificate, due to a waiver or exemption.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseWaiverExemptExpirationDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An expiration date of the most recent variance of a medical certificate, due to a waiver or exemption.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DriverLicenseWaiverExemptExpirationIndefiniteIndicator" type="niem-xs:boolean" nillable="true">
-    <xs:annotation>
-      <xs:documentation>True if the expiration date of the most recent variance of a medical certificate is indefinite; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="DriverLicenseWithdrawal" type="j:DriverLicenseWithdrawalType" nillable="true">
@@ -16435,34 +16128,9 @@
       <xs:documentation>A driving offense designation as specified by the AAMVA Code Dictionary (ACD).</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DrivingRestriction" type="j:DrivingRestrictionType" nillable="true">
+  <xs:element name="DrivingRestriction" type="nc:LicenseRestrictionType" nillable="true">
     <xs:annotation>
       <xs:documentation>A restriction applicable to a driver permit or license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DrivingRestrictionAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a driving restriction.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DrivingRestrictionAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for DrivingRestrictionType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DrivingRestrictionDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of the nature of a restriction</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DrivingRestrictionEndDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date on which a special restriction ends.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="DrivingRestrictionText" type="nc:TextType" substitutionGroup="j:DrivingRestrictionAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A category of a driving restriction.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="DrugAugmentation" type="j:DrugAugmentationType" substitutionGroup="nc:DrugAugmentationPoint" nillable="true">

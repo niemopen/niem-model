@@ -59,6 +59,52 @@ Updated the following properties to no longer be abstract and to have type `nc:C
 - j:DriverLicenseIssuingCountryAbstract
 - mo:ObservedObjectAllegianceCountryAbstract
 
+### Added support for new digital identification and license requirements ([#37](https://github.com/niemopen/niem-model/issues/37))
+
+The Department of Homeland Security (DHS) is working to establish digital identity standards. This will help the 50 states harmonize their digital identity attributes such as driver licenses, FAA licenses such as pilot licenses, TSA inner system to system communications for validation of identity documentation, coast guard marine licenses, DoT related Truck licenses and more.
+
+The Emergency Management domain has worked with several states and the FAA to harmonize an initial set of requirements.  Existing identification- and license-related components in NIEM have been reviewed and refactored as needed to support the new requirements.
+
+Key changes include:
+
+- `nc:IdentificationType`
+  - Added new properties
+  - Added refactored properties from domain augmentations
+
+- `nc:LicenseType`
+
+  - Added as a new type to support other kinds of licenses.
+  - Extends `nc:IdentificationType`
+  - Added new properties
+  - Added refactored properties from `j:DriverLicenseBaseType`
+
+- `j:DriverLicenseType` and related types
+
+  - Updated to extend the new `nc:LicenseType`
+  - Refactored the more generic properties to `nc:LicenseType` and related types
+  - Added "driver license, DL" keywords to former driver license-specific properties to support the ability for users to find these properties under new, more generic names
+
+- `nc:PassportType`
+
+  - Updated to extend `nc:IdentificationType`
+  - Removed individual person-specific properties like `nc:PersonName` and `nc:PersonBirthDate` in favor of the new `nc:IdentificationPerson` property which supports the use of any property from `nc:PersonType` or an augmentation of it
+
+- `em:PersonIDCardType`
+
+  - Refactored and moved some properties to `nc:IdentificationType`
+  - Converted to an augmentation of `nc:IdentificationType`
+
+- `m:SeamanLicenseType`
+
+  - Refactored and moved some ratings properties to the new `nc:LicenseType`
+  - Removed this type because its contents can now be represented by the new `nc:LicenseType`
+  - Changed property `m:SeamanLicense` to type `nc:LicenseType`
+
+- `m:MerchantMarinerDocumentType`
+
+  - Removed this type because its contents can now be represented by the new `nc:LicenseType`
+  - Changed property `m:MerchantMarinerDocument` to type `nc:LicenseType`
+
 ### Refactored nc:EmployeeAssignmentAssociation ([#14](https://github.com/niemopen/niem-model/issues/14))
 
 Moved `nc:nc:EmployeeRegistrationAbstract` and `nc:EmployeeSupervisorIndicator` elements to from type `nc:EmployeeAssignmentAssociationType` to its parent type `nc:EmploymentAssociationType`.  This allows those properties to be used in any employment association, not just assignments.
@@ -210,6 +256,18 @@ The new pattern for NIEM URIs under OASIS prevent collisions with older versions
 - URI: https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/
 - Definition: "Justice domain 6.0 / GJXDM 8.0"
 - Filename: "justice.xsd"
+
+#### Refactored DriverLicenseType and related types ([#37](https://github.com/niemopen/niem-model/issues/37))
+
+See [Added support for new digital identification and license requirements](#added-support-for-new-digital-identification-and-license-requirements-37) above for general information about new identification and license requirements.
+
+- Refactored `j:DriverLicenseBaseType` to a more generic `nc:LicenseType`
+  - Removed properties like `j:DriverLicenseIdentification`, `j:DriverLicenseExpirationDate`, and `j:DriverLicenseIssueDate` as the new `nc:LicenseType` extends `nc:IdentificationType`, now making these identification properties inherited
+- Refactored `j:DriverLicenseType` to extend the new `nc:LicenseType`
+- Refactored `j:DriverLicenseBaseEndorsementType` and `j:DriverLicensePermitEndorsementType` to a more generic `nc:LicenseEndorsementType` and a driver license-specific `j:DriverLicenseEndorsementType`
+- Refactored `j:DriverLicenseMedicalCertificationType` to a more generic `nc:LicenseMedicalCertificationType`
+- Refactored `j:DriverLicenseRestrictionType` and `j:DriverLicensePermitRestrictionType` into a generic `nc:LicenseRestrictionType` and Justice-specific code set substitutions
+- Refactored `j:DriverLicensePermitType` to a new `nc:LicensePermitType` and Justice-specific code set substitutions
 
 #### Updated NCIC codes
 

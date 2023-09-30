@@ -865,7 +865,7 @@
       <xs:documentation>A data type for an ID card that identifies a person. A badge can be a low cost card, or a PIV card that follows specification NIST SP-800-73-2. Badge may work together with a pin number, visual identification and biometrics of the badge holder to make a positive identification of a person</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="em:PersonIDCardType">
+      <xs:extension base="nc:IdentificationType">
         <xs:sequence>
           <xs:element ref="em:PersonHumanResource" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:BadgeJobTitleText" minOccurs="0" maxOccurs="unbounded"/>
@@ -4252,6 +4252,22 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="IdentificationAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about an identification.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="em:ResourcePicture" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:NISTSP800733PIVCardData" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:EAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:PIVAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:FIPS201ConformanceCode" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="InaccessibleCauseCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type code to specify if the damaged area/item is assessed as inaccessible, why?</xs:documentation>
@@ -5988,28 +6004,6 @@
           <xs:element ref="em:UpdateRecord" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:Attachment" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PersonHumanResourceAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="PersonIDCardType">
-    <xs:annotation>
-      <xs:documentation>A data type for a credential class that represents the identification of a human resource</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:IdentificationType">
-        <xs:sequence>
-          <xs:element ref="em:NameOnCardText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:IDCategoryCodeAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:SignatureAuthorityName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:AgencySymbol" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:ResourcePicture" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:CardPicture" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:NISTSP800733PIVCardData" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:EAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:PIVAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:FIPS201ConformanceCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:PersonIDCardAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -10634,11 +10628,6 @@
       <xs:documentation>An augmentation point for type em:AfterActionReviewReportType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AgencySymbol" type="nc:BinaryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A binary (i.e. digitized) presentation of an Agency's Symbol (i.e. Logo of the agency that the ID has been issued for)</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="AlarmAudibleDescriptionCode" type="em:AlarmAudibleDescriptionCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A code indicating whether the alarm is audible or silent</xs:documentation>
@@ -11467,11 +11456,6 @@
   <xs:element name="CardioThoracicServiceCoverageStatusCode" type="have-codes:AvailabilityStatusCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A status describing the availability of cardio-thoracic surgical services</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="CardPicture" type="nc:ImageType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A binary (i.e. digitized) presentation of an identification card picture</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Cat-CCategoryCode" type="em:Cat-CCategoryCodeType" nillable="true">
@@ -12814,11 +12798,6 @@
       <xs:documentation>An augmentation point for type em:HumanResourcesType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IDCategoryCodeAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a code list for identification information types for a resource e.g.  ID card number etc.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="ImmediateNeedsTernaryIndicatorCode" type="nc:YesNoUnknownCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>An indication if there are immediate needs (Yes, No, Unknown)</xs:documentation>
@@ -13549,11 +13528,6 @@
       <xs:documentation>An augmentation point for MissionInformationType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NameOnCardText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A data element that is the name of the person which is printed on an identification card</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="NavigationInstructionsText" type="nc:TextType" nillable="true">
     <xs:annotation>
       <xs:documentation>A set of instructions that define how to get to the report to location</xs:documentation>
@@ -14094,19 +14068,9 @@
       <xs:documentation>An augmentation point for PersonHumanResourceType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonIDCard" type="em:PersonIDCardType" nillable="true">
+  <xs:element name="PersonIDCard" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An element contains information about a person identification information</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonIDCardAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for PersonIDCardType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonIDCategoryText" type="nc:TextType" substitutionGroup="em:IDCategoryCodeAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A kind of identification type of a person</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonPublication" type="nc:PublicationType" nillable="true">
@@ -14822,11 +14786,6 @@
   <xs:element name="Shelter" type="nc:FacilityType" nillable="true">
     <xs:annotation>
       <xs:documentation>A place giving temporary protection from an emergency incident or danger.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SignatureAuthorityName" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A data element for the signature authority name on a badge</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SituationalReport" type="em:SituationalReportType" nillable="true">
