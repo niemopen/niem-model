@@ -10,7 +10,7 @@ Participation is expected to be consistent with the [OASIS Code of Conduct](http
 
 When contributing to this repository, please first discuss significant changes you wish to make via issue, GitHub discussion, NBAC monthly meeting, or the [NBAC TSC's email list](mailto:niemopen-nbactsc@lists.oasis-open-projects.org).
 
-The [NTAC](https://github.com/niemopen/ntac-admin/tree/main) has published the [NIEMOpen Publication Process Project Note](https://github.com/niemopen/ntac-admin/blob/main/project-notes/docs/niem-pubs-v1.0-pn01/niem-pubs-v1.0-pn01.md), which includes information about NIEM versioning practices, the steps involved in updating NIEM content, and the process of approving products as OASIS Project Specification Drafts and [Project Specifications](https://www.oasis-open.org/policies-guidelines/oasis-defined-terms-2018-05-22/#dProj-spec).
+The [NTAC](https://github.com/niemopen/ntac-admin/tree/main) has published the [NIEMOpen Publication Process Project Note](https://docs.oasis-open.org/niemopen/niem-pubs/v1.0/niem-pubs-v1.0.html), which includes information about NIEM versioning practices, the steps involved in updating NIEM content, and the process of approving products as OASIS Project Specification Drafts and [Project Specifications](https://www.oasis-open.org/policies-guidelines/oasis-defined-terms-2018-05-22/#dProj-spec).
 
 ### Issues
 
