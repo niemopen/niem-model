@@ -28,6 +28,7 @@
       <appinfo:LocalTerm term="FIPS" literal="Federal Information Processing Standards"/>
       <appinfo:LocalTerm term="GENC" literal="Geopolitical Entities, Names, and Codes"/>
       <appinfo:LocalTerm term="GSM" literal="Global System for Mobile communication"/>
+      <appinfo:LocalTerm term="IEC" literal="International Electrotechnical Commission"/>
       <appinfo:LocalTerm term="IMEI" literal="International Mobile Equipment Identity"/>
       <appinfo:LocalTerm term="IPv4" literal="Internet Protocol version 4"/>
       <appinfo:LocalTerm term="IPv6" literal="Internet Protocol version 6"/>

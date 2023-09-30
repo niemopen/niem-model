@@ -15876,7 +15876,7 @@
   </xs:element>
   <xs:element name="DNASource" type="biom:DNASourceType" nillable="true">
     <xs:annotation>
-      <xs:documentation>A description of the DNA source such as the source category person vs. stain; cellular orgin blood, etc</xs:documentation>
+      <xs:documentation>A description of the DNA source such as the source category person vs. stain; cellular origin blood, etc</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="DNASourceAugmentationPoint" abstract="true">

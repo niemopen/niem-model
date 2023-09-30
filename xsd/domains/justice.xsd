@@ -62,6 +62,7 @@
       <appinfo:LocalTerm term="FFL" literal="federal firearms license"/>
       <appinfo:LocalTerm term="FIPS" literal="Federal Information Processing Standards"/>
       <appinfo:LocalTerm term="GDEP" literal="Geographic-Drug Enforcement Program"/>
+      <appinfo:LocalTerm term="GJXDM" literal="GLOBAL Justice XML Data Model"/>
       <appinfo:LocalTerm term="GVWR" literal="gross vehicle weight rating"/>
       <appinfo:LocalTerm term="HazMat" literal="Hazardous Materials"/>
       <appinfo:LocalTerm term="HME" literal="Hazardous Material Endorsement"/>
@@ -16860,7 +16861,7 @@
   </xs:element>
   <xs:element name="EvidenceRepresentation" abstract="true">
     <xs:annotation>
-      <xs:documentation>A data concept for a representation of evidence.</xs:documentation>
+      <xs:documentation>A data concept for a representation of an item of evidence.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EvidenceReturnedIndicator" type="niem-xs:boolean" nillable="true">

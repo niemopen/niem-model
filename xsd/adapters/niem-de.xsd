@@ -14,6 +14,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>NIEM adapter for EDXL Distribution Element</xs:documentation>
+    <xs:appinfo>
+      <appinfo:LocalTerm term="EDXL" literal="Emergency Data Exchange Language"/>
+    </xs:appinfo>
   </xs:annotation>
   <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:import namespace="urn:oasis:names:tc:emergency:EDXL:DE:1.0" schemaLocation="../external/de.xsd" appinfo:externalImportIndicator="true">

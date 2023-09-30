@@ -328,7 +328,7 @@
   </xs:element>
   <xs:element name="CourseAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for type CourseType</xs:documentation>
+      <xs:documentation>An augmentation point for CourseType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="CourseBeginDate" type="nc:DateType" nillable="true">
@@ -498,7 +498,7 @@
   </xs:element>
   <xs:element name="CourseSectionAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for type CourseSectionType</xs:documentation>
+      <xs:documentation>An augmentation point for CourseSectionType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="CourseSectionEndDate" type="nc:DateType" nillable="true">
@@ -633,7 +633,7 @@
   </xs:element>
   <xs:element name="InstructionalProgramAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for type InstructionalProgramType</xs:documentation>
+      <xs:documentation>An augmentation point for InstructionalProgramType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="InstructionalProgramID" type="niem-xs:string" nillable="true">
@@ -643,7 +643,7 @@
   </xs:element>
   <xs:element name="IntelligenceTestAugmentationPoint" abstract="true">
     <xs:annotation>
-      <xs:documentation>An augmentation point for type IntelligenceTestType</xs:documentation>
+      <xs:documentation>An augmentation point for IntelligenceTestType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="IntelligenceTestCategoryText" type="nc:TextType" nillable="true">

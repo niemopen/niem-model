@@ -21257,7 +21257,7 @@
       </xs:enumeration>
       <xs:enumeration value="NO-20">
         <xs:annotation>
-          <xs:documentation>Finnmark; Finnmárku </xs:documentation>
+          <xs:documentation>Finnmark; Finnmárku</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NO-50">
