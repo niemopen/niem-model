@@ -1250,35 +1250,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MerchantMarinerDocumentType">
-    <xs:annotation>
-      <xs:documentation>A data type for a Merchant Mariner Document (MMD).</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="m:MerchantMarinerDocumentIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentIssueDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentIssuerLocation" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentIssuingOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentRatingAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:PersonAddress" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonCitizenshipCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonEyeColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHairColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSexAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSSNIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="NextPortOfCallListType">
     <xs:annotation>
       <xs:documentation>A data type for a list of ports that will be visited subsequently.</xs:documentation>
@@ -1461,35 +1432,6 @@
         <xs:sequence>
           <xs:element ref="m:PreviousForeignPortOfCall" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="m:PreviousForeignPortOfCallListAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="SeamanLicenseType">
-    <xs:annotation>
-      <xs:documentation>A data type for an able-bodied seaman license.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="m:PersonAddress" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonCitizenshipCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonEyeColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHairColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSexAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSSNIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIssueDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIssuerLocation" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIssuingOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseRatingAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2264,44 +2206,9 @@
       <xs:documentation>A location identified by a United Nations Location Code, also known as a UN/LOCODE (United Nations Code for Trade and Transport Locations).</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MerchantMarinerDocument" type="m:MerchantMarinerDocumentType" nillable="true">
+  <xs:element name="MerchantMarinerDocument" type="nc:LicenseType" nillable="true">
     <xs:annotation>
       <xs:documentation>A Merchant Mariner Document (MMD) issued to a merchant mariner.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for MerchantMarinerDocumentType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identification of a merchant mariner document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIssueDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date a merchant mariner document was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIssuerLocation" type="nc:LocationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A location of the issuer of a merchant mariner document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIssuingOrganization" type="nc:OrganizationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An issuer of a merchant mariner document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentRatingAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a rating on a merchant mariner document which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentRatingText" type="nc:TextType" substitutionGroup="m:MerchantMarinerDocumentRatingAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A rating on a merchant mariner document which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="NextPortOfCall" type="m:PortVisitType" nillable="true">
@@ -2372,11 +2279,6 @@
   <xs:element name="NonCrewNationalityQuantity" type="niem-xs:nonNegativeInteger" nillable="true">
     <xs:annotation>
       <xs:documentation>A count of passengers of a particular nationality</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonAddress" type="nc:AddressType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An address for a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonAugmentation" type="m:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint" nillable="true">
@@ -2659,44 +2561,14 @@
       <xs:documentation>An identification of a passenger name record (PNR).</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="SeamanLicense" type="m:SeamanLicenseType" nillable="true">
+  <xs:element name="SeamanLicense" type="nc:LicenseType" nillable="true">
     <xs:annotation>
       <xs:documentation>An able-bodied seaman license issued to a person.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for SeamanLicenseType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identification of a seaman license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseIssueDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date a seaman license was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseIssuerLocation" type="nc:LocationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A location of an issuer of a seaman license.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SeamanLicenseIssuingOrganization" type="nc:OrganizationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An issuer of a seaman license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseRatingAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a rating on a seaman license which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseRatingText" type="nc:TextType" substitutionGroup="m:SeamanLicenseRatingAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A rating on a seaman license which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Shipment" type="m:ShipmentType" nillable="true">

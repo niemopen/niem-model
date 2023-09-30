@@ -134,9 +134,6 @@
       <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="intel:AuthenticIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="intel:IdentificationIssuingCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="intel:IdentificationIssuingStateName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="intel:IdentificationIssuingLocalityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="intel:PersonInIdentification" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -347,21 +344,6 @@
   <xs:element name="IdentificationAugmentation" type="intel:IdentificationAugmentationType" substitutionGroup="nc:IdentificationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about an identification.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationIssuingCountry" type="nc:CountryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A GeoPolitical Entity from which this identification was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationIssuingLocalityText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A Geographic Location from which this identification was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationIssuingStateName" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A name of a major administrative district or division of a country from which this identification was issued.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="LocationAugmentation" type="intel:LocationAugmentationType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
