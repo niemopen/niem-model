@@ -10,12 +10,6 @@
     <xs:documentation>The appinfo schema provides support for high level data model concepts and additional syntax to support the NIEM conceptual model and validation of NIEM-conformant instances.</xs:documentation>
   </xs:annotation>
 
-  <xs:attribute name="appliesToParent" type="xs:boolean" default="true">
-    <xs:annotation>
-      <xs:documentation>True if this element is a property of its parent; false if it appears only to support referencing.</xs:documentation>
-    </xs:annotation>
-  </xs:attribute>
-
   <xs:attribute name="deprecated" default="false">
     <xs:annotation>
       <xs:documentation>The deprecated attribute provides a method for identifying schema components as being deprecated. A deprecated component is one that is provided, but the use of which is not recommended.</xs:documentation>
