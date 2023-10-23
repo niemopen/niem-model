@@ -74,6 +74,12 @@
     </xs:annotation>
   </xs:element>
 
+  <xs:attribute name="appliesToParent" type="xs:boolean" default="true">
+    <xs:annotation>
+      <xs:documentation>True if this element is a property of its parent; false if it appears only to support referencing.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+
   <xs:attribute name="id" type="xs:ID">
     <xs:annotation>
       <xs:documentation>A document-relative identifier for an XML element.</xs:documentation>
