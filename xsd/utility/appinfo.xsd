@@ -9,15 +9,23 @@
   <xs:annotation>
     <xs:documentation>The appinfo schema provides support for high level data model concepts and additional syntax to support the NIEM conceptual model and validation of NIEM-conformant instances.</xs:documentation>
   </xs:annotation>
+  
+  <xs:simpleType name="URIListSimpleType">
+    <xs:list itemType="xs:anyURI"/>
+  </xs:simpleType>
+  <xs:attribute name="augmentingNamespace" type="appinfo:URIListSimpleType">
+    <xs:annotation>
+      <xs:documentation>A list of URIs for namespaces responsible for an augmentation.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
 
-  <xs:attribute name="deprecated" default="false">
+  <xs:attribute name="deprecated">
     <xs:annotation>
       <xs:documentation>The deprecated attribute provides a method for identifying schema components as being deprecated. A deprecated component is one that is provided, but the use of which is not recommended.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:restriction base="xs:boolean">
         <xs:pattern value="true"/>
-        <xs:pattern value="false"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
@@ -25,6 +33,45 @@
   <xs:attribute name="externalImportIndicator">
     <xs:annotation>
       <xs:documentation>The externalImportIndicator attribute is true if and only if a namespace identified via xs:import is expected to be non-conformant.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:boolean">
+        <xs:pattern value="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  
+  <xs:attribute name="orderedPropertyIndicator">
+    <xs:annotation>
+      <xs:documentation>True if the order of a repeated property is significant.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:boolean">
+        <xs:pattern value="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  
+  <xs:attribute name="referenceableIndicator" type="xs:boolean">
+    <xs:annotation>
+      <xs:documentation>True if an element may be referenced; false if it can only be inline.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="referenceAttributeIndicator">
+    <xs:annotation>
+      <xs:documentation>True if an attribute is a list of object references (IDREFs or URIs).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:boolean">
+        <xs:pattern value="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  
+  <xs:attribute name="relationshipPropertyIndicator">
+    <xs:annotation>
+      <xs:documentation>True if a property applies to the relationship between an element and its parent.</xs:documentation>
     </xs:annotation>
     <xs:simpleType>
       <xs:restriction base="xs:boolean">
