@@ -57,8 +57,7 @@ Christina Medlin (christina.medlin@gtri.gatech.edu), [Georgia Tech Research Inst
 
 This prose specification is one component of a Work Product that also includes:
 
-- Complete XML Schema list: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/schemas.html
-
+- Complete XML Schema: 
   - NIEM Core Schema: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/niem-core.xsd
   - NIEM Domain Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/domains/
   - NIEM Adapter Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/adapters/
