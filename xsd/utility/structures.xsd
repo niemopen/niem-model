@@ -1,101 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     NIEM Model Version 6.0
+     Project Specification 02
+     11 April 2024
+     Copyright (c) OASIS Open 2024. All Rights Reserved.
+     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
+     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+-->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  version="psd01"
+  version="ps02"
   xml:lang="en-US">
-
   <xs:annotation>
     <xs:documentation>The structures namespace provides base types and other components for definition of NIEM-conformant XML schemas.</xs:documentation>
   </xs:annotation>
-
   <xs:attributeGroup name="SimpleObjectAttributeGroup">
-    <xs:attribute ref="structures:id" />
-    <xs:attribute ref="structures:ref" />
-    <xs:attribute ref="structures:uri" />
-    <xs:anyAttribute processContents="strict" namespace="##other" />
+    <xs:attribute ref="structures:id"/>
+    <xs:attribute ref="structures:ref"/>
+    <xs:attribute ref="structures:uri"/>
+    <xs:anyAttribute processContents="strict" namespace="##other"/>
   </xs:attributeGroup>
-
   <xs:complexType name="AdapterType" abstract="true">
     <xs:annotation>
       <xs:documentation>A data type for a type that contains a single non-conformant property from an external standard for use in NIEM.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element ref="structures:ObjectAugmentationPoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="structures:ObjectAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute ref="structures:id" />
-    <xs:attribute ref="structures:ref" />
-    <xs:attribute ref="structures:uri" />
-    <xs:anyAttribute processContents="strict" namespace="##other" />
+    <xs:attribute ref="structures:appliesToParent"/>
+    <xs:attribute ref="structures:id"/>
+    <xs:attribute ref="structures:ref"/>
+    <xs:attribute ref="structures:uri"/>
+    <xs:anyAttribute processContents="strict" namespace="##other"/>
   </xs:complexType>
-
   <xs:complexType name="AssociationType" abstract="true">
     <xs:annotation>
       <xs:documentation>A data type for a relationship between two or more objects, including any properties of that relationship.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element ref="structures:AssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="structures:AssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute ref="structures:id" />
-    <xs:attribute ref="structures:ref" />
-    <xs:attribute ref="structures:uri" />
-    <xs:anyAttribute processContents="strict" namespace="##other" />
+    <xs:attribute ref="structures:appliesToParent"/>
+    <xs:attribute ref="structures:id"/>
+    <xs:attribute ref="structures:ref"/>
+    <xs:attribute ref="structures:uri"/>
+    <xs:anyAttribute processContents="strict" namespace="##other"/>
   </xs:complexType>
-
   <xs:complexType name="AugmentationType" abstract="true">
     <xs:annotation>
       <xs:documentation>A data type for a set of properties to be applied to a base type.</xs:documentation>
     </xs:annotation>
   </xs:complexType>
-
   <xs:complexType name="ObjectType" abstract="true">
     <xs:annotation>
       <xs:documentation>A data type for a thing with its own lifespan that has some existence.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element ref="structures:ObjectAugmentationPoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="structures:ObjectAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute ref="structures:id" />
-    <xs:attribute ref="structures:ref" />
-    <xs:attribute ref="structures:uri" />
-    <xs:anyAttribute processContents="strict" namespace="##other" />
+    <xs:attribute ref="structures:appliesToParent"/>
+    <xs:attribute ref="structures:id"/>
+    <xs:attribute ref="structures:ref"/>
+    <xs:attribute ref="structures:uri"/>
+    <xs:anyAttribute processContents="strict" namespace="##other"/>
   </xs:complexType>
-
   <xs:element name="AssociationAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for type structures:AssociationType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-
   <xs:element name="ObjectAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for type structures:ObjectType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-
   <xs:attribute name="appliesToParent" type="xs:boolean" default="true">
     <xs:annotation>
       <xs:documentation>True if this element is a property of its parent; false if it appears only to support referencing.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
   <xs:attribute name="id" type="xs:ID">
     <xs:annotation>
       <xs:documentation>A document-relative identifier for an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
   <xs:attribute name="ref" type="xs:IDREF">
     <xs:annotation>
       <xs:documentation>A document-relative reference to an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
   <xs:attribute name="uri" type="xs:anyURI">
     <xs:annotation>
       <xs:documentation>An internationalized resource identifier or uniform resource identifier for a node or object.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
 </xs:schema>

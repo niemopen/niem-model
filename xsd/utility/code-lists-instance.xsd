@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     NIEM Model Version 6.0
+     Project Specification 02
+     11 April 2024
+     Copyright (c) OASIS Open 2024. All Rights Reserved.
+     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
+     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+-->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/"
-  version="psd01"
+  version="ps02"
   xml:lang="en-US"
   ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
   xmlns:cli="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/"
   xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <xs:annotation>
     <xs:documentation>Definitions for the use of the NIEM Code Lists Specification, version 5.0, in XML message instances.</xs:documentation>
   </xs:annotation>
-
   <xs:attribute name="codeListURI" type="xs:anyURI">
     <xs:annotation>
       <xs:documentation>A universal identifier for a code list.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
   <xs:attribute name="codeListColumnName" type="xs:string">
     <xs:annotation>
       <xs:documentation>A local name for a code list column within a code list.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
   <xs:attribute name="codeListConstrainingIndicator" type="xs:boolean">
     <xs:annotation>
       <xs:documentation>True if a code list binding constrains the validity of a code list value; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
 </xs:schema>

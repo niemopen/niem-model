@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     NIEM Model Version 6.0
+     Project Specification 02
+     11 April 2024
+     Copyright (c) OASIS Open 2024. All Rights Reserved.
+     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
+     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+-->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
-  version="psd01"
+  version="ps02"
   xml:lang="en-US"
   xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <xs:annotation>
     <xs:documentation>The appinfo schema provides support for high level data model concepts and additional syntax to support the NIEM conceptual model and validation of NIEM-conformant instances.</xs:documentation>
   </xs:annotation>
-  
   <xs:simpleType name="URIListSimpleType">
     <xs:list itemType="xs:anyURI"/>
   </xs:simpleType>
@@ -18,7 +25,6 @@
       <xs:documentation>A list of URIs for namespaces responsible for an augmentation.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-
   <xs:attribute name="deprecated">
     <xs:annotation>
       <xs:documentation>The deprecated attribute provides a method for identifying schema components as being deprecated. A deprecated component is one that is provided, but the use of which is not recommended.</xs:documentation>
@@ -29,7 +35,6 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-
   <xs:attribute name="externalImportIndicator">
     <xs:annotation>
       <xs:documentation>The externalImportIndicator attribute is true if and only if a namespace identified via xs:import is expected to be non-conformant.</xs:documentation>
@@ -40,7 +45,6 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-  
   <xs:attribute name="orderedPropertyIndicator">
     <xs:annotation>
       <xs:documentation>True if the order of a repeated property is significant.</xs:documentation>
@@ -51,13 +55,19 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-  
-  <xs:attribute name="referenceableIndicator" type="xs:boolean">
+  <xs:attribute name="referenceCode">
     <xs:annotation>
-      <xs:documentation>True if an element may be referenced; false if it can only be inline.</xs:documentation>
+      <xs:documentation>A code describing how a property may be referenced (or must appear inline).</xs:documentation>
     </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="NONE"/>
+        <xs:enumeration value="REF"/>
+        <xs:enumeration value="URI"/>
+        <xs:enumeration value="ANY"/>
+      </xs:restriction>
+    </xs:simpleType>
   </xs:attribute>
-  
   <xs:attribute name="referenceAttributeIndicator">
     <xs:annotation>
       <xs:documentation>True if an attribute is a list of object references (IDREFs or URIs).</xs:documentation>
@@ -68,7 +78,6 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-  
   <xs:attribute name="relationshipPropertyIndicator">
     <xs:annotation>
       <xs:documentation>True if a property applies to the relationship between an element and its parent.</xs:documentation>
@@ -79,16 +88,37 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-
   <xs:element name="LocalTerm">
+    <xs:annotation>
+      <xs:documentation>A meaning of a local term within a namespace.</xs:documentation>
+    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-    <xs:element name="SourceText" type="appinfo:NonemptyStringSimpleType" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+        <xs:element name="SourceText" type="appinfo:NonemptyStringSimpleType" minOccurs="0" maxOccurs="unbounded" form="qualified">
+          <xs:annotation>
+            <xs:documentation> A plain text citation of, reference to, or bibliographic entry for an originating or authoritative document defining the term.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
       </xs:sequence>
-      <xs:attribute name="term" type="appinfo:NonemptyStringSimpleType" use="required"/>
-      <xs:attribute name="literal" type="appinfo:NonemptyStringSimpleType"/>
-      <xs:attribute name="definition" type="appinfo:NonemptyStringSimpleType"/>
+      <xs:attribute name="term" type="appinfo:NonemptyStringSimpleType" use="required">
+        <xs:annotation>
+          <xs:documentation>A local term defined within a namespace.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="literal" type="appinfo:NonemptyStringSimpleType">
+        <xs:annotation>
+          <xs:documentation>A meaning of a local term, provided in a full plain-text form. when a local term is an abbreviation, acronym, or diminutive form of a longer term.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="definition" type="appinfo:NonemptyStringSimpleType">
+        <xs:annotation>
+          <xs:documentation>A dictionary-style description of the meaning of a local term.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
       <xs:attribute name="sourceURIs">
+        <xs:annotation>
+          <xs:documentation>A list of URIs, each of which is an identifier or locator for an originating or authoritative document defining the term.</xs:documentation>
+        </xs:annotation>
         <xs:simpleType>
           <xs:restriction>
             <xs:simpleType>
@@ -100,11 +130,9 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-
   <xs:simpleType name="NonemptyStringSimpleType">
     <xs:restriction base="xs:string">
       <xs:minLength value="1"/>
     </xs:restriction>
   </xs:simpleType>
-
 </xs:schema>

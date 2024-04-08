@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     NIEM Model Version 6.0
+     Project Specification 02
+     11 April 2024
+     Copyright (c) OASIS Open 2024. All Rights Reserved.
+     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
+     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+-->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
-  version="psd01"
+  version="ps02"
   xml:lang="en-US"
   xmlns:clsa="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <xs:annotation>
     <xs:documentation>This schema provides annotations for connecting content defined within an XML Schema document to the content of code lists.</xs:documentation>
   </xs:annotation>
-
   <xs:element name="SimpleCodeListBinding">
     <xs:annotation>
       <xs:documentation>An element for connecting simple content defined by an XML Schema component to a a column of a code list.</xs:documentation>
@@ -32,7 +39,6 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-
   <xs:element name="ComplexCodeListBinding">
     <xs:annotation>
       <xs:documentation>An element for connecting complex content defined by an XML Schema component to a set of columns of a code list.</xs:documentation>
@@ -66,5 +72,4 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-
 </xs:schema>

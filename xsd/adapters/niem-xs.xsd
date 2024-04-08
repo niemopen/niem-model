@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     NIEM Model Version 6.0
+     Project Specification 02
+     11 April 2024
+     Copyright (c) OASIS Open 2024. All Rights Reserved.
+     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
+     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+-->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
-  version="psd01"
+  version="ps02"
   xml:lang="en-US"
   xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
   ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
@@ -218,6 +227,26 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="Name">
+    <xs:annotation>
+      <xs:documentation>A data type for a name.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:Name">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="NCName">
+    <xs:annotation>
+      <xs:documentation>A data type for a name that does not contain a colon (":").</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:NCName">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="negativeInteger">
     <xs:annotation>
       <xs:documentation>A data type that is derived from nonPositiveInteger by setting the value of maxInclusive to be -1.</xs:documentation>
@@ -264,6 +293,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="xs:positiveInteger">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="QName">
+    <xs:annotation>
+      <xs:documentation>A data type for a qualified name.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:QName">
         <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
       </xs:extension>
     </xs:simpleContent>
