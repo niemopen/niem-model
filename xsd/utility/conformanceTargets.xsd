@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     NIEM Model Version 6.0
+     Project Specification 02
+     11 April 2024
+     Copyright (c) OASIS Open 2024. All Rights Reserved.
+     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
+     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+-->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
-  version="psd01"
+  version="ps02"
   xml:lang="en-US"
   xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <xs:attribute name="conformanceTargets">
     <xs:simpleType>
       <xs:list itemType="xs:anyURI"/>
     </xs:simpleType>
   </xs:attribute>
-
 </xs:schema>
