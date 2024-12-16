@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-     NIEM Model Version 6.0
-     Project Specification 02
-     11 April 2024
-     Copyright (c) OASIS Open 2024. All Rights Reserved.
-     Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/
-     Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
-     NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
--->
 <xs:schema
   targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   version="ps02"
@@ -16,6 +7,22 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>The appinfo schema provides support for high level data model concepts and additional syntax to support the NIEM conceptual model and validation of NIEM-conformant instances.</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification:https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement:https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+ 
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the
+      additional Specification Non-Assertion Covenants to support finally-approved for any Project
+      Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.    
+    </xs:documentation>
   </xs:annotation>
   <xs:simpleType name="URIListSimpleType">
     <xs:list itemType="xs:anyURI"/>
@@ -88,6 +95,47 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
+  <xs:element name="Augmentation">
+    <xs:annotation>
+      <xs:documentation>A record of a property added to a class in another namespace by this namespace.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="class" type="xs:QName">
+        <xs:annotation>
+          <xs:documentation>The augmented class.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    <xs:attribute name="property" type="xs:QName" use="required">
+      <xs:annotation>
+        <xs:documentation>The augmenting property.</xs:documentation>
+      </xs:annotation>      
+    </xs:attribute>
+    <xs:attribute name="globalClassCode">
+      <xs:annotation>
+        <xs:documentation>A code indicating the kind of globally augmented class.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="OBJECT">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation property that applies to all object classes.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ASSOCIATION">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation property that applies to all association classes.</xs:documentation>
+            </xs:annotation>            
+          </xs:enumeration>
+          <xs:enumeration value="LITERAL">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation property that applies to all datatypes and literal classes.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="LocalTerm">
     <xs:annotation>
       <xs:documentation>A meaning of a local term within a namespace.</xs:documentation>
