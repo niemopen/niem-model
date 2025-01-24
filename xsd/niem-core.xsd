@@ -4,7 +4,7 @@
   version="ps02"
   xml:lang="en-US"
   xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ utility/conformanceTargets.xsd"
-  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/XNDR/6.0/#ReferenceSchemaDocument"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
   xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:cli="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/"
   xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
@@ -5147,7 +5147,7 @@
       <xs:documentation>A date on which a fiscal year begins.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-  <xs:attribute name="metadataRef" type="xs:IDREFS">
+  <xs:attribute name="metadataRef" type="xs:IDREFS" appinfo:referenceAttributeIndicator="true">
     <xs:annotation>
       <xs:documentation>A list of metadata objects that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
