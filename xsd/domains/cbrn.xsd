@@ -2145,12 +2145,12 @@
       <xs:documentation>True if the system is simulated; false otherwise.  If the attribute is not present, the value is false.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-  <xs:attribute name="totalDoseMetadataRef" type="xs:IDREFS">
+  <xs:attribute name="totalDoseMetadataRef" type="xs:IDREFS" appinfo:referenceAttributeIndicator="true">
     <xs:annotation>
       <xs:documentation>A list of metadata objects about the accumulated ambient dose equivalent since the last radiation detection instrument reset, with units microsieverts (Sv), that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
-  <xs:attribute name="totalExposureMetadataRef" type="xs:IDREFS">
+  <xs:attribute name="totalExposureMetadataRef" type="xs:IDREFS" appinfo:referenceAttributeIndicator="true">
     <xs:annotation>
       <xs:documentation>A list of metadata objects about accumulated exposure since the last instrument reset, in milliroentgen (mR), that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
