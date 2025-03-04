@@ -20,15 +20,13 @@
       1 January 2025
       Copyright (c) OASIS Open 2025. All Rights Reserved.
       Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
-      Latest stage of narrative specification:https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
-      NIEMOpen IPR Statement:https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
       License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
- 
+
       This work is licensed under a Creative Commons Attribution 4.0 International License:
       CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
-      In addition to the above license, each Contributor also agrees in the CLA to provide the
-      additional Specification Non-Assertion Covenants to support finally-approved for any Project
-      Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.    
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
     </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="Alpha2" definition="Two-letter"/>
