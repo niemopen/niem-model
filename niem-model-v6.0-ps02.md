@@ -16,20 +16,21 @@
 
 # NIEM Model Version 6.0
 
-## Project Specification Draft 01
+## Project Specification 02
 
-## 30 September 2023
+## 10 March 2025
 
 &nbsp;
 
 #### This stage:
 
-https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.html (Authoritative) \
-https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.pdf
+https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/niem-model-v6.0-ps02.html (Authoritative) \
+https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/niem-model-v6.0-ps02.pdf
 
 #### Previous stage:
 
-N/A
+https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/niem-model-v6.0-ps01.html (Authoritative) \
+https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/niem-model-v6.0-ps01.pdf
 
 #### Latest stage:
 
@@ -47,7 +48,8 @@ Katherine Escobar (katherine.b.escobar.civ@mail.mil), [Joint Staff J6](https://w
 #### NBAC Technical Steering Committee Chairs:
 
 Kamran Atri (katri@a4safe.com), [A4SAFE](https://a4safe.com/) \
-Thomas Krul (thomas.krul@ecn.forces.gc.ca), [Public Safety Canada](https://www.publicsafety.gc.ca)
+Thomas Krul (thomas.krul@ecn.forces.gc.ca), [Public Safety Canada](https://www.publicsafety.gc.ca) \
+Paul Wormeli (pwormeli@WormeliConsulting.com), [Wormeli Consulting LLC](https://wormeliconsulting.com/)
 
 #### Editor:
 
@@ -57,25 +59,25 @@ Christina Medlin (christina.medlin@gtri.gatech.edu), [Georgia Tech Research Inst
 
 This prose specification is one component of a Work Product that also includes:
 
-- Complete XML Schema: 
-  - NIEM Core Schema: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/niem-core.xsd
-  - NIEM Domain Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/domains/
-  - NIEM Adapter Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/adapters/
-  - NIEM Auxiliary Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/auxiliary/
-  - NIEM Code Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/codes/
-  - NIEM External Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/external/
-  - NIEM Utility Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/utility/
+- Complete XML Schema:
+  - NIEM Core Schema: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/niem-core.xsd
+  - NIEM Domain Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/domains/
+  - NIEM Adapter Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/adapters/
+  - NIEM Auxiliary Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/auxiliary/
+  - NIEM Code Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/codes/
+  - NIEM External Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/external/
+  - NIEM Utility Schemas: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/utility/
 
 - NIEM Documentation files, including:
 
-  - NIEM README: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/README.md/
-  - NIEM documentation files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/docs/
+  - NIEM README: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/README.md/
+  - NIEM documentation files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/docs/
 
 - Other artifacts:
 
-  - NIEM CSV files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/csv/
-  - NIEM JSON-LD files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/json-ld/
-  - NIEM XML Catalog: https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/xsd/xml-catalog.xml
+  - NIEM CSV files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/csv/
+  - NIEM JSON-LD files: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/json-ld/
+  - NIEM XML Catalog: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/xml-catalog.xml
 
 #### Related work:
 
@@ -85,7 +87,7 @@ This specification replaces or supersedes:
 
 This specification is related to:
 
-- _NIEM Naming and Design Rules Specification Version 6.0_. Work in progress.
+- _NIEM Naming and Design Rules (NDR) Version 6.0_. Edited by Scott Renner. 1 January 2025. OASIS Project Specification Draft 01. https://docs.oasis-open.org/niemopen/ndr/v6.0/psd01/ndr-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/ndr/v6.0/ndr-v6.0.html.
 
 - _NIEM Code Lists Specification Version 6.0_.  Work in progress.
 
@@ -115,13 +117,13 @@ When referencing this specification the following citation format should be used
 
 **[NIEM-Model-v6.0]**
 
-_NIEM Model Version 6.0_. Edited by Christina Medlin. 30 September 2023. OASIS Project Specification Draft 01. https://docs.oasis-open.org/niemopen/niem-model/v6.0/psd01/niem-model-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html.
+_NIEM Model Version 6.0_. Edited by Christina Medlin. 10 March 2025. OASIS Project Specification 02. https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/niem-model-v6.0-ps02.html. Latest stage: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html.
 
 -------
 
 ## Notices
 
-Copyright &copy; OASIS Open 2023. All Rights Reserved.
+Copyright &copy; OASIS Open 2025. All Rights Reserved.
 
 Distributed under the terms of the OASIS [IPR Policy](https://www.oasis-open.org/policies-guidelines/ipr/).
 
@@ -131,8 +133,28 @@ For complete copyright information please see the Notices section in the Appendi
 
 # Table of Contents
 
+- [NIEM Model Version 6.0](#niem-model-version-60)
+  - [Project Specification 02](#project-specification-02)
+  - [10 March 2025](#10-march-2025)
+      - [This stage:](#this-stage)
+      - [Previous stage:](#previous-stage)
+      - [Latest stage:](#latest-stage)
+      - [Open Project:](#open-project)
+      - [Project Chair:](#project-chair)
+      - [NBAC Technical Steering Committee Chairs:](#nbac-technical-steering-committee-chairs)
+      - [Editor:](#editor)
+      - [Additional artifacts:](#additional-artifacts)
+      - [Related work:](#related-work)
+      - [Abstract:](#abstract)
+      - [Status:](#status)
+      - [Key words:](#key-words)
+      - [Citation format:](#citation-format)
+  - [Notices](#notices)
+- [Table of Contents](#table-of-contents)
 - [1 Introduction](#1-introduction)
   - [1.1 Changes from earlier versions](#11-changes-from-earlier-versions)
+    - [1.1.1 Changes from 5.2](#111-changes-from-52)
+    - [1.1.2 Changes from 6.0 PS01](#112-changes-from-60-ps01)
   - [1.2 Glossary](#12-glossary)
     - [1.2.1 Definitions of terms](#121-definitions-of-terms)
     - [1.2.2 Acronyms and abbreviations](#122-acronyms-and-abbreviations)
@@ -162,9 +184,9 @@ For complete copyright information please see the Notices section in the Appendi
 
 The NIEM model is a data model made up of a collection of properties and types defined within a set of namespaces, organized by governance authority.  NIEM components can be leveraged as reusable building blocks in information exchanges, providing consistency and well-defined semantics that support interoperability among various exchange partners.
 
-<!-- TODO: Label sections that are not normative -->
-
 ## 1.1 Changes from earlier versions
+
+### 1.1.1 Changes from 5.2
 
 Significant changes to the NIEM model in version 6.0 from previous version 5.2 include:
 
@@ -197,25 +219,46 @@ Significant changes to the NIEM model in version 6.0 from previous version 5.2 i
 
 Changes to version 6.0 are described in more detail in `README.md`.
 
+### 1.1.2 Changes from 6.0 PS01
+
+Changes in 6.0 PS02 to support [NIEM-NDR-v6.0] include:
+
+- Updated NDR conformance targets
+- Added attribute `appinfo:referenceAttributeIndicator="true"` to metadata reference attribute declarations
+- Added attribute `structures:appliesToParent` to `structures:AdapterType`, `structures:AssociationType`, and `structures:ObjectType`
+- Added element `Augmentation` to `appinfo.xsd`
+- Added types `Name`, `NCName`, and `QName` to the `niem-xs` namespace
+- Added documentation to utility schemas
+- Changed `appinfo:referenceableIndicator` to `appinfo:referenceCode`
+- Removed trailing hashes from URIs in `context.json`
+
+Other changes to the model and package include:
+
+- Added copyright and license information to additional schema annotation documentation blocks
+- Fixed missing USMTF tab in the codes documentation spreadsheet
+- Fixed NCIC codes from the October 2023 update
+- Updated NCIC local terminology definition
+- Updated the specification document
+
 ## 1.2 Glossary
 
 ### 1.2.1 Definitions of terms
 
 | Term | Definition |
 |:---- | ----------- |
-NDR    | The NIEM Naming and Design Rules is a technical specification managed by the NTAC which governs the architecture of the model.
+| NDR    | The NIEM Naming and Design Rules is a technical specification managed by the NTAC which governs the architecture of the model. |
 
 ### 1.2.2 Acronyms and abbreviations
 
 | Term | Literal |
 |:---- | ------- |
-NBAC   | NIEM Business Architectures Committee TSC
-NDR    | NIEM Naming and Design Rules Specification
-NIEM   | NIEMOpen, the NIEM Open Project under OASIS
-NMO    | NIEM Management Office TSC
-NTAC   | NIEM Technical Architecture Committee TSC
-PGB    | NIEM Project Governing Board
-TSC    | Technical Steering Committee
+| NBAC   | NIEM Business Architectures Committee TSC |
+| NDR    | NIEM Naming and Design Rules Specification |
+| NIEM   | NIEMOpen, the NIEM Open Project under OASIS |
+| NMO    | NIEM Management Office TSC |
+| NTAC   | NIEM Technical Architecture Committee TSC |
+| PGB    | NIEM Project Governing Board |
+| TSC    | Technical Steering Committee |
 
 -------
 
@@ -283,8 +326,6 @@ Major versions of the NIEM Model correspond to major versions of the NDR.  The a
 
 # 3 Conformance
 
-<!-- TODO: Review Conformance -->
-
 This specification normatively defines NIEM Model Version 6.0 with a set of reference XML schemas.
 
 The NIEM Naming and Design Rules [NIEM-NDR-v6.0] defines conformance targets, Schematron and text rules, and guidance for the conformant use of NIEM in messages and message specifications.
@@ -295,18 +336,14 @@ The NIEM Conformance Specification [NIEM-Conformance-v6.0] describes NIEM confor
 
 # Appendix A. References
 
-<!-- TODO: Check References -->
-
 ## A.1 Normative References
 
 ###### [NIEM-Conformance-v6.0]
 
-<!-- TODO: Get template for Conformance specification for better work-in-progress reference -->
 _NIEM Conformance Specification Version 6.0_. Work in progress.
 
 ###### [NIEM-NDR-v6.0]
 
-<!-- TODO: Get template for NDR specification for better work-in-progress reference -->
 _NIEM Naming and Design Rules Specification Version 6.0_. Work in progress.
 
 ###### [RFC2119]
@@ -331,102 +368,99 @@ Substantial contributions to this document from the following individuals are gr
 - **Chuck Chipman**, NTAC TSC, MilOps Domain Subcommittee
 - **April Mitchell**, NBAC TSC, Justice Domain Subcommittee
 
-<!-- TODO: Review HSC list -->
 Special thanks are given to the following individuals for their assistance in reviewing and resolving harmonization and other content issues affecting the model:
 
 **NBAC Harmonization Subcommittee Members:**
 
-| First Name | Last Name    | Domain Subcommittee or COI |
-| :--------- | :----------- | :------------------------- |
-Kamran       | Atri         | Emergency Management; NBAC co-chair
-Aubrey       | Beach        | NIEMOpen
-Chuck        | Chipman      | MilOps
-Kelly        | Cullinane    | OASIS
-Chet         | Ensign       | OASIS
-Katherine    | Escobar      | Joint Staff J6; PGB Chair
-Vamsi        | Kondannagari | Biometrics
-Thomas       | Krul         | NBAC co-chair
-Shunda       | Louis        | NIEMOpen
-Christina    | Medlin       | NIEMOpen
-April        | Mitchell     | Justice
-Ashok        | Singal       | Biometrics
-Beth         | Smalley      | NIEMOpen
-Duncan       | Sparrell     | Cyber
-Satish       | Sripada      | Biometrics
-Jennifer     | Stathakis    | Biometrics
-Stephen      | Sullivan     | NIEMOpen
-Cynthia      | Sun          | International Human Services
-Josh         | Wilson       | Biometrics
+| First Name   | Last Name    | Domain Subcommittee or COI |
+| :----------- | :----------- | :------------------------- |
+| Kamran       | Atri         | Emergency Management; NBAC co-chair |
+| Aubrey       | Beach        | NIEMOpen |
+| Chuck        | Chipman      | MilOps |
+| Kelly        | Cullinane    | OASIS |
+| Chet         | Ensign       | OASIS |
+| Katherine    | Escobar      | Joint Staff J6; PGB Chair |
+| Vamsi        | Kondannagari | Biometrics |
+| Thomas       | Krul         | NBAC co-chair |
+| Shunda       | Louis        | NIEMOpen |
+| Christina    | Medlin       | NIEMOpen |
+| April        | Mitchell     | Justice |
+| Ashok        | Singal       | Biometrics |
+| Beth         | Smalley      | NIEMOpen |
+| Duncan       | Sparrell     | Cyber |
+| Satish       | Sripada      | Biometrics |
+| Jennifer     | Stathakis    | Biometrics |
+| Stephen      | Sullivan     | NIEMOpen |
+| Cynthia      | Sun          | International Human Services |
+| Josh         | Wilson       | Biometrics |
 
-<!-- TODO: Review NTAC list -->
 Special thanks are also given to the following individuals for their guidance and expertise on architectural-related changes to the model:
 
 **NTAC Members:**
 
-| First Name | Last Name    | Domain Subcommittee or COI |
-| :--------- | :----------- | :------------------------- |
-Aubrey       | Beach        | BAH
-Jim          | Cabral       | InfoTrack US; NTAC Co-Chair
-Tom          | Carlson      | GTRI
-Mike         | Douklias     | Joint Staff J6
-Katherine    | Escobar      | Joint Staff J6; PGB Chair
-Mike         | Hulme        | Unisys
-Eric         | Jahn         | Alexandria Consulting
-Dave         | Kemp         | NSA
-Vamsi        | Kondannagari | DHS
-Peter        | Madruga      | GTRI
-Christina    | Medlin       | GTRI
-Scott        | Renner       | MITRE; NTAC Co-Chair
-Duncan       | Sparrell     | sFractal Consulting
-Jennifer     | Stathakis    | FBI
-Stephen      | Sullivan     | BAH; NBAC Secretary
+| First Name   | Last Name    | Domain Subcommittee or COI |
+| :----------- | :----------- | :------------------------- |
+| Aubrey       | Beach        | BAH |
+| Jim          | Cabral       | InfoTrack US; NTAC Co-Chair |
+| Tom          | Carlson      | GTRI |
+| Mike         | Douklias     | Joint Staff J6 |
+| Katherine    | Escobar      | Joint Staff J6; PGB Chair |
+| Mike         | Hulme        | Unisys |
+| Eric         | Jahn         | Alexandria Consulting |
+| Dave         | Kemp         | NSA |
+| Vamsi        | Kondannagari | DHS |
+| Peter        | Madruga      | GTRI |
+| Christina    | Medlin       | GTRI |
+| Scott        | Renner       | MITRE; NTAC Co-Chair |
+| Duncan       | Sparrell     | sFractal Consulting |
+| Jennifer     | Stathakis    | FBI |
+| Stephen      | Sullivan     | BAH; NBAC Secretary |
 
 ## B.2 Participants
 
-<!-- TODO: Review NBAC list -->
 The following individuals have participated in the creation of this specification and are gratefully acknowledged:
 
 **NBAC Members:**
 
-| First Name | Last Name  | Company  | Domain Subcommittee or COI
-| :--------- | :--------- | :------- |:--------------------------
-Meher        | Alam       | USDOT    | Surface Transportation
-Kamran       | Atri       | A4SAFE   | Emergency Management; NBAC Co-Chair
-Aubrey       | Beach      | BAH/Joint Staff J6 | NMO
-Ernesto      | Broderson  |          | NTAC
-Jim          | Cabral     | InfoTech | NTAC Co-Chair, PGB
-Maria        | Cardiellos | IJIS     | PGB
-Tom          | Carlson    | GTRI/Joint Staff J6 | NTAC
-Chuck        | Chipman    | GTRI/Joint Staff J6 | NTAC
-Kelly        | Cullinane  | OASIS    | OASIS
-Mark         | Dotson     | GTRI/Joint Staff J6 | NMO, PGB alternate
-Mike         | Douklias   | Joint Staff J6 | NTAC
-Gary         | Egner      | Equivant | PGB
-Chet         | Ensign     | OASIS    | OASIS
-Katherine    | Escobar    | Joint Staff J6 | PGB Chair
-Taraneh      | Etemadi    | OBIM     | NBAC, Biometrics
-Lavdjola     | Farrington | Joint Staff J6 | MilOps Co-Chair
-Bob          | Greeves    | NCJA     | Justice, PGB
-Dave         | Hardy      | BAH/Joint Staff J6 | NBAC
-Eric         | Jahn       | Alexandria Consulting | NTAC
-Ashwini      | Jarral     | IJIS     | NBAC, PGB alternate
-Luke         | Johnson    | USDOT/National Highway <br />Traffic Safety Administration (NHTSA) | Surface Transportation
-David        | Kemp       | NSA      | NTAC
-Vamsi        | Kondannagari |  Integral Consulting/OBIM  | Biometrics
-Thomas       | Krul       | Public Safety Canada | NBAC Co-Chair
-Payton       | Lamb       | Commonwealth of Virginia <br /> Office of Data Governance and Analytics (ODGA) | PGB
-Shunda       | Louis      | BAH/Joint Staff J6 | NMO, Harmonization SC Co-Chair
-Christina    | Medlin     | GTRI/Joint Staff J6 | Harmonization SC Co-chair
-April        | Mitchell   | FBI      | Justice Co-Chair; PGB
-Scott        | Renner     | MITRE/Joint Staff J6 | NTAC Co-Chair
-Beth         | Smalley    | Joint Staff J6 | MilOps Co-Chair
-Duncan       | Sparrell   | sFractal | NTAC, PGB
-Satish       | Sripada    | OBIM     | Biometrics
-Jennifer     | Stathakis  | FBI CJIS | Biometrics
-Stephen      | Sullivan   | BAH/Joint Staff J6 | NBAC Secretary
-Ryan         | Triplett   | Defense Forensic and Biometrics Agency | Biometrics
-Josh         | Wilson     | FBI CJIS | Biometrics
-Paul         | Wormeli    | Wormeli Consulting | NMO Communication and Outreach SC
+| First Name   | Last Name  | Company  | Domain Subcommittee or COI |
+| :----------- | :--------- | :------- |:-------------------------- |
+| Meher        | Alam       | USDOT    | Surface Transportation |
+| Kamran       | Atri       | A4SAFE   | Emergency Management; NBAC Co-Chair |
+| Aubrey       | Beach      | BAH/Joint Staff J6 | NMO |
+| Ernesto      | Broderson  |          | NTAC |
+| Jim          | Cabral     | InfoTech | NTAC Co-Chair, PGB |
+| Maria        | Cardiellos | IJIS     | PGB |
+| Tom          | Carlson    | GTRI/Joint Staff J6 | NTAC |
+| Chuck        | Chipman    | GTRI/Joint Staff J6 | NTAC |
+| Kelly        | Cullinane  | OASIS    | OASIS |
+| Mark         | Dotson     | GTRI/Joint Staff J6 | NMO, PGB alternate |
+| Mike         | Douklias   | Joint Staff J6 | NTAC |
+| Gary         | Egner      | Equivant | PGB |
+| Chet         | Ensign     | OASIS    | OASIS |
+| Katherine    | Escobar    | Joint Staff J6 | PGB Chair |
+| Taraneh      | Etemadi    | OBIM     | NBAC, Biometrics |
+| Lavdjola     | Farrington | Joint Staff J6 | MilOps Co-Chair |
+| Bob          | Greeves    | NCJA     | Justice, PGB |
+| Dave         | Hardy      | BAH/Joint Staff J6 | NBAC |
+| Eric         | Jahn       | Alexandria Consulting | NTAC |
+| Ashwini      | Jarral     | IJIS     | NBAC, PGB alternate |
+| Luke         | Johnson    | USDOT/National Highway <br />Traffic Safety Administration (NHTSA) | Surface Transportation |
+| David        | Kemp       | NSA      | NTAC |
+| Vamsi        | Kondannagari |  Integral Consulting/OBIM  | Biometrics |
+| Thomas       | Krul       | Public Safety Canada | NBAC Co-Chair |
+| Payton       | Lamb       | Commonwealth of Virginia <br /> Office of Data Governance and Analytics (ODGA) | PGB |
+| Shunda       | Louis      | BAH/Joint Staff J6 | NMO, Harmonization SC Co-Chair |
+| Christina    | Medlin     | GTRI/Joint Staff J6 | Harmonization SC Co-chair |
+| April        | Mitchell   | FBI      | Justice Co-Chair; PGB |
+| Scott        | Renner     | MITRE/Joint Staff J6 | NTAC Co-Chair |
+| Beth         | Smalley    | Joint Staff J6 | MilOps Co-Chair |
+| Duncan       | Sparrell   | sFractal | NTAC, PGB |
+| Satish       | Sripada    | OBIM     | Biometrics |
+| Jennifer     | Stathakis  | FBI CJIS | Biometrics |
+| Stephen      | Sullivan   | BAH/Joint Staff J6 | NBAC Secretary |
+| Ryan         | Triplett   | Defense Forensic and Biometrics Agency | Biometrics |
+| Josh         | Wilson     | FBI CJIS | Biometrics |
+| Paul         | Wormeli    | Wormeli Consulting | NMO Communication and Outreach SC |
 
 -------
 
@@ -444,9 +478,9 @@ Updates to working drafts are made to the `dev` branch.  The full commit history
 
 The following are links to the GitHub pull requests merged into the model for 6.0:
 
-| Milestone | GitHub link |
-|:--------- | ----------- |
-6.0 PSD 01  | https://github.com/niemopen/niem-model/pulls?q=is%3Apr+milestone%3A6.0-psd01
+| Milestone   | GitHub link |
+|:----------- | ----------- |
+| 6.0 PSD 01  | https://github.com/niemopen/niem-model/pulls?q=is%3Apr+milestone%3A6.0-psd01 |
 
 Note that file diffs are available from each pull request.
 
@@ -456,8 +490,9 @@ The following are links to issues documenting the changes that have been made:
 
 | Milestone | GitHub link |
 |:--------- | ----------- |
-6.0 PSD 01 model issues | `niemopen/niem-model` repo, issues with `milestone:6.0-psd01` <br /> https://github.com/niemopen/niem-model/issues?q=is%3Aissue+milestone%3A6.0-psd01
-6.0 PSD 01 NDR-related issues | `niemopen/niem-naming-design-rules` repo, issues with `milestone:6.0-psd01` and `label:model` <br /> https://github.com/niemopen/niem-naming-design-rules/issues?q=is%3Aissue+milestone%3A6.0-psd01+label%3Amodel
+| 6.0 PSD 01 model issues | `niemopen/niem-model` repo, issues with `milestone:6.0-psd01` <br /> https://github.com/niemopen/niem-model/issues?q=is:issue+milestone:6.0-psd01 |
+| 6.0 PSD 01 model-related NDR issues | `niemopen/niem-naming-design-rules` repo, issues with `milestone:6.0-ps02` and `label:model` <br /> https://github.com/niemopen/niem-naming-design-rules/issues?q=is:issue+milestone:6.0-psd01+label:model |
+| 6.0 PS 02 model issues | `niemopen/niem-model` repo, issues with `milestone:6.0-ps02` <br /> https://github.com/niemopen/niem-model/issues?q=is:issue+milestone:6.0-ps02 |
 
 -------
 
