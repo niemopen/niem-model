@@ -18,7 +18,7 @@
 
 ## Project Specification 02
 
-## 10 March 2025
+## 26 March 2025
 
 &nbsp;
 
@@ -346,21 +346,16 @@ Specifically, an implementation conforms to this specification if it satisfies a
 
 The NIEM Naming and Design Rules [NIEM-NDR-v6.0] defines conformance targets, Schematron and text rules, and guidance for the conformant use of NIEM in messages and message specifications.
 
-The NIEM Conformance Specification [NIEM-Conformance-v6.0] describes NIEM conformance.
-
 -------
 
 # Appendix A. References
 
 ## A.1 Normative References
 
-###### [NIEM-Conformance-v6.0]
-
-_NIEM Conformance Specification Version 6.0_. Work in progress.
-
 ###### [NIEM-NDR-v6.0]
 
-_NIEM Naming and Design Rules Specification Version 6.0_. Work in progress.
+_NIEM Naming and Design Rules (NDR) Version 6.0_.  Edited by Scott Renner. 27 January 2025. OASIS Project Specification Draft 01.  https://docs.oasis-open.org/niemopen/ndr/v6.0/psd01/ndr-v6.0-psd01.html. Latest stage: https://docs.oasis-open.org/niemopen/ndr/v6.0/ndr-v6.0.html.
+
 
 ###### [RFC2119]
 
