@@ -326,7 +326,23 @@ Major versions of the NIEM Model correspond to major versions of the NDR.  The a
 
 # 3 Conformance
 
-This specification normatively defines NIEM Model Version 6.0 with a set of reference XML schemas.
+This specification normatively defines NIEM Model Version 6.0 with a set of reference XML Schema documents. An implementation uses the model to partly define the messages it produces in terms of model components. In general, a conforming implementation uses all of the model components that satisfy a business need, uses each component according to its definition, does not needlessly duplicate components in the model, and does not add components to the model namespaces.
+
+Specifically, an implementation conforms to this specification if it satisfies all of the following  conditions:
+
+1. Every XML Schema document used in the implementation that has a target namespace equal to the target namespace of a reference schema document MUST be a subset of that document. This means that every possible XML element or attribute which is valid against the implementation's schema document will also be valid against the reference schema document.
+
+2. Every XML Schema document used in the implementation that refers to a schema component with a namespace and local name equal to that of a component in a reference schema document MUST import that reference schema document or a subset of that reference schema document. 
+
+3. In every XML document produced by the implementation, every element and attribute that has a namespace equal to the target namespace of a reference schema document MUST be valid against that reference schema document.
+
+4. In every XML document produced by the implementation, the content of every element and attribute that has a namespace equal to the target namespace of a reference schema document MUST have a meaning consistent with the business semantics defined for that element or attribute in the reference schema document.  
+
+5. Every component from a reference schema document that is used by the implementation MUST be used in a manner consistent with the component's structural definition and business semantics.
+
+6. If a component defined by a reference schema document matches the business semantics required by the implementation, then the implementation MUST use that component, either directly or as the basis for derived components. An implementation MUST NOT needlessly duplicate the business semantics of a component in the NIEM model. (This condition also applies to implementations that do not create XML messages.)
+
+7. An implementation MAY use the structure and business semantics of components defined by a reference schema document in a JSON message (or in any other supported serialization). Every such message component has an XML equivalent, and that equivalent component MUST satisfy conditions #3 and #4 above. (An implementation is not required to actually generate the XML equivalent; the requirement is only that the XML equivalent, if generated, would conform.)
 
 The NIEM Naming and Design Rules [NIEM-NDR-v6.0] defines conformance targets, Schematron and text rules, and guidance for the conformant use of NIEM in messages and message specifications.
 

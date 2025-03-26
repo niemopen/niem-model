@@ -97,7 +97,7 @@
   </xs:attribute>
   <xs:element name="Augmentation">
     <xs:annotation>
-      <xs:documentation>A record of a property added to a class in another namespace by this namespace.</xs:documentation>
+      <xs:documentation>A record of an attribute property added to a class in another namespace by this namespace.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:attribute name="class" type="xs:QName">
@@ -109,6 +109,25 @@
       <xs:annotation>
         <xs:documentation>The augmenting property.</xs:documentation>
       </xs:annotation>      
+    </xs:attribute>
+    <xs:attribute name="use">
+      <xs:annotation>
+        <xs:documentation>A code indicating whether the augmenting property is optional or required</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="optional">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation attribute property that is optional.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="required">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation attribute property that is required.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="globalClassCode">
       <xs:annotation>
