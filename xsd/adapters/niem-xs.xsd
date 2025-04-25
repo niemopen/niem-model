@@ -25,7 +25,9 @@
 
       This work is licensed under a Creative Commons Attribution 4.0 International License:
       CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
-      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the 
+      additional Specification Non-Assertion Covenants to support finally-approved for any Project 
+      Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
     </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="maxInclusive" definition="An inclusive maximum value. To be valid, a value must be less than or equal to the value of xs:maxInclusive."/>
