@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/domains/humanServices/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:fips="http://release.niem.gov/niem/codes/fips/5.2/"
-  xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
-  xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
-  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
-  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
+  version="ps02"
+  xml:lang="en-US"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:fips="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/"
+  xmlns:hs="https://docs.oasis-open.org/niemopen/ns/model/domains/humanServices/6.0/"
+  xmlns:im="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
+  xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>Human Services</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+    </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="AFCARS" literal="Adoption and Foster Care Analysis and Reporting System (AFCARS)"/>
       <appinfo:LocalTerm term="ASFA" literal="Adoption and Safe Families Act"/>
@@ -43,13 +62,13 @@
       <appinfo:LocalTerm term="VA" literal="Veterans Affairs"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/codes/fips/5.2/" schemaLocation="../codes/fips.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/immigration/5.2/" schemaLocation="immigration.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="jxdm.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="screening.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" schemaLocation="../codes/fips.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/" schemaLocation="immigration.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/" schemaLocation="justice.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AbuseNeglectInjuryType">
     <xs:annotation>
       <xs:documentation>A data type for an applied augmentation for type nc:InjuryType</xs:documentation>
@@ -665,9 +684,8 @@
       <xs:documentation>A data type for information about a participant.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseParticipantInvolvementText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseParticipantAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -778,9 +796,8 @@
       <xs:documentation>A data type for information about the caseworker.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseworkerCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseworkerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -1297,9 +1314,8 @@
       <xs:documentation>A data type for information about a person who has not yet reached the age of legal majority (i.e., adulthood).</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ChildRemovalDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CountyOfCustodyText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ChildAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -1327,12 +1343,11 @@
       <xs:documentation>A data type for information about a person who has not yet reached the age of majority and in whose interest a child welfare case has been initiated.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:ChildRemovalDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RemovalIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:FatherUnknownText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PlacementChangeReasonAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PlacementText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ChildVictimAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -1502,9 +1517,8 @@
       <xs:documentation>A data type for details about court event attendees</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CaseInvolvementDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CourtEventInputIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:CourtEventAttendeeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -2767,38 +2781,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="JuvenileFamilyFinancialProblemCodeSimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for describing whether a family suffers from financial problems.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="No">
-        <xs:annotation>
-          <xs:documentation>No</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Unknown">
-        <xs:annotation>
-          <xs:documentation>Unknown</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Yes">
-        <xs:annotation>
-          <xs:documentation>Yes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="JuvenileFamilyFinancialProblemCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for describing whether a family suffers from financial problems.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="hs:JuvenileFamilyFinancialProblemCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:complexType name="JuvenileFireSettingCaseType">
     <xs:annotation>
       <xs:documentation>A data type for a juvenile firesetting case. This is specific to juveniles.</xs:documentation>
@@ -3014,9 +2996,8 @@
       <xs:documentation>A data type for a juvenile.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:JuvenileArrestedFriendsIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:JuvenileAttentionDisorderDiagnosisIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:JuvenileChildEverAdoptedIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -3440,12 +3421,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MetadataType">
+  <xs:complexType name="MetadataAugmentationType">
     <xs:annotation>
-      <xs:documentation>A data type for metadata about a record.</xs:documentation>
+      <xs:documentation>A data type for additional information about metadata.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="hs:CreationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:LastUpdatedTrackingID" minOccurs="0" maxOccurs="unbounded"/>
@@ -3536,11 +3517,10 @@
       <xs:documentation>A data type for a person related to a missing child.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:ChildRelationshipText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:Warrant" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:MissingChildRelatedPersonAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -3882,7 +3862,7 @@
       <xs:documentation>A data type for a person receiving medical care.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:CustodialEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:MedicalSummary" minOccurs="0" maxOccurs="unbounded"/>
@@ -3891,7 +3871,6 @@
           <xs:element ref="hs:ProviderEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ReportingEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SpeciesAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PatientAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -3924,7 +3903,7 @@
           <xs:element ref="hs:StudentCurrentEducationDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StudentSpecialEducationEligibleIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StudentCurrentEducationEnrollmentEndDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:EducationalIssues" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:HistoricalNarrative" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:ICWAEligibilityIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -3942,6 +3921,7 @@
           <xs:element ref="hs:PersonGenderIdentityAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PersonPhysicalConditionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RecentLivingSituationCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:Wages" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -4397,9 +4377,8 @@
       <xs:documentation>A data type for information about the person filing the petition.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PetitionerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -4410,11 +4389,10 @@
       <xs:documentation>A data type for a person who is professionally qualified to prepare and dispense medicinal drugs.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="hs:NPIIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:StateLicenseIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:PharmacistAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -5454,9 +5432,8 @@
       <xs:documentation>A data type for the party required to the next court event.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:RequiredPartyAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -5639,9 +5616,8 @@
       <xs:documentation>A data type for information about a person who is considered a Serious Habitual Offender Drug Involved individual by a law enforcement agency.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SeriousHabitualOffenderDeterminingJurisdiction" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SeriousHabitualOffenderScoreText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="hs:SeriousHabitualOffenderParentNotifiedIndicator" minOccurs="0" maxOccurs="unbounded"/>
@@ -6121,6 +6097,28 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="StudentAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a student.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="hs:StudentCurrentEducationGradeLevelAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentCurrentEducationDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentCurrentEducationEnrollmentIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentCurrentEducationEnrollmentEndDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentCurrentEducationTruancyIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:EducationalIssues" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:EducationalAdjustmentAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentSpecialEducationEligibleIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentSpecialEducationDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentSchoolConductChangeText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="hs:StudentPhotoImage" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="StudentEducationGradeLevelCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for describing a grade level in juvenile education.</xs:documentation>
@@ -6202,31 +6200,6 @@
         <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
       </xs:extension>
     </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="StudentType">
-    <xs:annotation>
-      <xs:documentation>A data type for a student.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationGradeLevelAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationEnrollmentIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationEnrollmentEndDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentCurrentEducationTruancyIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:EducationalIssues" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:EducationalAdjustmentAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentSpecialEducationEligibleIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentSpecialEducationDetails" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentSchoolConductChangeText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentPhotoImage" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="hs:StudentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="SubjectChildAssociationType">
     <xs:annotation>
@@ -9862,7 +9835,7 @@
       <xs:documentation>A date of most recent removal from a foster home.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="FosterCareLiablePlacementCountyCode" type="fips:USCounty3DigitCodeType" nillable="true">
+  <xs:element name="FosterCareLiablePlacementCountyCode" type="fips:USCounty5DigitCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A FIPS code of the legal liable county with the current placement setting.</xs:documentation>
     </xs:annotation>
@@ -10247,7 +10220,7 @@
       <xs:documentation>A data concept for expressing the financial problems that a child or youth's family is experiencing.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="JuvenileFamilyFinancialProblemCode" type="hs:JuvenileFamilyFinancialProblemCodeType" substitutionGroup="hs:JuvenileFamilyFinancialProblemAbstract" nillable="true">
+  <xs:element name="JuvenileFamilyFinancialProblemCode" type="nc:YesNoUnknownCodeType" substitutionGroup="hs:JuvenileFamilyFinancialProblemAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A description of whether juvenile's family is experiencing financial problems.</xs:documentation>
     </xs:annotation>
@@ -10767,9 +10740,9 @@
       <xs:documentation>A description of past in-patient hospitalizations due to mental health issues.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="hs:MetadataType" nillable="true">
+  <xs:element name="MetadataAugmentation" type="hs:MetadataAugmentationType" substitutionGroup="nc:MetadataAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>Information that further qualifies primary juvenile data; data about data. A typical use is internal tracking IDs.</xs:documentation>
+      <xs:documentation>Additional information about metadata.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MethodOfPaymentAbstract" abstract="true">
@@ -11407,7 +11380,7 @@
       <xs:documentation>A data concept for describing a county for whom a person was held in a prior detention.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PriorDetentionHoldingForCountyCode" type="fips:USCounty3DigitCodeType" substitutionGroup="hs:PriorDetentionHoldingForCountyAbstract" nillable="true">
+  <xs:element name="PriorDetentionHoldingForCountyCode" type="fips:USCounty5DigitCodeType" substitutionGroup="hs:PriorDetentionHoldingForCountyAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A county for whom a person was held in a prior detention.</xs:documentation>
     </xs:annotation>
@@ -12152,14 +12125,9 @@
       <xs:documentation>An association between a child and a person who is in a Person Union with one of the child's biological parents.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Student" type="hs:StudentType" nillable="true">
+  <xs:element name="StudentAugmentation" type="hs:StudentAugmentationType" substitutionGroup="nc:StudentAugmentationPoint" nillable="true">
     <xs:annotation>
-      <xs:documentation>A role of a K-12 student, played by a juvenile.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="StudentAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for StudentType.</xs:documentation>
+      <xs:documentation>Additional information about a student.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="StudentCurrentEducationDescriptionText" type="nc:TextType" nillable="true">
@@ -12195,11 +12163,6 @@
   <xs:element name="StudentCurrentEducationTruancyIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if the juvenile is currently considered truant; false otherwise.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="StudentIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A unique alphanumeric identification assigned to a student by an education organization.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="StudentPhotoImage" type="nc:ImageType" nillable="true">
@@ -12515,6 +12478,11 @@
   <xs:element name="VisualDisabilityIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
       <xs:documentation>True if the juvenile has a visual disability; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Wages" type="hs:WagesType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A payment made by an employer to an employee for work done in a specific period of time.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="WagesAugmentationPoint" abstract="true">

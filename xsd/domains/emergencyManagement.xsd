@@ -1,27 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:apco="http://release.niem.gov/niem/codes/apco/5.0/"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:biom="http://release.niem.gov/niem/domains/biometrics/5.2/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:edxl_rm="http://release.niem.gov/niem/codes/edxl_rm/5.0/"
-  xmlns:edxl-cap="http://release.niem.gov/niem/adapters/edxl-cap/5.0/"
-  xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/"
-  xmlns:fema="http://release.niem.gov/niem/codes/fema/5.1/"
-  xmlns:fips="http://release.niem.gov/niem/codes/fips/5.2/"
-  xmlns:have-codes="http://release.niem.gov/niem/codes/edxl_have/5.0/"
-  xmlns:iso_639-3="http://release.niem.gov/niem/codes/iso_639-3/5.1/"
-  xmlns:it="http://release.niem.gov/niem/domains/internationalTrade/5.2/"
-  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
-  xmlns:mo="http://release.niem.gov/niem/domains/militaryOperations/5.2/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
-  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/"
+  version="ps02"
+  xml:lang="en-US"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
+  xmlns:apco="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:biom="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:edxl_rm="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_rm/6.0/"
+  xmlns:em="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/"
+  xmlns:fema="https://docs.oasis-open.org/niemopen/ns/model/codes/fema/6.0/"
+  xmlns:fips="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/"
+  xmlns:have-codes="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_have/6.0/"
+  xmlns:iso_639-3="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/"
+  xmlns:it="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/"
+  xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/"
+  xmlns:mo="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:niem-cap="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>Emergency Management</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+    </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="Cat-C" definition="FEMA Category C: Roads and Bridges"/>
       <appinfo:LocalTerm term="Cat-D" definition="FEMA Category D: Water Control Facilities"/>
@@ -65,21 +84,21 @@
       <appinfo:LocalTerm term="X509" definition="X.509 is a standard defining the format of public key certificates."/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/adapters/edxl-cap/5.0/" schemaLocation="../adapters/edxl-cap.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/apco/5.0/" schemaLocation="../codes/apco.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/edxl_have/5.0/" schemaLocation="../codes/have-codes.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/edxl_rm/5.0/" schemaLocation="../codes/edxl_rm.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/fema/5.1/" schemaLocation="../codes/fema.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/fips/5.2/" schemaLocation="../codes/fips.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/iso_639-3/5.1/" schemaLocation="../codes/iso_639-3.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/biometrics/5.2/" schemaLocation="biom.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/internationalTrade/5.2/" schemaLocation="internationalTrade.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="jxdm.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/militaryOperations/5.2/" schemaLocation="mo.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="screening.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-cap/6.0/" schemaLocation="../adapters/niem-cap.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/apco/6.0/" schemaLocation="../codes/apco.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_have/6.0/" schemaLocation="../codes/have-codes.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/edxl_rm/6.0/" schemaLocation="../codes/edxl_rm.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/fema/6.0/" schemaLocation="../codes/fema.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/fips/6.0/" schemaLocation="../codes/fips.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_639-3/6.0/" schemaLocation="../codes/iso_639-3.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/biometrics/6.0/" schemaLocation="biom.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/" schemaLocation="internationalTrade.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/" schemaLocation="justice.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/militaryOperations/6.0/" schemaLocation="mo.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:complexType name="AccessType">
     <xs:annotation>
       <xs:documentation>A data type for a credential class that describes the access rights</xs:documentation>
@@ -860,7 +879,7 @@
       <xs:documentation>A data type for an ID card that identifies a person. A badge can be a low cost card, or a PIV card that follows specification NIST SP-800-73-2. Badge may work together with a pin number, visual identification and biometrics of the badge holder to make a positive identification of a person</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="em:PersonIDCardType">
+      <xs:extension base="nc:IdentificationType">
         <xs:sequence>
           <xs:element ref="em:PersonHumanResource" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:BadgeJobTitleText" minOccurs="0" maxOccurs="unbounded"/>
@@ -1113,11 +1132,6 @@
           <xs:documentation>Character set C encodes only numbers and the FNC1 function (indicated in blue). Because the numbers are "interleaved" into pairs, two numbers are encoded into every bar-code character which makes it a very high-density bar-code.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="SCC-14">
-        <xs:annotation>
-          <xs:documentation>Interleaved 2 of 5 (ITF) is a numeric-only bar-code used for encoding pairs of numbers in a high density bar-code format</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="SSCC-18">
         <xs:annotation>
           <xs:documentation>Character set C encodes only numbers and the FNC1 function (indicated in blue). Because the numbers are "interleaved" into pairs, two numbers are encoded into every bar-code character which makes it a very high-density bar-code.</xs:documentation>
@@ -1145,12 +1159,7 @@
       </xs:enumeration>
       <xs:enumeration value="USPS">
         <xs:annotation>
-          <xs:documentation>Character set A allows for uppercase characters, punctuation, numbers and several special functions such as a return or tab.Character set B allows for upper and lower case letters, punctuation, numbers and a few select functions</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="USPS">
-        <xs:annotation>
-          <xs:documentation>Interleaved 2 of 5 (ITF) is a numeric-only bar-code used for encoding pairs of numbers in a high density bar-code format</xs:documentation>
+          <xs:documentation>Character set A allows for uppercase characters, punctuation, numbers and several special functions such as a return or tab.Character set B allows for upper and lower case letters, punctuation, numbers and a few select functions.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="USPS CONFIRM">
@@ -4126,9 +4135,8 @@
       <xs:documentation>A data type for a person who is a first responder</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PersonHumanResource" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:JobTitleOrRole" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:CheckInOutRecord" minOccurs="0" maxOccurs="unbounded"/>
@@ -4254,6 +4262,22 @@
         <xs:sequence>
           <xs:element ref="nc:Employee" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:HumanResourcesAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="IdentificationAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about an identification.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="em:ResourcePicture" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:NISTSP800733PIVCardData" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:EAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:PIVAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="em:FIPS201ConformanceCode" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -5345,7 +5369,7 @@
       <xs:extension base="nc:MissionType">
         <xs:sequence>
           <xs:element ref="nc:IncidentEvent" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="edxl-cap:AlertAdapter" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="niem-cap:AlertAdapter" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:MissionStagingLocation" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:MissionInformationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -5474,11 +5498,6 @@
       <xs:enumeration value="Alarm">
         <xs:annotation>
           <xs:documentation>Alarm message(s)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Alert">
-        <xs:annotation>
-          <xs:documentation>Alert message(s)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Alert">
@@ -5906,9 +5925,8 @@
       <xs:documentation>A data type for a person receiving or registered to receive medical treatment.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PatientConditionName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PatientConditionOnsetDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PatientDiagnosis" minOccurs="0" maxOccurs="unbounded"/>
@@ -6000,28 +6018,6 @@
           <xs:element ref="em:UpdateRecord" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:Attachment" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:PersonHumanResourceAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="PersonIDCardType">
-    <xs:annotation>
-      <xs:documentation>A data type for a credential class that represents the identification of a human resource</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:IdentificationType">
-        <xs:sequence>
-          <xs:element ref="em:NameOnCardText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:IDCategoryCodeAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:SignatureAuthorityName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:AgencySymbol" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:ResourcePicture" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:CardPicture" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:NISTSP800733PIVCardData" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:EAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:PIVAssuranceLevelCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:FIPS201ConformanceCode" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="em:PersonIDCardAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -6749,9 +6745,8 @@
       <xs:documentation>A data type for an expert or staff that participates in emergency preparedness and response activities.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ResponderIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ResponderOrganization" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ResponderAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -6945,13 +6940,12 @@
       <xs:documentation>A data type for a structure that contains additional information about a Service Call Originator</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
           <xs:element ref="em:CallerCategoryText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementOfficialBadgeIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:EnforcementUnitIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:OrganizationName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="em:ServiceCallOriginatorAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -7209,38 +7203,6 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="TernaryIndicatorCodeSimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a Ternary Indicator</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="No">
-        <xs:annotation>
-          <xs:documentation>No</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Unknown">
-        <xs:annotation>
-          <xs:documentation>Unknown</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Yes">
-        <xs:annotation>
-          <xs:documentation>Yes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="TernaryIndicatorCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for a Ternary Indicator code (Yes, No, Unknown)</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="em:TernaryIndicatorCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="TestAugmentationType">
     <xs:annotation>
@@ -10680,11 +10642,6 @@
       <xs:documentation>An augmentation point for type em:AfterActionReviewReportType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AgencySymbol" type="nc:BinaryType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A binary (i.e. digitized) presentation of an Agency's Symbol (i.e. Logo of the agency that the ID has been issued for)</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="AlarmAudibleDescriptionCode" type="em:AlarmAudibleDescriptionCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A code indicating whether the alarm is audible or silent</xs:documentation>
@@ -11513,11 +11470,6 @@
   <xs:element name="CardioThoracicServiceCoverageStatusCode" type="have-codes:AvailabilityStatusCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>A status describing the availability of cardio-thoracic surgical services</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="CardPicture" type="nc:ImageType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A binary (i.e. digitized) presentation of an identification card picture</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Cat-CCategoryCode" type="em:Cat-CCategoryCodeType" nillable="true">
@@ -12860,12 +12812,7 @@
       <xs:documentation>An augmentation point for type em:HumanResourcesType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IDCategoryCodeAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a code list for identification information types for a resource e.g.  ID card number etc.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="ImmediateNeedsTernaryIndicatorCode" type="em:TernaryIndicatorCodeType" nillable="true">
+  <xs:element name="ImmediateNeedsTernaryIndicatorCode" type="nc:YesNoUnknownCodeType" nillable="true">
     <xs:annotation>
       <xs:documentation>An indication if there are immediate needs (Yes, No, Unknown)</xs:documentation>
     </xs:annotation>
@@ -13595,11 +13542,6 @@
       <xs:documentation>An augmentation point for MissionInformationType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NameOnCardText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A data element that is the name of the person which is printed on an identification card</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="NavigationInstructionsText" type="nc:TextType" nillable="true">
     <xs:annotation>
       <xs:documentation>A set of instructions that define how to get to the report to location</xs:documentation>
@@ -14140,19 +14082,9 @@
       <xs:documentation>An augmentation point for PersonHumanResourceType</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonIDCard" type="em:PersonIDCardType" nillable="true">
+  <xs:element name="PersonIDCard" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An element contains information about a person identification information</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonIDCardAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for PersonIDCardType</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonIDCategoryText" type="nc:TextType" substitutionGroup="em:IDCategoryCodeAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A kind of identification type of a person</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonPublication" type="nc:PublicationType" nillable="true">
@@ -14868,11 +14800,6 @@
   <xs:element name="Shelter" type="nc:FacilityType" nillable="true">
     <xs:annotation>
       <xs:documentation>A place giving temporary protection from an emergency incident or danger.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SignatureAuthorityName" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A data element for the signature authority name on a badge</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SituationalReport" type="em:SituationalReportType" nillable="true">

@@ -131,13 +131,12 @@
 "cyber","IOA","Indicator(s) of Attack","Evidence of the intent the adversary is trying to accomplish."
 "cyber","IOB","Indicator(s) of Behavior","Evidence of user behavior and interests."
 "cyber","IOC","Indicator(s) of Compromise","Forensic evidence of potential intrusions on a host system or network."
+"cyber","SBOM","Software Bill of Materials","A SBOM is a nested inventory, a list of ingredients that make up software components. ref cisa.gov/sbom"
 "cyber","SMS","Short Messaging Service","A technology for sending short text messages between mobile phones"
 "cyber","TTP","Tactic, Technique, and Procedure","A description of the ""why,"" ""how,"" and specific implementation the adversary uses."
 "cyber","VERIS","Vocabulary for Event Recording and Incident Sharing","The Vocabulary for Event Recording and Incident Sharing (VERIS) is a set of metrics designed to provide a common language for describing security incidents in a structured and repeatable manner."
 "cyber","WFN","well-formed CPE name",""
 "edxl_rm","EDXL","Emergency Data Exchange Language",""
-"edxl-have","EDXL","Emergency Data Exchange Language",""
-"edxl-have","HAVE","Hospital Availability Exchange",""
 "em","Cat-C","","FEMA Category C: Roads and Bridges"
 "em","Cat-D","","FEMA Category D: Water Control Facilities"
 "em","Cat-E","","FEMA Category E: Buildings and Equipment"
@@ -182,9 +181,6 @@
 "fema","SFHA","Special Flood Hazard Area",
 "genc","Alpha2",,"Two-letter"
 "genc","Alpha3","","Three-letter"
-"geo","GML","Geography Markup Language",""
-"geo","Multi",,"one or more"
-"geo","OGC","Open Geospatial Consortium",""
 "have-codes","Decon","Decontamination",
 "have-codes","EMS","Emergency Medical Service",
 "have-codes","EOC","Emergency Operations Center",
@@ -301,6 +297,7 @@
 "j","FFL","federal firearms license",""
 "j","FIPS","Federal Information Processing Standards",
 "j","GDEP","Geographic-Drug Enforcement Program",
+"j","GJXDM","GLOBAL Justice XML Data Model",""
 "j","GVWR","gross vehicle weight rating",""
 "j","HazMat","Hazardous Materials",
 "j","HME","Hazardous Material Endorsement",
@@ -489,6 +486,7 @@
 "nc","FIPS","Federal Information Processing Standards",
 "nc","GENC","Geopolitical Entities, Names, and Codes",
 "nc","GSM","Global System for Mobile communication",""
+"nc","IEC","International Electrotechnical Commission",""
 "nc","IMEI","International Mobile Equipment Identity",
 "nc","IPv4","Internet Protocol version 4",""
 "nc","IPv6","Internet Protocol version 6",""
@@ -574,11 +572,12 @@
 "ncic","PSC","Physical Feature Sub Class",
 "ncic","RAC","Race",
 "ncic","RES","Registration State",
+"ncic","RH","Rhesus factor",""
 "ncic","RMI","Ransom Money Indicator",
 "ncic","ROV","Relationship of Victim",""
 "ncic","RPP","Reason for Property Record Removal",""
 "ncic","SDT","Security Date or Series Year",
-"ncic","SEX","Gender",
+"ncic","SEX","Sex",
 "ncic","SKN","Skin Tone",
 "ncic","SMT","Scars, Marks, Tattoos, and Other Characteristics",
 "ncic","SVC","Service Information",""
@@ -604,6 +603,12 @@
 "ndex","RAC","Race",
 "ndex","SEX",,"The gender or sex of a person."
 "ndex","VST","Vehicle Style",
+"niem-de","EDXL","Emergency Data Exchange Language",""
+"niem-gml","GML","Geography Markup Language",""
+"niem-gml","Multi",,"one or more"
+"niem-gml","OGC","Open Geospatial Consortium",""
+"niem-have","EDXL","Emergency Data Exchange Language",""
+"niem-have","HAVE","Hospital Availability Exchange",""
 "niem-xs","maxInclusive","","An inclusive maximum value. To be valid, a value must be less than or equal to the value of xs:maxInclusive."
 "occs","OmniClass","","OmniClass is a comprehensive classification system for the construction industry."
 "sar","FS","Functional Standard",""
@@ -695,6 +700,7 @@
 "usmtf","HM","hectometers",""
 "usmtf","Hr","hours",""
 "usmtf","Hrs","hours",""
+"usmtf","ICAO","International Civil Aviation Organization",""
 "usmtf","ICM","improved conventional munitions",""
 "usmtf","IMEI","International Mobile Equipment Identification",""
 "usmtf","INET","Internet",""
@@ -798,6 +804,7 @@
 "usmtf","UID","unique identifier",""
 "usmtf","ULN","Unit Line Number",""
 "usmtf","USCG","United States Coast Guard",""
+"usmtf","USMTF","United States Message Text Format",""
 "usmtf","UTC","Unit Type Code",""
 "usmtf","UTM","Universal Transverse Mercator",""
 "usmtf","VDS","variable depth sonar",""

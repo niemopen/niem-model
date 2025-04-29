@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/domains/screening/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:cbrn="http://release.niem.gov/niem/domains/cbrn/5.2/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/"
-  xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
-  xmlns:intel="http://release.niem.gov/niem/domains/intelligence/5.2/"
-  xmlns:it="http://release.niem.gov/niem/domains/internationalTrade/5.2/"
-  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
-  xmlns:m="http://release.niem.gov/niem/domains/maritime/5.2/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
-  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
+  version="ps02"
+  xml:lang="en-US"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:cbrn="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:em="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/"
+  xmlns:im="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/"
+  xmlns:intel="https://docs.oasis-open.org/niemopen/ns/model/domains/intelligence/6.0/"
+  xmlns:it="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/"
+  xmlns:j="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/"
+  xmlns:m="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>The People Screening domain provides harmonized information sharing content within the Screening Portfolio of DHS.  The Screening namespace is initially being populated with person screening information for immigrant and non-immigrant person types who have been encountered and identified by the Screening Portfolio Components.  Screening expands on encounter-related NIEM elements currently included in the Immigration and Intelligence domains.</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+    </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="ASA" literal="Army Security Agency"/>
       <appinfo:LocalTerm term="CBP" literal="United States Customs and Border Protection"/>
@@ -32,16 +51,16 @@
       <appinfo:LocalTerm term="Watchlist" definition="A document which contains a nomination list prepared and approved by the National Center of Counter Terrorism."/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/domains/cbrn/5.2/" schemaLocation="cbrn.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" schemaLocation="emergencyManagement.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/immigration/5.2/" schemaLocation="immigration.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/intelligence/5.2/" schemaLocation="intelligence.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/internationalTrade/5.2/" schemaLocation="internationalTrade.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="jxdm.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/maritime/5.2/" schemaLocation="maritime.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/cbrn/6.0/" schemaLocation="cbrn.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/emergencyManagement/6.0/" schemaLocation="emergencyManagement.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/immigration/6.0/" schemaLocation="immigration.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/intelligence/6.0/" schemaLocation="intelligence.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/internationalTrade/6.0/" schemaLocation="internationalTrade.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/justice/6.0/" schemaLocation="justice.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/" schemaLocation="maritime.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="ActivityProcessCategoryCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a kind of activity process.</xs:documentation>
@@ -304,20 +323,6 @@
         <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
       </xs:extension>
     </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="AgentAssociationType">
-    <xs:annotation>
-      <xs:documentation>A data type for a relationship between a Person and a Person Role</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:AssociationType">
-        <xs:sequence>
-          <xs:element ref="scr:AgentPerson" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AgentPersonRole" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AgentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="AircraftFlightPlanSummaryAssociationType">
     <xs:annotation>
@@ -12994,7 +12999,7 @@
       </xs:enumeration>
       <xs:enumeration value="507">
         <xs:annotation>
-          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. ? 758</xs:documentation>
+          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. 758</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="508">
@@ -13069,7 +13074,7 @@
       </xs:enumeration>
       <xs:enumeration value="520">
         <xs:annotation>
-          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. ? 1546</xs:documentation>
+          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. 1546</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="521">
@@ -15359,7 +15364,7 @@
       </xs:enumeration>
       <xs:enumeration value="967">
         <xs:annotation>
-          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. ? 758</xs:documentation>
+          <xs:documentation>HIGH SPEED FLIGHT CONVICTION, 18 U.S.C. 758</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="968">
@@ -15434,7 +15439,7 @@
       </xs:enumeration>
       <xs:enumeration value="980">
         <xs:annotation>
-          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. ? 1546</xs:documentation>
+          <xs:documentation>FRAUD AND MISUSE OF VISAS, PERMITS AND OTHER DOCUMENTS: CONVICTED UNDER 18 U.S.C. 1546</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="981">
@@ -18001,18 +18006,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="IdentificationAugmentationType">
-    <xs:annotation>
-      <xs:documentation>A data type for additional information about an identification.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:AugmentationType">
-        <xs:sequence>
-          <xs:element ref="scr:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="ImageFeatureExtractionType">
     <xs:annotation>
       <xs:documentation>A data type that specifies details of the image extraction</xs:documentation>
@@ -19866,6 +19859,19 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="PersonAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a person.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="scr:PersonMetadata" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonRole" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="PersonBiometricAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association that distinguishes physical characteristics captured at the time of person encounter.</xs:documentation>
@@ -20607,10 +20613,11 @@
       <xs:documentation>A data type for metadata about the data associated with a person being screened.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="nc:MetadataType">
         <xs:sequence>
           <xs:element ref="scr:ConfidenceLevel" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonConfidenceLevelPercent" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonMetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -20624,6 +20631,8 @@
         <xs:sequence>
           <xs:element ref="scr:SoundexIndexValueText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonNameOriginText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonPrimaryName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="scr:PersonSecondaryName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:DesignationCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute ref="scr:nameTranslationCategoryCode" use="optional"/>
@@ -20761,7 +20770,7 @@
           <xs:element ref="im:SEVISID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PhotoRequestIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:AdmittedDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonSearchResultAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -20774,7 +20783,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="im:NaturalizedCitizenRole" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="im:NaturalizedCitizen" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="im:AlienNumberIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
@@ -20868,7 +20877,7 @@
         <xs:sequence>
           <xs:element ref="scr:AgentPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonEncounter" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:AgentPersonRole" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:Person" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PhysicalEncounterAgentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -20911,6 +20920,38 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="PilotLicenseMedicalAssessmentCategoryCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a kind of medical assessment for a pilot license.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>A 1st Class medical is required when flight operations require an Air Transport Pilot (ATP) certificate.  An ATP is required to act as the Pilot in Command (PIC) or Captain of a scheduled airliner.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>A 2nd Class medical is required when flight operations require a Commercial Pilot certificate.  A Commercial certificate is required essentially to get paid to be a pilot.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>A 3rd Class medical is required for all other flight operations that require an FAA Medical Certificate.  This includes Student Pilots pursuing a Recreational or Private certificate, Recreational and Private pilots, and most Flight Instructors.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PilotLicenseMedicalAssessmentCategoryCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a kind of medical assessment for a pilot license.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="scr:PilotLicenseMedicalAssessmentCategoryCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:simpleType name="RiskCategoryCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type describing the kinds of risk categories for screening purposes</xs:documentation>
@@ -21007,9 +21048,8 @@
       <xs:documentation>A data type for additional information about an Alien being screened.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="im:AlienType">
         <xs:sequence>
-          <xs:element ref="im:RoleOfAlienAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PrincipalIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:VisaWaiverIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:AlienCategoryText" minOccurs="0" maxOccurs="unbounded"/>
@@ -21062,11 +21102,9 @@
       <xs:documentation>A data type for additional information about Persons being Screened</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:PersonType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonCategory" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="scr:PersonRole" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonTelephoneNumber" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:PersonIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="scr:Biographic" minOccurs="0" maxOccurs="unbounded"/>
@@ -21886,24 +21924,9 @@
       <xs:documentation>True if DHS had advanced manifest information on the traveler prior to person crossing; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AgentAssociation" type="scr:AgentAssociationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An association between a PERSON and a PERSON ROLE</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AgentAssociationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for AgentAssociationType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="AgentPerson" type="nc:PersonType" nillable="true">
     <xs:annotation>
       <xs:documentation>An Agent of Department of Homeland Security.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="AgentPersonRole" type="scr:PersonRoleType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A part played by a Person in an Encounter.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="AircraftFlightPlanSummaryAssociation" type="scr:AircraftFlightPlanSummaryAssociationType" nillable="true">
@@ -23021,16 +23044,6 @@
       <xs:documentation>True if the person arrested has requested a court hearing; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IdentificationAugmentation" type="scr:IdentificationAugmentationType" substitutionGroup="nc:IdentificationAugmentationPoint" nillable="true">
-    <xs:annotation>
-      <xs:documentation>Additional information about an identification.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="IdentificationStatusAdvisoryText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A text that describes special or advisory information about a particular Identification ID</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="IdentityStatusAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for an aggregated status of biometrically linked encounters for an identified individual.</xs:documentation>
@@ -23551,6 +23564,11 @@
       <xs:documentation>A date that a Person arrived in the U.S.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonAugmentation" type="scr:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Additional information about a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonBiometricAssociation" type="scr:PersonBiometricAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between a person and distinguishing physical characteristic captured at the time of PERSON ENCOUNTER.</xs:documentation>
@@ -23786,9 +23804,14 @@
       <xs:documentation>A data concept for a status of the medical condition of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonMetadata" type="scr:PersonMetadataType" nillable="true" appinfo:appliesToTypes="nc:PersonType">
+  <xs:element name="PersonMetadata" type="scr:PersonMetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies Screening purposes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonMetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for scr:PersonMetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonNameAugmentation" type="scr:PersonNameAugmentationType" substitutionGroup="nc:PersonNameAugmentationPoint" nillable="true">
@@ -23809,6 +23832,11 @@
   <xs:element name="PersonPhoneAssociationAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for PersonPhoneAssociationType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPrimaryName" type="nc:PersonNameTextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A primary name of a person, which may be the family name, the maiden name, the surname, or the entire name in cases where the name cannot be divided into two parts.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonRole" type="scr:PersonRoleType" nillable="true">
@@ -23871,6 +23899,11 @@
       <xs:documentation>An augmentation point for PersonSearchResultType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonSecondaryName" type="nc:PersonNameTextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A secondary name of a person, which may include given names, middle names, forenames, familiar names, initials, or any other secondary names.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonStatusSummary" type="scr:PersonStatusSummaryType" nillable="true">
     <xs:annotation>
       <xs:documentation>A status of Person involved in a Screening Encounter.</xs:documentation>
@@ -23904,6 +23937,11 @@
   <xs:element name="PhysicalEncounterAgentAssociationAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for PhysicalEncounterAgentAssociationType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PilotLicenseMedicalAssessmentCategoryCode" type="scr:PilotLicenseMedicalAssessmentCategoryCodeType" substitutionGroup="nc:LicenseMedicalAssessmentCategoryAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A kind of medical assessment for a pilot license.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PrimaryDispositionText" type="nc:TextType" nillable="true">

@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/niem-core/5.0/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:cli="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  version="ps02"
+  xml:lang="en-US"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:cli="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>NIEM Core.</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+    </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="2D" literal="Two-dimensional"/>
       <appinfo:LocalTerm term="3D" literal="Three-dimensional"/>
@@ -23,6 +42,7 @@
       <appinfo:LocalTerm term="FIPS" literal="Federal Information Processing Standards"/>
       <appinfo:LocalTerm term="GENC" literal="Geopolitical Entities, Names, and Codes"/>
       <appinfo:LocalTerm term="GSM" literal="Global System for Mobile communication"/>
+      <appinfo:LocalTerm term="IEC" literal="International Electrotechnical Commission"/>
       <appinfo:LocalTerm term="IMEI" literal="International Mobile Equipment Identity"/>
       <appinfo:LocalTerm term="IPv4" literal="Internet Protocol version 4"/>
       <appinfo:LocalTerm term="IPv6" literal="Internet Protocol version 6"/>
@@ -44,10 +64,10 @@
       <appinfo:LocalTerm term="UTM" literal="Universal Transverse Mercator"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="utility/code-lists-instance.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="adapters/niem-xs.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="utility/structures.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="external/xml.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/instance/" schemaLocation="utility/code-lists-instance.xsd"/>
   <xs:complexType name="ActivityConveyanceAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between an activity and a conveyance.</xs:documentation>
@@ -1602,20 +1622,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="EmployeeAssignmentAssociationType">
-    <xs:annotation>
-      <xs:documentation>A data type for an association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:EmploymentAssociationType">
-        <xs:sequence>
-          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:EmployeeAssignmentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="EmployerType">
     <xs:annotation>
       <xs:documentation>A data type for an organization or person that employs a person.</xs:documentation>
@@ -1653,11 +1659,13 @@
           <xs:element ref="nc:EmployeePayHourlyIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeePosition" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeRankAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeRegistrationAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSchedule" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeScheduleFixedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeShiftAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentStatus" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmployeeSupervisor" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:EmployeeSupervisorIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EmploymentAssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -1816,9 +1824,8 @@
       <xs:documentation>A data type for a tangible property (other than land or buildings) of more or less durable nature which is useful in carrying on the operations of a business.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:EquipmentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -2120,13 +2127,33 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="nc:IdentificationID" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationPerson" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationJurisdiction" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationCardDesignRevisionDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationCategoryDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationElectronicIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationEffectiveDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:IdentificationSourceText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssueDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerAdministrativeID" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerComment" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerCountry" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerLocalityText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerLocation" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerOrganization" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerState" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerSymbolImage" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationIssuerText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationLimitedTermIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationREALIDComplianceAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationSealImage" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationSignatureAuthorityName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationStatus" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationStatusAdvisoryText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationStolenLostIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationTitleText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:IdentificationUNDistinguishingSignID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:IdentificationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
@@ -2597,6 +2624,96 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="LicenseEndorsementType">
+    <xs:annotation>
+      <xs:documentation>A data type for an endorsement on a license or license permit which authorizes specific privileges.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:LicenseEndorsementEndDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseEndorsementAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseEndorsementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LicenseMedicalCertificationType">
+    <xs:annotation>
+      <xs:documentation>A data type for a medical certification associated with a license.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:LicenseMedicalAssessmentCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalAssessmentDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalCertificationExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalCertificationIssueDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseSkillsPerformanceEvaluationEffectiveDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseSkillsPerformanceEvaluationExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseWaiverExemptEffectiveDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseWaiverExemptExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseWaiverExemptExpirationIndefiniteIndicator" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalCertificationRestrictionAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalCertificationStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalSelfCertificationAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalLimitationText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseMedicalCertificationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LicensePermitType">
+    <xs:annotation>
+      <xs:documentation>A data type for a license permit issued to a person granting conditional or limited privileges.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:LicenseType">
+        <xs:sequence>
+          <xs:element ref="nc:LicensePermitClassificationText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicensePermitStatusAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicensePermitRestriction" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicensePermitEndorsement" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicensePermitAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LicenseRestrictionType">
+    <xs:annotation>
+      <xs:documentation>A data type for a restriction applicable to a permit or license.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:LicenseRestrictionAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRestrictionDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRestrictionEndDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRestrictionAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LicenseType">
+    <xs:annotation>
+      <xs:documentation>A data type for an authorization issued to a person granting certain privileges.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:IdentificationType">
+        <xs:sequence>
+          <xs:element ref="nc:LicenseMedicalCertification" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRatingAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRatingEffectiveDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRatingExpirationDate" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicensePermit" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicensePermitQuantity" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseRestriction" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseEndorsement" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:LicenseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="LocaleType">
     <xs:annotation>
       <xs:documentation>A data type for a geopolitical area.</xs:documentation>
@@ -2904,7 +3021,7 @@
       <xs:documentation>A data type for information that further qualifies primary data; data about data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:MetadataType">
+      <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="nc:AdministrativeID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:CaveatText" minOccurs="0" maxOccurs="unbounded"/>
@@ -2933,6 +3050,7 @@
           <xs:element ref="nc:SourceContactPersonAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:SourceIDText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:MetadataAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -3324,20 +3442,11 @@
       <xs:documentation>A data type for a government-issued document that authenticates the identity and citizenship of a person.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="nc:DocumentType">
+      <xs:extension base="nc:IdentificationType">
         <xs:sequence>
           <xs:element ref="nc:PassportNumberIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonBirthLocation" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PassportBookIdentification" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PassportCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonDigitalImage" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonCitizenshipCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PassportElectronicIndicator" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PassportIssuingOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSexAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PassportStolenLostIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PassportTransmissionTrackingID" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PassportAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -3670,6 +3779,53 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="PersonPronounsCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="he/him">
+        <xs:annotation>
+          <xs:documentation>he/him</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other">
+        <xs:annotation>
+          <xs:documentation>other</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="prefer not to say">
+        <xs:annotation>
+          <xs:documentation>prefer not to say</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="she/her">
+        <xs:annotation>
+          <xs:documentation>she/her</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="they/them">
+        <xs:annotation>
+          <xs:documentation>they/them</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation>unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PersonPronounsCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:PersonPronounsCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="PersonResidenceAssociationType">
     <xs:annotation>
       <xs:documentation>A data type for an association between a person and a location where that person lives.</xs:documentation>
@@ -3750,8 +3906,10 @@
           <xs:element ref="nc:PersonPhysicalDisabilityText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPhysicalFeature" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPrimaryLanguage" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonPronounsAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonRaceAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonReligionAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonResidenceAddress" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonResidentAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonSecondaryLanguage" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonSecurityClearanceAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -4063,9 +4221,8 @@
       <xs:documentation>A data type for a collection of written, printed, illustrated, or blank sheets, made of paper, parchment, or other material, usually fastened together to hinge at one side.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:DocumentType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfDocument" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationAuthorText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationDate" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PublicationISBNID" minOccurs="0" maxOccurs="unbounded"/>
@@ -4112,6 +4269,8 @@
     <xs:simpleContent>
       <xs:extension base="nc:NumericType">
         <xs:attribute ref="nc:quantityUnitText" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonCode" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonText" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -4278,9 +4437,8 @@
       <xs:documentation>A data type for an account given of a particular matter, especially in the form of an official document, after thorough investigation or consideration by an appointed person or body.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:DocumentType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfDocument" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportAssignee" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportCoverageDateRange" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ReportDueDate" minOccurs="0" maxOccurs="unbounded"/>
@@ -4539,6 +4697,19 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="StudentType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person formally engaged in learning, especially one enrolled in a school or college.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:PersonType">
+        <xs:sequence>
+          <xs:element ref="nc:StudentIdentification" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:StudentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="SubstanceMeasureType">
     <xs:annotation>
       <xs:documentation>A data type for a measure of the amount of something.</xs:documentation>
@@ -4693,8 +4864,11 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="niem-xs:string">
+        <xs:attribute ref="nc:metadataRef" use="optional"/>
         <xs:attribute ref="nc:partialIndicator" use="optional"/>
         <xs:attribute ref="nc:truncationIndicator" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonCode" use="optional"/>
+        <xs:attribute ref="nc:valueEmptyReasonText" use="optional"/>
         <xs:attribute ref="xml:lang" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
@@ -4889,9 +5063,8 @@
       <xs:documentation>A data type for a property item used as an instrument of attack or defense.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base="nc:ItemType">
         <xs:sequence>
-          <xs:element ref="nc:RoleOfItem" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponUser" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponInvolvedInActivity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:WeaponUsageAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -4912,6 +5085,38 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="YesNoUnknownCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a ternary or three-option indicator representing true/yes, false/no, and unknown.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="No">
+        <xs:annotation>
+          <xs:documentation>No</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:documentation>Unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Yes">
+        <xs:annotation>
+          <xs:documentation>Yes</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="YesNoUnknownCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a ternary or three-option indicator representing true/yes, false/no, and unknown.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:YesNoUnknownCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
   <xs:simpleType name="ZuluDateTimeSimpleType">
     <xs:annotation>
@@ -4938,6 +5143,11 @@
   <xs:attribute name="fiscalYearStartDate" type="xs:date">
     <xs:annotation>
       <xs:documentation>A date on which a fiscal year begins.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="metadataRef" type="xs:IDREFS" appinfo:referenceAttributeIndicator="true">
+    <xs:annotation>
+      <xs:documentation>A list of metadata objects that apply to a node or object represented by an XML element.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="partialIndicator" type="xs:boolean">
@@ -4973,6 +5183,16 @@
   <xs:attribute name="truncationIndicator" type="xs:boolean">
     <xs:annotation>
       <xs:documentation>True if the length of a string is greater than the length of the field within which the string was stored in the exporting system; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="valueEmptyReasonCode" type="nc:EmptyReasonCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A reason why a data value was not provided.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="valueEmptyReasonText" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A reason why a data value was not provided.</xs:documentation>
     </xs:annotation>
   </xs:attribute>
   <xs:attribute name="yearFirstMonthDate" type="xs:gMonth">
@@ -7620,14 +7840,9 @@
       <xs:documentation>A person who works for a business or a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmployeeAssignmentAssociationType" nillable="true">
+  <xs:element name="EmployeeAssignmentAssociation" type="nc:EmploymentAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between an employee and a position or post for which that employee has been temporarily assigned to for some period of time.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="EmployeeAssignmentAssociationAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for type nc:EmployeeAssignmentAssociationType</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EmployeeContactInformation" type="nc:ContactInformationType" nillable="true">
@@ -8405,6 +8620,11 @@
       <xs:documentation>An augmentation point for IdentificationType.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="IdentificationCardDesignRevisionDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An implementation date of the most recent version or modification to the visible design of a license or ID card.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="IdentificationCategoryAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a kind of identification.</xs:documentation>
@@ -8425,6 +8645,11 @@
       <xs:documentation>A date an identification takes effect.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="IdentificationElectronicIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if an identification document is RFID enabled; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="IdentificationExpirationDate" type="nc:DateType" nillable="true">
     <xs:annotation>
       <xs:documentation>A date after which an identification is no longer valid.</xs:documentation>
@@ -8435,19 +8660,109 @@
       <xs:documentation>An identifier.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="IdentificationIssueDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date when an identification is issued or renewed.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerAdministrativeID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identifier, such as an audit control number, assigned by the issuing authority of the identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerComment" type="nc:CommentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A comment or remark made about an identification by the issuing authority.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerCountry" type="nc:CountryType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A country which issued an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerLocalityText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A locality or other subdivision of a state which issued an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerLocation" type="nc:LocationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A location of an issuer of an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerOrganization" type="nc:OrganizationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An organization that issued an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerState" type="nc:StateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A state which issued an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerSymbolImage" type="nc:ImageType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A binary image of the symbol or logo of the organization that issued the identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationIssuerText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person, organization, or locale which issues an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="IdentificationJurisdiction" type="nc:JurisdictionType" nillable="true">
     <xs:annotation>
       <xs:documentation>An area, region, or unit where a unique identification is issued.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IdentificationSourceText" type="nc:TextType" nillable="true">
+  <xs:element name="IdentificationLimitedTermIndicator" type="niem-xs:boolean" nillable="true">
     <xs:annotation>
-      <xs:documentation>A person, organization, or locale which issues an identification.</xs:documentation>
+      <xs:documentation>True if a license or identification card is classified by DHS or other agency regulations as a temporary or limited-term document (e.g., the expiration date of the card is limited to the duration of an aliens legal stay in the U.S.); false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationPerson" type="nc:PersonType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of characteristics captured about a person for an identification.  These characteristics may be accurate, out of date, verified, or self-asserted.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationREALIDComplianceAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for an indication of the degree to which a driver license or ID Card is compliant with the REAL ID A data concept for act.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationSealImage" type="nc:ImageType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An image of a seal or stamp of the identification issuer.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationSignatureAuthorityName" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A name of the signature authority on an identification document.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="IdentificationStatus" type="nc:StatusType" nillable="true">
     <xs:annotation>
       <xs:documentation>A status of an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationStatusAdvisoryText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An advisory or special information about the status of an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationStolenLostIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if an identification is stolen or lost; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationTitleText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A title of an identification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IdentificationUNDistinguishingSignID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A distinguishing sign identifier of the country which issued an identification, according to ISO/IEC 18013-1:2018, Annex F.  If not applicable, the value may be left blank or may use an internationally-recognized identifier..</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Identity" type="nc:IdentityType" nillable="true">
@@ -9345,6 +9660,206 @@
       <xs:documentation>A data concept for a unit of measure for length.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="LicenseAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for LicenseType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseEndorsement" type="nc:LicenseEndorsementType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An endorsement on a license which authorizes additional privileges.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseEndorsementAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for an endorsement on a license or license permit which authorizes specific privileges.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseEndorsementAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for LicenseEndorsementType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseEndorsementEndDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date on which an endorsement for a license ends.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseEndorsementText" type="nc:TextType" substitutionGroup="nc:LicenseEndorsementAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An endorsement on a license or license permit which authorizes specific privileges.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalAssessmentCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of medical assessment for a license holder.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalAssessmentCategoryText" type="nc:TextType" substitutionGroup="nc:LicenseMedicalAssessmentCategoryAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A kind of medical assessment for a license holder.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalAssessmentDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of a medical assessment as determined by a medical authority for a license certification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalCertification" type="nc:LicenseMedicalCertificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A medical certification associated with a license.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalCertificationAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for LicenseMedicalCertificationType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalCertificationExpirationDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date on which a medical certificate issued to a license holder expires.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalCertificationIssueDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date on which a medical practitioner issued a medical certificate to a license holder.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalCertificationRestrictionAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a restriction imposed on a license holder by a medical examiner.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalCertificationStatusAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for an indication of the status of a license holder's medical certification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalLimitationText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A medical limitation on a license holder.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseMedicalSelfCertificationAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a license holder's self certification of the license holder's status.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermit" type="nc:LicensePermitType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A permit issued to a person granting conditional or limited privileges.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for LicensePermitType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitClassificationText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A kind of privilege a person has been examined on and approved for subject to a permit.  For a driver license, this would be a kind of commercial or non-commercial vehicle that a licensed driver is approved to operate.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitEndorsement" type="nc:LicenseEndorsementType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An endorsement on a license permit which authorizes additional privileges.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitQuantity" type="niem-xs:nonNegativeInteger" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A number of permits issued on a license.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitRestriction" type="nc:LicenseRestrictionType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A restriction on a license permit.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitStatusAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a current status of an individual's license permit.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicensePermitStatusText" type="nc:TextType" substitutionGroup="nc:LicensePermitStatusAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A current status of an individual's license permit.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRatingAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for rating on a license which authorizes the performance of certain duties or actions.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRatingEffectiveDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date a license rating becomes effective.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRatingExpirationDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date a license rating is no longer valid.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRatingText" type="nc:TextType" substitutionGroup="nc:LicenseRatingAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A rating on a license which authorizes the performance of certain duties or actions.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRestriction" type="nc:LicenseRestrictionType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A restriction on a license.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRestrictionAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept about a restriction on a license.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRestrictionAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for LicenseRestrictionType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRestrictionDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the nature of a restriction on a license.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRestrictionEndDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date on which a special restriction on a license ends.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseRestrictionText" type="nc:TextType" substitutionGroup="nc:LicenseRestrictionAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A restriction on a license.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseSkillsPerformanceEvaluationEffectiveDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A start date of the most recent variance of a medical certificate, due to a license holder's Skills Performance Evaluation.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseSkillsPerformanceEvaluationExpirationDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An expiration date of the most recent variance of a medical certificate, due to a license holder's Skills Performance Evaluation.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseWaiverExemptEffectiveDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A start date of the most recent variance of a medical certificate, due to a waiver or exemption.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseWaiverExemptExpirationDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An expiration date of the most recent variance of a medical certificate, due to a waiver or exemption.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LicenseWaiverExemptExpirationIndefiniteIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if the expiration date of the most recent variance of a medical certificate is indefinite; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="Locale" type="nc:LocaleType" nillable="true">
     <xs:annotation>
       <xs:documentation>A geopolitical area.</xs:documentation>
@@ -10135,9 +10650,14 @@
       <xs:documentation>A body or main content of a message.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Metadata" type="nc:MetadataType" nillable="true" appinfo:appliesToTypes="structures:AssociationType structures:ObjectType">
+  <xs:element name="Metadata" type="nc:MetadataType" nillable="true">
     <xs:annotation>
       <xs:documentation>Information that further qualifies primary data; data about data.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MetadataAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for nc:MetadataType.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="MilitaryBranchName" type="nc:TextType" nillable="true">
@@ -10805,24 +11325,9 @@
       <xs:documentation>A kind of passport.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PassportElectronicIndicator" type="niem-xs:boolean" nillable="true">
-    <xs:annotation>
-      <xs:documentation>True if the passport document is RFID enabled; false otherwise.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PassportIssuingOrganization" type="nc:OrganizationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An organization that issued a passport.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="PassportNumberIdentification" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An identification of a passport.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PassportStolenLostIndicator" type="niem-xs:boolean" nillable="true">
-    <xs:annotation>
-      <xs:documentation>True if a passport is stolen or lost; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PassportTransmissionTrackingID" type="niem-xs:string" nillable="true">
@@ -11640,6 +12145,21 @@
       <xs:documentation>An association between a person and a primary worker assigned to that person.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonPronounsAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPronounsCode" type="nc:PersonPronounsCodeType" substitutionGroup="nc:PersonPronounsAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonPronounsText" type="nc:TextType" substitutionGroup="nc:PersonPronounsAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A set of third-person pronouns that can be used in place of a person's name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonRaceAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
@@ -11668,6 +12188,11 @@
   <xs:element name="PersonReligionText" type="nc:TextType" substitutionGroup="nc:PersonReligionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A religion to which a person subscribes or believes; a categorization of spiritual beliefs.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonResidenceAddress" type="nc:AddressType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An address where a person lives.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonResidenceAssociation" type="nc:PersonResidenceAssociationType" nillable="true">
@@ -12830,31 +13355,6 @@
       <xs:documentation>A program designed to lower the probability of undesirable outcomes.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="RoleOfAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a property of a role object. This specifies the base object, of which the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfDocument" type="nc:DocumentType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A document of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfItem" type="nc:ItemType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An entity of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfOrganization" type="nc:OrganizationType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An organization of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="RoleOfPerson" type="nc:PersonType" substitutionGroup="nc:RoleOfAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A person of whom the role object is a function.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="RollValue" type="nc:Degree180PlusMinusType" nillable="true">
     <xs:annotation>
       <xs:documentation>An angle of rotation of a thing about its longitudinal axis, measured in degrees between the lateral axis and the horizontal plane; negative values indicate the left side is rotated downward.</xs:documentation>
@@ -13298,6 +13798,21 @@
   <xs:element name="StreetPredirectional" type="nc:StreetDirectionalType" nillable="true">
     <xs:annotation>
       <xs:documentation>A direction that appears before a street name.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Student" type="nc:StudentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person formally engaged in learning, especially one enrolled in a school or college.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StudentAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for type nc:StudentType</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StudentIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unique alphanumeric identification assigned to a student by an education organization.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SubFacility" type="nc:FacilityType" nillable="true">

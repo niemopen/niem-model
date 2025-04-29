@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/codes/canada_post/5.0/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:can="http://release.niem.gov/niem/codes/canada_post/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/codes/canada_post/6.0/"
+  version="ps02"
+  xml:lang="en-US"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:can="https://docs.oasis-open.org/niemopen/ns/model/codes/canada_post/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>Canada Post Addressing Guidelines</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+    </xs:documentation>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="CanadianProvinceCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for provinces in Canada.</xs:documentation>
@@ -24,7 +43,7 @@
       </xs:enumeration>
       <xs:enumeration value="BC">
         <xs:annotation>
-          <xs:documentation>British Columbia</xs:documentation>
+          <xs:documentation>British Columbia; Colombie-Britannique</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MB">
@@ -34,22 +53,22 @@
       </xs:enumeration>
       <xs:enumeration value="NB">
         <xs:annotation>
-          <xs:documentation>New Brunswick</xs:documentation>
+          <xs:documentation>New Brunswick; Nouveau-Brunswick</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NL">
         <xs:annotation>
-          <xs:documentation>Newfoundland and Labrador</xs:documentation>
+          <xs:documentation>Newfoundland and Labrador; Terre-Neuve-et-Labrador</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NS">
         <xs:annotation>
-          <xs:documentation>Nova Scotia</xs:documentation>
+          <xs:documentation>Nova Scotia; Nouvelle-Écosse</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NT">
         <xs:annotation>
-          <xs:documentation>Northwest Territories</xs:documentation>
+          <xs:documentation>Northwest Territories; Territoires du Nord-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NU">
@@ -64,12 +83,12 @@
       </xs:enumeration>
       <xs:enumeration value="PE">
         <xs:annotation>
-          <xs:documentation>Prince Edward Island</xs:documentation>
+          <xs:documentation>Prince Edward Island; Île-du-Prince-Édouard</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="QC">
         <xs:annotation>
-          <xs:documentation>Québec</xs:documentation>
+          <xs:documentation>Quebec; Québec</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SK">
@@ -119,19 +138,14 @@
           <xs:documentation>Alley</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="AUT">
-        <xs:annotation>
-          <xs:documentation>Autoroute</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="AV">
         <xs:annotation>
-          <xs:documentation>Avenue (French)</xs:documentation>
+          <xs:documentation>Avenue (Français)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="AVE">
         <xs:annotation>
-          <xs:documentation>Avenue (English)</xs:documentation>
+          <xs:documentation>Avenue; Avenue (Anglais)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BAY">
@@ -151,12 +165,12 @@
       </xs:enumeration>
       <xs:enumeration value="BLVD">
         <xs:annotation>
-          <xs:documentation>Boulevard (English)</xs:documentation>
+          <xs:documentation>Boulevard; Boulevard (Anglais)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BOUL">
         <xs:annotation>
-          <xs:documentation>Boulevard (French)</xs:documentation>
+          <xs:documentation>Boulevard (Français)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="BYPASS">
@@ -171,7 +185,7 @@
       </xs:enumeration>
       <xs:enumeration value="C">
         <xs:annotation>
-          <xs:documentation>Centre (French)</xs:documentation>
+          <xs:documentation>Centre (Français)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="CAMPUS">
@@ -249,11 +263,6 @@
           <xs:documentation>Cour</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="COURS">
-        <xs:annotation>
-          <xs:documentation>Cours</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="COVE">
         <xs:annotation>
           <xs:documentation>Cove</xs:documentation>
@@ -286,7 +295,7 @@
       </xs:enumeration>
       <xs:enumeration value="CTR">
         <xs:annotation>
-          <xs:documentation>Centre (English)</xs:documentation>
+          <xs:documentation>Centre; Centre (Anglais)</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DALE">
@@ -591,12 +600,12 @@
       </xs:enumeration>
       <xs:enumeration value="PL">
         <xs:annotation>
-          <xs:documentation>Place (English)</xs:documentation>
+          <xs:documentation>Place</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PLACE">
         <xs:annotation>
-          <xs:documentation>Place (French)</xs:documentation>
+          <xs:documentation>Place</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="PLAT">
@@ -843,82 +852,42 @@
     <xs:restriction base="xs:token">
       <xs:enumeration value="E">
         <xs:annotation>
-          <xs:documentation>East</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="E">
-        <xs:annotation>
-          <xs:documentation>Est</xs:documentation>
+          <xs:documentation>East; Est</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="N">
         <xs:annotation>
-          <xs:documentation>Nord</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="N">
-        <xs:annotation>
-          <xs:documentation>North</xs:documentation>
+          <xs:documentation>North; Nord</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NE">
         <xs:annotation>
-          <xs:documentation>Nord-Est</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NE">
-        <xs:annotation>
-          <xs:documentation>Northeast</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="NO">
-        <xs:annotation>
-          <xs:documentation>Nord-Ouest</xs:documentation>
+          <xs:documentation>Northeast; Nord-Est</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NW">
         <xs:annotation>
-          <xs:documentation>Northwest</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="O">
-        <xs:annotation>
-          <xs:documentation>Ouest</xs:documentation>
+          <xs:documentation>Northwest; Nord-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="S">
         <xs:annotation>
-          <xs:documentation>South</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="S">
-        <xs:annotation>
-          <xs:documentation>Sud</xs:documentation>
+          <xs:documentation>South; Sud</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SE">
         <xs:annotation>
-          <xs:documentation>Southeast</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SE">
-        <xs:annotation>
-          <xs:documentation>Sud-Est</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SO">
-        <xs:annotation>
-          <xs:documentation>Sud-Ouest</xs:documentation>
+          <xs:documentation>Southeast; Sud-Est</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="SW">
         <xs:annotation>
-          <xs:documentation>Southwest</xs:documentation>
+          <xs:documentation>Southwest; Sud-Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="W">
         <xs:annotation>
-          <xs:documentation>West</xs:documentation>
+          <xs:documentation>West; Ouest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>

@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/domains/maritime/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
-  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
-  xmlns:hazmat="http://release.niem.gov/niem/codes/hazmat/5.0/"
-  xmlns:iso_3166="http://release.niem.gov/niem/codes/iso_3166-1/5.0/"
-  xmlns:m="http://release.niem.gov/niem/domains/maritime/5.2/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
-  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/"
+  version="ps02"
+  xml:lang="en-US"
+  xsi:schemaLocation="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/ ../utility/appinfo.xsd https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/ ../utility/conformanceTargets.xsd"
+  ct:conformanceTargets="https://docs.oasis-open.org/niemopen/ns/specification/NDR/6.0/#ReferenceSchemaDocument"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  xmlns:ct="https://docs.oasis-open.org/niemopen/ns/specification/conformanceTargets/6.0/"
+  xmlns:hazmat="https://docs.oasis-open.org/niemopen/ns/model/codes/hazmat/6.0/"
+  xmlns:iso_3166="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/"
+  xmlns:m="https://docs.oasis-open.org/niemopen/ns/model/domains/maritime/6.0/"
+  xmlns:nc="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/"
+  xmlns:ncic="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/"
+  xmlns:niem-xs="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/"
+  xmlns:scr="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/"
+  xmlns:structures="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xs:annotation>
     <xs:documentation>Maritime</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification: https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement: https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the additional Specification Non-Assertion Covenants to support finally-approved for any Project Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.
+    </xs:documentation>
     <xs:appinfo>
       <appinfo:LocalTerm term="Alpha2" definition="Two-letter"/>
       <appinfo:LocalTerm term="Alpha3" definition="Three-letter"/>
@@ -47,13 +66,13 @@
       <appinfo:LocalTerm term="USMTF" literal="United States Message Text Format"/>
     </xs:appinfo>
   </xs:annotation>
-  <xs:import namespace="http://release.niem.gov/niem/codes/hazmat/5.0/" schemaLocation="../codes/hazmat.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/iso_3166-1/5.0/" schemaLocation="../codes/iso_3166.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/codes/ncic/5.2/" schemaLocation="../codes/ncic.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="screening.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
-  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/adapters/niem-xs/6.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/hazmat/6.0/" schemaLocation="../codes/hazmat.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/iso_3166-1/6.0/" schemaLocation="../codes/iso_3166.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/codes/ncic/6.0/" schemaLocation="../codes/ncic.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/domains/screening/6.0/" schemaLocation="screening.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/niem-core/6.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="https://docs.oasis-open.org/niemopen/ns/model/structures/6.0/" schemaLocation="../utility/structures.xsd"/>
   <xs:simpleType name="CANUSLexiconAPR07CategoryCodeSimpleType">
     <xs:annotation>
       <xs:documentation>A data type for a category defined by the April 2007 Canada/USA Bi-National Vessel of Interest (VOI) Lexicon category codes.</xs:documentation>
@@ -1075,6 +1094,53 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="EnvironmentCategoryCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a force-threat designator code used in combination with threat codes.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AIR">
+        <xs:annotation>
+          <xs:documentation>Air</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LND">
+        <xs:annotation>
+          <xs:documentation>Land</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SPC">
+        <xs:annotation>
+          <xs:documentation>Space</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SUB">
+        <xs:annotation>
+          <xs:documentation>Subsurface</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SUR">
+        <xs:annotation>
+          <xs:documentation>Surface</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UNK">
+        <xs:annotation>
+          <xs:documentation>Unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EnvironmentCategoryCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a force-threat designator code used in combination with threat codes.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="m:EnvironmentCategoryCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="HazmatDeclarationType">
     <xs:annotation>
       <xs:documentation>A data type for a declaration of hazardous materials within transported goods.</xs:documentation>
@@ -1194,35 +1260,6 @@
           <xs:element ref="m:LocationOnVesselDistanceFromSternMeasure" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="m:LocationOnVesselElevationMeasure" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="m:LocationOnVesselAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="MerchantMarinerDocumentType">
-    <xs:annotation>
-      <xs:documentation>A data type for a Merchant Mariner Document (MMD).</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="m:MerchantMarinerDocumentIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentIssueDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentIssuerLocation" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentIssuingOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentRatingAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:PersonAddress" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonCitizenshipCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonEyeColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHairColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSexAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSSNIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:MerchantMarinerDocumentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1413,35 +1450,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="SeamanLicenseType">
-    <xs:annotation>
-      <xs:documentation>A data type for an able-bodied seaman license.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
-        <xs:sequence>
-          <xs:element ref="m:PersonAddress" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonCitizenshipCountry" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonEyeColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHairColorAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonHeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSexAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonSSNIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="nc:PersonWeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIdentification" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIssueDate" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIssuerLocation" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseIssuingOrganization" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseRatingAbstract" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="m:SeamanLicenseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="ShipmentType">
     <xs:annotation>
       <xs:documentation>A data type for a shipment of goods from one place to another.</xs:documentation>
@@ -1463,53 +1471,6 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="USMTFEnvironmentCategoryCodeSimpleType">
-    <xs:annotation>
-      <xs:documentation>A data type for a USMTF-defined force-threat designator code used in combination with threat codes.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="AIR">
-        <xs:annotation>
-          <xs:documentation>Air</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="LND">
-        <xs:annotation>
-          <xs:documentation>Land</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SPC">
-        <xs:annotation>
-          <xs:documentation>Space</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SUB">
-        <xs:annotation>
-          <xs:documentation>Subsurface</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SUR">
-        <xs:annotation>
-          <xs:documentation>Surface</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="UNK">
-        <xs:annotation>
-          <xs:documentation>Unknown</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="USMTFEnvironmentCategoryCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for a USMTF-defined force-threat designator code used in combination with threat codes.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="m:USMTFEnvironmentCategoryCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
   </xs:complexType>
   <xs:simpleType name="USMTFThreatCodeSimpleType">
     <xs:annotation>
@@ -2014,6 +1975,11 @@
       <xs:documentation>A departure of a vessel from a port.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="EnvironmentCategoryCode" type="m:EnvironmentCategoryCodeType" substitutionGroup="m:InterestCategoryAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A kind of environment code.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="HazmatDeclaration" type="m:HazmatDeclarationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A declaration of hazardous materials within transported goods.</xs:documentation>
@@ -2254,44 +2220,9 @@
       <xs:documentation>A location identified by a United Nations Location Code, also known as a UN/LOCODE (United Nations Code for Trade and Transport Locations).</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MerchantMarinerDocument" type="m:MerchantMarinerDocumentType" nillable="true">
+  <xs:element name="MerchantMarinerDocument" type="nc:LicenseType" nillable="true">
     <xs:annotation>
       <xs:documentation>A Merchant Mariner Document (MMD) issued to a merchant mariner.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for MerchantMarinerDocumentType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identification of a merchant mariner document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIssueDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date a merchant mariner document was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIssuerLocation" type="nc:LocationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A location of the issuer of a merchant mariner document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentIssuingOrganization" type="nc:OrganizationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An issuer of a merchant mariner document.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentRatingAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a rating on a merchant mariner document which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="MerchantMarinerDocumentRatingText" type="nc:TextType" substitutionGroup="m:MerchantMarinerDocumentRatingAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A rating on a merchant mariner document which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="NextPortOfCall" type="m:PortVisitType" nillable="true">
@@ -2362,11 +2293,6 @@
   <xs:element name="NonCrewNationalityQuantity" type="niem-xs:nonNegativeInteger" nillable="true">
     <xs:annotation>
       <xs:documentation>A count of passengers of a particular nationality</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonAddress" type="nc:AddressType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An address for a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonAugmentation" type="m:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint" nillable="true">
@@ -2649,44 +2575,14 @@
       <xs:documentation>An identification of a passenger name record (PNR).</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="SeamanLicense" type="m:SeamanLicenseType" nillable="true">
+  <xs:element name="SeamanLicense" type="nc:LicenseType" nillable="true">
     <xs:annotation>
       <xs:documentation>An able-bodied seaman license issued to a person.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseAugmentationPoint" abstract="true">
-    <xs:annotation>
-      <xs:documentation>An augmentation point for SeamanLicenseType.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identification of a seaman license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseIssueDate" type="nc:DateType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A date a seaman license was issued.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseIssuerLocation" type="nc:LocationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A location of an issuer of a seaman license.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="SeamanLicenseIssuingOrganization" type="nc:OrganizationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An issuer of a seaman license.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseRatingAbstract" abstract="true">
-    <xs:annotation>
-      <xs:documentation>A data concept for a rating on a seaman license which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="SeamanLicenseRatingText" type="nc:TextType" substitutionGroup="m:SeamanLicenseRatingAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A rating on a seaman license which authorizes the performance of certain shipboard duties or actions.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Shipment" type="m:ShipmentType" nillable="true">
@@ -2747,11 +2643,6 @@
   <xs:element name="ShipmentStatus" type="nc:StatusType" nillable="true">
     <xs:annotation>
       <xs:documentation>A status of a shipment.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="USMTFEnvironmentCategoryCode" type="m:USMTFEnvironmentCategoryCodeType" substitutionGroup="m:InterestCategoryAbstract" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A kind of USMTF-defined environment code.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="USMTFThreatCode" type="m:USMTFThreatCodeType" substitutionGroup="m:InterestLevelAbstract" nillable="true">

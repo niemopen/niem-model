@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
-   targetNamespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
-   version="5.0"
-   xml:lang="en-US"
-   xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
-   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+<xs:schema
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
+  version="ps02"
+  xml:lang="en-US"
+  xmlns:clsa="https://docs.oasis-open.org/niemopen/ns/specification/code-lists/6.0/appinfo/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>This schema provides annotations for connecting content defined within an XML Schema document to the content of code lists.</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification:https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement:https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+ 
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the
+      additional Specification Non-Assertion Covenants to support finally-approved for any Project
+      Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.    
+    </xs:documentation>
   </xs:annotation>
-
   <xs:element name="SimpleCodeListBinding">
     <xs:annotation>
       <xs:documentation>An element for connecting simple content defined by an XML Schema component to a a column of a code list.</xs:documentation>
@@ -32,7 +46,6 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-
   <xs:element name="ComplexCodeListBinding">
     <xs:annotation>
       <xs:documentation>An element for connecting complex content defined by an XML Schema component to a set of columns of a code list.</xs:documentation>
@@ -66,5 +79,4 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-
 </xs:schema>

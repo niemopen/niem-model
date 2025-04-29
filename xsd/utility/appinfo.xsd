@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
-  targetNamespace="http://release.niem.gov/niem/appinfo/5.0/"
-  version="5.0"
+  targetNamespace="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
+  version="ps02"
   xml:lang="en-US"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+  xmlns:appinfo="https://docs.oasis-open.org/niemopen/ns/model/appinfo/6.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <xs:annotation>
     <xs:documentation>The appinfo schema provides support for high level data model concepts and additional syntax to support the NIEM conceptual model and validation of NIEM-conformant instances.</xs:documentation>
+    <xs:documentation>
+      NIEM Model Version 6.0
+      Project Specification 02
+      1 January 2025
+      Copyright (c) OASIS Open 2025. All Rights Reserved.
+      Source: https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps02/xsd/
+      Latest stage of narrative specification:https://docs.oasis-open.org/niemopen/niem-model/v6.0/niem-model-v6.0.html
+      NIEMOpen IPR Statement:https://github.com/niemopen/oasis-open-project/blob/main/IPR-STATEMENT.md
+      License: https://github.com/niemopen/niem-model/blob/main/LICENSE.md.
+ 
+      This work is licensed under a Creative Commons Attribution 4.0 International License:
+      CC BY 4.0: Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/.
+      In addition to the above license, each Contributor also agrees in the CLA to provide the
+      additional Specification Non-Assertion Covenants to support finally-approved for any Project
+      Specifications, as explained in Section 15.3 of the OASIS Open Project Rules.    
+    </xs:documentation>
   </xs:annotation>
-
+  <xs:simpleType name="URIListSimpleType">
+    <xs:list itemType="xs:anyURI"/>
+  </xs:simpleType>
+  <xs:attribute name="augmentingNamespace" type="appinfo:URIListSimpleType">
+    <xs:annotation>
+      <xs:documentation>A list of URIs for namespaces responsible for an augmentation.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
   <xs:attribute name="deprecated">
     <xs:annotation>
       <xs:documentation>The deprecated attribute provides a method for identifying schema components as being deprecated. A deprecated component is one that is provided, but the use of which is not recommended.</xs:documentation>
@@ -20,36 +42,6 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-
-  <xs:attribute name="appliesToTypes">
-    <xs:annotation>
-      <xs:documentation>The appliesToTypes attribute appears on the element declaration of a metadata element. It indicates a set of types to which the metadata element may be applied. The metadata element will also be applicable to any type that is derived from a listed type.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleType>
-      <xs:list itemType="xs:QName"/>
-    </xs:simpleType>
-  </xs:attribute>
-
-  <xs:attribute name="appliesToElements">
-    <xs:annotation>
-      <xs:documentation>The appliesToElements attribute appears on the element declaration of a metadata element. It indicates a set of elements to which the metadata element may be applied. The metadata element will also be applicable to any element that is in the substitution group of a listed element.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleType>
-      <xs:list itemType="xs:QName"/>
-    </xs:simpleType>
-  </xs:attribute>
-
-  <xs:attribute name="externalAdapterTypeIndicator">
-    <xs:annotation>
-      <xs:documentation>The externalAdapterTypeIndicator attribute indicates that a complex type is an external adapter type. An external adapter type is composed of elements and attributes from non-NIEM-conformant schemas.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleType>
-      <xs:restriction base="xs:boolean">
-        <xs:pattern value="true"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:attribute>
-
   <xs:attribute name="externalImportIndicator">
     <xs:annotation>
       <xs:documentation>The externalImportIndicator attribute is true if and only if a namespace identified via xs:import is expected to be non-conformant.</xs:documentation>
@@ -60,16 +52,144 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-
+  <xs:attribute name="orderedPropertyIndicator">
+    <xs:annotation>
+      <xs:documentation>True if the order of a repeated property is significant.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:boolean">
+        <xs:pattern value="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="referenceCode">
+    <xs:annotation>
+      <xs:documentation>A code describing how a property may be referenced (or must appear inline).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="NONE"/>
+        <xs:enumeration value="REF"/>
+        <xs:enumeration value="URI"/>
+        <xs:enumeration value="ANY"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="referenceAttributeIndicator">
+    <xs:annotation>
+      <xs:documentation>True if an attribute is a list of object references (IDREFs or URIs).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:boolean">
+        <xs:pattern value="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="relationshipPropertyIndicator">
+    <xs:annotation>
+      <xs:documentation>True if a property applies to the relationship between an element and its parent.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:boolean">
+        <xs:pattern value="true"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:element name="Augmentation">
+    <xs:annotation>
+      <xs:documentation>A record of an attribute property added to a class in another namespace by this namespace.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="class" type="xs:QName">
+        <xs:annotation>
+          <xs:documentation>The augmented class.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    <xs:attribute name="property" type="xs:QName" use="required">
+      <xs:annotation>
+        <xs:documentation>The augmenting property.</xs:documentation>
+      </xs:annotation>      
+    </xs:attribute>
+    <xs:attribute name="use">
+      <xs:annotation>
+        <xs:documentation>A code indicating whether the augmenting property is optional or required</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="optional">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation attribute property that is optional.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="required">
+            <xs:annotation>
+              <xs:documentation>A code for an augmentation attribute property that is required.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="globalClassCode">
+      <xs:annotation>
+        <xs:documentation>A code indicating the kind of globally augmented class.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:list>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="OBJECT">
+                <xs:annotation>
+                  <xs:documentation>A code for an augmentation property that applies to all object classes.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="ASSOCIATION">
+                <xs:annotation>
+                  <xs:documentation>A code for an augmentation property that applies to all association classes.</xs:documentation>
+                </xs:annotation>            
+              </xs:enumeration>
+              <xs:enumeration value="LITERAL">
+                <xs:annotation>
+                  <xs:documentation>A code for an augmentation property that applies to all datatypes and literal classes.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:list>
+      </xs:simpleType>
+    </xs:attribute>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="LocalTerm">
+    <xs:annotation>
+      <xs:documentation>A meaning of a local term within a namespace.</xs:documentation>
+    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-	<xs:element name="SourceText" type="appinfo:NonemptyStringSimpleType" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+        <xs:element name="SourceText" type="appinfo:NonemptyStringSimpleType" minOccurs="0" maxOccurs="unbounded" form="qualified">
+          <xs:annotation>
+            <xs:documentation> A plain text citation of, reference to, or bibliographic entry for an originating or authoritative document defining the term.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
       </xs:sequence>
-      <xs:attribute name="term" type="appinfo:NonemptyStringSimpleType" use="required"/>
-      <xs:attribute name="literal" type="appinfo:NonemptyStringSimpleType"/>
-      <xs:attribute name="definition" type="appinfo:NonemptyStringSimpleType"/>
+      <xs:attribute name="term" type="appinfo:NonemptyStringSimpleType" use="required">
+        <xs:annotation>
+          <xs:documentation>A local term defined within a namespace.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="literal" type="appinfo:NonemptyStringSimpleType">
+        <xs:annotation>
+          <xs:documentation>A meaning of a local term, provided in a full plain-text form. when a local term is an abbreviation, acronym, or diminutive form of a longer term.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="definition" type="appinfo:NonemptyStringSimpleType">
+        <xs:annotation>
+          <xs:documentation>A dictionary-style description of the meaning of a local term.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
       <xs:attribute name="sourceURIs">
+        <xs:annotation>
+          <xs:documentation>A list of URIs, each of which is an identifier or locator for an originating or authoritative document defining the term.</xs:documentation>
+        </xs:annotation>
         <xs:simpleType>
           <xs:restriction>
             <xs:simpleType>
@@ -81,11 +201,9 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-
   <xs:simpleType name="NonemptyStringSimpleType">
     <xs:restriction base="xs:string">
       <xs:minLength value="1"/>
     </xs:restriction>
   </xs:simpleType>
-
 </xs:schema>
